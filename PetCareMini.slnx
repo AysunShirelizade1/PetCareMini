@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Core/">
+    <Project Path="Application/PetCareMini.Application/PetCareMini.Application.csproj" />
+    <Project Path="Domain/PetCareMini.Domain/PetCareMini.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="Infrastructure/PetCareMini.Infrastructure/PetCareMini.Infrastructure.csproj" />
+    <Project Path="Persistence/PetCareMini.Persistence/PetCareMini.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/src/Presentation/">
+    <Project Path="WebApi/PetCareMini.WebApi/PetCareMini.WebApi.csproj" />
+  </Folder>
+</Solution>
