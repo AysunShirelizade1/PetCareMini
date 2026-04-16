@@ -10,4 +10,3 @@ public interface IAppointmentRepository
     Task AddAsync(Appointment appointment);
     Task SaveChangesAsync();
 }
-//dnalnlsn

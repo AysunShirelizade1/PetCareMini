@@ -12,7 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\Application\PetCareMini.Application\PetCareMini.Application.csproj" />
+    <ProjectReference Include="..\..\Domain\PetCareMini.Domain\PetCareMini.Domain.csproj" />
   </ItemGroup>
 
 </Project>
