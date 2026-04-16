@@ -1,9 +1,11 @@
+using PetCareMini.Persistence;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
