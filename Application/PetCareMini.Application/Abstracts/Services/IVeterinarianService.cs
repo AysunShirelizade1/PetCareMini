@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PetCareMini.Application.DTOs.Veterinarian;
 
-namespace PetCareMini.Application.Abstracts.Services
+namespace PetCareMini.Application.Abstracts.Services;
+
+public interface IVeterinarianService
 {
-    internal class IVeterinarianService
-    {
-    }
+    Task<List<VeterinarianGetDto>> GetAllAsync();
+    Task<VeterinarianGetDto?> GetByIdAsync(int id);
+    Task CreateAsync(VeterinarianCreateDto dto);
+    Task<bool> UpdateAsync(int id, VeterinarianUpdateDto dto);
+    Task<bool> DeleteAsync(int id);
 }
