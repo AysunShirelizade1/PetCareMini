@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PetCareMini.Application.Interfaces.Repositories;
+using PetCareMini.Application.Abstracts.Repositories;
 using PetCareMini.Domain.Entities;
 using PetCareMini.Persistence.Contexts;
 

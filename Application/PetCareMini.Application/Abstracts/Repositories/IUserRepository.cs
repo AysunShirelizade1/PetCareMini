@@ -1,5 +1,5 @@
 ﻿using PetCareMini.Domain.Entities;
-namespace PetCareMini.Application.Interfaces.Repositories;
+namespace PetCareMini.Application.Abstracts.Repositories;
 
 public interface IUserRepository
 {
