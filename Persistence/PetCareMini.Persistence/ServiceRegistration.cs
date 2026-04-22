@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using PetCareMini.Application.Abstracts.Repositories;
 using PetCareMini.Persistence.Contexts;
 using PetCareMini.Persistence.Repositories;
+using PetCareMini.Application.Abstracts.Services;
+using PetCareMini.Persistence.Services;
 
 namespace PetCareMini.Persistence;
 
@@ -18,7 +20,10 @@ public static class ServiceRegistration
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IPetRepository, PetRepository>();
+        services.AddScoped<IVeterinarianRepository, VeterinarianRepository>();
 
+
+        services.AddScoped<IVeterinarianService, VeterinarianService>();
         return services;
     }
 }
