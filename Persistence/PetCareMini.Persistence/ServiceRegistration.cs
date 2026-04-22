@@ -21,9 +21,10 @@ public static class ServiceRegistration
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IPetRepository, PetRepository>();
         services.AddScoped<IVeterinarianRepository, VeterinarianRepository>();
-
+        services.AddScoped<IServiceRepository, ServiceRepository>();
 
         services.AddScoped<IVeterinarianService, VeterinarianService>();
+        services.AddScoped<IServiceService, ServiceService>();
         return services;
     }
 }
