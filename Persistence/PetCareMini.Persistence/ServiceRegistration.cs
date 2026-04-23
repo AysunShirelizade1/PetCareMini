@@ -22,9 +22,13 @@ public static class ServiceRegistration
         services.AddScoped<IPetRepository, PetRepository>();
         services.AddScoped<IVeterinarianRepository, VeterinarianRepository>();
         services.AddScoped<IServiceRepository, ServiceRepository>();
+        services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
+        services.AddScoped<IProductRepository, ProductRepository>();
 
         services.AddScoped<IVeterinarianService, VeterinarianService>();
         services.AddScoped<IServiceService, ServiceService>();
+        services.AddScoped<IProductCategoryService, ProductCategoryService>();
+        services.AddScoped<IProductService, ProductService>();
         return services;
     }
 }

@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PetCareMini.Application.DTOs.Product;
 
-namespace PetCareMini.Application.Abstracts.Services
+namespace PetCareMini.Application.Abstracts.Services;
+
+public interface IProductService
 {
-    internal class IProductService
-    {
-    }
+    Task<List<ProductGetDto>> GetAllAsync();
+    Task<ProductGetDto?> GetByIdAsync(int id);
+    Task CreateAsync(ProductCreateDto dto);
+    Task<bool> UpdateAsync(int id, ProductUpdateDto dto);
+    Task<bool> DeleteAsync(int id);
 }
