@@ -1,4 +1,5 @@
-﻿    using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Veterinarian;
 
@@ -34,6 +35,7 @@ public class VeterinariansController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Create([FromBody] VeterinarianCreateDto dto)
     {
         await _vetService.CreateAsync(dto);
@@ -41,6 +43,7 @@ public class VeterinariansController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Update(int id, [FromBody] VeterinarianUpdateDto dto)
     {
         var result = await _vetService.UpdateAsync(id, dto);
@@ -52,6 +55,7 @@ public class VeterinariansController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Delete(int id)
     {
         var result = await _vetService.DeleteAsync(id);

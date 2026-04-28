@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PetCareMini.Application.DTOs.Auth;
 
-namespace PetCareMini.Application.Abstracts.Services
+namespace PetCareMini.Application.Abstracts.Services;
+
+public interface IAuthService
 {
-    internal class IAuthService
-    {
-    }
+    Task<AuthResponseDto> RegisterAsync(RegisterDto dto);
+
+    Task<AuthResponseDto?> LoginAsync(LoginDto dto);
 }

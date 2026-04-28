@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Product;
-
+using Microsoft.AspNetCore.Authorization;
 namespace PetCareMini.WebApi.Controllers;
 
 [ApiController]
@@ -33,6 +33,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPost]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Create(ProductCreateDto dto)
     {
         await _service.CreateAsync(dto);
@@ -40,6 +41,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Update(int id, ProductUpdateDto dto)
     {
         var result = await _service.UpdateAsync(id, dto);
@@ -51,6 +53,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Delete(int id)
     {
         var result = await _service.DeleteAsync(id);

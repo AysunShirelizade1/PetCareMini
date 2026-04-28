@@ -6,7 +6,6 @@ using PetCareMini.Persistence.Contexts;
 using PetCareMini.Persistence.Repositories;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Persistence.Services;
-
 namespace PetCareMini.Persistence;
 
 public static class ServiceRegistration
@@ -24,7 +23,9 @@ public static class ServiceRegistration
         services.AddScoped<IServiceRepository, ServiceRepository>();
         services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
-
+        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IAuthService, AuthService>();
+        services.AddScoped<IJwtTokenService, JwtTokenService>();
         services.AddScoped<IVeterinarianService, VeterinarianService>();
         services.AddScoped<IServiceService, ServiceService>();
         services.AddScoped<IProductCategoryService, ProductCategoryService>();

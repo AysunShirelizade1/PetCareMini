@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace PetCareMini.Application.Abstracts.Services;
 
-namespace PetCareMini.Application.Abstracts.Services
+using PetCareMini.Domain.Entities;
+
+public interface IJwtTokenService
 {
-    internal class IJwtTokenService
-    {
-    }
+    string GenerateToken(User user);
 }
