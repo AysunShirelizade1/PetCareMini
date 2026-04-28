@@ -64,6 +64,8 @@ public class AuthService : IAuthService
         return new AuthResponseDto
         {
             Token = token,
+            Email = user.Email,
+            FullName = user.FullName,
             Role = user.Role.ToString()
         };
     }
