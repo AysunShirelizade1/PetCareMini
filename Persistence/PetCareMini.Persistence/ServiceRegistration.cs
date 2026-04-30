@@ -24,6 +24,8 @@ public static class ServiceRegistration
         services.AddScoped<IProductCategoryRepository, ProductCategoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IWishlistRepository, WishlistRepository>();
+        services.AddScoped<IWishlistService, WishlistService>();
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IJwtTokenService, JwtTokenService>();
         services.AddScoped<IVeterinarianService, VeterinarianService>();

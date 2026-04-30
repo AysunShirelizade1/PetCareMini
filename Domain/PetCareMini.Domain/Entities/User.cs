@@ -13,4 +13,5 @@ public class User : BaseEntity
     public UserRole Role { get; set; } = UserRole.User;
     public ICollection<Pet> Pets { get; set; } = new List<Pet>();
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
+    public ICollection<WishlistItem> WishlistItems { get; set; } = new List<WishlistItem>();
 }
