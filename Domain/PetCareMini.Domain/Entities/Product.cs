@@ -14,4 +14,5 @@ public class Product : BaseEntity
     public int CategoryId { get; set; }
     public ProductCategory Category { get; set; } = null!;
     public ICollection<WishlistItem> WishlistItems { get; set; } = new List<WishlistItem>();
+    public ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
 }
