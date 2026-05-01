@@ -21,7 +21,7 @@ public class CartService : ICartService
         return items.Select(x => new CartItemGetDto
         {
             ProductId = x.ProductId,
-            ProductName = x.Product.Name,
+            ProductName = x.Product.NameAz,
             Price = x.Product.Price,
             Quantity = x.Quantity
         }).ToList();

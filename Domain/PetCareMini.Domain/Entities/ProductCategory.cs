@@ -4,8 +4,11 @@ namespace PetCareMini.Domain.Entities;
 
 public class ProductCategory : BaseEntity
 {
-    public string Name { get; set; } = string.Empty;
-    public string? Description { get; set; }
+    public string NameAz { get; set; } = string.Empty;
+    public string NameEn { get; set; } = string.Empty;
+
+    public string? DescriptionAz { get; set; }
+    public string? DescriptionEn { get; set; }
 
     public ICollection<Product> Products { get; set; } = new List<Product>();
 }

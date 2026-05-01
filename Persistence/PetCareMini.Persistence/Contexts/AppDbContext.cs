@@ -19,6 +19,7 @@ public class AppDbContext : DbContext
     public DbSet<ContactMessage> ContactMessages => Set<ContactMessage>();
     public DbSet<WishlistItem> WishlistItems { get; set; }
     public DbSet<CartItem> CartItems { get; set; }
+    public DbSet<Faq> Faqs { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -14,42 +14,35 @@ public class ServiceService : IServiceService
         _repository = repository;
     }
 
-    public async Task<List<ServiceGetDto>> GetAllAsync()
+    public async Task<List<ServiceGetDto>> GetAllAsync(string lang)
     {
         var services = await _repository.GetAllAsync();
 
-        return services.Select(x => new ServiceGetDto
-        {
-            Id = x.Id,
-            Name = x.Name,
-            Description = x.Description,
-            Price = x.Price
-        }).ToList();
+        return services.Select(x => MapToDto(x, lang)).ToList();
     }
 
-    public async Task<ServiceGetDto?> GetByIdAsync(int id)
+    public async Task<ServiceGetDto?> GetByIdAsync(int id, string lang)
     {
         var service = await _repository.GetByIdAsync(id);
 
         if (service is null)
             return null;
 
-        return new ServiceGetDto
-        {
-            Id = service.Id,
-            Name = service.Name,
-            Description = service.Description,
-            Price = service.Price
-        };
+        return MapToDto(service, lang);
     }
 
     public async Task CreateAsync(ServiceCreateDto dto)
     {
         var service = new Service
         {
-            Name = dto.Name,
-            Description = dto.Description,
-            Price = dto.Price
+            NameAz = dto.NameAz,
+            NameEn = dto.NameEn,
+            DescriptionAz = dto.DescriptionAz,
+            DescriptionEn = dto.DescriptionEn,
+            Price = dto.Price,
+            DurationMinutes = dto.DurationMinutes,
+            ImageUrl = dto.ImageUrl,
+            IsActive = true
         };
 
         await _repository.AddAsync(service);
@@ -63,9 +56,14 @@ public class ServiceService : IServiceService
         if (service is null)
             return false;
 
-        service.Name = dto.Name;
-        service.Description = dto.Description;
+        service.NameAz = dto.NameAz;
+        service.NameEn = dto.NameEn;
+        service.DescriptionAz = dto.DescriptionAz;
+        service.DescriptionEn = dto.DescriptionEn;
         service.Price = dto.Price;
+        service.DurationMinutes = dto.DurationMinutes;
+        service.ImageUrl = dto.ImageUrl;
+        service.IsActive = dto.IsActive;
 
         _repository.Update(service);
         await _repository.SaveChangesAsync();
@@ -84,5 +82,20 @@ public class ServiceService : IServiceService
         await _repository.SaveChangesAsync();
 
         return true;
+    }
+
+    private ServiceGetDto MapToDto(Service service, string lang)
+    {
+        var isEn = lang.ToLower() == "en";
+
+        return new ServiceGetDto
+        {
+            Id = service.Id,
+            Name = isEn ? service.NameEn : service.NameAz,
+            Description = isEn ? service.DescriptionEn : service.DescriptionAz,
+            Price = service.Price,
+            DurationMinutes = service.DurationMinutes,
+            ImageUrl = service.ImageUrl
+        };
     }
 }

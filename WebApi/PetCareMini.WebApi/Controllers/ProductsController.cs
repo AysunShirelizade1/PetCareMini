@@ -16,15 +16,15 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll([FromQuery] string lang = "az")
     {
-        return Ok(await _service.GetAllAsync());
+        return Ok(await _service.GetAllAsync(lang));
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetById(int id)
+    public async Task<IActionResult> GetById(int id, [FromQuery] string lang = "az")
     {
-        var data = await _service.GetByIdAsync(id);
+        var data = await _service.GetByIdAsync(id, lang);
 
         if (data is null)
             return NotFound();

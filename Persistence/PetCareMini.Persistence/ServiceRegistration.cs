@@ -26,6 +26,8 @@ public static class ServiceRegistration
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IWishlistRepository, WishlistRepository>();
         services.AddScoped<ICartRepository, CartRepository>();
+        services.AddScoped<IFaqRepository, FaqRepository>();
+        services.AddScoped<IFaqService, FaqService>();
         services.AddScoped<IWishlistService, WishlistService>();
         services.AddScoped<ICartService, CartService>();
         services.AddScoped<IAuthService, AuthService>();

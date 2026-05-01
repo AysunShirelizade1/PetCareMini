@@ -10,11 +10,18 @@ public class ProductCategoryConfiguration : IEntityTypeConfiguration<ProductCate
     {
         builder.HasKey(x => x.Id);
 
-        builder.Property(x => x.Name)
+        builder.Property(x => x.NameAz)
             .IsRequired()
             .HasMaxLength(100);
 
-        builder.Property(x => x.Description)
+        builder.Property(x => x.NameEn)
+            .IsRequired()
+            .HasMaxLength(100);
+
+        builder.Property(x => x.DescriptionAz)
+            .HasMaxLength(500);
+
+        builder.Property(x => x.DescriptionEn)
             .HasMaxLength(500);
 
         builder.Property(x => x.CreatedAt)

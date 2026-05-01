@@ -22,7 +22,7 @@ public class WishlistService : IWishlistService
         {
             Id = x.Id,
             ProductId = x.ProductId,
-            ProductName = x.Product.Name,
+            ProductName = x.Product.NameAz,
             ProductPrice = x.Product.Price,
             ProductImageUrl = x.Product.ImageUrl
         }).ToList();

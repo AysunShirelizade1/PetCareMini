@@ -4,8 +4,12 @@ namespace PetCareMini.Domain.Entities;
 
 public class Service : BaseEntity
 {
-    public string Name { get; set; } = string.Empty;
-    public string? Description { get; set; }
+    public string NameAz { get; set; } = string.Empty;
+    public string NameEn { get; set; } = string.Empty;
+
+    public string? DescriptionAz { get; set; }
+    public string? DescriptionEn { get; set; }
+
     public decimal Price { get; set; }
     public int? DurationMinutes { get; set; }
     public string? ImageUrl { get; set; }

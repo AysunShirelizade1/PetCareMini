@@ -2,96 +2,72 @@
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Product;
 using PetCareMini.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PetCareMini.Persistence.Services;
 
 public class ProductService : IProductService
 {
     private readonly IProductRepository _repository;
-    private readonly IProductCategoryRepository _categoryRepository;
 
-    public ProductService(
-    IProductRepository repository,
-    IProductCategoryRepository categoryRepository)
+    public ProductService(IProductRepository repository)
     {
         _repository = repository;
-        _categoryRepository = categoryRepository;
     }
 
-    public async Task<List<ProductGetDto>> GetAllAsync()
+    public async Task<List<ProductGetDto>> GetAllAsync(string lang)
     {
-        var data = await _repository.GetAllAsync();
+        var products = await _repository.GetAllAsync();
 
-        return data.Select(x => new ProductGetDto
-        {
-            Id = x.Id,
-            Name = x.Name,
-            Description = x.Description,
-            Price = x.Price,
-            StockQuantity = x.StockQuantity,
-            ImageUrl = x.ImageUrl,
-            CategoryName = x.Category.Name
-        }).ToList();
+        return products.Select(x => MapToDto(x, lang)).ToList();
     }
 
-    public async Task<ProductGetDto?> GetByIdAsync(int id)
+    public async Task<ProductGetDto?> GetByIdAsync(int id, string lang)
     {
-        var entity = await _repository.GetByIdAsync(id);
+        var product = await _repository.GetByIdAsync(id);
 
-        if (entity is null)
+        if (product is null)
             return null;
 
-        return new ProductGetDto
-        {
-            Id = entity.Id,
-            Name = entity.Name,
-            Description = entity.Description,
-            Price = entity.Price,
-            StockQuantity = entity.StockQuantity,
-            ImageUrl = entity.ImageUrl,
-            CategoryName = entity.Category.Name
-        };
+        return MapToDto(product, lang);
     }
 
     public async Task CreateAsync(ProductCreateDto dto)
     {
-        var categoryExists = await _categoryRepository.GetByIdAsync(dto.CategoryId);
-
-        if (categoryExists is null)
-            throw new Exception("Category not found");
-
-        var entity = new Product
+        var product = new Product
         {
-            Name = dto.Name,
-            Description = dto.Description,
+            NameAz = dto.NameAz,
+            NameEn = dto.NameEn,
+            DescriptionAz = dto.DescriptionAz,
+            DescriptionEn = dto.DescriptionEn,
             Price = dto.Price,
             StockQuantity = dto.StockQuantity,
             ImageUrl = dto.ImageUrl,
-            CategoryId = dto.CategoryId
+            CategoryId = dto.CategoryId,
+            IsActive = true
         };
 
-        await _repository.AddAsync(entity);
+        await _repository.AddAsync(product);
         await _repository.SaveChangesAsync();
     }
 
     public async Task<bool> UpdateAsync(int id, ProductUpdateDto dto)
     {
-        var entity = await _repository.GetByIdAsync(id);
+        var product = await _repository.GetByIdAsync(id);
 
-        if (entity is null)
+        if (product is null)
             return false;
 
-        entity.Name = dto.Name;
-        entity.Description = dto.Description;
-        entity.Price = dto.Price;
-        entity.StockQuantity = dto.StockQuantity;
-        entity.ImageUrl = dto.ImageUrl;
-        entity.CategoryId = dto.CategoryId;
+        product.NameAz = dto.NameAz;
+        product.NameEn = dto.NameEn;
+        product.DescriptionAz = dto.DescriptionAz;
+        product.DescriptionEn = dto.DescriptionEn;
+        product.Price = dto.Price;
+        product.StockQuantity = dto.StockQuantity;
+        product.ImageUrl = dto.ImageUrl;
+        product.CategoryId = dto.CategoryId;
+        product.IsActive = dto.IsActive;
 
-        _repository.Update(entity);
+        _repository.Update(product);
         await _repository.SaveChangesAsync();
 
         return true;
@@ -99,14 +75,30 @@ public class ProductService : IProductService
 
     public async Task<bool> DeleteAsync(int id)
     {
-        var entity = await _repository.GetByIdAsync(id);
+        var product = await _repository.GetByIdAsync(id);
 
-        if (entity is null)
+        if (product is null)
             return false;
 
-        _repository.Delete(entity);
+        _repository.Delete(product);
         await _repository.SaveChangesAsync();
 
         return true;
+    }
+
+    private ProductGetDto MapToDto(Product product, string lang)
+    {
+        var isEn = lang.ToLower() == "en";
+
+        return new ProductGetDto
+        {
+            Id = product.Id,
+            Name = isEn ? product.NameEn : product.NameAz,
+            Description = isEn ? product.DescriptionEn : product.DescriptionAz,
+            Price = product.Price,
+            StockQuantity = product.StockQuantity,
+            ImageUrl = product.ImageUrl,
+            CategoryName = isEn ? product.Category.NameEn : product.Category.NameAz
+        };
     }
 }

@@ -14,36 +14,31 @@ public class ProductCategoryService : IProductCategoryService
         _repository = repository;
     }
 
-    public async Task<List<ProductCategoryGetDto>> GetAllAsync()
+    public async Task<List<ProductCategoryGetDto>> GetAllAsync(string lang)
     {
         var data = await _repository.GetAllAsync();
 
-        return data.Select(x => new ProductCategoryGetDto
-        {
-            Id = x.Id,
-            Name = x.Name
-        }).ToList();
+        return data.Select(x => MapToDto(x, lang)).ToList();
     }
 
-    public async Task<ProductCategoryGetDto?> GetByIdAsync(int id)
+    public async Task<ProductCategoryGetDto?> GetByIdAsync(int id, string lang)
     {
         var entity = await _repository.GetByIdAsync(id);
 
         if (entity is null)
             return null;
 
-        return new ProductCategoryGetDto
-        {
-            Id = entity.Id,
-            Name = entity.Name
-        };
+        return MapToDto(entity, lang);
     }
 
     public async Task CreateAsync(ProductCategoryCreateDto dto)
     {
         var entity = new ProductCategory
         {
-            Name = dto.Name
+            NameAz = dto.NameAz,
+            NameEn = dto.NameEn,
+            DescriptionAz = dto.DescriptionAz,
+            DescriptionEn = dto.DescriptionEn
         };
 
         await _repository.AddAsync(entity);
@@ -57,7 +52,10 @@ public class ProductCategoryService : IProductCategoryService
         if (entity is null)
             return false;
 
-        entity.Name = dto.Name;
+        entity.NameAz = dto.NameAz;
+        entity.NameEn = dto.NameEn;
+        entity.DescriptionAz = dto.DescriptionAz;
+        entity.DescriptionEn = dto.DescriptionEn;
 
         _repository.Update(entity);
         await _repository.SaveChangesAsync();
@@ -76,5 +74,17 @@ public class ProductCategoryService : IProductCategoryService
         await _repository.SaveChangesAsync();
 
         return true;
+    }
+
+    private ProductCategoryGetDto MapToDto(ProductCategory category, string lang)
+    {
+        var isEn = lang.ToLower() == "en";
+
+        return new ProductCategoryGetDto
+        {
+            Id = category.Id,
+            Name = isEn ? category.NameEn : category.NameAz,
+            Description = isEn ? category.DescriptionEn : category.DescriptionAz
+        };
     }
 }
