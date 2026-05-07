@@ -20,4 +20,5 @@ public class Product : BaseEntity
 
     public ICollection<WishlistItem> WishlistItems { get; set; } = new List<WishlistItem>();
     public ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
+    public ICollection<ProductReview> Reviews { get; set; } = new List<ProductReview>();
 }

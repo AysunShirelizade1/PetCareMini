@@ -4,7 +4,7 @@ namespace PetCareMini.Application.Abstracts.Services;
 
 public interface IProductService
 {
-    Task<List<ProductGetDto>> GetAllAsync(string lang);
+    Task<List<ProductGetDto>> GetAllAsync(ProductQueryDto query);
 
     Task<ProductGetDto?> GetByIdAsync(int id, string lang);
 

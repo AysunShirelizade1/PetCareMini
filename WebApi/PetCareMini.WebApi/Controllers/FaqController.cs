@@ -6,11 +6,11 @@ using PetCareMini.Application.DTOs.Faq;
 namespace PetCareMini.WebApi.Controllers;
 
 [ApiController]
+
 [Route("api/[controller]")]
 public class FaqsController : ControllerBase
 {
     private readonly IFaqService _faqService;
-
     public FaqsController(IFaqService faqService)
     {
         _faqService = faqService;
@@ -66,3 +66,10 @@ public class FaqsController : ControllerBase
         return Ok(new { message = "FAQ deleted successfully" });
     }
 }
+
+// This controller provides endpoints for managing FAQs
+// (Frequently Asked Questions) in the PetCareMini application.
+// It includes methods for retrieving all FAQs, retrieving a specific FAQ by ID,
+// creating a new FAQ, updating an existing FAQ, and deleting an FAQ.
+// The create, update, and delete operations are restricted to users with the "Admin" role.
+

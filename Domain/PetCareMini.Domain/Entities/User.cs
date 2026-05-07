@@ -15,4 +15,6 @@ public class User : BaseEntity
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
     public ICollection<WishlistItem> WishlistItems { get; set; } = new List<WishlistItem>();
     public ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
+    public ICollection<ProductReview> Reviews { get; set; } = new List<ProductReview>();
+    public ICollection<Order> Orders { get; set; } = new List<Order>();
 }

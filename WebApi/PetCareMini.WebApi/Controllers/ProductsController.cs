@@ -16,9 +16,9 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAll([FromQuery] string lang = "az")
+    public async Task<IActionResult> GetAll([FromQuery] ProductQueryDto query)
     {
-        return Ok(await _service.GetAllAsync(lang));
+        return Ok(await _service.GetAllAsync(query));
     }
 
     [HttpGet("{id}")]

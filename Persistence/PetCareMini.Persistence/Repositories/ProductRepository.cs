@@ -16,6 +16,7 @@ public class ProductRepository : IProductRepository
     {
         return await _context.Products
             .Include(x => x.Category)
+            .Where(x => x.IsActive)
             .ToListAsync();
     }
 
@@ -23,7 +24,7 @@ public class ProductRepository : IProductRepository
     {
         return await _context.Products
             .Include(x => x.Category)
-            .FirstOrDefaultAsync(x => x.Id == id);
+            .FirstOrDefaultAsync(x => x.Id == id && x.IsActive);
     }
 
     public async Task AddAsync(Product entity)

@@ -14,11 +14,54 @@ public class ProductService : IProductService
         _repository = repository;
     }
 
-    public async Task<List<ProductGetDto>> GetAllAsync(string lang)
+    public async Task<List<ProductGetDto>> GetAllAsync(ProductQueryDto query)
     {
         var products = await _repository.GetAllAsync();
 
-        return products.Select(x => MapToDto(x, lang)).ToList();
+        var data = products.AsQueryable();
+
+        // Category filter
+        if (query.CategoryId.HasValue)
+        {
+            data = data.Where(x => x.CategoryId == query.CategoryId.Value);
+        }
+
+        // Price filter
+        if (query.MinPrice.HasValue)
+        {
+            data = data.Where(x => x.Price >= query.MinPrice.Value);
+        }
+
+        if (query.MaxPrice.HasValue)
+        {
+            data = data.Where(x => x.Price <= query.MaxPrice.Value);
+        }
+
+        // Search
+        if (!string.IsNullOrWhiteSpace(query.Search))
+        {
+            var search = query.Search.ToLower();
+
+            data = data.Where(x =>
+                x.NameAz.ToLower().Contains(search) ||
+                x.NameEn.ToLower().Contains(search));
+        }
+
+        // Sort
+        data = query.SortBy switch
+        {
+            "priceAsc" => data.OrderBy(x => x.Price),
+
+            "priceDesc" => data.OrderByDescending(x => x.Price),
+
+            "nameAsc" => data.OrderBy(x => x.NameAz),
+
+            "nameDesc" => data.OrderByDescending(x => x.NameAz),
+
+            _ => data.OrderByDescending(x => x.CreatedAt)
+        };
+
+        return data.Select(x => MapToDto(x, query.Lang)).ToList();
     }
 
     public async Task<ProductGetDto?> GetByIdAsync(int id, string lang)

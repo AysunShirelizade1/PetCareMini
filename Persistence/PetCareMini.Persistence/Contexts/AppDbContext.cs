@@ -17,9 +17,12 @@ public class AppDbContext : DbContext
     public DbSet<Product> Products => Set<Product>();
     public DbSet<ProductCategory> ProductCategories => Set<ProductCategory>();
     public DbSet<ContactMessage> ContactMessages => Set<ContactMessage>();
-    public DbSet<WishlistItem> WishlistItems { get; set; }
-    public DbSet<CartItem> CartItems { get; set; }
-    public DbSet<Faq> Faqs { get; set; }
+    public DbSet<WishlistItem> WishlistItems => Set<WishlistItem>();
+    public DbSet<CartItem> CartItems => Set<CartItem>();
+    public DbSet<Faq> Faqs => Set<Faq>();
+    public DbSet<ProductReview> ProductReviews => Set<ProductReview>();
+    public DbSet<Order> Orders => Set<Order>();
+    public DbSet<OrderItem> OrderItems => Set<OrderItem>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

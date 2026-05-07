@@ -27,6 +27,8 @@ public static class ServiceRegistration
         services.AddScoped<IWishlistRepository, WishlistRepository>();
         services.AddScoped<ICartRepository, CartRepository>();
         services.AddScoped<IFaqRepository, FaqRepository>();
+        services.AddScoped<IOrderService, OrderService>();
+        services.AddScoped<IProductReviewService, ProductReviewService>();
         services.AddScoped<IFaqService, FaqService>();
         services.AddScoped<IWishlistService, WishlistService>();
         services.AddScoped<ICartService, CartService>();
@@ -39,3 +41,4 @@ public static class ServiceRegistration
         return services;
     }
 }
+
