@@ -79,7 +79,7 @@ if (app.Environment.IsDevelopment())
 }
 
 // app.UseHttpsRedirection();
-
+app.UseMiddleware<PetCareMini.WebApi.Middlewares.ExceptionMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 

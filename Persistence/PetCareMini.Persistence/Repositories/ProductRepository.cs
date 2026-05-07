@@ -26,7 +26,10 @@ public class ProductRepository : IProductRepository
             .Include(x => x.Category)
             .FirstOrDefaultAsync(x => x.Id == id && x.IsActive);
     }
-
+    public async Task<bool> ExistsAsync(int id)
+    {
+        return await _context.Products.AnyAsync(p => p.Id == id && p.IsActive);
+    }
     public async Task AddAsync(Product entity)
     {
         await _context.Products.AddAsync(entity);

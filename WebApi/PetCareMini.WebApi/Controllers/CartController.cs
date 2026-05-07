@@ -18,39 +18,35 @@ public class CartController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> Get()
+    public async Task<IActionResult> GetCart([FromQuery] string lang = "az")
     {
-        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-        return Ok(await _service.GetCartAsync(userId));
+        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        var result = await _service.GetCartAsync(userId, lang);
+        return Ok(result);
     }
 
     [HttpPost("{productId}")]
-    public async Task<IActionResult> Add(int productId)
+    public async Task<IActionResult> AddToCart(int productId)
     {
-        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-
+        var userId = int.Parse(User.FindFirst("UserId")!.Value);
         await _service.AddToCartAsync(userId, productId);
-
-        return Ok("Added to cart");
-    }
-
-    [HttpDelete("{productId}")]
-    public async Task<IActionResult> Remove(int productId)
-    {
-        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-
-        await _service.RemoveFromCartAsync(userId, productId);
-
-        return Ok("Removed");
+        return Ok(new { message = "Product added to cart." });
     }
 
     [HttpPut("{productId}")]
-    public async Task<IActionResult> ChangeQuantity(int productId, int quantity)
+    public async Task<IActionResult> ChangeQuantity(
+        int productId, [FromQuery] int quantity)
     {
-        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-
+        var userId = int.Parse(User.FindFirst("UserId")!.Value);
         await _service.ChangeQuantityAsync(userId, productId, quantity);
+        return Ok(new { message = "Quantity updated." });
+    }
 
-        return Ok("Updated");
+    [HttpDelete("{productId}")]
+    public async Task<IActionResult> RemoveFromCart(int productId)
+    {
+        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        await _service.RemoveFromCartAsync(userId, productId);
+        return Ok(new { message = "Product removed from cart." });
     }
 }

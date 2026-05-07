@@ -8,13 +8,18 @@ namespace PetCareMini.Persistence.Services;
 public class WishlistService : IWishlistService
 {
     private readonly IWishlistRepository _wishlistRepository;
+    private readonly IProductRepository _productRepository;
 
-    public WishlistService(IWishlistRepository wishlistRepository)
+    public WishlistService(
+        IWishlistRepository wishlistRepository,
+        IProductRepository productRepository)
     {
         _wishlistRepository = wishlistRepository;
+        _productRepository = productRepository;
     }
 
-    public async Task<List<WishlistItemGetDto>> GetUserWishlistAsync(int userId)
+    public async Task<List<WishlistItemGetDto>> GetUserWishlistAsync(
+        int userId, string lang = "az")
     {
         var items = await _wishlistRepository.GetUserWishlistAsync(userId);
 
@@ -22,7 +27,7 @@ public class WishlistService : IWishlistService
         {
             Id = x.Id,
             ProductId = x.ProductId,
-            ProductName = x.Product.NameAz,
+            ProductName = lang == "en" ? x.Product.NameEn : x.Product.NameAz,
             ProductPrice = x.Product.Price,
             ProductImageUrl = x.Product.ImageUrl
         }).ToList();
@@ -30,18 +35,20 @@ public class WishlistService : IWishlistService
 
     public async Task<bool> AddToWishlistAsync(int userId, int productId)
     {
+        // Product exists check
+        var productExists = await _productRepository.ExistsAsync(productId);
+        if (!productExists)
+            throw new KeyNotFoundException($"Product with id {productId} not found.");
+
         var existItem = await _wishlistRepository.GetByUserAndProductAsync(userId, productId);
-
         if (existItem is not null)
-            return false;
+            return false; // artıq wishlist-dədir
 
-        var wishlistItem = new WishlistItem
+        await _wishlistRepository.AddAsync(new WishlistItem
         {
             UserId = userId,
             ProductId = productId
-        };
-
-        await _wishlistRepository.AddAsync(wishlistItem);
+        });
         await _wishlistRepository.SaveChangesAsync();
 
         return true;
@@ -50,9 +57,8 @@ public class WishlistService : IWishlistService
     public async Task<bool> RemoveFromWishlistAsync(int userId, int productId)
     {
         var item = await _wishlistRepository.GetByUserAndProductAsync(userId, productId);
-
         if (item is null)
-            return false;
+            return false; // tapılmadı
 
         _wishlistRepository.Delete(item);
         await _wishlistRepository.SaveChangesAsync();

@@ -1,55 +1,66 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using PetCareMini.Application.Abstracts.Repositories;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Review;
 using PetCareMini.Domain.Entities;
-using PetCareMini.Persistence.Contexts;
 
 namespace PetCareMini.Persistence.Services;
 
 public class ProductReviewService : IProductReviewService
 {
-    private readonly AppDbContext _context;
+    private readonly IProductReviewRepository _reviewRepo;
+    private readonly IProductRepository _productRepo;
 
-    public ProductReviewService(AppDbContext context)
+    public ProductReviewService(
+        IProductReviewRepository reviewRepo,
+        IProductRepository productRepo)
     {
-        _context = context;
+        _reviewRepo = reviewRepo;
+        _productRepo = productRepo;
     }
 
     public async Task<bool> CreateAsync(int userId, ReviewCreateDto dto)
     {
-        var alreadyReviewed = await _context.ProductReviews
-            .AnyAsync(x => x.UserId == userId && x.ProductId == dto.ProductId);
+        // Product exists check
+        var productExists = await _productRepo.ExistsAsync(dto.ProductId);
+        if (!productExists)
+            throw new KeyNotFoundException($"Product with id {dto.ProductId} not found.");
 
+        // Rating validation
+        if (dto.Rating < 1 || dto.Rating > 5)
+            throw new ArgumentException("Rating must be between 1 and 5.");
+
+        // Duplicate check
+        var alreadyReviewed = await _reviewRepo.HasUserReviewedAsync(userId, dto.ProductId);
         if (alreadyReviewed)
             return false;
 
-        var review = new ProductReview
+        await _reviewRepo.AddAsync(new ProductReview
         {
             UserId = userId,
             ProductId = dto.ProductId,
             Rating = dto.Rating,
             Comment = dto.Comment
-        };
+        });
 
-        await _context.ProductReviews.AddAsync(review);
-        await _context.SaveChangesAsync();
-
+        await _reviewRepo.SaveChangesAsync();
         return true;
     }
 
     public async Task<List<ReviewGetDto>> GetProductReviewsAsync(int productId)
     {
-        return await _context.ProductReviews
-            .Include(x => x.User)
-            .Where(x => x.ProductId == productId)
-            .OrderByDescending(x => x.CreatedAt)
-            .Select(x => new ReviewGetDto
-            {
-                UserName = x.User.FullName,
-                Rating = x.Rating,
-                Comment = x.Comment,
-                CreatedAt = (DateTime)x.CreatedAt
-            })
-            .ToListAsync();
+        // Product exists check
+        var productExists = await _productRepo.ExistsAsync(productId);
+        if (!productExists)
+            throw new KeyNotFoundException($"Product with id {productId} not found.");
+
+        var reviews = await _reviewRepo.GetByProductIdAsync(productId);
+
+        return reviews.Select(x => new ReviewGetDto
+        {
+            UserName = x.User.FullName,
+            Rating = x.Rating,
+            Comment = x.Comment,
+            CreatedAt = (DateTime)x.CreatedAt
+        }).ToList();
     }
 }

@@ -7,21 +7,23 @@ namespace PetCareMini.Persistence.Services;
 
 public class CartService : ICartService
 {
-    private readonly ICartRepository _repo;
+    private readonly ICartRepository _cartRepo;
+    private readonly IProductRepository _productRepo;
 
-    public CartService(ICartRepository repo)
+    public CartService(ICartRepository cartRepo, IProductRepository productRepo)
     {
-        _repo = repo;
+        _cartRepo = cartRepo;
+        _productRepo = productRepo;
     }
 
-    public async Task<List<CartItemGetDto>> GetCartAsync(int userId)
+    public async Task<List<CartItemGetDto>> GetCartAsync(int userId, string lang = "az")
     {
-        var items = await _repo.GetUserCartAsync(userId);
+        var items = await _cartRepo.GetUserCartAsync(userId);
 
         return items.Select(x => new CartItemGetDto
         {
             ProductId = x.ProductId,
-            ProductName = x.Product.NameAz,
+            ProductName = lang == "en" ? x.Product.NameEn : x.Product.NameAz,
             Price = x.Product.Price,
             Quantity = x.Quantity
         }).ToList();
@@ -29,16 +31,21 @@ public class CartService : ICartService
 
     public async Task AddToCartAsync(int userId, int productId)
     {
-        var item = await _repo.GetAsync(userId, productId);
+        // Product exists check
+        var exists = await _productRepo.ExistsAsync(productId);
+        if (!exists)
+            throw new KeyNotFoundException($"Product with id {productId} not found.");
+
+        var item = await _cartRepo.GetAsync(userId, productId);
 
         if (item != null)
         {
             item.Quantity++;
-            _repo.Update(item);
+            _cartRepo.Update(item);
         }
         else
         {
-            await _repo.AddAsync(new CartItem
+            await _cartRepo.AddAsync(new CartItem
             {
                 UserId = userId,
                 ProductId = productId,
@@ -46,29 +53,29 @@ public class CartService : ICartService
             });
         }
 
-        await _repo.SaveChangesAsync();
+        await _cartRepo.SaveChangesAsync();
     }
 
     public async Task RemoveFromCartAsync(int userId, int productId)
     {
-        var item = await _repo.GetAsync(userId, productId);
+        var item = await _cartRepo.GetAsync(userId, productId);
+        if (item == null) return;
 
-        if (item != null)
-        {
-            _repo.Delete(item);
-            await _repo.SaveChangesAsync();
-        }
+        _cartRepo.Delete(item);
+        await _cartRepo.SaveChangesAsync();
     }
 
     public async Task ChangeQuantityAsync(int userId, int productId, int quantity)
     {
-        var item = await _repo.GetAsync(userId, productId);
+        if (quantity <= 0)
+            throw new ArgumentException("Quantity must be greater than 0.");
 
-        if (item == null) return;
+        var item = await _cartRepo.GetAsync(userId, productId);
+        if (item == null)
+            throw new KeyNotFoundException("Cart item not found.");
 
         item.Quantity = quantity;
-
-        _repo.Update(item);
-        await _repo.SaveChangesAsync();
+        _cartRepo.Update(item);
+        await _cartRepo.SaveChangesAsync();
     }
 }

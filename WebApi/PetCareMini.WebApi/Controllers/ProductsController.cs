@@ -2,6 +2,7 @@
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Product;
 using Microsoft.AspNetCore.Authorization;
+
 namespace PetCareMini.WebApi.Controllers;
 
 [ApiController]
@@ -25,31 +26,25 @@ public class ProductsController : ControllerBase
     public async Task<IActionResult> GetById(int id, [FromQuery] string lang = "az")
     {
         var data = await _service.GetByIdAsync(id, lang);
-
-        if (data is null)
-            return NotFound();
-
+        if (data is null) return NotFound();
         return Ok(data);
     }
 
     [HttpPost]
     [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> Create(ProductCreateDto dto)
+    public async Task<IActionResult> Create([FromBody] ProductCreateDto dto)
     {
         await _service.CreateAsync(dto);
-        return Ok("Created");
+        return StatusCode(201, new { message = "Product created." });
     }
 
     [HttpPut("{id}")]
     [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> Update(int id, ProductUpdateDto dto)
+    public async Task<IActionResult> Update(int id, [FromBody] ProductUpdateDto dto)
     {
         var result = await _service.UpdateAsync(id, dto);
-
-        if (!result)
-            return NotFound();
-
-        return Ok("Updated");
+        if (!result) return NotFound(new { message = "Product not found." });
+        return Ok(new { message = "Product updated." });
     }
 
     [HttpDelete("{id}")]
@@ -57,10 +52,7 @@ public class ProductsController : ControllerBase
     public async Task<IActionResult> Delete(int id)
     {
         var result = await _service.DeleteAsync(id);
-
-        if (!result)
-            return NotFound();
-
-        return Ok("Deleted");
+        if (!result) return NotFound(new { message = "Product not found." });
+        return Ok(new { message = "Product deleted." });
     }
 }

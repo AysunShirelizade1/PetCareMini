@@ -15,7 +15,7 @@ public class OrderService : IOrderService
         _context = context;
     }
 
-    public async Task<OrderGetDto?> CheckoutAsync(int userId, string lang)
+    public async Task<OrderGetDto?> CheckoutAsync(int userId, string lang, string? couponCode = null)
     {
         var cartItems = await _context.CartItems
             .Include(x => x.Product)
@@ -23,15 +23,35 @@ public class OrderService : IOrderService
             .ToListAsync();
 
         if (!cartItems.Any())
-            return null;
+            throw new InvalidOperationException("Your cart is empty.");
 
         var totalPrice = cartItems.Sum(x => x.Product.Price * x.Quantity);
+        var discountAmount = 0m;
+        var usedCoupon = string.Empty;
+
+        if (!string.IsNullOrWhiteSpace(couponCode))
+        {
+            var coupon = await _context.Coupons
+                .FirstOrDefaultAsync(c =>
+                    c.Code == couponCode.ToUpper().Trim() &&
+                    c.IsActive &&
+                    c.ExpireDate > DateTime.UtcNow);
+
+            if (coupon is null)
+                throw new KeyNotFoundException("Coupon not found or expired.");
+
+            discountAmount = Math.Round(totalPrice * coupon.DiscountPercent / 100, 2);
+            usedCoupon = coupon.Code;
+        }
+
+        var finalPrice = totalPrice - discountAmount;
 
         var order = new Order
         {
             UserId = userId,
-            TotalPrice = totalPrice,
-            Status = "Completed",
+            TotalPrice = finalPrice,
+            Status = "Pending",
+            CreatedAt = DateTime.UtcNow,
             OrderItems = cartItems.Select(x => new OrderItem
             {
                 ProductId = x.ProductId,
@@ -46,7 +66,12 @@ public class OrderService : IOrderService
 
         await _context.SaveChangesAsync();
 
-        return MapToDto(order, lang);
+        var createdOrder = await _context.Orders
+            .Include(x => x.OrderItems)
+                .ThenInclude(x => x.Product)
+            .FirstOrDefaultAsync(x => x.Id == order.Id);
+
+        return createdOrder is null ? null : MapToDto(createdOrder, lang);
     }
 
     public async Task<List<OrderGetDto>> GetMyOrdersAsync(int userId, string lang)

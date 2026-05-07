@@ -26,21 +26,15 @@ public class OrdersController : ControllerBase
         return Ok(data);
     }
     [HttpPost("checkout")]
-    public async Task<IActionResult> Checkout([FromQuery] string lang = "az")
+    [Authorize]
+    public async Task<IActionResult> Checkout(
+    [FromQuery] string lang = "az",
+    [FromQuery] string? couponCode = null)
     {
-        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-
-        var result = await _orderService.CheckoutAsync(userId, lang);
-
-        if (result is null)
-            return BadRequest(new { message = "Cart is empty" });
-
-        return Ok(new
-        {
-            message = "Checkout completed successfully",
-            order = result
-        });
+        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        var result = await _orderService.CheckoutAsync(userId, lang, couponCode);
+        return Ok(result);
     }
 
-    
+
 }
