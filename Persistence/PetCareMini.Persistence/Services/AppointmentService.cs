@@ -26,15 +26,13 @@ public class AppointmentService : IAppointmentService
             throw new ArgumentException("Appointment date must be in the future.");
 
         var pet = await _context.Pets.FindAsync(dto.PetId);
-
         if (pet is null)
             throw new KeyNotFoundException("Pet not found.");
 
         if (pet.OwnerId != userId)
-            throw new UnauthorizedAccessException("This pet does not belong to user.");
+            throw new UnauthorizedAccessException("This pet does not belong to you.");
 
         var veterinarian = await _context.Veterinarians.FindAsync(dto.VeterinarianId);
-
         if (veterinarian is null)
             throw new KeyNotFoundException("Veterinarian not found.");
 
@@ -42,7 +40,6 @@ public class AppointmentService : IAppointmentService
             throw new InvalidOperationException("Veterinarian is not available.");
 
         var service = await _context.Services.FindAsync(dto.ServiceId);
-
         if (service is null)
             throw new KeyNotFoundException("Service not found.");
 
@@ -66,7 +63,8 @@ public class AppointmentService : IAppointmentService
         await _appointmentRepository.SaveChangesAsync();
     }
 
-    public async Task<List<AppointmentGetDto>> GetUserAppointmentsAsync(int userId)
+    public async Task<List<AppointmentGetDto>> GetUserAppointmentsAsync(
+        int userId, string lang = "az")
     {
         var appointments = await _appointmentRepository
             .GetUserAppointmentsAsync(userId);
@@ -76,14 +74,15 @@ public class AppointmentService : IAppointmentService
             Id = a.Id,
             PetName = a.Pet.Name,
             VeterinarianName = a.Veterinarian.FullName,
-            ServiceName = a.Service.NameEn,
+            // Fix: multilang ServiceName
+            ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
             AppointmentDate = a.AppointmentDate,
             Status = a.Status.ToString(),
             Notes = a.Notes
         }).ToList();
     }
 
-    public async Task<List<AppointmentGetDto>> GetAllAsync()
+    public async Task<List<AppointmentGetDto>> GetAllAsync(string lang = "az")
     {
         var appointments = await _appointmentRepository.GetAllAsync();
 
@@ -92,7 +91,8 @@ public class AppointmentService : IAppointmentService
             Id = a.Id,
             PetName = a.Pet.Name,
             VeterinarianName = a.Veterinarian.FullName,
-            ServiceName = a.Service.NameEn,
+            // Fix: multilang ServiceName
+            ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
             AppointmentDate = a.AppointmentDate,
             Status = a.Status.ToString(),
             Notes = a.Notes
@@ -106,8 +106,11 @@ public class AppointmentService : IAppointmentService
         if (appointment is null)
             throw new KeyNotFoundException("Appointment not found.");
 
-        appointment.Status = (AppointmentStatus)dto.Status;
+        //  Validate enum range before casting
+        if (!Enum.IsDefined(typeof(AppointmentStatus), dto.Status))
+            throw new ArgumentException("Invalid appointment status value.");
 
+        appointment.Status = (AppointmentStatus)dto.Status;
         await _appointmentRepository.SaveChangesAsync();
     }
 }

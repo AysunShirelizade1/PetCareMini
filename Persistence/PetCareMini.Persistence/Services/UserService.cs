@@ -7,8 +7,7 @@ namespace PetCareMini.Persistence.Services;
 
 public class UserService : IUserService
 {
-    private readonly AppDbContext _context;
-
+    private readonly AppDbContext _context;  
     public UserService(AppDbContext context)
     {
         _context = context;

@@ -1,6 +1,10 @@
-﻿namespace PetCareMini.Application.DTOs.Appointment;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PetCareMini.Application.DTOs.Appointment;
 
 public class AppointmentStatusUpdateDto
 {
-    public int Status { get; set; } // 1=Pending, 2=Approved, 3=Completed, 4=Canceled
+    // Added Range validation so invalid numbers are rejected
+    [Range(0, 3, ErrorMessage = "Status must be between 0 and 3.")]
+    public int Status { get; set; } // 0=Pending, 1=Approved, 2=Completed, 3=Canceled
 }
