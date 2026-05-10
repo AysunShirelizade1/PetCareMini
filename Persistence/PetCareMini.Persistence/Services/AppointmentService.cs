@@ -30,7 +30,7 @@ public class AppointmentService : IAppointmentService
         if (pet is null)
             throw new KeyNotFoundException("Pet not found.");
 
-        if (pet.UserId != userId)
+        if (pet.OwnerId != userId)
             throw new UnauthorizedAccessException("This pet does not belong to user.");
 
         var veterinarian = await _context.Veterinarians.FindAsync(dto.VeterinarianId);

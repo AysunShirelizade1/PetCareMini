@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="DTOs\Contact\" />
-    <Folder Include="DTOs\Pat\" />
   </ItemGroup>
 
   <ItemGroup>

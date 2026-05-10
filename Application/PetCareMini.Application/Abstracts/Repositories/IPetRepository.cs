@@ -1,12 +1,12 @@
 ﻿using PetCareMini.Domain.Entities;
+
 namespace PetCareMini.Application.Abstracts.Repositories;
 
 public interface IPetRepository
 {
-    Task<List<Pet>> GetAllByOwnerIdAsync(int ownerId);
+    Task<List<Pet>> GetUserPetsAsync(int ownerId);
     Task<Pet?> GetByIdAsync(int id);
-    void Update(Pet pet);
+    Task CreateAsync(Pet pet);
     void Delete(Pet pet);
-    Task AddAsync(Pet pet);
     Task SaveChangesAsync();
 }

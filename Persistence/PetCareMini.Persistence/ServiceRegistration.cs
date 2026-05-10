@@ -16,7 +16,7 @@ public static class ServiceRegistration
     {
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
-
+        #region Repositories
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IPetRepository, PetRepository>();
         services.AddScoped<IVeterinarianRepository, VeterinarianRepository>();
@@ -29,6 +29,10 @@ public static class ServiceRegistration
         services.AddScoped<IFaqRepository, FaqRepository>();
         services.AddScoped<IProductReviewRepository, ProductReviewRepository>();
         services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+        services.AddScoped<IPetRepository, PetRepository>();
+        #endregion
+        #region Services
+        services.AddScoped<IPetService, PetService>();
         services.AddScoped<IAppointmentService, AppointmentService>();
         services.AddScoped<ICouponService, CouponService>();    
         services.AddScoped<IOrderService, OrderService>();
@@ -43,6 +47,7 @@ public static class ServiceRegistration
         services.AddScoped<IServiceService, ServiceService>();
         services.AddScoped<IProductCategoryService, ProductCategoryService>();
         services.AddScoped<IProductService, ProductService>();
+        #endregion
         return services;
     }
 }
