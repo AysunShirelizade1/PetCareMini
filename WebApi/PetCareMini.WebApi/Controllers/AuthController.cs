@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Auth;
+using System.Security.Claims;
 
 namespace PetCareMini.WebApi.Controllers;
 
@@ -9,10 +11,12 @@ namespace PetCareMini.WebApi.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly IAuthService _authService;
+    private readonly IUserService _userService;
 
-    public AuthController(IAuthService authService)
+    public AuthController(IAuthService authService, IUserService userService)
     {
         _authService = authService;
+        _userService = userService;
     }
 
     [HttpPost("register")]
@@ -36,6 +40,25 @@ public class AuthController : ControllerBase
 
         if (result is null)
             return Unauthorized(new { message = "Email or password is incorrect" });
+
+        return Ok(result);
+    }
+
+    // ✅ NEW ENDPOINT
+    [HttpGet("me")]
+    [Authorize]
+    public async Task<IActionResult> GetMe()
+    {
+        // Get userId from JWT token claims
+        var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)
+                       ?? User.FindFirst("sub")
+                       ?? User.FindFirst("userId");
+
+        if (userIdClaim is null)
+            return Unauthorized(new { message = "Invalid token." });
+
+        var userId = int.Parse(userIdClaim.Value);
+        var result = await _userService.GetMeAsync(userId);
 
         return Ok(result);
     }

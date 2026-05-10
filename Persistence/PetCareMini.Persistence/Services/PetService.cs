@@ -7,16 +7,16 @@ namespace PetCareMini.Persistence.Services;
 
 public class PetService : IPetService
 {
-    private readonly IPetRepository _petRepository;
+    private readonly IPetRepository _petRepo;
 
-    public PetService(IPetRepository petRepository)
+    public PetService(IPetRepository petRepo)
     {
-        _petRepository = petRepository;
+        _petRepo = petRepo;
     }
 
     public async Task<List<PetGetDto>> GetUserPetsAsync(int ownerId)
     {
-        var pets = await _petRepository.GetUserPetsAsync(ownerId);
+        var pets = await _petRepo.GetUserPetsAsync(ownerId);
 
         return pets.Select(p => new PetGetDto
         {
@@ -33,13 +33,15 @@ public class PetService : IPetService
 
     public async Task<PetGetDto> GetByIdAsync(int id, int ownerId)
     {
-        var pet = await _petRepository.GetByIdAsync(id);
+        var pet = await _petRepo.GetByIdAsync(id);
 
+        // 404 if not found
         if (pet is null)
-            throw new KeyNotFoundException("Pet not found.");
+            throw new KeyNotFoundException($"Pet with id {id} not found.");
 
+        // 403 if pet belongs to another user
         if (pet.OwnerId != ownerId)
-            throw new UnauthorizedAccessException("You do not own this pet.");
+            throw new UnauthorizedAccessException("You don't have access to this pet.");
 
         return new PetGetDto
         {
@@ -56,12 +58,6 @@ public class PetService : IPetService
 
     public async Task CreateAsync(int ownerId, PetCreateDto dto)
     {
-        if (string.IsNullOrWhiteSpace(dto.Name))
-            throw new ArgumentException("Pet name is required.");
-
-        if (string.IsNullOrWhiteSpace(dto.Type))
-            throw new ArgumentException("Pet type is required.");
-
         var pet = new Pet
         {
             Name = dto.Name,
@@ -74,20 +70,21 @@ public class PetService : IPetService
             OwnerId = ownerId
         };
 
-        await _petRepository.CreateAsync(pet);
-        await _petRepository.SaveChangesAsync();
+        await _petRepo.CreateAsync(pet);
+        await _petRepo.SaveChangesAsync();
     }
 
     public async Task UpdateAsync(int id, int ownerId, PetUpdateDto dto)
     {
-        var pet = await _petRepository.GetByIdAsync(id);
+        var pet = await _petRepo.GetByIdAsync(id);
 
         if (pet is null)
-            throw new KeyNotFoundException("Pet not found.");
+            throw new KeyNotFoundException($"Pet with id {id} not found.");
 
         if (pet.OwnerId != ownerId)
-            throw new UnauthorizedAccessException("You do not own this pet.");
+            throw new UnauthorizedAccessException("You don't have access to this pet.");
 
+        // Update fields
         pet.Name = dto.Name;
         pet.Age = dto.Age;
         pet.Gender = dto.Gender;
@@ -96,21 +93,20 @@ public class PetService : IPetService
         pet.Weight = dto.Weight;
         pet.Notes = dto.Notes;
 
-        await _petRepository.SaveChangesAsync();
+        await _petRepo.SaveChangesAsync();
     }
 
     public async Task DeleteAsync(int id, int ownerId)
     {
-        var pet = await _petRepository.GetByIdAsync(id);
+        var pet = await _petRepo.GetByIdAsync(id);
 
         if (pet is null)
-            throw new KeyNotFoundException("Pet not found.");
+            throw new KeyNotFoundException($"Pet with id {id} not found.");
 
         if (pet.OwnerId != ownerId)
-            throw new UnauthorizedAccessException("You do not own this pet.");
+            throw new UnauthorizedAccessException("You don't have access to this pet.");
 
-        _petRepository.Delete(pet);
-
-        await _petRepository.SaveChangesAsync();
+        _petRepo.Delete(pet);
+        await _petRepo.SaveChangesAsync();
     }
 }

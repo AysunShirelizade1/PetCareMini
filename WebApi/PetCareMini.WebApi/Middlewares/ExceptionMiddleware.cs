@@ -33,7 +33,7 @@ public class ExceptionMiddleware
         {
             KeyNotFoundException => (HttpStatusCode.NotFound, ex.Message),
             ArgumentException => (HttpStatusCode.BadRequest, ex.Message),
-            UnauthorizedAccessException => (HttpStatusCode.Unauthorized, ex.Message),
+            UnauthorizedAccessException => (HttpStatusCode.Forbidden, ex.Message), // ✅ 403
             InvalidOperationException => (HttpStatusCode.Conflict, ex.Message),
             _ => (HttpStatusCode.InternalServerError, "An unexpected error occurred.")
         };

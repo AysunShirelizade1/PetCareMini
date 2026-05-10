@@ -22,9 +22,7 @@ public class PetsController : ControllerBase
     public async Task<IActionResult> GetMyPets()
     {
         int ownerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-
         var result = await _petService.GetUserPetsAsync(ownerId);
-
         return Ok(result);
     }
 
@@ -32,48 +30,31 @@ public class PetsController : ControllerBase
     public async Task<IActionResult> GetById(int id)
     {
         int ownerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-
         var result = await _petService.GetByIdAsync(id, ownerId);
-
         return Ok(result);
     }
 
     [HttpPost]
-    public async Task<IActionResult> Create(PetCreateDto dto)
+    public async Task<IActionResult> Create([FromBody] PetCreateDto dto)
     {
         int ownerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-
         await _petService.CreateAsync(ownerId, dto);
-
-        return Ok(new
-        {
-            message = "Pet created successfully."
-        });
+        return StatusCode(201, new { message = "Pet created successfully." });
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(int id, PetUpdateDto dto)
+    public async Task<IActionResult> Update(int id, [FromBody] PetUpdateDto dto)
     {
         int ownerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-
         await _petService.UpdateAsync(id, ownerId, dto);
-
-        return Ok(new
-        {
-            message = "Pet updated successfully."
-        });
+        return Ok(new { message = "Pet updated successfully." });
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {
         int ownerId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-
         await _petService.DeleteAsync(id, ownerId);
-
-        return Ok(new
-        {
-            message = "Pet deleted successfully."
-        });
+        return Ok(new { message = "Pet deleted successfully." });
     }
 }

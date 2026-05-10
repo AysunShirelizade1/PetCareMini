@@ -77,7 +77,9 @@ public class ProductService : IProductService
 
     public async Task<ProductGetDto?> GetByIdAsync(int id, string lang)
     {
+        // ✅ Fix 1: Added .Include(p => p.Category)
         var p = await _context.Products
+            .Include(p => p.Category)
             .FirstOrDefaultAsync(x => x.Id == id && x.IsActive);
 
         if (p is null)
@@ -91,28 +93,27 @@ public class ProductService : IProductService
             Price = p.Price,
             StockQuantity = p.StockQuantity,
             ImageUrl = p.ImageUrl,
-            CategoryName = lang == "en"
-                    ? p.Category.NameAz
-                    : p.Category.NameAz
+            // ✅ Fix 2: CategoryName now correctly returns EN or AZ
+            CategoryName = lang == "en" ? p.Category.NameEn : p.Category.NameAz
         };
     }
+
     public async Task<List<ProductGetDto>> GetRecommendedAsync(
         int productId, string lang = "az", int count = 6)
     {
-        //Find the product to get its category
         var product = await _context.Products
             .FirstOrDefaultAsync(p => p.Id == productId && p.IsActive);
-        //If product not found, return empty list
+
         if (product is null)
             throw new KeyNotFoundException($"Product with id {productId} not found.");
-        //Get other products in the same category, excluding the current product
+
         return await _context.Products
             .Include(p => p.Category)
             .Where(p =>
                p.IsActive &&
                p.CategoryId == product.CategoryId &&
                p.Id != productId)
-            .OrderBy(p => Guid.NewGuid()) //Randomize the order
+            .OrderBy(p => Guid.NewGuid())
             .Take(count)
             .Select(p => new ProductGetDto
             {
@@ -126,6 +127,7 @@ public class ProductService : IProductService
             })
             .ToListAsync();
     }
+
     public async Task CreateAsync(ProductCreateDto dto)
     {
         await _context.Products.AddAsync(new Product
@@ -135,6 +137,8 @@ public class ProductService : IProductService
             DescriptionAz = dto.DescriptionAz,
             DescriptionEn = dto.DescriptionEn,
             Price = dto.Price,
+            // ✅ Fix 3: StockQuantity was missing
+            StockQuantity = dto.StockQuantity,
             ImageUrl = dto.ImageUrl,
             CategoryId = dto.CategoryId,
             IsActive = true
@@ -152,7 +156,9 @@ public class ProductService : IProductService
         product.DescriptionAz = dto.DescriptionAz;
         product.DescriptionEn = dto.DescriptionEn;
         product.Price = dto.Price;
+        product.StockQuantity = dto.StockQuantity;
         product.ImageUrl = dto.ImageUrl;
+        product.IsActive = dto.IsActive;
         product.CategoryId = dto.CategoryId;
 
         await _context.SaveChangesAsync();
