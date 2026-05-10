@@ -1,12 +1,13 @@
-﻿using PetCareMini.Domain.Entities;
-namespace PetCareMini.Application.Abstracts.Repositories;
+﻿namespace PetCareMini.Application.Abstracts.Repositories;
+
+using PetCareMini.Domain.Entities;
 
 public interface IAppointmentRepository
 {
-    Task<List<Appointment>> GetAllByOwnerIdAsync(int ownerId);
+    Task CreateAsync(Appointment appointment);
     Task<Appointment?> GetByIdAsync(int id);
-    void Update(Appointment appointment);
-    void Delete(Appointment appointment);
-    Task AddAsync(Appointment appointment);
+    Task<List<Appointment>> GetUserAppointmentsAsync(int userId);
+    Task<List<Appointment>> GetAllAsync();
+    Task<bool> ExistsConflictAsync(int veterinarianId, DateTime appointmentDate);
     Task SaveChangesAsync();
 }

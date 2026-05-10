@@ -28,6 +28,8 @@ public static class ServiceRegistration
         services.AddScoped<ICartRepository, CartRepository>();
         services.AddScoped<IFaqRepository, FaqRepository>();
         services.AddScoped<IProductReviewRepository, ProductReviewRepository>();
+        services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+        services.AddScoped<IAppointmentService, AppointmentService>();
         services.AddScoped<ICouponService, CouponService>();    
         services.AddScoped<IOrderService, OrderService>();
         services.AddScoped<IProductReviewService, ProductReviewService>();

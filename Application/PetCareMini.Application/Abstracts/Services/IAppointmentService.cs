@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PetCareMini.Application.DTOs.Appointment;
 
-namespace PetCareMini.Application.Abstracts.Services
+namespace PetCareMini.Application.Abstracts.Services;
+
+public interface IAppointmentService
 {
-    internal class IAppointmentService
-    {
-    }
+    Task CreateAsync(int userId, AppointmentCreateDto dto);
+    Task<List<AppointmentGetDto>> GetUserAppointmentsAsync(int userId);
+    Task<List<AppointmentGetDto>> GetAllAsync();
+    Task UpdateStatusAsync(int appointmentId, AppointmentStatusUpdateDto dto);
 }
