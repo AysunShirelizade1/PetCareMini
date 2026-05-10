@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using PetCareMini.Domain.Entities;
 
-namespace PetCareMini.Application.Abstracts.Repositories
+namespace PetCareMini.Application.Abstracts.Repositories;
+
+public interface IUserRepository
 {
-    internal class IUserRepository
-    {
-    }
+    Task<User?> GetByEmailAsync(string email);
+    Task<bool> IsEmailExistAsync(string email);
+    Task AddAsync(User user);
+    Task SaveChangesAsync();
 }

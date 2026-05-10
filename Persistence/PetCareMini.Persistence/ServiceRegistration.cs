@@ -28,6 +28,7 @@ public static class ServiceRegistration
         services.AddScoped<IProductReviewRepository, ProductReviewRepository>();
         services.AddScoped<IAppointmentRepository, AppointmentRepository>();
         services.AddScoped<IPetRepository, PetRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
         #endregion
         #region Services
         services.AddScoped<IUserService, UserService>();
