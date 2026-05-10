@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Coupon;
+using System.Security.Claims;
 
 namespace PetCareMini.WebApi.Controllers;
 
@@ -16,17 +17,15 @@ public class CouponController : ControllerBase
         _service = service;
     }
 
-    // User kupon tətbiq edir — cart məbləğini görür
     [HttpPost("apply")]
     [Authorize]
     public async Task<IActionResult> Apply([FromBody] CouponApplyDto dto)
     {
-        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         var result = await _service.ApplyAsync(userId, dto.Code);
         return Ok(result);
     }
 
-    // Admin yeni kupon yaradır
     [HttpPost]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Create([FromBody] CreateCouponDto dto)
@@ -35,7 +34,6 @@ public class CouponController : ControllerBase
         return StatusCode(201, new { message = "Coupon created." });
     }
 
-    // Admin kuponu deaktiv edir
     [HttpPatch("{id}/deactivate")]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Deactivate(int id)

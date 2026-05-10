@@ -1,11 +1,13 @@
-using PetCareMini.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using Microsoft.OpenApi.Models;
 using Microsoft.OpenApi;
+using Microsoft.OpenApi.Models;
+using PetCareMini.Persistence;
+using PetCareMini.Persistence.Contexts;
+using PetCareMini.Persistence.Seed;
+using System.Text;
 var builder = WebApplication.CreateBuilder(args);
-
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 builder.Services.AddControllers();
 
 builder.Services.AddPersistenceServices(builder.Configuration);
@@ -94,6 +96,13 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+// Seed Data
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    await DbSeeder.SeedAsync(context);
+}
+
 
 app.Run();
 

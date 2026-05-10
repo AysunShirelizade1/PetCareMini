@@ -30,6 +30,16 @@ public class ProductsController : ControllerBase
         return Ok(data);
     }
 
+    [HttpGet("{id}/recommended")]
+    public async Task<IActionResult> GetRecommended(
+        int id,
+        [FromQuery] string lang = "az",
+        [FromQuery] int count = 6)
+    {
+        var result = await _service.GetRecommendedAsync(id, lang, count);
+        return Ok(result);
+    }
+
     [HttpPost]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> Create([FromBody] ProductCreateDto dto)

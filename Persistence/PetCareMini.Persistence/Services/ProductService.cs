@@ -96,7 +96,36 @@ public class ProductService : IProductService
                     : p.Category.NameAz
         };
     }
-
+    public async Task<List<ProductGetDto>> GetRecommendedAsync(
+        int productId, string lang = "az", int count = 6)
+    {
+        //Find the product to get its category
+        var product = await _context.Products
+            .FirstOrDefaultAsync(p => p.Id == productId && p.IsActive);
+        //If product not found, return empty list
+        if (product is null)
+            throw new KeyNotFoundException($"Product with id {productId} not found.");
+        //Get other products in the same category, excluding the current product
+        return await _context.Products
+            .Include(p => p.Category)
+            .Where(p =>
+               p.IsActive &&
+               p.CategoryId == product.CategoryId &&
+               p.Id != productId)
+            .OrderBy(p => Guid.NewGuid()) //Randomize the order
+            .Take(count)
+            .Select(p => new ProductGetDto
+            {
+                Id = p.Id,
+                Name = lang == "en" ? p.NameEn : p.NameAz,
+                Description = lang == "en" ? p.DescriptionEn : p.DescriptionAz,
+                Price = p.Price,
+                StockQuantity = p.StockQuantity,
+                ImageUrl = p.ImageUrl,
+                CategoryName = lang == "en" ? p.Category.NameEn : p.Category.NameAz
+            })
+            .ToListAsync();
+    }
     public async Task CreateAsync(ProductCreateDto dto)
     {
         await _context.Products.AddAsync(new Product

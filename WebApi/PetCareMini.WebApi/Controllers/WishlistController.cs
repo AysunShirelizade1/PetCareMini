@@ -3,6 +3,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PetCareMini.Application.Abstracts.Services;
+using System.Security.Claims;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -19,7 +20,7 @@ public class WishlistController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetWishlist([FromQuery] string lang = "az")
     {
-        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         var result = await _service.GetUserWishlistAsync(userId, lang);
         return Ok(result);
     }
@@ -27,7 +28,7 @@ public class WishlistController : ControllerBase
     [HttpPost("{productId}")]
     public async Task<IActionResult> AddToWishlist(int productId)
     {
-        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         var added = await _service.AddToWishlistAsync(userId, productId);
 
         if (!added)
@@ -39,8 +40,7 @@ public class WishlistController : ControllerBase
     [HttpDelete("{productId}")]
     public async Task<IActionResult> RemoveFromWishlist(int productId)
     {
-        var userId = int.Parse(User.FindFirst("UserId")!.Value);
-
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         var removed = await _service.RemoveFromWishlistAsync(userId, productId);
 
         if (!removed)

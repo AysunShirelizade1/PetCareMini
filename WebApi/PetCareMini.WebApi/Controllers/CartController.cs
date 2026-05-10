@@ -20,7 +20,7 @@ public class CartController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetCart([FromQuery] string lang = "az")
     {
-        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         var result = await _service.GetCartAsync(userId, lang);
         return Ok(result);
     }
@@ -28,7 +28,7 @@ public class CartController : ControllerBase
     [HttpPost("{productId}")]
     public async Task<IActionResult> AddToCart(int productId)
     {
-        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         await _service.AddToCartAsync(userId, productId);
         return Ok(new { message = "Product added to cart." });
     }
@@ -37,7 +37,7 @@ public class CartController : ControllerBase
     public async Task<IActionResult> ChangeQuantity(
         int productId, [FromQuery] int quantity)
     {
-        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         await _service.ChangeQuantityAsync(userId, productId, quantity);
         return Ok(new { message = "Quantity updated." });
     }
@@ -45,7 +45,7 @@ public class CartController : ControllerBase
     [HttpDelete("{productId}")]
     public async Task<IActionResult> RemoveFromCart(int productId)
     {
-        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         await _service.RemoveFromCartAsync(userId, productId);
         return Ok(new { message = "Product removed from cart." });
     }

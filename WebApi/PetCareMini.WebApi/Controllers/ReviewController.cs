@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Review;
+using System.Security.Claims;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -20,7 +21,7 @@ public class ReviewController : ControllerBase
     [Authorize]
     public async Task<IActionResult> Create([FromBody] ReviewCreateDto dto)
     {
-        var userId = int.Parse(User.FindFirst("UserId")!.Value);
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         var created = await _service.CreateAsync(userId, dto);
 
         if (!created)
