@@ -26,11 +26,16 @@ public class AuthService : IAuthService
         if (emailExists)
             throw new Exception("Email already exists");
 
+        // ✅ Generate refresh token on register
+        var refreshToken = _jwtTokenService.GenerateRefreshToken();
+
         var user = new User
         {
             FullName = dto.FullName,
             Email = dto.Email,
-            PasswordHash = PasswordHasher.HashPassword(dto.Password)
+            PasswordHash = PasswordHasher.HashPassword(dto.Password),
+            RefreshToken = refreshToken,
+            RefreshTokenExpireDate = DateTime.UtcNow.AddDays(7)
         };
 
         await _userRepository.AddAsync(user);
@@ -41,6 +46,7 @@ public class AuthService : IAuthService
         return new AuthResponseDto
         {
             Token = token,
+            RefreshToken = refreshToken,
             Email = user.Email,
             FullName = user.FullName,
             Role = user.Role.ToString()
@@ -59,11 +65,48 @@ public class AuthService : IAuthService
         if (!passwordIsCorrect)
             return null;
 
+        // ✅ Generate new refresh token on every login
+        var refreshToken = _jwtTokenService.GenerateRefreshToken();
+        user.RefreshToken = refreshToken;
+        user.RefreshTokenExpireDate = DateTime.UtcNow.AddDays(7);
+        await _userRepository.SaveChangesAsync();
+
         var token = _jwtTokenService.GenerateToken(user);
 
         return new AuthResponseDto
         {
             Token = token,
+            RefreshToken = refreshToken,
+            Email = user.Email,
+            FullName = user.FullName,
+            Role = user.Role.ToString()
+        };
+    }
+
+    public async Task<AuthResponseDto?> RefreshTokenAsync(RefreshTokenDto dto)
+    {
+        // ✅ Find user by refresh token
+        var user = await _userRepository.GetByRefreshTokenAsync(dto.RefreshToken);
+
+        if (user is null)
+            throw new KeyNotFoundException("Invalid refresh token.");
+
+        // ✅ Check if refresh token is expired
+        if (user.RefreshTokenExpireDate < DateTime.UtcNow)
+            throw new ArgumentException("Refresh token has expired. Please login again.");
+
+        // ✅ Generate new tokens
+        var newAccessToken = _jwtTokenService.GenerateToken(user);
+        var newRefreshToken = _jwtTokenService.GenerateRefreshToken();
+
+        user.RefreshToken = newRefreshToken;
+        user.RefreshTokenExpireDate = DateTime.UtcNow.AddDays(7);
+        await _userRepository.SaveChangesAsync();
+
+        return new AuthResponseDto
+        {
+            Token = newAccessToken,
+            RefreshToken = newRefreshToken,
             Email = user.Email,
             FullName = user.FullName,
             Role = user.Role.ToString()

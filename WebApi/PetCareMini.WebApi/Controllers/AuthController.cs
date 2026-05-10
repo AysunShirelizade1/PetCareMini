@@ -39,17 +39,15 @@ public class AuthController : ControllerBase
         var result = await _authService.LoginAsync(dto);
 
         if (result is null)
-            return Unauthorized(new { message = "Email or password is incorrect" });
+            return Unauthorized(new { message = "Email or password is incorrect." });
 
         return Ok(result);
     }
 
-    // ✅ NEW ENDPOINT
     [HttpGet("me")]
     [Authorize]
     public async Task<IActionResult> GetMe()
     {
-        // Get userId from JWT token claims
         var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)
                        ?? User.FindFirst("sub")
                        ?? User.FindFirst("userId");
@@ -60,6 +58,14 @@ public class AuthController : ControllerBase
         var userId = int.Parse(userIdClaim.Value);
         var result = await _userService.GetMeAsync(userId);
 
+        return Ok(result);
+    }
+
+    
+    [HttpPost("refresh-token")]
+    public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenDto dto)
+    {
+        var result = await _authService.RefreshTokenAsync(dto);
         return Ok(result);
     }
 }

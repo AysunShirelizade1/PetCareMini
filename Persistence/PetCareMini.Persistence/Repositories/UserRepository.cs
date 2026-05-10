@@ -20,6 +20,13 @@ public class UserRepository : IUserRepository
             .FirstOrDefaultAsync(u => u.Email == email);
     }
 
+    // ✅ New method
+    public async Task<User?> GetByRefreshTokenAsync(string refreshToken)
+    {
+        return await _context.Users
+            .FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
+    }
+
     public async Task<bool> IsEmailExistAsync(string email)
     {
         return await _context.Users
