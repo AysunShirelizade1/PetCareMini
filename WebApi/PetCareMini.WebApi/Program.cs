@@ -1,18 +1,30 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
 using PetCareMini.Persistence;
 using PetCareMini.Persistence.Contexts;
 using PetCareMini.Persistence.Seed;
+using Serilog;
 using System.Text;
+
+//  Configure Serilog from appsettings.json
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(new ConfigurationBuilder()
+        .AddJsonFile("appsettings.json")
+        .Build())
+    .CreateLogger();
+
 var builder = WebApplication.CreateBuilder(args);
+
+//  Use Serilog instead of default logger
+builder.Host.UseSerilog();
+
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 builder.Services.AddControllers();
-
 builder.Services.AddPersistenceServices(builder.Configuration);
-
 builder.Services.AddEndpointsApiExplorer();
+
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -41,8 +53,6 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-
-
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -56,10 +66,8 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-
         ValidIssuer = builder.Configuration["Jwt:Issuer"],
         ValidAudience = builder.Configuration["Jwt:Audience"],
-
         IssuerSigningKey = new SymmetricSecurityKey(
             Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!)
         )
@@ -77,6 +85,7 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -89,13 +98,16 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-// app.UseHttpsRedirection();
 app.UseMiddleware<PetCareMini.WebApi.Middlewares.ExceptionMiddleware>();
 app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();
 
+//  Log every HTTP request automatically
+app.UseSerilogRequestLogging();
+
 app.MapControllers();
+
 // Seed Data
 using (var scope = app.Services.CreateScope())
 {
@@ -103,7 +115,4 @@ using (var scope = app.Services.CreateScope())
     await DbSeeder.SeedAsync(context);
 }
 
-
 app.Run();
-
-//cors her seye icaze ver 

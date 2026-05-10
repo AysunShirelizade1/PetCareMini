@@ -1,0 +1,3 @@
+2026-05-10 19:45:07.399 +04:00 [INF] HTTP GET /api/Products responded 200 in 436.6790 ms
+2026-05-10 19:45:23.771 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 125.3508 ms
+2026-05-10 19:45:34.192 +04:00 [INF] HTTP GET /api/Services responded 200 in 81.4764 ms

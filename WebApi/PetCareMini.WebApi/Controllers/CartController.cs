@@ -35,8 +35,12 @@ public class CartController : ControllerBase
 
     [HttpPut("{productId}")]
     public async Task<IActionResult> ChangeQuantity(
-        int productId, [FromQuery] int quantity)
+    int productId, [FromQuery] int quantity)
     {
+        
+        if (quantity <= 0)
+            return BadRequest(new { message = "Quantity must be greater than 0." });
+
         var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         await _service.ChangeQuantityAsync(userId, productId, quantity);
         return Ok(new { message = "Quantity updated." });
