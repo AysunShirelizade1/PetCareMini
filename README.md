@@ -11,7 +11,7 @@
 | Role | GitHub |
 |---|---|
 | 🔧 Backend Developer | [@AysunShirelizade1](https://github.com/AysunShirelizade1) |
-| 🎨 Frontend Developer | — |
+| 🎨 Frontend Developer | [@Subhane00](https://github.com/Subhane00) |
 
 ---
 
