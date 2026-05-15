@@ -1,0 +1,8 @@
+2026-05-12 09:45:58.240 +04:00 [INF] HTTP GET /api/Products responded 200 in 713.2232 ms
+2026-05-12 09:55:04.830 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 300.5817 ms
+2026-05-12 10:04:30.218 +04:00 [INF] HTTP POST /api/Auth/login responded 401 in 424.4271 ms
+2026-05-12 10:04:46.327 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 608.9689 ms
+2026-05-12 10:05:26.353 +04:00 [INF] HTTP GET /api/Products responded 200 in 337.6371 ms
+2026-05-12 10:05:35.531 +04:00 [INF] HTTP GET /api/Products/14/recommended responded 200 in 157.1092 ms
+2026-05-12 10:08:18.450 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 318.9808 ms
+2026-05-12 10:09:16.565 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 135.3589 ms

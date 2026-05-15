@@ -95,10 +95,11 @@ if (app.Environment.IsDevelopment())
     {
         options.SwaggerEndpoint("/swagger/v1/swagger.json", "PetCareMini.WebApi v1");
         options.RoutePrefix = string.Empty;
-    });
+    }); 
 }
 
 app.UseMiddleware<PetCareMini.WebApi.Middlewares.ExceptionMiddleware>();
+app.UseRouting();
 app.UseCors("AllowAll");
 app.UseAuthentication();
 app.UseAuthorization();

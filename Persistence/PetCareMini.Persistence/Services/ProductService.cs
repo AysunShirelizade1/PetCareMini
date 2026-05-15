@@ -60,6 +60,7 @@ public class ProductService : IProductService
                 Name = query.Lang == "en" ? p.NameEn : p.NameAz,
                 Description = query.Lang == "en" ? p.DescriptionEn : p.DescriptionAz,
                 Price = p.Price,
+                DiscountPrice = p.DiscountPrice,
                 StockQuantity = p.StockQuantity,
                 ImageUrl = p.ImageUrl,
                 CategoryName = query.Lang == "en" ? p.Category.NameEn : p.Category.NameAz
@@ -77,7 +78,6 @@ public class ProductService : IProductService
 
     public async Task<ProductGetDto?> GetByIdAsync(int id, string lang)
     {
-        // ✅ Fix 1: Added .Include(p => p.Category)
         var p = await _context.Products
             .Include(p => p.Category)
             .FirstOrDefaultAsync(x => x.Id == id && x.IsActive);
@@ -91,9 +91,9 @@ public class ProductService : IProductService
             Name = lang == "en" ? p.NameEn : p.NameAz,
             Description = lang == "en" ? p.DescriptionEn : p.DescriptionAz,
             Price = p.Price,
+            DiscountPrice = p.DiscountPrice,
             StockQuantity = p.StockQuantity,
             ImageUrl = p.ImageUrl,
-            // ✅ Fix 2: CategoryName now correctly returns EN or AZ
             CategoryName = lang == "en" ? p.Category.NameEn : p.Category.NameAz
         };
     }
@@ -121,6 +121,7 @@ public class ProductService : IProductService
                 Name = lang == "en" ? p.NameEn : p.NameAz,
                 Description = lang == "en" ? p.DescriptionEn : p.DescriptionAz,
                 Price = p.Price,
+                DiscountPrice = p.DiscountPrice,
                 StockQuantity = p.StockQuantity,
                 ImageUrl = p.ImageUrl,
                 CategoryName = lang == "en" ? p.Category.NameEn : p.Category.NameAz
@@ -137,7 +138,7 @@ public class ProductService : IProductService
             DescriptionAz = dto.DescriptionAz,
             DescriptionEn = dto.DescriptionEn,
             Price = dto.Price,
-            // ✅ Fix 3: StockQuantity was missing
+            DiscountPrice = dto.DiscountPrice,
             StockQuantity = dto.StockQuantity,
             ImageUrl = dto.ImageUrl,
             CategoryId = dto.CategoryId,
@@ -156,6 +157,7 @@ public class ProductService : IProductService
         product.DescriptionAz = dto.DescriptionAz;
         product.DescriptionEn = dto.DescriptionEn;
         product.Price = dto.Price;
+        product.DiscountPrice = dto.DiscountPrice; 
         product.StockQuantity = dto.StockQuantity;
         product.ImageUrl = dto.ImageUrl;
         product.IsActive = dto.IsActive;

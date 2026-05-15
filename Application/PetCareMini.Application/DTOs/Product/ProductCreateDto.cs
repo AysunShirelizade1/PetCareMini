@@ -9,6 +9,7 @@ public class ProductCreateDto
     public string? DescriptionEn { get; set; }
 
     public decimal Price { get; set; }
+    public decimal? DiscountPrice { get; set; }
     public int StockQuantity { get; set; }
     public string? ImageUrl { get; set; }
 

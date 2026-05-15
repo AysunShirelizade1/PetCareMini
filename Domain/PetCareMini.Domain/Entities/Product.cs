@@ -11,6 +11,8 @@ public class Product : BaseEntity
     public string? DescriptionEn { get; set; }
 
     public decimal Price { get; set; }
+    public decimal? DiscountPrice { get; set; }
+    public bool HasDiscount => DiscountPrice.HasValue && DiscountPrice < Price;
     public int StockQuantity { get; set; }
     public string? ImageUrl { get; set; }
     public bool IsActive { get; set; } = true;
