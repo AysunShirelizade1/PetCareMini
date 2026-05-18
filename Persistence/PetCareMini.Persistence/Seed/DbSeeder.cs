@@ -17,6 +17,7 @@ public static class DbSeeder
         await SeedFaqsAsync(context);
         await SeedUsersAsync(context);
         await SeedCouponsAsync(context);
+        await SeedVeterinaryReviewsAsync(context);
     }
 
     // ── CATEGORIES ──────────────────────────────────────────────
@@ -167,4 +168,102 @@ public static class DbSeeder
 
         await context.SaveChangesAsync();
     }
+
+
+    // ── VETERINARY REVIEWS ─────────────────────────────────────────
+    private static async Task SeedVeterinaryReviewsAsync(AppDbContext context)
+    {
+        if (await context.VeterinaryReviews.AnyAsync()) return;
+
+        var users = await context.Users.ToListAsync();
+        var veterinarians = await context.Veterinarians.ToListAsync();
+        var services = await context.Services.ToListAsync();
+
+        if (!users.Any() || !veterinarians.Any() || !services.Any())
+            return;
+
+        await context.VeterinaryReviews.AddRangeAsync(new List<VeterinaryReview>
+    {
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[0].Id,
+            ServiceId = services[1].Id,
+
+            Rating = 5,
+            Comment = "Amazing doctor. Very caring and professional.",
+
+            IsApproved = true,
+            IsFeatured = true
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[1].Id,
+            ServiceId = services[0].Id,
+
+            Rating = 4,
+            Comment = "Clinic was very clean and service was fast.",
+
+            IsApproved = true,
+            IsFeatured = true
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[2].Id,
+            ServiceId = services[2].Id,
+
+            Rating = 5,
+            Comment = "Best veterinary experience ever!",
+
+            IsApproved = true,
+            IsFeatured = false
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[3].Id,
+            ServiceId = services[1].Id,
+
+            Rating = 3,
+            Comment = "Good service but waiting time was long.",
+
+            IsApproved = true,
+            IsFeatured = false
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[0].Id,
+            ServiceId = services[4].Id,
+
+            Rating = 5,
+            Comment = "My dog loved the training sessions.",
+
+            IsApproved = true,
+            IsFeatured = true
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[2].Id,
+            ServiceId = services[3].Id,
+
+            Rating = 4,
+            Comment = "Pet hotel service was very comfortable and clean.",
+
+            IsApproved = true,
+            IsFeatured = false
+        }
+    });
+
+        await context.SaveChangesAsync();
+    }
+
 }

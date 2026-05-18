@@ -11,6 +11,7 @@ public interface IVeterinaryReviewRepository
     Task<IEnumerable<VeterinaryReview>> GetFeaturedAsync();       // Homepage
     Task<IEnumerable<VeterinaryReview>> GetAllApprovedAsync();    // About Us
     Task AddAsync(VeterinaryReview review);
+
     Task<VeterinaryReview?> GetByIdAsync(int id);
     Task DeleteAsync(VeterinaryReview review);
     Task SaveAsync();

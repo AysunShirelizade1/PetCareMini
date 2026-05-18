@@ -23,7 +23,7 @@ public class AppointmentsController : ControllerBase
     {
         int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
         await _appointmentService.CreateAsync(userId, dto);
-        //  Fix: 201 instead of 200
+        
         return StatusCode(201, new { message = "Appointment created successfully." });
     }
 

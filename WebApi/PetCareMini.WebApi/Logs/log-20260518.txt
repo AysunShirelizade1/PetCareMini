@@ -109,3 +109,10 @@ POSITION: 56
 2026-05-18 17:44:38.544 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 4.1568 ms
 2026-05-18 17:48:26.111 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1179.5878 ms
 2026-05-18 17:48:46.837 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 580.4802 ms
+2026-05-18 19:57:52.794 +04:00 [INF] HTTP GET /api/Products responded 200 in 307.7949 ms
+2026-05-18 23:29:46.614 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1286.5941 ms
+2026-05-18 23:30:12.561 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 263.4022 ms
+2026-05-18 23:31:57.870 +04:00 [INF] HTTP GET /api/veterinary-reviews/veterinarian/1 responded 200 in 89.7895 ms
+2026-05-18 23:33:48.993 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 713.8585 ms
+2026-05-18 23:34:25.278 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 812.9585 ms
+2026-05-18 23:34:46.303 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 20.9024 ms
