@@ -34,8 +34,10 @@ public static class ServiceRegistration
         services.AddScoped<IAppointmentRepository, AppointmentRepository>();
         services.AddScoped<IPetRepository, PetRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IVeterinaryReviewRepository, VeterinaryReviewRepository>();
         #endregion
         #region Services
+        services.AddScoped<IVeterinaryReviewService, VeterinaryReviewService>();
         services.AddScoped<IUserService, UserService>();
         services.AddScoped<IPetService, PetService>();
         services.AddScoped<IAppointmentService, AppointmentService>();

@@ -80,3 +80,11 @@ POSITION: 56
 2026-05-18 11:49:48.129 +04:00 [INF] HTTP GET /api/Review/product/15 responded 200 in 4.7385 ms
 2026-05-18 11:52:58.413 +04:00 [INF] HTTP GET /api/Review/product/16 responded 200 in 6.0118 ms
 2026-05-18 11:53:01.542 +04:00 [INF] HTTP GET /api/Review/product/16 responded 200 in 4.2893 ms
+2026-05-18 17:13:27.782 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 559.5088 ms
+2026-05-18 17:13:57.172 +04:00 [INF] HTTP GET /api/Services responded 200 in 88.0580 ms
+2026-05-18 17:18:03.015 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 178.2713 ms
+2026-05-18 17:19:06.366 +04:00 [INF] HTTP GET /api/Pets responded 200 in 94.1362 ms
+2026-05-18 17:19:43.840 +04:00 [INF] HTTP POST /api/Pets responded 400 in 123.5459 ms
+2026-05-18 17:19:58.005 +04:00 [INF] HTTP POST /api/Pets responded 201 in 265.0024 ms
+2026-05-18 17:20:02.216 +04:00 [INF] HTTP GET /api/Pets responded 200 in 8.6811 ms
+2026-05-18 17:20:33.436 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 403.3747 ms
