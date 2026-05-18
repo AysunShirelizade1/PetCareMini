@@ -19,7 +19,21 @@ public class AppointmentService : IAppointmentService
         _appointmentRepository = appointmentRepository;
         _context = context;
     }
+    public async Task<IEnumerable<AppointmentGetDto>> GetByUserAsync(int userId, string lang = "az")
+    {
+        var appointments = await _appointmentRepository.GetUserAppointmentsAsync(userId);
 
+        return appointments.Select(a => new AppointmentGetDto
+        {
+            Id = a.Id,
+            PetName = a.Pet.Name,
+            VeterinarianName = a.Veterinarian.FullName,
+            ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
+            AppointmentDate = a.AppointmentDate,
+            Status = a.Status.ToString(),
+            Notes = a.Notes
+        });
+    }
     public async Task CreateAsync(int userId, AppointmentCreateDto dto)
     {
         if (dto.AppointmentDate <= DateTime.UtcNow)

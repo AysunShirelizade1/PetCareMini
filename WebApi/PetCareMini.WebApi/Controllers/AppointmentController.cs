@@ -39,11 +39,15 @@ public class AppointmentsController : ControllerBase
 
     [Authorize(Roles = "Admin")]
     [HttpGet]
-    public async Task<IActionResult> GetAll([FromQuery] string lang = "az")
+    public async Task<IActionResult> GetAll(string lang = "az")
     {
-        //  Fix: lang parameter passed
         var result = await _appointmentService.GetAllAsync(lang);
-        return Ok(result);
+
+        return Ok(new
+        {
+            data = result,
+            statusCode = 200
+        });
     }
 
     [Authorize(Roles = "Admin")]
