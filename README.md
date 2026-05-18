@@ -1,377 +1,90 @@
-# 🐾 PetCareMini — Backend API
+# AzTU-PeerZenith
 
-> A full-featured RESTful API for a pet shop, pet care services, and veterinary appointment management platform. Built with ASP.NET Core 8 and PostgreSQL.
+# Branching strategy
+
+![Logo](https://d33wubrfki0l68.cloudfront.net/42fea6b4216e2060ea860e0b86f03d770ef9cbd3/3b149/uploads/git-flow-diagram.png)
 
 
+___
+
+# Code and issue managment lifecycle
+- **opened** : Issue ilk dəfə yaradılanda bu siyahıya düşür. Issue yaradılarkən bu label-lar istifadə edilməlidir: *feature*, *hotfix*.
+- **ToDo** : Qərar verildikdə ki, *opened* siyahısındakı hansısa issue artıq həll edilməlidir, bu halda həmin issue *opened* siyahısından *todo* siyahısına atılır.
+- **InProgress** : Developer *ToDo*da yerləşən issue üzərində lokalında işə başladıqda həmin issue-nu *InProgress* siyahısına atır.
+- Developer lokalında işi bitirdikdən sonra və ya həmin taskın hazır olduğuna əmin olduqdan sonra öz branch-ını *develop* branch-ına merge etmək üçün request yaradır.
+- **Solved** : Developer, branch-ının merge request-i qəbul edildikdən sonra həmin issue-nu *InProgress*dən *Solved* siyahısına atır.
+- **Release(Test)** : Developer,artıq bu issue-nun testə hazır olduğuna əmin olursa bu halda issue bu siyahıya əlavə olunur və test ünvanı update olunarkən yalnız bu siyahıda olan tasklar keçir.
+	*Develop* branch-ından *release* branch-ı yaradan developer, *release* branch-ını yaratdığı commitə tag əlavə edir(r-v1.1). Həmçinin *release*ə keçən issue-ları *solved* siyahısından *release* siyahısına atır.
+  - Test edən şəxslər, *test* ünvanı update olunduqdan sonra *release* siyahısında olan məsələləri bir-bir test etməli:
+  - Testdən uğurla keçən issue-a *Release(success)* label-ı əlavə edir
+  - Testdən uğurla keçmədiyi halda isə *Release(failed)* label-ı əlavə edir.
+  - Taskına *Release(failed)* label-ı əlavə edilmiş developer cari release branch-ını lokalına pull etdikdən sonra onun üzərində işləyərək səhvləri həll etdikdən sonra həmin branch-ı push edir. Həmçinin həmin issue-dan *Release(failed)* label-ını silir ki, tester yenidən həmin taskı test etsin.
+- *Release* siyahısındakı bütün issue-lara *Release(success)* label-ı əlavə edildikdən sonra developer *release* branch-ını *master* branch-ına merge edir. Həmçinin *master*də həmin merge commitinə yeni tag əlavə edir(v1.1). Həmçinin, *Release* siyahısındakı bütün issue-ları *Production* siyahısına atır.
+- **Release(Failed)** : Test ünvanında testdən keçməyən task bu siyahıya əlavə olunur.
+- **Release(success)** : Test ünvanında testdən keçən tasklar bu siyahıya əlavə olunur. 
+- **Production** : Testerlər *Production* siyahısında olan işləri bir-bir test edir:
+  - Hər issue-nun testi bitdikdən sonra, testdən uğurla keçdiyi halda ona *Production(Success)*, keçmədiyi halda isə *Production(Failed)* label-ə əlavə edilir.
+  - Production-da testi bitdikdən sonra bütün issue-lar *closed* siyahısına atılır. Bundan sonra testdən keçməyən tasklar üçün yeni hotfix issue yazılır.
+
+## Hotfix issue
+- Hotfix issue-lar developer tərəfindən həll edildikdən sonra və hotfix branch-ı *master* və *develop* branch-ına merge edilib, sayt deploy edildikdən sonra həmin issue solved siyahısına atılmır.
+  - Bunun yerinə issue-a *release* və *production* label-larını əlavə edir. Bu halda issue həm *release*, həm də *production* siyahısında görünəcək.
+- Bundan sonra test edilir:
+  - Testdən uğurla keçən taska *Production(Success)* label-ı əlavə edilir.
+  - Testdən uğurla keçmədiyi halda isə *Production(Failed)* label-ı əlavə edilir.
 
 
+### Qeyd
+Fors major hallar gitlab maintainer-lərlə məsləhətləşib qərar verilməlidir.
 
-## 👥 Team
+___
 
-| Role | GitHub |
-|---|---|
-| 🔧 Backend Developer | [@AysunShirelizade1](https://github.com/AysunShirelizade1) |
-| 🎨 Frontend Developer | [@Subhane00](https://github.com/Subhane00) |
+# Branch naming convention
 
----
+Short-term branch-lar 2 növdür: feature, hotfix.
 
-## 🚀 Tech Stack
-
-| Layer | Technology |
-|---|---|
-| Framework | ASP.NET Core 8 Web API |
-| ORM | Entity Framework Core 8 |
-| Database | PostgreSQL (Npgsql) |
-| Authentication | JWT Bearer + Refresh Token |
-| Authorization | Role-Based (Admin / User) |
-| Architecture | Layered Architecture (4 layers) |
-| Validation | FluentValidation 11 |
-| Logging | Serilog (Console + File) |
-| Documentation | Swagger / OpenAPI |
-| Language Support | Azerbaijani (AZ) + English (EN) |
-
----
-
-## 🏗️ Project Structure
-
-```
-PetCareMini/
-├── PetCareMini.Domain          # Entities, Enums, BaseEntity
-├── PetCareMini.Application     # DTOs, Interfaces, Validators, Common
-├── PetCareMini.Persistence     # DbContext, Repositories, Services, Seed
-└── PetCareMini.WebApi          # Controllers, Middlewares, Program.cs
-```
-
----
-
-## ✨ Features
-
-- 🔐 JWT Authentication with Refresh Token support
-- 👮 Role-based authorization (Admin / User)
-- 🛍️ Product management with filter, sort, search & pagination
-- 🛒 Cart & Wishlist system
-- 🎫 Coupon & discount support
-- 📦 Order & checkout flow
-- ⭐ Product review system
-- 🐾 Pet profile management
-- 📅 Veterinary appointment booking
-- 📊 Admin dashboard statistics
-- 🌐 Multilanguage API support (AZ / EN)
-- 🔍 Global exception handling middleware
-- 📝 Serilog file & console logging
-- ✅ FluentValidation on all input DTOs
-- 🌱 Automatic database seeding
-
----
-
-## ⚙️ Getting Started
-
-### 1. Clone the repository
+#### 1. Feature branch aşağıdakı kimi adlandırılmalı:
 
 ```bash
-git clone https://github.com/AysunShirelizade1/PetCareMini.git
-cd PetCareMini
+  feature/<tasknomresi>/<taskin-qisa-izahi-və-ya-taskin-adi>
 ```
 
-### 2. Update `appsettings.json`
-
-```json
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Host=localhost;Port=5432;Database=PetCareDb;Username=postgres;Password=yourpassword"
-  },
-  "Jwt": {
-    "Key": "your-secret-key-min-32-characters",
-    "Issuer": "PetCareMiniApi",
-    "Audience": "PetCareMiniClient"
-  }
-}
-```
-
-### 3. Apply migrations
+#### 2. Hotfix branch aşağıdakı kimi adlandırılmalı:
 
 ```bash
-dotnet ef database update \
-  --project PetCareMini.Persistence \
-  --startup-project PetCareMini.WebApi
+  hotfix/<tasknomresi>/<taskin-qisa-izahi-və-ya-taskin-adi>
 ```
 
-### 4. Run the project
+# Release branch naming convention
 
 ```bash
-dotnet run --project PetCareMini.WebApi
+  release/<versiya nömrəsi>
+
+  Nümunə:
+  release/1.0
+  release/2.3
 ```
 
-### 5. Open Swagger
 
-```
-https://localhost:{port}/swagger
-```
+# Tag naming convention
 
----
-
-## 🌱 Seed Data
-
-The database is seeded automatically on startup.
-
-### Default Accounts
-
-| Role | Email | Password |
-|---|---|---|
-| Admin | admin@petcare.az | Admin123! |
-| User | user@petcare.az | User123! |
-
-### Coupon Codes
-
-| Code | Discount |
-|---|---|
-| WELCOME10 | 10% |
-| SUMMER20 | 20% |
-| PET50 | 50% |
-
-### Seeded Content
-
-- 15 Products
-- 5 Categories
-- 5 Services
-- 4 Veterinarians
-- 5 FAQs
-- 2 Users (Admin + Test)
-- 3 Coupons
-
----
-
-## 📡 API Endpoints
-
-### 🔑 Authentication
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| POST | `/api/auth/register` | Public | Register new user |
-| POST | `/api/auth/login` | Public | Login and get JWT token |
-| POST | `/api/auth/refresh-token` | Public | Get new access token |
-| GET | `/api/auth/me` | User | Get current user info |
-
-### 🛍️ Products
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| GET | `/api/products` | Public | List with filter/sort/pagination |
-| GET | `/api/products/{id}` | Public | Single product |
-| GET | `/api/products/{id}/recommended` | Public | Recommended products |
-| POST | `/api/products` | Admin | Create product |
-| PUT | `/api/products/{id}` | Admin | Update product |
-| DELETE | `/api/products/{id}` | Admin | Soft delete product |
-
-### 📂 Categories
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| GET | `/api/productcategories` | Public | List categories |
-| POST | `/api/productcategories` | Admin | Create category |
-| PUT | `/api/productcategories/{id}` | Admin | Update category |
-| DELETE | `/api/productcategories/{id}` | Admin | Delete category |
-
-### 🐾 Pets
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| GET | `/api/pets` | User | Get my pets |
-| GET | `/api/pets/{id}` | User | Get single pet |
-| POST | `/api/pets` | User | Create pet |
-| PUT | `/api/pets/{id}` | User | Update pet |
-| DELETE | `/api/pets/{id}` | User | Delete pet |
-
-### 📅 Appointments
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| GET | `/api/appointments/my` | User | Get my appointments |
-| POST | `/api/appointments` | User | Book appointment |
-| GET | `/api/appointments` | Admin | Get all appointments |
-| PATCH | `/api/appointments/{id}/status` | Admin | Update appointment status |
-
-### 🛒 Cart & Wishlist
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| GET | `/api/cart` | User | Get cart (`?lang=az`) |
-| POST | `/api/cart/{productId}` | User | Add to cart |
-| PUT | `/api/cart/{productId}` | User | Update quantity |
-| DELETE | `/api/cart/{productId}` | User | Remove from cart |
-| GET | `/api/wishlist` | User | Get wishlist (`?lang=az`) |
-| POST | `/api/wishlist/{productId}` | User | Add to wishlist |
-| DELETE | `/api/wishlist/{productId}` | User | Remove from wishlist |
-
-### 📦 Orders
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| POST | `/api/orders/checkout` | User | Checkout (cart → order) |
-| GET | `/api/orders/my-orders` | User | My orders |
-
-### ⭐ Reviews
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| POST | `/api/review` | User | Write a review |
-| GET | `/api/review/product/{productId}` | Public | Get product reviews |
-
-### 🎫 Coupons
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| POST | `/api/coupon/apply` | User | Apply coupon |
-| POST | `/api/coupon` | Admin | Create coupon |
-| PATCH | `/api/coupon/{id}/deactivate` | Admin | Deactivate coupon |
-
-### 🩺 Veterinarians & Services
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| GET | `/api/veterinarians` | Public | List veterinarians |
-| GET | `/api/services` | Public | List services |
-| GET | `/api/faqs` | Public | List FAQs (`?lang=az`) |
-
-### 📊 Admin
-
-| Method | Endpoint | Auth | Description |
-|---|---|---|---|
-| GET | `/api/admin/statistics` | Admin | Dashboard statistics |
-
----
-
-## 🌐 Multilanguage Support
-
-All variable content supports AZ and EN via `?lang=` query parameter:
-
-```
-GET /api/products?lang=az
-GET /api/products?lang=en
-GET /api/cart?lang=en
-GET /api/wishlist?lang=az
-GET /api/faqs?lang=en
-GET /api/appointments/my?lang=en
+```bash
+  r-v<versiya nömrəsi>      => develop branch
+  v<versiya nömrəsi>        => master branch
+  
+  Nümunə:
+  r-v1.5.2
+  v1.5.2
 ```
 
-Supported modules: Products, Categories, Services, Cart, Wishlist, FAQ, Appointments
 
----
+# Commit message convention
 
-## 🔄 Refresh Token Flow
+Commit edilən fayllarda görülmüş işlərin geniş izahı verilməlidir
 
+
+# Qeydlər
+
+```bash
+  <packages> adlı folder yaratmayın. Yaradıldığı halda .gitignore onun stage olunmasının qarşısını alacaq
 ```
-1. POST /api/auth/login
-   → Returns: { token, refreshToken, ... }
-
-2. Store both tokens on frontend
-
-3. When token expires (60 min):
-   POST /api/auth/refresh-token
-   Body: { "refreshToken": "..." }
-   → Returns: new { token, refreshToken }
-
-4. Refresh token expires after 7 days
-   → User must login again
-```
-
----
-
-## 📅 Appointment Booking Flow
-
-```
-1. User creates pet profile       → POST /api/pets
-2. User selects veterinarian      → GET /api/veterinarians
-3. User selects service           → GET /api/services
-4. User books appointment         → POST /api/appointments
-5. Backend validates:
-   - Pet ownership
-   - Veterinarian availability
-   - Future date
-   - No booking conflicts
-6. Appointment created (Pending)
-7. Admin approves or updates      → PATCH /api/appointments/{id}/status
-```
-
----
-
-## 🛒 Checkout Flow
-
-```
-1. User logs in                   → POST /api/auth/login
-2. Adds products to cart          → POST /api/cart/{productId}
-3. (Optional) Apply coupon        → POST /api/coupon/apply
-4. Checkout                       → POST /api/orders/checkout?couponCode=WELCOME10
-5. Backend converts cart → order
-6. Cart is cleared automatically
-
-Response includes:
-  - orderId
-  - originalPrice
-  - discountAmount
-  - finalPrice
-  - couponUsed
-```
-
----
-
-## ❌ Error Response Format
-
-All errors return consistent JSON:
-
-```json
-{
-  "statusCode": 404,
-  "message": "Product with id 99 not found."
-}
-```
-
-| Status Code | Meaning |
-|---|---|
-| 200 | Success |
-| 201 | Created |
-| 400 | Validation error |
-| 401 | Missing or invalid token |
-| 403 | Access forbidden (wrong role or ownership) |
-| 404 | Resource not found |
-| 409 | Conflict (duplicate, already exists) |
-| 500 | Unexpected server error |
-
----
-
-## 📝 Logging
-
-Serilog is configured to log to both Console and File:
-
-```
-Logs/
-└── log-20260510.txt   ← daily rotating log files (kept for 7 days)
-```
-
-Sample log output:
-```
-[INF] HTTP GET /api/products responded 200 in 45ms
-[INF] HTTP POST /api/auth/login responded 200 in 120ms
-[ERR] Unhandled exception: Product with id 99 not found.
-```
-
----
-
-## 🏛️ Architecture Highlights
-
-- **Layered Architecture** — Domain / Application / Persistence / WebApi
-- **Repository Pattern** — abstracted data access
-- **DTO-based responses** — clean separation of concerns
-- **Global Exception Middleware** — consistent error handling
-- **Role-based authorization** — Admin and User roles
-- **Ownership validation** — users can only access their own resources
-- **Soft delete support** — deleted products remain in order history
-- **FluentValidation** — all input DTOs validated automatically
-- **Refresh Token** — seamless session management
-- **Seed data system** — auto-populated on startup
-
----
-
-## 📄 License
-
-MIT License — free to use for educational purposes.
