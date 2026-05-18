@@ -40,6 +40,7 @@ public class ProductReviewService : IProductReviewService
             ProductId = dto.ProductId,
             Rating = dto.Rating,
             Comment = dto.Comment
+            
         });
 
         await _reviewRepo.SaveChangesAsync();
@@ -60,6 +61,7 @@ public class ProductReviewService : IProductReviewService
             UserName = x.User.FullName,
             Rating = x.Rating,
             Comment = x.Comment,
+            UserImageUrl = x.User.ImageUrl,
             CreatedAt = (DateTime)x.CreatedAt
         }).ToList();
     }

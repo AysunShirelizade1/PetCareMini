@@ -9,9 +9,8 @@ public class User : BaseEntity
     public string Email { get; set; } = string.Empty;
     public string PasswordHash { get; set; } = string.Empty;
     public string? PhoneNumber { get; set; }
+    public string? ImageUrl { get; set; }
     public UserRole Role { get; set; } = UserRole.User;
-
-    
     public string? RefreshToken { get; set; }
     public DateTime? RefreshTokenExpireDate { get; set; }
 
