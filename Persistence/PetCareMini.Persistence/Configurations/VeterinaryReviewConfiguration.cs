@@ -32,7 +32,13 @@ public class VeterinaryReviewConfiguration
             .HasForeignKey(r => r.AppointmentId)
             .OnDelete(DeleteBehavior.SetNull);
 
-        builder.Property(r => r.Comment).HasMaxLength(500);
+        builder.Property(r => r.CommentAz)
+            .HasMaxLength(500)
+            .IsRequired();
+
+        builder.Property(r => r.CommentEn)
+            .HasMaxLength(500)
+            .IsRequired();
         builder.Property(r => r.Rating).IsRequired();
     }
 }

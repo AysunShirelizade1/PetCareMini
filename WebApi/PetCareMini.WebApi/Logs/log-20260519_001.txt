@@ -1,0 +1,18 @@
+2026-05-19 10:35:18.188 +04:00 [ERR] An error occurred using the connection to database 'PetCareDb' on server 'tcp://localhost:5432'.
+2026-05-19 10:38:21.999 +04:00 [INF] HTTP POST /api/Auth/login responded 401 in 593.1980 ms
+2026-05-19 10:39:07.964 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 239.2089 ms
+2026-05-19 10:39:35.365 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 96.6299 ms
+2026-05-19 10:40:04.340 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 293.6075 ms
+2026-05-19 10:40:56.177 +04:00 [INF] HTTP GET /api/Services responded 200 in 80.2466 ms
+2026-05-19 10:41:25.324 +04:00 [INF] HTTP GET /api/Pets responded 200 in 76.6706 ms
+2026-05-19 11:03:51.921 +04:00 [ERR] An error occurred using the connection to database 'PetCareDb' on server 'tcp://localhost:5432'.
+2026-05-19 11:10:58.513 +04:00 [INF] HTTP POST /api/Auth/login responded 401 in 616.9302 ms
+2026-05-19 11:11:36.946 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 280.8237 ms
+2026-05-19 11:11:42.700 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 80.9460 ms
+2026-05-19 11:12:02.363 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 320.3421 ms
+2026-05-19 11:12:16.179 +04:00 [INF] HTTP GET /api/Services responded 200 in 123.1945 ms
+2026-05-19 11:12:36.751 +04:00 [INF] HTTP GET /api/veterinary-reviews/approved responded 200 in 126.6136 ms
+2026-05-19 11:14:07.391 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 22.1983 ms
+2026-05-19 11:14:32.590 +04:00 [INF] HTTP GET /api/veterinary-reviews/approved responded 200 in 16.2404 ms
+2026-05-19 11:14:51.924 +04:00 [INF] HTTP PATCH /api/veterinary-reviews/2/approve responded 200 in 79.7170 ms
+2026-05-19 11:15:56.472 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 306.3269 ms

@@ -10,5 +10,6 @@ public class VeterinaryReviewCreateDto
     public int? ServiceId { get; set; }
     public int? AppointmentId { get; set; }
     public int Rating { get; set; }
-    public string Comment { get; set; } = null!;
+    public string CommentAz { get; set; } = string.Empty;
+    public string CommentEn { get; set; } = string.Empty;
 }

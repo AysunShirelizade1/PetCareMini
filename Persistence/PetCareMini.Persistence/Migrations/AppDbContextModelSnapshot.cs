@@ -656,7 +656,12 @@ namespace PetCareMini.Persistence.Migrations
                     b.Property<int?>("AppointmentId")
                         .HasColumnType("integer");
 
-                    b.Property<string>("Comment")
+                    b.Property<string>("CommentAz")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
+
+                    b.Property<string>("CommentEn")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)");

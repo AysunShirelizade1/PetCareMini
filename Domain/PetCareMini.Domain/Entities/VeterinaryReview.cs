@@ -20,7 +20,8 @@ public class VeterinaryReview : BaseEntity
     public Appointment? Appointment { get; set; }
 
     public int Rating { get; set; }         
-    public string Comment { get; set; } = null!;
+    public string CommentAz { get; set; } = string.Empty!;
+    public string CommentEn { get; set; } = string.Empty!;
     public bool IsApproved { get; set; } = false;  
     public bool IsFeatured { get; set; } = false;  
 }
