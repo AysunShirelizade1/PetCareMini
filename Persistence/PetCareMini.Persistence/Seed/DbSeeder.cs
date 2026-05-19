@@ -18,6 +18,7 @@ public static class DbSeeder
         await SeedUsersAsync(context);
         await SeedCouponsAsync(context);
         await SeedVeterinaryReviewsAsync(context);
+        await SeedPetsAsync(context);
     }
 
     // ── CATEGORIES ──────────────────────────────────────────────
@@ -191,7 +192,9 @@ public static class DbSeeder
             ServiceId = services[1].Id,
 
             Rating = 5,
-            Comment = "Amazing doctor. Very caring and professional.",
+
+            CommentAz = "Möhtəşəm həkimdir. Çox diqqətli və peşəkardır.",
+            CommentEn = "Amazing doctor. Very caring and professional.",
 
             IsApproved = true,
             IsFeatured = true
@@ -204,7 +207,9 @@ public static class DbSeeder
             ServiceId = services[0].Id,
 
             Rating = 4,
-            Comment = "Clinic was very clean and service was fast.",
+
+            CommentAz = "Klinika çox təmiz idi və xidmət sürətli oldu.",
+            CommentEn = "Clinic was very clean and service was fast.",
 
             IsApproved = true,
             IsFeatured = true
@@ -217,7 +222,9 @@ public static class DbSeeder
             ServiceId = services[2].Id,
 
             Rating = 5,
-            Comment = "Best veterinary experience ever!",
+
+            CommentAz = "İndiyə qədərki ən yaxşı veterinar təcrübəsi idi.",
+            CommentEn = "Best veterinary experience ever!",
 
             IsApproved = true,
             IsFeatured = false
@@ -230,7 +237,9 @@ public static class DbSeeder
             ServiceId = services[1].Id,
 
             Rating = 3,
-            Comment = "Good service but waiting time was long.",
+
+            CommentAz = "Xidmət yaxşı idi amma gözləmə vaxtı uzun çəkdi.",
+            CommentEn = "Good service but waiting time was long.",
 
             IsApproved = true,
             IsFeatured = false
@@ -243,7 +252,9 @@ public static class DbSeeder
             ServiceId = services[4].Id,
 
             Rating = 5,
-            Comment = "My dog loved the training sessions.",
+
+            CommentAz = "İtim təlim seanslarını çox sevdi.",
+            CommentEn = "My dog loved the training sessions.",
 
             IsApproved = true,
             IsFeatured = true
@@ -256,7 +267,99 @@ public static class DbSeeder
             ServiceId = services[3].Id,
 
             Rating = 4,
-            Comment = "Pet hotel service was very comfortable and clean.",
+
+            CommentAz = "Pet hotel xidməti çox rahat və təmiz idi.",
+            CommentEn = "Pet hotel service was very comfortable and clean.",
+
+            IsApproved = true,
+            IsFeatured = false
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[1].Id,
+            ServiceId = services[2].Id,
+
+            Rating = 5,
+
+            CommentAz = "Peyvənd prosesi çox sürətli və təhlükəsiz keçdi.",
+            CommentEn = "Vaccination process was quick and safe.",
+
+            IsApproved = true,
+            IsFeatured = true
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[3].Id,
+            ServiceId = services[0].Id,
+
+            Rating = 4,
+
+            CommentAz = "Qroominq xidməti çox peşəkar idi.",
+            CommentEn = "Grooming service was very professional.",
+
+            IsApproved = true,
+            IsFeatured = false
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[0].Id,
+            ServiceId = services[1].Id,
+
+            Rating = 5,
+
+            CommentAz = "Həkim bütün suallarıma ətraflı cavab verdi.",
+            CommentEn = "The doctor answered all my questions clearly.",
+
+            IsApproved = true,
+            IsFeatured = true
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[2].Id,
+            ServiceId = services[4].Id,
+
+            Rating = 4,
+
+            CommentAz = "Təlimlər faydalı və maraqlı idi.",
+            CommentEn = "Training sessions were useful and engaging.",
+
+            IsApproved = true,
+            IsFeatured = false
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[1].Id,
+            ServiceId = services[3].Id,
+
+            Rating = 5,
+
+            CommentAz = "Oteldə heyvanlara çox yaxşı baxılır.",
+            CommentEn = "Pets are treated very well at the hotel.",
+
+            IsApproved = true,
+            IsFeatured = true
+        },
+
+        new()
+        {
+            UserId = users[1].Id,
+            VeterinarianId = veterinarians[3].Id,
+            ServiceId = services[2].Id,
+
+            Rating = 3,
+
+            CommentAz = "Normal xidmət idi, amma daha yaxşı ola bilərdi.",
+            CommentEn = "Average service, could be better.",
 
             IsApproved = true,
             IsFeatured = false
@@ -265,5 +368,78 @@ public static class DbSeeder
 
         await context.SaveChangesAsync();
     }
+    private static async Task SeedPetsAsync(AppDbContext context)
+    {
+        if (await context.Pets.AnyAsync()) return;
 
+        var users = await context.Users.ToListAsync();
+
+        if (!users.Any())
+            return;
+
+        await context.Pets.AddRangeAsync(new List<Pet>
+    {
+        new()
+        {
+            Name = "Max",
+            Age = 3,
+            Gender = "Male",
+            Type = "Dog",
+            Breed = "Golden Retriever",
+            Weight = 28.5m,
+            Notes = "Very friendly and energetic.",
+            OwnerId = users[1].Id
+        },
+
+        new()
+        {
+            Name = "Mia",
+            Age = 2,
+            Gender = "Female",
+            Type = "Cat",
+            Breed = "British Shorthair",
+            Weight = 4.2m,
+            Notes = "Loves sleeping all day.",
+            OwnerId = users[1].Id
+        },
+
+        new()
+        {
+            Name = "Rocky",
+            Age = 5,
+            Gender = "Male",
+            Type = "Dog",
+            Breed = "German Shepherd",
+            Weight = 35.0m,
+            Notes = "Needs regular training.",
+            OwnerId = users[1].Id
+        },
+
+        new()
+        {
+            Name = "Luna",
+            Age = 1,
+            Gender = "Female",
+            Type = "Cat",
+            Breed = "Siamese",
+            Weight = 3.8m,
+            Notes = "Very playful kitten.",
+            OwnerId = users[1].Id
+        },
+
+        new()
+        {
+            Name = "Coco",
+            Age = 4,
+            Gender = "Female",
+            Type = "Bird",
+            Breed = "Parrot",
+            Weight = 1.1m,
+            Notes = "Can say a few words.",
+            OwnerId = users[1].Id
+        }
+    });
+
+        await context.SaveChangesAsync();
+    }
 }

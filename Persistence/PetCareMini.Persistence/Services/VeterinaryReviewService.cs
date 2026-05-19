@@ -28,7 +28,8 @@ public class VeterinaryReviewService : IVeterinaryReviewService
             AppointmentId = dto.AppointmentId,
 
             Rating = dto.Rating,
-            Comment = dto.Comment,
+            CommentAz = dto.CommentAz,
+            CommentEn = dto.CommentEn,
 
             // frontend görsün deyə
             IsApproved = true,
@@ -103,7 +104,8 @@ public class VeterinaryReviewService : IVeterinaryReviewService
                 : r.Service?.NameEn,
 
             Rating = r.Rating,
-            Comment = r.Comment,
+            CommentAz = r.CommentAz,
+            CommentEn = r.CommentEn,
             IsFeatured = r.IsFeatured,
             CreatedAt = r.CreatedAt
         };
