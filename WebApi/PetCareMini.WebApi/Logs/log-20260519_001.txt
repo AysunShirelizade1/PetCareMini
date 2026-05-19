@@ -16,3 +16,5 @@
 2026-05-19 11:14:32.590 +04:00 [INF] HTTP GET /api/veterinary-reviews/approved responded 200 in 16.2404 ms
 2026-05-19 11:14:51.924 +04:00 [INF] HTTP PATCH /api/veterinary-reviews/2/approve responded 200 in 79.7170 ms
 2026-05-19 11:15:56.472 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 306.3269 ms
+2026-05-19 11:57:05.605 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 692.4559 ms
+2026-05-19 11:57:17.930 +04:00 [INF] HTTP GET /api/Products responded 200 in 532.5578 ms

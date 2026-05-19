@@ -7,10 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Behaviors\**" />
+    <Compile Remove="Features\**" />
+    <EmbeddedResource Remove="Behaviors\**" />
+    <EmbeddedResource Remove="Features\**" />
+    <None Remove="Behaviors\**" />
+    <None Remove="Features\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="DTOs\Contact\" />
-    <Folder Include="Behaviors\" />
-    <Folder Include="Features\Auth\" />
-    <Folder Include="Features\Commands\Login\" />
   </ItemGroup>
 
   <ItemGroup>
