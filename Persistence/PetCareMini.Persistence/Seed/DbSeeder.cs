@@ -19,6 +19,7 @@ public static class DbSeeder
         await SeedCouponsAsync(context);
         await SeedVeterinaryReviewsAsync(context);
         await SeedPetsAsync(context);
+        await SeedContactMessagesAsync(context);
     }
 
     // ── CATEGORIES ──────────────────────────────────────────────
@@ -438,6 +439,128 @@ public static class DbSeeder
             Notes = "Can say a few words.",
             OwnerId = users[1].Id
         }
+    });
+
+        await context.SaveChangesAsync();
+    }
+    // ── CONTACT MESSAGES ─────────────────────────────────────────
+    private static async Task SeedContactMessagesAsync(AppDbContext context)
+    {
+        if (await context.ContactMessages.AnyAsync()) return;
+
+        var users = await context.Users.ToListAsync();
+        if (!users.Any()) return;
+
+        var userId = users[1].Id; // Test User
+
+        await context.ContactMessages.AddRangeAsync(new List<ContactMessage>
+    {
+        new()
+        {
+            Subject = "Çatdırılma haqqında sual",
+            Message = "Salam, sifariş verdim amma hələ çatdırılmayıb. Nə vaxt gəlib çatacaq?",
+            UserId = userId,
+            IsRead = true,
+            ReadAt = DateTime.UtcNow.AddDays(-3),
+            IsArchived = false,
+            ReplyMessage = "Hörmətli müştəri, sifarişiniz 1-2 iş günü ərzində çatdırılacaq. Səbriniz üçün təşəkkür edirik.",
+            RepliedAt = DateTime.UtcNow.AddDays(-3)
+        },
+        new()
+        {
+            Subject = "Məhsul geri qaytarma",
+            Message = "Aldığım it yemi məhsulu açıldıqdan sonra xarab çıxdı. Geri qaytara bilərəmmi?",
+            UserId = userId,
+            IsRead = true,
+            ReadAt = DateTime.UtcNow.AddDays(-5),
+            IsArchived = false,
+            ReplyMessage = "Bəli, məhsulu 14 gün ərzində geri qaytara bilərsiniz. Zəhmət olmasa məhsulu orijinal qablaşdırmada göndərin.",
+            RepliedAt = DateTime.UtcNow.AddDays(-5)
+        },
+        new()
+        {
+            Subject = "Veterinar randevusu haqqında",
+            Message = "Sabah randevum var, amma gələ bilməyəcəyəm. Ləğv etmək mümkündürmü?",
+            UserId = userId,
+            IsRead = true,
+            ReadAt = DateTime.UtcNow.AddDays(-2),
+            IsArchived = false,
+            ReplyMessage = "Randevunuzu ləğv etdik. Yeni randevu üçün istənilən vaxt müraciət edə bilərsiniz.",
+            RepliedAt = DateTime.UtcNow.AddDays(-2)
+        },
+        new()
+        {
+            Subject = "Kupon kodu işləmir",
+            Message = "SUMMER20 kupon kodunu daxil etdim amma endirim tətbiq olunmur. Kömək edə bilərsinizmi?",
+            UserId = userId,
+            IsRead = true,
+            ReadAt = DateTime.UtcNow.AddDays(-1),
+            IsArchived = false,
+            ReplyMessage = "Kupon kodunun istifadə şərtlərini yoxlayın. Minimum sifariş məbləği 30 AZN olmalıdır. Hər hansı problem olarsa bildirin.",
+            RepliedAt = DateTime.UtcNow.AddDays(-1)
+        },
+        new()
+        {
+            Subject = "Stokda olmayan məhsul",
+            Message = "Pişik evi məhsulu stokda yoxdur görünür. Nə vaxt gəlib çatacaq?",
+            UserId = userId,
+            IsRead = false,
+            IsArchived = false,
+            ReplyMessage = null,
+            RepliedAt = null
+        },
+        new()
+        {
+            Subject = "Ödəniş problemi",
+            Message = "Kart ilə ödəniş etməyə çalışdım amma uğursuz oldu. Başqa ödəniş üsulu varmı?",
+            UserId = userId,
+            IsRead = false,
+            IsArchived = false,
+            ReplyMessage = null,
+            RepliedAt = null
+        },
+        new()
+        {
+            Subject = "Pet otel xidməti haqqında",
+            Message = "Pet otel xidmətiniz haqqında ətraflı məlumat ala bilərəmmi? Qiymət və şərtlər nədən ibarətdir?",
+            UserId = userId,
+            IsRead = true,
+            ReadAt = DateTime.UtcNow.AddDays(-7),
+            IsArchived = true,
+            ReplyMessage = "Pet otel xidmətimiz gündəlik 30 AZN-dir. Yeməkdən tutmuş gəzintiyə qədər bütün qulluq daxildir.",
+            RepliedAt = DateTime.UtcNow.AddDays(-7)
+        },
+        new()
+        {
+            Subject = "Qroominq xidməti rezervasiyası",
+            Message = "Köpəyim üçün qroominq xidməti almaq istəyirəm. Hansı tarixlər mövcuddur?",
+            UserId = userId,
+            IsRead = true,
+            ReadAt = DateTime.UtcNow.AddDays(-10),
+            IsArchived = true,
+            ReplyMessage = "Bu həftə çərşənbə və cümə günləri boş yerlər var. Randevu sistemi üzərindən rezervasiya edə bilərsiniz.",
+            RepliedAt = DateTime.UtcNow.AddDays(-10)
+        },
+        new()
+        {
+            Subject = "Məhsul haqqında sual",
+            Message = "Vitamin kompleksi məhsulu neçə yaşdan yuxarı itlər üçün uyğundur?",
+            UserId = userId,
+            IsRead = false,
+            IsArchived = false,
+            ReplyMessage = null,
+            RepliedAt = null
+        },
+        new()
+        {
+            Subject = "Saytda xəta var",
+            Message = "Məhsulları səbətə əlavə edəndə səhifə donur. Bu problem nə vaxtdan bəridir?",
+            UserId = userId,
+            IsRead = false,
+            IsArchived = false,
+            ReplyMessage = null,
+            RepliedAt = null
+        },
     });
 
         await context.SaveChangesAsync();
