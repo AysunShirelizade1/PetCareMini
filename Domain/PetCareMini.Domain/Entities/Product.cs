@@ -12,11 +12,13 @@ public class Product : BaseEntity
 
     public decimal Price { get; set; }
     public decimal? DiscountPrice { get; set; }
+    
     public bool HasDiscount => DiscountPrice.HasValue && DiscountPrice < Price;
     public int StockQuantity { get; set; }
     public string? ImageUrl { get; set; }
     public bool IsActive { get; set; } = true;
-
+    public double AverageRating { get; set; } = 0;
+    public int ReviewCount { get; set; } = 0;
     public int CategoryId { get; set; }
     public ProductCategory Category { get; set; } = null!;
 

@@ -20,16 +20,13 @@ public class ProductReviewService : IProductReviewService
 
     public async Task<bool> CreateAsync(int userId, ReviewCreateDto dto)
     {
-        // Product exists check
         var productExists = await _productRepo.ExistsAsync(dto.ProductId);
         if (!productExists)
             throw new KeyNotFoundException($"Product with id {dto.ProductId} not found.");
 
-        // Rating validation
         if (dto.Rating < 1 || dto.Rating > 5)
             throw new ArgumentException("Rating must be between 1 and 5.");
 
-        // Duplicate check
         var alreadyReviewed = await _reviewRepo.HasUserReviewedAsync(userId, dto.ProductId);
         if (alreadyReviewed)
             return false;
@@ -40,16 +37,18 @@ public class ProductReviewService : IProductReviewService
             ProductId = dto.ProductId,
             Rating = dto.Rating,
             Comment = dto.Comment
-            
         });
 
         await _reviewRepo.SaveChangesAsync();
+
+        // Rating yenilə
+        await UpdateProductRatingAsync(dto.ProductId);
+
         return true;
     }
 
     public async Task<List<ReviewGetDto>> GetProductReviewsAsync(int productId)
     {
-        // Product exists check
         var productExists = await _productRepo.ExistsAsync(productId);
         if (!productExists)
             throw new KeyNotFoundException($"Product with id {productId} not found.");
@@ -64,5 +63,20 @@ public class ProductReviewService : IProductReviewService
             UserImageUrl = x.User.ImageUrl,
             CreatedAt = (DateTime)x.CreatedAt
         }).ToList();
+    }
+
+
+    private async Task UpdateProductRatingAsync(int productId)
+    {
+        var product = await _productRepo.GetByIdAsync(productId);
+        var reviews = await _reviewRepo.GetByProductIdAsync(productId);
+
+        product!.ReviewCount = reviews.Count;
+        product.AverageRating = reviews.Count > 0
+            ? Math.Round(reviews.Average(r => r.Rating), 1)
+            : 0;
+
+        _productRepo.Update(product);           
+        await _productRepo.SaveChangesAsync();  
     }
 }

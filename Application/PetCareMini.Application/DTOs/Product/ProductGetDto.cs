@@ -16,4 +16,6 @@ public class ProductGetDto
     public string? ImageUrl { get; set; }
 
     public string CategoryName { get; set; } = string.Empty;
+    public double AverageRating { get; set; }
+    public int ReviewCount { get; set; }
 }
