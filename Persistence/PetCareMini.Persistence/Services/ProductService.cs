@@ -63,7 +63,9 @@ public class ProductService : IProductService
                 DiscountPrice = p.DiscountPrice,
                 StockQuantity = p.StockQuantity,
                 ImageUrl = p.ImageUrl,
-                CategoryName = query.Lang == "en" ? p.Category.NameEn : p.Category.NameAz
+                CategoryName = query.Lang == "en" ? p.Category.NameEn : p.Category.NameAz,
+                AverageRating = p.AverageRating,   
+                ReviewCount = p.ReviewCount
             })
             .ToListAsync();
 
@@ -94,7 +96,9 @@ public class ProductService : IProductService
             DiscountPrice = p.DiscountPrice,
             StockQuantity = p.StockQuantity,
             ImageUrl = p.ImageUrl,
-            CategoryName = lang == "en" ? p.Category.NameEn : p.Category.NameAz
+            CategoryName = lang == "en" ? p.Category.NameEn : p.Category.NameAz,
+            AverageRating = p.AverageRating,
+            ReviewCount = p.ReviewCount
         };
     }
 
@@ -124,7 +128,9 @@ public class ProductService : IProductService
                 DiscountPrice = p.DiscountPrice,
                 StockQuantity = p.StockQuantity,
                 ImageUrl = p.ImageUrl,
-                CategoryName = lang == "en" ? p.Category.NameEn : p.Category.NameAz
+                CategoryName = lang == "en" ? p.Category.NameEn : p.Category.NameAz,
+                AverageRating = p.AverageRating,
+                ReviewCount = p.ReviewCount
             })
             .ToListAsync();
     }
