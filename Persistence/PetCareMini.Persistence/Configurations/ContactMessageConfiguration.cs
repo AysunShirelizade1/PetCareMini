@@ -11,22 +11,27 @@ public class ContactMessageConfiguration : IEntityTypeConfiguration<ContactMessa
     {
         builder.HasKey(x => x.Id);
 
-        builder.Property(x => x.Name)
-            .IsRequired()
-            .HasMaxLength(100);
-
-        builder.Property(x => x.Email)
-            .IsRequired()
-            .HasMaxLength(100);
-
         builder.Property(x => x.Subject)
+            .IsRequired()
             .HasMaxLength(200);
 
         builder.Property(x => x.Message)
             .IsRequired()
             .HasMaxLength(2000);
 
-        builder.Property(x => x.CreatedAt)
-            .IsRequired();
+        builder.Property(x => x.ReplyMessage)
+            .HasMaxLength(2000);
+
+        builder.Property(x => x.IsRead)
+            .HasDefaultValue(false);
+
+        builder.Property(x => x.IsArchived)
+            .HasDefaultValue(false);
+
+        // User ilə relation
+        builder.HasOne(x => x.User)
+            .WithMany()
+            .HasForeignKey(x => x.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
