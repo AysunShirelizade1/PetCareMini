@@ -21,7 +21,17 @@ public class VeterinaryReviewRepository : IVeterinaryReviewRepository
             .Where(r => r.VeterinarianId == vetId && r.IsApproved)
             .OrderByDescending(r => r.CreatedAt)
             .ToListAsync();
-
+    public async Task<IEnumerable<VeterinaryReview>> GetAllAsync(int page, int pageSize)
+    {
+        return await _context.VeterinaryReviews
+            .Include(r => r.User)
+            .Include(r => r.Veterinarian)
+            .Include(r => r.Service)
+            .OrderByDescending(r => r.CreatedAt)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+    }
     public async Task<IEnumerable<VeterinaryReview>> GetFeaturedAsync()
         => await _context.VeterinaryReviews
             .Include(r => r.User)
@@ -37,7 +47,13 @@ public class VeterinaryReviewRepository : IVeterinaryReviewRepository
             .Where(r => r.IsApproved)
             .OrderByDescending(r => r.Rating)
             .ToListAsync();
+    public async Task<bool> ExistsByAppointmentAsync(int? appointmentId)
+    {
+        if (appointmentId is null) return false;
 
+        return await _context.VeterinaryReviews
+            .AnyAsync(r => r.AppointmentId == appointmentId);
+    }
     public async Task AddAsync(VeterinaryReview review)
         => await _context.VeterinaryReviews.AddAsync(review);
 

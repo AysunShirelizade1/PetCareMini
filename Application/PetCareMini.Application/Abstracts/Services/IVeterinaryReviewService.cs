@@ -7,7 +7,8 @@ namespace PetCareMini.Application.Abstracts.Services;
 
 public interface IVeterinaryReviewService
 {
-    Task CreateAsync(int userId, VeterinaryReviewCreateDto dto);
+    Task<VeterinaryReviewGetDto> CreateAsync(int userId, VeterinaryReviewCreateDto dto);
+    Task<IEnumerable<VeterinaryReviewGetDto>> GetAllAsync(int page, int pageSize);
     Task<IEnumerable<VeterinaryReviewGetDto>> GetByVeterinarianAsync(int vetId, string lang = "az");
     Task<IEnumerable<VeterinaryReviewGetDto>> GetFeaturedAsync();
     Task<IEnumerable<VeterinaryReviewGetDto>> GetAllApprovedAsync();
