@@ -35,6 +35,8 @@ public static class ServiceRegistration
         services.AddScoped<IPetRepository, PetRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IVeterinaryReviewRepository, VeterinaryReviewRepository>();
+        services.AddScoped<IContactMessageRepository, ContactMessageRepository>();
+        
         #endregion
         #region Services
         services.AddScoped<IVeterinaryReviewService, VeterinaryReviewService>();
@@ -54,6 +56,7 @@ public static class ServiceRegistration
         services.AddScoped<IServiceService, ServiceService>();
         services.AddScoped<IProductCategoryService, ProductCategoryService>();
         services.AddScoped<IProductService, ProductService>();
+        services.AddScoped<IContactMessageService, ContactMessageService>();
         #endregion
         return services;
     }
