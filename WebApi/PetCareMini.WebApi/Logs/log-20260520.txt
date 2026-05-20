@@ -52,3 +52,91 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 2026-05-20 12:31:49.160 +04:00 [INF] HTTP GET /api/Contact/archived responded 200 in 10.9710 ms
 2026-05-20 12:33:31.755 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 7.6079 ms
 2026-05-20 12:34:17.945 +04:00 [INF] HTTP DELETE /api/Contact/1 responded 204 in 121.5575 ms
+2026-05-20 12:44:42.652 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1441.8365 ms
+2026-05-20 12:45:07.157 +04:00 [INF] HTTP GET /api/Contact responded 200 in 495.7342 ms
+2026-05-20 12:45:26.538 +04:00 [INF] HTTP GET /api/Contact/my responded 200 in 71.3188 ms
+2026-05-20 14:11:00.573 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 1140.8434 ms
+2026-05-20 14:11:38.797 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 73.4389 ms
+2026-05-20 14:11:55.633 +04:00 [INF] HTTP GET /api/veterinary-reviews/approved responded 200 in 204.1667 ms
+2026-05-20 21:28:38.930 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 875.5645 ms
+2026-05-20 21:29:44.846 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 952.8224 ms
+2026-05-20 21:30:13.374 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 851.4950 ms
+2026-05-20 21:30:42.326 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 140.0948 ms
+2026-05-20 21:32:16.198 +04:00 [INF] HTTP POST /api/Contact responded 200 in 219.2359 ms
+2026-05-20 21:32:27.918 +04:00 [INF] HTTP GET /api/Contact/my responded 200 in 90.4024 ms
+2026-05-20 21:33:06.034 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 81.6469 ms
+2026-05-20 21:33:22.697 +04:00 [INF] HTTP GET /api/Services responded 200 in 183.1313 ms
+2026-05-20 21:33:42.434 +04:00 [INF] HTTP GET /api/Pets responded 200 in 141.1696 ms
+2026-05-20 21:34:12.785 +04:00 [INF] HTTP POST /api/Pets responded 201 in 335.4787 ms
+2026-05-20 21:34:18.201 +04:00 [INF] HTTP GET /api/Pets responded 200 in 40.9733 ms
+2026-05-20 21:34:48.885 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 611.8119 ms
+2026-05-20 21:35:00.146 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 132.9595 ms
+2026-05-20 21:35:35.976 +04:00 [INF] HTTP POST /api/veterinary-reviews responded 201 in 111.4484 ms
+2026-05-20 21:50:08.274 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1278.8437 ms
+2026-05-20 21:50:26.931 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 548.5665 ms
+2026-05-20 21:52:02.110 +04:00 [ERR] HTTP POST /api/veterinary-reviews responded 500 in 119.3764 ms
+System.InvalidOperationException: Bu görüş üçün artıq rəy yazılıb.
+   at PetCareMini.Persistence.Services.VeterinaryReviewService.CreateAsync(Int32 userId, VeterinaryReviewCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\Final_Project\Persistence\PetCareMini.Persistence\Services\VeterinaryReviewService.cs:line 25
+   at PetCareMini.WebApi.Controllers.VeterinaryReviewController.Create(VeterinaryReviewCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\Final_Project\WebApi\PetCareMini.WebApi\Controllers\VeterinaryReviewController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-20 21:52:02.250 +04:00 [ERR] Unhandled exception: Bu görüş üçün artıq rəy yazılıb.
+System.InvalidOperationException: Bu görüş üçün artıq rəy yazılıb.
+   at PetCareMini.Persistence.Services.VeterinaryReviewService.CreateAsync(Int32 userId, VeterinaryReviewCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\Final_Project\Persistence\PetCareMini.Persistence\Services\VeterinaryReviewService.cs:line 25
+   at PetCareMini.WebApi.Controllers.VeterinaryReviewController.Create(VeterinaryReviewCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\Final_Project\WebApi\PetCareMini.WebApi\Controllers\VeterinaryReviewController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\Final_Project\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-05-20 21:52:16.752 +04:00 [ERR] HTTP POST /api/veterinary-reviews responded 500 in 19.8538 ms
+System.InvalidOperationException: Bu görüş üçün artıq rəy yazılıb.
+   at PetCareMini.Persistence.Services.VeterinaryReviewService.CreateAsync(Int32 userId, VeterinaryReviewCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\Final_Project\Persistence\PetCareMini.Persistence\Services\VeterinaryReviewService.cs:line 25
+   at PetCareMini.WebApi.Controllers.VeterinaryReviewController.Create(VeterinaryReviewCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\Final_Project\WebApi\PetCareMini.WebApi\Controllers\VeterinaryReviewController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-05-20 21:52:16.767 +04:00 [ERR] Unhandled exception: Bu görüş üçün artıq rəy yazılıb.
+System.InvalidOperationException: Bu görüş üçün artıq rəy yazılıb.
+   at PetCareMini.Persistence.Services.VeterinaryReviewService.CreateAsync(Int32 userId, VeterinaryReviewCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\Final_Project\Persistence\PetCareMini.Persistence\Services\VeterinaryReviewService.cs:line 25
+   at PetCareMini.WebApi.Controllers.VeterinaryReviewController.Create(VeterinaryReviewCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\Final_Project\WebApi\PetCareMini.WebApi\Controllers\VeterinaryReviewController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\Final_Project\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-05-20 21:52:39.050 +04:00 [INF] HTTP GET /api/Pets responded 200 in 79.5101 ms
+2026-05-20 21:53:39.089 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 637.4410 ms
+2026-05-20 21:53:53.602 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 12.8424 ms
+2026-05-20 21:54:49.363 +04:00 [INF] HTTP POST /api/veterinary-reviews responded 201 in 177.3303 ms
