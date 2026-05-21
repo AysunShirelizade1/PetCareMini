@@ -34,7 +34,7 @@ public class BlogAuthorProfileConfiguration : IEntityTypeConfiguration<BlogAutho
             .IsUnique();
 
         builder.HasOne(x => x.User)
-            .WithOne()
+            .WithOne(x => x.BlogAuthorProfile)
             .HasForeignKey<BlogAuthorProfile>(x => x.UserId)
             .OnDelete(DeleteBehavior.Cascade);
     }

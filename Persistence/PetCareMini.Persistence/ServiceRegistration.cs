@@ -36,7 +36,12 @@ public static class ServiceRegistration
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<IVeterinaryReviewRepository, VeterinaryReviewRepository>();
         services.AddScoped<IContactMessageRepository, ContactMessageRepository>();
-        
+        services.AddScoped<IBlogPostRepository, BlogPostRepository>();
+        services.AddScoped<IBlogCategoryRepository, BlogCategoryRepository>();
+        services.AddScoped<IBlogTagRepository, BlogTagRepository>();
+        services.AddScoped<IBlogCommentRepository, BlogCommentRepository>();
+        services.AddScoped<IBlogAuthorProfileRepository, BlogAuthorProfileRepository>();
+
         #endregion
         #region Services
         services.AddScoped<IVeterinaryReviewService, VeterinaryReviewService>();
@@ -57,6 +62,10 @@ public static class ServiceRegistration
         services.AddScoped<IProductCategoryService, ProductCategoryService>();
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<IContactMessageService, ContactMessageService>();
+        services.AddScoped<IBlogPostService, BlogPostService>();
+        services.AddScoped<IBlogCategoryService, BlogCategoryService>();
+        services.AddScoped<IBlogCommentService, BlogCommentService>();
+        services.AddScoped<IBlogAuthorProfileService, BlogAuthorProfileService>();
         #endregion
         return services;
     }
