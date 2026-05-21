@@ -25,6 +25,12 @@ public class AppDbContext : DbContext
     public DbSet<OrderItem> OrderItems => Set<OrderItem>();
     public DbSet<Coupon> Coupons => Set<Coupon>();
     public DbSet<VeterinaryReview> VeterinaryReviews => Set<VeterinaryReview>();
+    public DbSet<BlogPost> BlogPosts => Set<BlogPost>();
+    public DbSet<BlogCategory> BlogCategories => Set<BlogCategory>();
+    public DbSet<BlogTag> BlogTags => Set<BlogTag>();
+    public DbSet<BlogPostTag> BlogPostTags => Set<BlogPostTag>();
+    public DbSet<BlogComment> BlogComments => Set<BlogComment>();
+    public DbSet<BlogAuthorProfile> BlogAuthorProfiles => Set<BlogAuthorProfile>();
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);

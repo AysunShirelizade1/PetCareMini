@@ -2,9 +2,6 @@
 using PetCareMini.Application.Abstracts.Repositories;
 using PetCareMini.Domain.Entities;
 using PetCareMini.Persistence.Contexts;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PetCareMini.Persistence.Repositories;
 

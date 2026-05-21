@@ -20,4 +20,5 @@ public class User : BaseEntity
     public ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
     public ICollection<ProductReview> Reviews { get; set; } = new List<ProductReview>();
     public ICollection<Order> Orders { get; set; } = new List<Order>();
+
 }
