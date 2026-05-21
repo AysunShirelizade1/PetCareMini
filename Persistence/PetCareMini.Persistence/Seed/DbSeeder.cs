@@ -561,6 +561,17 @@ public static class DbSeeder
             ReplyMessage = null,
             RepliedAt = null
         },
+        new()
+        {
+            Subject = "Sifarişin vəziyyəti",
+            Message = "Sifariş verdim amma hələ təsdiqlənməyib. Nə vaxt təsdiqlənəcək?",
+            UserId = userId,
+            IsRead = true,
+            ReadAt = DateTime.UtcNow.AddDays(-4),
+            IsArchived = false,
+            ReplyMessage = "Sifarişiniz təsdiqlənmək üzrədir. Normalda 24 saat ərzində təsdiqlənir.",
+            RepliedAt = DateTime.UtcNow.AddDays(-4)
+        }
     });
 
         await context.SaveChangesAsync();
