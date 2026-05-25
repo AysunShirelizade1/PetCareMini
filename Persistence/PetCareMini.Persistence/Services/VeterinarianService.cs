@@ -27,6 +27,7 @@ public class VeterinarianService : IVeterinarianService
             ProfileImageUrl = x.ProfileImageUrl,
             PhoneNumber = x.PhoneNumber,
             Email = x.Email,
+            ExperienceYears = x.ExperienceYears,
             FacebookUrl = x.FacebookUrl,
             InstagramUrl = x.InstagramUrl,
             LinkedInUrl = x.LinkedInUrl,
@@ -49,6 +50,7 @@ public class VeterinarianService : IVeterinarianService
             Bio = veterinarian.Bio,
             ProfileImageUrl = veterinarian.ProfileImageUrl,
             PhoneNumber = veterinarian.PhoneNumber,
+            ExperienceYears = veterinarian.ExperienceYears,
             Email = veterinarian.Email,
             FacebookUrl = veterinarian.FacebookUrl,
             InstagramUrl = veterinarian.InstagramUrl,
@@ -66,6 +68,7 @@ public class VeterinarianService : IVeterinarianService
             Bio = dto.Bio,
             ProfileImageUrl = dto.ProfileImageUrl,
             PhoneNumber = dto.PhoneNumber,
+            ExperienceYears = dto.ExperienceYears,
             Email = dto.Email,
             FacebookUrl = dto.FacebookUrl,
             InstagramUrl = dto.InstagramUrl,
@@ -89,6 +92,7 @@ public class VeterinarianService : IVeterinarianService
         veterinarian.Bio = dto.Bio;
         veterinarian.ProfileImageUrl = dto.ProfileImageUrl;
         veterinarian.PhoneNumber = dto.PhoneNumber;
+        veterinarian.ExperienceYears = dto.ExperienceYears;
         veterinarian.Email = dto.Email;
         veterinarian.FacebookUrl = dto.FacebookUrl;
         veterinarian.InstagramUrl = dto.InstagramUrl;
