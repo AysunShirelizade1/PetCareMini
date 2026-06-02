@@ -22,4 +22,10 @@ public class AdminController : ControllerBase
         var result = await _service.GetStatisticsAsync();
         return Ok(result);
     }
+    [HttpGet("users")]
+    public async Task<IActionResult> GetAllUsers()
+    {
+        var result = await _service.GetAllUsersAsync();
+        return Ok(result);
+    }
 }
