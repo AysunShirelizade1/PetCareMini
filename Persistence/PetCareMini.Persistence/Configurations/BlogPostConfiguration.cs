@@ -10,21 +10,36 @@ public class BlogPostConfiguration : IEntityTypeConfiguration<BlogPost>
     {
         builder.HasKey(x => x.Id);
 
-        builder.Property(x => x.Title)
+        builder.Property(x => x.TitleAz)
+            .IsRequired()
+            .HasMaxLength(300);
+        builder.Property(x => x.TitleEn)
             .IsRequired()
             .HasMaxLength(300);
 
-        builder.Property(x => x.Slug)
+        builder.Property(x => x.SlugAz)
+            .IsRequired()
+            .HasMaxLength(300);
+        builder.Property(x => x.SlugEn)
             .IsRequired()
             .HasMaxLength(300);
 
-        builder.HasIndex(x => x.Slug)
+        builder.HasIndex(x => x.SlugAz)
+            .IsUnique();
+        builder.HasIndex(x => x.SlugEn)
             .IsUnique();
 
-        builder.Property(x => x.Content)
+        builder.Property(x => x.ContentAz)
             .IsRequired();
 
-        builder.Property(x => x.Summary)
+        builder.Property(x => x.ContentEn)
+            .IsRequired();
+
+        builder.Property(x => x.SummaryAz)
+            .IsRequired()
+            .HasMaxLength(500);
+
+        builder.Property(x => x.SummaryEn)
             .IsRequired()
             .HasMaxLength(500);
 

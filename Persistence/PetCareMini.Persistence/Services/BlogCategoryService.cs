@@ -14,21 +14,24 @@ public class BlogCategoryService : IBlogCategoryService
         _repo = repo;
     }
 
-    public async Task<List<BlogCategoryGetDto>> GetAllAsync()
+    public async Task<List<BlogCategoryGetDto>> GetAllAsync(string lang = "az")
     {
         var categories = await _repo.GetAllAsync();
         return categories.Select(x => new BlogCategoryGetDto
         {
             Id = x.Id,
-            Name = x.Name,
-            Slug = x.Slug,
-            Description = x.Description,
+            NameAz = x.NameAz,
+            NameEn = x.NameEn,
+            SlugAz = x.SlugAz,
+            SlugEn = x.SlugEn,
+            DescriptionAz = x.DescriptionAz,
+            DescriptionEn = x.DescriptionEn,
             IconUrl = x.IconUrl,
             PostCount = x.Posts.Count
         }).ToList();
     }
 
-    public async Task<BlogCategoryGetDto> GetBySlugAsync(string slug)
+    public async Task<BlogCategoryGetDto> GetBySlugAsync(string slug, string lang = "az")
     {
         var category = await _repo.GetBySlugAsync(slug)
             ?? throw new KeyNotFoundException($"Category '{slug}' tapılmadı.");
@@ -36,9 +39,12 @@ public class BlogCategoryService : IBlogCategoryService
         return new BlogCategoryGetDto
         {
             Id = category.Id,
-            Name = category.Name,
-            Slug = category.Slug,
-            Description = category.Description,
+            NameAz = category.NameAz,
+            NameEn = category.NameEn,
+            SlugAz = category.SlugAz,
+            SlugEn = category.SlugEn,
+            DescriptionAz = category.DescriptionAz,
+            DescriptionEn = category.DescriptionEn,
             IconUrl = category.IconUrl,
             PostCount = category.Posts.Count
         };
@@ -48,9 +54,12 @@ public class BlogCategoryService : IBlogCategoryService
     {
         var category = new BlogCategory
         {
-            Name = dto.Name,
-            Slug = GenerateSlug(dto.Name),
-            Description = dto.Description,
+            NameAz = dto.NameAz,
+            NameEn = dto.NameEn,
+            SlugAz = GenerateSlug(dto.NameAz),
+            SlugEn = GenerateSlug(dto.NameEn),
+            DescriptionAz = dto.DescriptionAz,
+            DescriptionEn = dto.DescriptionEn,
             IconUrl = dto.IconUrl
         };
 

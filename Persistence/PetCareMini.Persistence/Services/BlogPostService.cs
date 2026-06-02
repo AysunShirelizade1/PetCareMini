@@ -22,24 +22,24 @@ public class BlogPostService : IBlogPostService
         _profileRepo = profileRepo;
     }
 
-    public async Task<List<BlogPostSummaryDto>> GetAllPublishedAsync()
+    public async Task<List<BlogPostSummaryDto>> GetAllPublishedAsync(string lang = "az")
     {
         var posts = await _repo.GetAllPublishedAsync();
-        return posts.Select(MapToSummary).ToList();
+        return posts.Select(p => MapToSummary(p, lang)).ToList();
     }
 
-    public async Task<List<BlogPostSummaryDto>> GetByCategoryAsync(string categorySlug)
+    public async Task<List<BlogPostSummaryDto>> GetByCategoryAsync(string categorySlug, string lang = "az")
     {
         var posts = await _repo.GetAllPublishedAsync();
         return posts
-            .Where(x => x.Category.Slug == categorySlug)
-            .Select(MapToSummary)
+            .Where(x => (lang == "az" ? x.Category.SlugAz : x.Category.SlugEn) == categorySlug)
+            .Select(p => MapToSummary(p, lang))
             .ToList();
     }
 
-    public async Task<BlogPostGetDto> GetBySlugAsync(string slug)
+    public async Task<BlogPostGetDto> GetBySlugAsync(string slug, string lang = "az")
     {
-        var post = await _repo.GetBySlugAsync(slug)
+        var post = await _repo.GetBySlugAsync(slug, lang)
             ?? throw new KeyNotFoundException($"Post '{slug}' tapılmadı.");
 
         // ViewCount artır
@@ -56,15 +56,19 @@ public class BlogPostService : IBlogPostService
 
         var post = new BlogPost
         {
-            Title = dto.Title,
-            Slug = GenerateSlug(dto.Title),
-            Content = dto.Content,
-            Summary = dto.Summary,
+            TitleAz = dto.TitleAz,
+            TitleEn = dto.TitleEn,
+            SlugAz = GenerateSlug(dto.TitleAz),
+            SlugEn = GenerateSlug(dto.TitleEn),
+            ContentAz = dto.ContentAz,
+            ContentEn = dto.ContentEn,
+            SummaryAz = dto.SummaryAz,
+            SummaryEn = dto.SummaryEn,
             CoverImageUrl = dto.CoverImageUrl,
             CategoryId = dto.CategoryId,
             AuthorId = userId,
             Status = BlogPostStatus.Pending,
-            ReadTimeMinutes = CalculateReadTime(dto.Content),
+            ReadTimeMinutes = CalculateReadTime(dto.ContentAz),
             BlogPostTags = tags.Select(t => new BlogPostTag { TagId = t.Id }).ToList()
         };
 
@@ -85,14 +89,18 @@ public class BlogPostService : IBlogPostService
 
         var tags = await _tagRepo.GetByIdsAsync(dto.TagIds);
 
-        post.Title = dto.Title;
-        post.Slug = GenerateSlug(dto.Title);
-        post.Content = dto.Content;
-        post.Summary = dto.Summary;
+        post.TitleAz = dto.TitleAz;
+        post.TitleEn = dto.TitleEn;
+        post.SlugAz = GenerateSlug(dto.TitleAz);
+        post.SlugEn = GenerateSlug(dto.TitleEn);
+        post.ContentAz = dto.ContentAz;
+        post.ContentEn = dto.ContentEn;
+        post.SummaryAz = dto.SummaryAz;
+        post.SummaryEn = dto.SummaryEn;
         post.CoverImageUrl = dto.CoverImageUrl;
         post.CategoryId = dto.CategoryId;
-        post.Status = BlogPostStatus.Pending;   // yenilənəndə yenidən təsdiq lazımdır
-        post.ReadTimeMinutes = CalculateReadTime(dto.Content);
+        post.Status = BlogPostStatus.Pending;   //yenilenen vaxt tezden tesdiqlenmelidir
+        post.ReadTimeMinutes = CalculateReadTime(dto.ContentAz);
         post.BlogPostTags = tags.Select(t => new BlogPostTag
         {
             BlogPostId = post.Id,
@@ -117,16 +125,16 @@ public class BlogPostService : IBlogPostService
         await UpdateAuthorTotalPostsAsync(userId);
     }
 
-    public async Task<List<BlogPostSummaryDto>> GetAllAsync()
+    public async Task<List<BlogPostSummaryDto>> GetAllAsync(string lang = "az")
     {
         var posts = await _repo.GetAllAsync();
-        return posts.Select(MapToSummary).ToList();
+        return posts.Select(p => MapToSummary(p, lang)).ToList();
     }
 
-    public async Task<List<BlogPostSummaryDto>> GetPendingAsync()
+    public async Task<List<BlogPostSummaryDto>> GetPendingAsync(string lang = "az")
     {
         var posts = await _repo.GetPendingAsync();
-        return posts.Select(MapToSummary).ToList();
+        return posts.Select(p => MapToSummary(p, lang)).ToList();
     }
 
     public async Task ApproveAsync(int id)
@@ -181,29 +189,54 @@ public class BlogPostService : IBlogPostService
             .Replace("ç", "c").Replace("ş", "s")
             .Replace("ğ", "g");
 
-    private static BlogPostSummaryDto MapToSummary(BlogPost p) => new()
+    private static BlogPostSummaryDto MapToSummary(BlogPost p, string lang) => new()
     {
         Id = p.Id,
-        Title = p.Title,
-        Slug = p.Slug,
-        Summary = p.Summary,
+
+        Title = lang == "az"
+        ? p.TitleAz
+        : p.TitleEn,
+
+        Slug = lang == "az"
+        ? p.SlugAz
+        : p.SlugEn,
+
+        Summary = lang == "az"
+        ? p.SummaryAz
+        : p.SummaryEn,
+
         CoverImageUrl = p.CoverImageUrl,
+
         ReadTimeMinutes = p.ReadTimeMinutes,
         ViewCount = p.ViewCount,
+
         PublishedAt = p.PublishedAt,
+
         AuthorName = p.Author.FullName,
         AuthorImageUrl = p.Author.ImageUrl,
-        CategoryName = p.Category.Name,
-        Tags = p.BlogPostTags.Select(t => t.Tag.Name).ToList()
+
+        CategoryName = lang == "az"
+        ? p.Category.NameAz
+        : p.Category.NameEn,
+
+        Tags = p.BlogPostTags
+        .Select(t => lang == "az"
+            ? t.Tag.NameAz
+            : t.Tag.NameEn)
+        .ToList()
     };
 
     private static BlogPostGetDto MapToDto(BlogPost p) => new()
     {
         Id = p.Id,
-        Title = p.Title,
-        Slug = p.Slug,
-        Content = p.Content,
-        Summary = p.Summary,
+        TitleAz = p.TitleAz,
+        TitleEn = p.TitleEn,
+        SlugAz = p.SlugAz,
+        SlugEn = p.SlugEn,
+        ContentAz = p.ContentAz,
+        ContentEn = p.ContentEn,
+        SummaryAz = p.SummaryAz,
+        SummaryEn = p.SummaryEn,
         CoverImageUrl = p.CoverImageUrl,
         ReadTimeMinutes = p.ReadTimeMinutes,
         ViewCount = p.ViewCount,
@@ -215,9 +248,11 @@ public class BlogPostService : IBlogPostService
         AuthorName = p.Author.FullName,
         AuthorImageUrl = p.Author.ImageUrl,
         AuthorBio = p.Author.BlogAuthorProfile?.Bio,
-        CategoryName = p.Category.Name,
-        CategorySlug = p.Category.Slug,
-        Tags = p.BlogPostTags.Select(t => t.Tag.Name).ToList(),
+        CategoryNameAz = p.Category.NameAz,
+        CategoryNameEn = p.Category.NameEn,
+        CategorySlugAz = p.Category.SlugAz,
+        CategorySlugEn = p.Category.SlugEn,
+        Tags = p.BlogPostTags.Select(t => t.Tag.NameAz).ToList(),
         Comments = p.Comments
             .Where(c => c.IsApproved && c.ParentCommentId == null)
             .Select(c => new BlogCommentGetDto

@@ -1,0 +1,7 @@
+2026-05-26 10:31:48.834 +04:00 [INF] HTTP GET /api/Products responded 200 in 604.8680 ms
+2026-05-26 11:14:21.049 +04:00 [INF] HTTP POST /api/Auth/login responded 401 in 782.9176 ms
+2026-05-26 11:14:29.824 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 288.4305 ms
+2026-05-26 11:24:11.691 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1314.8114 ms
+2026-05-26 11:24:30.265 +04:00 [INF] HTTP GET /api/blog responded 200 in 740.5901 ms
+2026-05-26 15:50:17.099 +04:00 [INF] HTTP GET /api/blog responded 200 in 1114.8406 ms
+2026-05-26 15:50:29.203 +04:00 [INF] HTTP GET /api/blog responded 200 in 65.0113 ms

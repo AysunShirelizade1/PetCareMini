@@ -11,7 +11,7 @@ public class AdminController : ControllerBase
 {
     private readonly IAdminService _service;
 
-    public AdminController(IAdminService service)
+    public AdminController(IAdminService service) 
     {
         _service = service;
     }

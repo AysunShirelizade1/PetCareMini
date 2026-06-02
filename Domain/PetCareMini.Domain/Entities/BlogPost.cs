@@ -5,10 +5,14 @@ namespace PetCareMini.Domain.Entities;
 
 public class BlogPost : BaseEntity
 {
-    public string Title { get; set; } = null!;
-    public string Slug { get; set; } = null!;
-    public string Content { get; set; } = null!;
-    public string Summary { get; set; } = null!;
+    public string TitleAz { get; set; } = null!;
+    public string TitleEn { get; set; } = null!;
+    public string SlugAz { get; set; } = null!;
+    public string SlugEn { get; set; } = null!;
+    public string ContentAz { get; set; } = null!;
+    public string ContentEn { get; set; } = null!;
+    public string SummaryAz { get; set; } = null!;
+    public string SummaryEn { get; set; } = null!;
     public string? CoverImageUrl { get; set; }
     public int ViewCount { get; set; } = 0;
     public int ReadTimeMinutes { get; set; } = 0;

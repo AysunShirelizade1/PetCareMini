@@ -10,15 +10,23 @@ public class BlogTagConfiguration : IEntityTypeConfiguration<BlogTag>
     {
         builder.HasKey(x => x.Id);
 
-        builder.Property(x => x.Name)
+        builder.Property(x => x.NameAz)
+            .IsRequired()
+            .HasMaxLength(50);
+        builder.Property(x => x.NameEn)
             .IsRequired()
             .HasMaxLength(50);
 
-        builder.Property(x => x.Slug)
+        builder.Property(x => x.SlugAz)
+            .IsRequired()
+            .HasMaxLength(50);
+        builder.Property(x => x.SlugEn)
             .IsRequired()
             .HasMaxLength(50);
 
-        builder.HasIndex(x => x.Slug)
+        builder.HasIndex(x => x.SlugAz)
+            .IsUnique();
+        builder.HasIndex(x => x.SlugEn)
             .IsUnique();
     }
 }

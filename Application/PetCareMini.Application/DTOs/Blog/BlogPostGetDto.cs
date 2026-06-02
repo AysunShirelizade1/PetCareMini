@@ -3,10 +3,14 @@
 public class BlogPostGetDto
 {
     public int Id { get; set; }
-    public string Title { get; set; } = null!;
-    public string Slug { get; set; } = null!;
-    public string Content { get; set; } = null!;
-    public string Summary { get; set; } = null!;
+    public string TitleAz { get; set; } = null!;
+    public string TitleEn { get; set; } = null!;
+    public string SlugAz { get; set; } = null!;
+    public string SlugEn { get; set; } = null!;
+    public string ContentAz { get; set; } = null!;
+    public string ContentEn { get; set; } = null!;
+    public string SummaryAz { get; set; } = null!;
+    public string SummaryEn { get; set; } = null!;
     public string? CoverImageUrl { get; set; }
     public int ReadTimeMinutes { get; set; }
     public int ViewCount { get; set; }
@@ -22,8 +26,10 @@ public class BlogPostGetDto
     public string? AuthorBio { get; set; }
 
     // Kateqoriya
-    public string CategoryName { get; set; } = null!;
-    public string CategorySlug { get; set; } = null!;
+    public string CategoryNameAz { get; set; } = null!;
+    public string CategoryNameEn { get; set; } = null!;
+    public string CategorySlugAz { get; set; } = null!;
+    public string CategorySlugEn { get; set; } = null!;
 
     // Etiketlər
     public List<string> Tags { get; set; } = new();

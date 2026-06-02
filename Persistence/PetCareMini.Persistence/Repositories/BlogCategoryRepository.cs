@@ -16,16 +16,16 @@ public class BlogCategoryRepository : IBlogCategoryRepository
 
     public async Task<List<BlogCategory>> GetAllAsync()
         => await _context.BlogCategories
-            .OrderBy(x => x.Name)
+            .OrderBy(x => x.NameAz)
             .ToListAsync();
 
     public async Task<BlogCategory?> GetByIdAsync(int id)
         => await _context.BlogCategories
             .FirstOrDefaultAsync(x => x.Id == id);
 
-    public async Task<BlogCategory?> GetBySlugAsync(string slug)
+    public async Task<BlogCategory?> GetBySlugAsync(string slug, string lang = "az")
         => await _context.BlogCategories
-            .FirstOrDefaultAsync(x => x.Slug == slug);
+            .FirstOrDefaultAsync(x => lang == "az" ? x.SlugAz == slug : x.SlugEn == slug);
 
     public async Task AddAsync(BlogCategory category)
         => await _context.BlogCategories.AddAsync(category);
