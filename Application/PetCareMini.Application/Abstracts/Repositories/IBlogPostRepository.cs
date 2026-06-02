@@ -6,10 +6,11 @@ namespace PetCareMini.Application.Abstracts.Repositories;
 public interface IBlogPostRepository
 {
     Task<List<BlogPost>> GetAllPublishedAsync();
-    Task<List<BlogPost>> GetAllAsync();                          // Admin üçün
+    Task<int> CountPendingByAuthorAsync(int userId);
+    Task<List<BlogPost>> GetAllAsync();                         
     Task<List<BlogPost>> GetByCategoryAsync(int categoryId);
     Task<List<BlogPost>> GetByAuthorAsync(int authorId);
-    Task<List<BlogPost>> GetPendingAsync();                      // Admin — gözləyənlər
+    Task<List<BlogPost>> GetPendingAsync();                      
     Task<BlogPost?> GetByIdAsync(int id);
     Task<BlogPost?> GetBySlugAsync(string slug, string lang = "az");
     Task AddAsync(BlogPost post);

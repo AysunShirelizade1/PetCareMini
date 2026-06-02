@@ -42,7 +42,7 @@ public class BlogPostService : IBlogPostService
         var post = await _repo.GetBySlugAsync(slug, lang)
             ?? throw new KeyNotFoundException($"Post '{slug}' tapılmadı.");
 
-        // ViewCount artır
+      
         post.ViewCount++;
         _repo.Update(post);
         await _repo.SaveChangesAsync();
@@ -52,6 +52,26 @@ public class BlogPostService : IBlogPostService
 
     public async Task CreateAsync(int userId, BlogPostCreateDto dto)
     {
+
+        var pendingCount = await _repo.CountPendingByAuthorAsync(userId);
+        if (pendingCount >= 2)
+            throw new InvalidOperationException("Eyni anda maksimum 2 gözləyən postunuz ola bilər.");
+
+    
+        if (dto.TitleAz.Length < 10 || dto.TitleAz.Length > 150)
+            throw new ArgumentException("Başlıq 10-150 simvol arasında olmalıdır.");
+        if (dto.TitleEn.Length < 10 || dto.TitleEn.Length > 150)
+            throw new ArgumentException("Title must be between 10 and 150 characters.");
+
+        if (dto.SummaryAz.Length < 50 || dto.SummaryAz.Length > 300)
+            throw new ArgumentException("Xülasə 50-300 simvol arasında olmalıdır.");
+        if (dto.SummaryEn.Length < 50 || dto.SummaryEn.Length > 300)
+            throw new ArgumentException("Summary must be between 50 and 300 characters.");
+
+        if (dto.ContentAz.Length < 300 || dto.ContentAz.Length > 10000)
+            throw new ArgumentException("Məzmun 300-10,000 simvol arasında olmalıdır.");
+        if (dto.ContentEn.Length < 300 || dto.ContentEn.Length > 10000)
+            throw new ArgumentException("Content must be between 300 and 10,000 characters.");
         var tags = await _tagRepo.GetByIdsAsync(dto.TagIds);
 
         var post = new BlogPost
@@ -75,12 +95,32 @@ public class BlogPostService : IBlogPostService
         await _repo.AddAsync(post);
         await _repo.SaveChangesAsync();
 
-        // Author profile TotalPosts artır
+        
         await UpdateAuthorTotalPostsAsync(userId);
     }
 
     public async Task UpdateAsync(int userId, int id, BlogPostUpdateDto dto)
     {
+        
+        var pendingCount = await _repo.CountPendingByAuthorAsync(userId);
+        if (pendingCount >= 2)
+            throw new InvalidOperationException("Eyni anda maksimum 2 gözləyən postunuz ola bilər.");
+
+        
+        if (dto.TitleAz.Length < 10 || dto.TitleAz.Length > 150)
+            throw new ArgumentException("Başlıq 10-150 simvol arasında olmalıdır.");
+        if (dto.TitleEn.Length < 10 || dto.TitleEn.Length > 150)
+            throw new ArgumentException("Title must be between 10 and 150 characters.");
+
+        if (dto.SummaryAz.Length < 50 || dto.SummaryAz.Length > 300)
+            throw new ArgumentException("Xülasə 50-300 simvol arasında olmalıdır.");
+        if (dto.SummaryEn.Length < 50 || dto.SummaryEn.Length > 300)
+            throw new ArgumentException("Summary must be between 50 and 300 characters.");
+
+        if (dto.ContentAz.Length < 300 || dto.ContentAz.Length > 10000)
+            throw new ArgumentException("Məzmun 300-10,000 simvol arasında olmalıdır.");
+        if (dto.ContentEn.Length < 300 || dto.ContentEn.Length > 10000)
+            throw new ArgumentException("Content must be between 300 and 10,000 characters.");
         var post = await _repo.GetByIdAsync(id)
             ?? throw new KeyNotFoundException("Post tapılmadı.");
 
@@ -99,7 +139,7 @@ public class BlogPostService : IBlogPostService
         post.SummaryEn = dto.SummaryEn;
         post.CoverImageUrl = dto.CoverImageUrl;
         post.CategoryId = dto.CategoryId;
-        post.Status = BlogPostStatus.Pending;   //yenilenen vaxt tezden tesdiqlenmelidir
+        post.Status = BlogPostStatus.Pending;   
         post.ReadTimeMinutes = CalculateReadTime(dto.ContentAz);
         post.BlogPostTags = tags.Select(t => new BlogPostTag
         {

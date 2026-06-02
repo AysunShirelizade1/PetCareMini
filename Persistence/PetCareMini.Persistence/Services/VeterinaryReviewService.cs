@@ -105,6 +105,7 @@ public class VeterinaryReviewService : IVeterinaryReviewService
             CommentAz = r.CommentAz,
             CommentEn = r.CommentEn,
             IsFeatured = r.IsFeatured,
+            IsApproved = r.IsApproved,
             CreatedAt = r.CreatedAt
         };
     }
