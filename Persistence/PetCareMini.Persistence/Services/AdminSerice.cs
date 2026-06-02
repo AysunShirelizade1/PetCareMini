@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Admin;
+using PetCareMini.Application.DTOs.User;
 using PetCareMini.Persistence.Contexts;
 
 namespace PetCareMini.Persistence.Services;
@@ -13,7 +14,19 @@ public class AdminService : IAdminService
     {
         _context = context;
     }
-
+    public async Task<List<UserGetDto>> GetAllUsersAsync()
+    {
+        return await _context.Users
+            .Select(u => new UserGetDto
+            {
+                Id = u.Id,
+                FullName = u.FullName,
+                Email = u.Email,
+                PhoneNumber = u.PhoneNumber,
+                Role = u.Role.ToString() 
+            })
+            .ToListAsync();
+    }
     public async Task<AdminStatisticsDto> GetStatisticsAsync()
     {
         var totalProducts = await _context.Products
