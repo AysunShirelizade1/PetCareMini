@@ -20,6 +20,7 @@ public static class DbSeeder
         await SeedVeterinaryReviewsAsync(context);
         await SeedPetsAsync(context);
         await SeedContactMessagesAsync(context);
+        await SeedBlogAsync(context);
     }
 
     // ── CATEGORIES ──────────────────────────────────────────────
@@ -573,6 +574,394 @@ public static class DbSeeder
             RepliedAt = DateTime.UtcNow.AddDays(-4)
         }
     });
+
+        await context.SaveChangesAsync();
+    }
+    // ── BLOG ─────────────────────────────────────────────────────
+    private static async Task SeedBlogAsync(AppDbContext context)
+    {
+        if (await context.BlogCategories.AnyAsync()) return;
+
+        var users = await context.Users.ToListAsync();
+        if (!users.Any()) return;
+
+        var adminId = users.First(u => u.Role == UserRole.Admin).Id;
+        var userId = users.First(u => u.Role == UserRole.User).Id;
+
+        // ── Kateqoriyalar ────────────────────────────────────────
+        var categories = new List<BlogCategory>
+    {
+        new() { NameAz = "İt Baxımı",       NameEn = "Dog Care",       SlugAz = "it-baximi",       SlugEn = "dog-care",       DescriptionAz = "İtlər üçün baxım məsləhətləri",          DescriptionEn = "Care tips for dogs",             IconUrl = "🐶" },
+        new() { NameAz = "Pişik Baxımı",    NameEn = "Cat Care",       SlugAz = "pisik-baximi",    SlugEn = "cat-care",       DescriptionAz = "Pişiklər üçün baxım məsləhətləri",       DescriptionEn = "Care tips for cats",             IconUrl = "🐱" },
+        new() { NameAz = "Sağlamlıq",       NameEn = "Health",         SlugAz = "saglamliq",       SlugEn = "health",         DescriptionAz = "Ev heyvanlarının sağlamlığı",            DescriptionEn = "Pet health and wellness",        IconUrl = "💊" },
+        new() { NameAz = "Qroominq",        NameEn = "Grooming",       SlugAz = "qroominq",        SlugEn = "grooming",       DescriptionAz = "Baxım və qroominq məsləhətləri",         DescriptionEn = "Grooming tips and tricks",       IconUrl = "✂️" },
+        new() { NameAz = "Qidalanma",       NameEn = "Nutrition",      SlugAz = "qidalanma",       SlugEn = "nutrition",      DescriptionAz = "Düzgün qidalanma tövsiyələri",           DescriptionEn = "Proper nutrition advice",        IconUrl = "🍖" },
+        new() { NameAz = "Veterinar",       NameEn = "Veterinary",     SlugAz = "veterinar",       SlugEn = "veterinary",     DescriptionAz = "Veterinar məsləhətləri",                 DescriptionEn = "Veterinary advice",             IconUrl = "🩺" },
+    };
+
+        await context.BlogCategories.AddRangeAsync(categories);
+        await context.SaveChangesAsync();
+
+        // ── Taglər ───────────────────────────────────────────────
+        var tags = new List<BlogTag>
+    {
+        new()
+        {
+            NameAz = "İt",
+            NameEn = "Dog",
+            SlugAz = "it",
+            SlugEn = "dog"
+        },
+
+        new()
+        {
+            NameAz = "Pişik",
+            NameEn = "Cat",
+            SlugAz = "pisik",
+            SlugEn = "cat"
+        },
+
+        new()
+        {
+            NameAz = "Sağlamlıq",
+            NameEn = "Health",
+            SlugAz = "saglamliq",
+            SlugEn = "health"
+        },
+
+        new()
+        {
+            NameAz = "Qroominq",
+            NameEn = "Grooming",
+            SlugAz = "qroominq",
+            SlugEn = "grooming"
+        },
+
+        new()
+        {
+            NameAz = "Qidalanma",
+            NameEn = "Nutrition",
+            SlugAz = "qidalanma",
+            SlugEn = "nutrition"
+        },
+
+        new()
+        {
+            NameAz = "Yavru",
+            NameEn = "Puppy",
+            SlugAz = "yavru",
+            SlugEn = "puppy"
+        },
+
+        new()
+        {
+            NameAz = "Peyvənd",
+            NameEn = "Vaccination",
+            SlugAz = "peyvend",
+            SlugEn = "vaccination"
+        },
+
+        new()
+        {
+            NameAz = "Məsləhət",
+            NameEn = "Advice",
+            SlugAz = "meslehet",
+            SlugEn = "advice"
+        }
+    };
+
+        await context.BlogTags.AddRangeAsync(tags);
+        await context.SaveChangesAsync();
+
+        // ── Author profillər ─────────────────────────────────────
+        var authorProfiles = new List<BlogAuthorProfile>
+    {
+        new()
+        {
+            UserId = adminId,
+            Bio = "PetCare komandası olaraq ev heyvanlarınızın sağlamlığı üçün ən yaxşı məsləhətləri paylaşırıq.",
+            ProfileImageUrl = "https://placehold.co/100x100?text=Admin",
+            WebsiteUrl = "https://petcare.az",
+            InstagramUrl = "https://instagram.com/petcare",
+            LinkedInUrl = null,
+            TotalPosts = 0
+        },
+        new()
+        {
+            UserId = userId,
+            Bio = "Ev heyvanı sevdalısı. İt və pişiklərlə 10 illik təcrübə.",
+            ProfileImageUrl = "https://placehold.co/100x100?text=User",
+            WebsiteUrl = null,
+            InstagramUrl = "https://instagram.com/petlover",
+            LinkedInUrl = null,
+            TotalPosts = 0
+        }
+    };
+
+        await context.BlogAuthorProfiles.AddRangeAsync(authorProfiles);
+        await context.SaveChangesAsync();
+
+        // ── Postlar ──────────────────────────────────────────────
+        var dogCare = categories[0];
+        var catCare = categories[1];
+        var health = categories[2];
+        var grooming = categories[3];
+        var nutrition = categories[4];
+        var veterinary = categories[5];
+
+        var tagIt = tags[0];
+        var tagPisik = tags[1];
+        var tagSaglamliq = tags[2];
+        var tagQroominq = tags[3];
+        var tagQida = tags[4];
+        var tagYavru = tags[5];
+        var tagPeyvend = tags[6];
+        var tagMeslehet = tags[7];
+
+        var posts = new List<BlogPost>
+    {
+        new()
+        {
+            TitleAz = "İtin Gündəlik Baxım Rutini",
+            TitleEn = "Daily Dog Care Routine",
+            SlugAz = "itin-gundelik-baxim-rutini",
+            SlugEn = "daily-dog-care-routine",
+            SummaryAz = "İtinizin sağlam və xoşbəxt olması üçün gündəlik baxım rutini haqqında bilməli olduğunuz hər şey.",
+            SummaryEn = "Everything you need to know about daily care routine to keep your dog healthy and happy.",
+            ContentAz = "İtlər sadiq dostlarımızdır və onlara lazımi qayğı göstərmək bizim vəzifəmizdir. Gündəlik baxım rutini olaraq hər gün ən azı 30 dəqiqə gəzintiyə çıxarmaq, düzgün qidalandırmaq və tüklərini daramaq lazımdır. Bundan əlavə, hər həftə çimizdirilməsi tövsiyə olunur.",
+            ContentEn = "Dogs are our loyal companions and it is our duty to take proper care of them. As a daily care routine, you should take them for at least 30 minutes of walk, feed them properly and brush their fur. Additionally, bathing them once a week is recommended.",
+            CoverImageUrl = "https://placehold.co/800x400?text=Dog+Care",
+            CategoryId = dogCare.Id,
+            AuthorId = adminId,
+            Status = BlogPostStatus.Published,
+            PublishedAt = DateTime.UtcNow.AddDays(-10),
+            ReadTimeMinutes = 3,
+            ViewCount = 245,
+            BlogPostTags = new List<BlogPostTag>
+            {
+                new() { TagId = tagIt.Id },
+                new() { TagId = tagMeslehet.Id }
+            }
+        },
+        new()
+        {
+            TitleAz = "Pişik Yavrusu Evə Gətirərkən Nə Etməli?",
+            TitleEn = "What to Do When Bringing a Kitten Home?",
+            SlugAz = "pisik-yavrusu-eve-getirende-ne-etmeli",
+            SlugEn = "what-to-do-when-bringing-kitten-home",
+            SummaryAz = "Evə yeni pişik yavrusu gətirərkən hazırlıq və ilk günlər haqqında praktiki məsləhətlər.",
+            SummaryEn = "Practical tips about preparation and first days when bringing a new kitten home.",
+            ContentAz = "Yeni pişik yavrusu evə gətirilməzdən əvvəl bir neçə hazırlıq işi görülməlidir. Yataq yeri, qida qabı, su qabı və tualet qumu hazırlanmalıdır. İlk günlər yavru stresli ola bilər, ona görə sakit mühit yaradılmalıdır.",
+            ContentEn = "Before bringing a new kitten home, several preparations need to be made. A sleeping area, food bowl, water bowl and litter box should be prepared. The kitten may be stressed in the first days, so a calm environment should be created.",
+            CoverImageUrl = "https://placehold.co/800x400?text=Kitten+Home",
+            CategoryId = catCare.Id,
+            AuthorId = adminId,
+            Status = BlogPostStatus.Published,
+            PublishedAt = DateTime.UtcNow.AddDays(-8),
+            ReadTimeMinutes = 4,
+            ViewCount = 189,
+            BlogPostTags = new List<BlogPostTag>
+            {
+                new() { TagId = tagPisik.Id },
+                new() { TagId = tagYavru.Id }
+            }
+        },
+        new()
+        {
+            TitleAz = "İtlər Üçün Peyvənd Cədvəli",
+            TitleEn = "Vaccination Schedule for Dogs",
+            SlugAz = "itler-ucun-peyvend-cedveli",
+            SlugEn = "vaccination-schedule-for-dogs",
+            SummaryAz = "İtinizi xəstəliklərdən qorumaq üçün peyvənd cədvəli və tövsiyələr.",
+            SummaryEn = "Vaccination schedule and recommendations to protect your dog from diseases.",
+            ContentAz = "Peyvəndlər itlərin sağlamlığını qorumaq üçün ən vacib vasitələrdən biridir. Yavru itlər 6-8 həftəlikdən başlayaraq peyvənd olunmalıdır. İllik təkrar peyvəndlər mütləq edilməlidir.",
+            ContentEn = "Vaccinations are one of the most important tools to protect dog health. Puppies should be vaccinated starting from 6-8 weeks of age. Annual booster vaccinations are mandatory.",
+            CoverImageUrl = "https://placehold.co/800x400?text=Vaccination",
+            CategoryId = health.Id,
+            AuthorId = adminId,
+            Status = BlogPostStatus.Published,
+            PublishedAt = DateTime.UtcNow.AddDays(-6),
+            ReadTimeMinutes = 5,
+            ViewCount = 312,
+            BlogPostTags = new List<BlogPostTag>
+            {
+                new() { TagId = tagIt.Id },
+                new() { TagId = tagPeyvend.Id },
+                new() { TagId = tagSaglamliq.Id }
+            }
+        },
+        new()
+        {
+            TitleAz = "Pişikləri Evdə Necə Qroominq Etməli?",
+            TitleEn = "How to Groom Cats at Home?",
+            SlugAz = "pisikleri-evde-nece-qroominq-etmeli",
+            SlugEn = "how-to-groom-cats-at-home",
+            SummaryAz = "Pişiyinizi evdə qroominq etmək üçün lazımi alətlər və addım-addım təlimat.",
+            SummaryEn = "Necessary tools and step-by-step guide for grooming your cat at home.",
+            ContentAz = "Pişiklərin qroomingü onların sağlamlığı üçün vacibdir. Lazımi alətlər: xüsusi daraq, dırnaq makası, pişik şampunu. Həftədə bir dəfə daramaq tüklərin düşməsini azaldır.",
+            ContentEn = "Grooming cats is important for their health. Necessary tools: special comb, nail scissors, cat shampoo. Brushing once a week reduces shedding.",
+            CoverImageUrl = "https://placehold.co/800x400?text=Cat+Grooming",
+            CategoryId = grooming.Id,
+            AuthorId = userId,
+            Status = BlogPostStatus.Published,
+            PublishedAt = DateTime.UtcNow.AddDays(-4),
+            ReadTimeMinutes = 4,
+            ViewCount = 156,
+            BlogPostTags = new List<BlogPostTag>
+            {
+                new() { TagId = tagPisik.Id },
+                new() { TagId = tagQroominq.Id }
+            }
+        },
+        new()
+        {
+            TitleAz = "İtlər Üçün Düzgün Qidalanma",
+            TitleEn = "Proper Nutrition for Dogs",
+            SlugAz = "itler-ucun-duzgun-qidalanma",
+            SlugEn = "proper-nutrition-for-dogs",
+            SummaryAz = "İtinizin yaşına və cinsəsinə görə ən uyğun qidalanma planı necə hazırlanır?",
+            SummaryEn = "How to prepare the most suitable nutrition plan according to your dog's age and breed?",
+            ContentAz = "İtlər üçün düzgün qidalanma onların sağlamlığının əsasını təşkil edir. Zülal, yağ, karbohidrat və vitaminlər tarazlı şəkildə verilməlidir. Yaşa görə yavru, yetkin və yaşlı it yemleri mövcuddur.",
+            ContentEn = "Proper nutrition for dogs forms the basis of their health. Protein, fat, carbohydrates and vitamins should be given in a balanced way. Age-appropriate puppy, adult and senior dog foods are available.",
+            CoverImageUrl = "https://placehold.co/800x400?text=Dog+Nutrition",
+            CategoryId = nutrition.Id,
+            AuthorId = userId,
+            Status = BlogPostStatus.Published,
+            PublishedAt = DateTime.UtcNow.AddDays(-2),
+            ReadTimeMinutes = 6,
+            ViewCount = 98,
+            BlogPostTags = new List<BlogPostTag>
+            {
+                new() { TagId = tagIt.Id },
+                new() { TagId = tagQida.Id },
+                new() { TagId = tagMeslehet.Id }
+            }
+        },
+        new()
+        {
+            TitleAz = "Veterinara Nə Vaxt Getməli?",
+            TitleEn = "When Should You Visit the Vet?",
+            SlugAz = "veterinara-ne-vaxt-getmeli",
+            SlugEn = "when-should-you-visit-the-vet",
+            SummaryAz = "Ev heyvanınızda hansı əlamətlər görünsə dərhal veterinara müraciət etməlisiniz?",
+            SummaryEn = "What signs in your pet should prompt you to visit the vet immediately?",
+            ContentAz = "Ev heyvanlarınızda iştahsızlıq, letarji, qusma, ishal kimi əlamətlər görünsə dərhal veterinara müraciət etmək lazımdır. İllik yoxlama da mütləq edilməlidir.",
+            ContentEn = "If you notice signs such as loss of appetite, lethargy, vomiting or diarrhea in your pets, you should visit the vet immediately. Annual check-ups are also mandatory.",
+            CoverImageUrl = "https://placehold.co/800x400?text=Vet+Visit",
+            CategoryId = veterinary.Id,
+            AuthorId = adminId,
+            Status = BlogPostStatus.Published,
+            PublishedAt = DateTime.UtcNow.AddDays(-1),
+            ReadTimeMinutes = 3,
+            ViewCount = 421,
+            BlogPostTags = new List<BlogPostTag>
+            {
+                new() { TagId = tagSaglamliq.Id },
+                new() { TagId = tagMeslehet.Id }
+            }
+        },
+        // Pending post — admin gözləyir
+        new()
+        {
+            TitleAz = "Pişiklər Üçün Ev Oyunları",
+            TitleEn = "Indoor Games for Cats",
+            SlugAz = "pisikler-ucun-ev-oyunlari",
+            SlugEn = "indoor-games-for-cats",
+            SummaryAz = "Pişiyinizi evdə aktiv saxlamaq üçün əyləncəli oyun fikirleri.",
+            SummaryEn = "Fun game ideas to keep your cat active indoors.",
+            ContentAz = "Pişiklər evdə aktiv qalmaq üçün stimulyasiyaya ehtiyac duyurlar. Lazer işığı, lələk oyuncaqları və qutular onları saatlarla məşğul edə bilər.",
+            ContentEn = "Cats need stimulation to stay active indoors. Laser lights, feather toys and boxes can keep them occupied for hours.",
+            CoverImageUrl = "https://placehold.co/800x400?text=Cat+Games",
+            CategoryId = catCare.Id,
+            AuthorId = userId,
+            Status = BlogPostStatus.Pending,
+            PublishedAt = null,
+            ReadTimeMinutes = 3,
+            ViewCount = 0,
+            BlogPostTags = new List<BlogPostTag>
+            {
+                new() { TagId = tagPisik.Id },
+                new() { TagId = tagMeslehet.Id }
+            }
+        },
+    };
+
+        await context.BlogPosts.AddRangeAsync(posts);
+        await context.SaveChangesAsync();
+
+        // ── Şərhlər ──────────────────────────────────────────────
+        var firstPost = posts[0];
+        var secondPost = posts[1];
+
+        var comments = new List<BlogComment>
+    {
+        new()
+        {
+            BlogPostId = firstPost.Id,
+            UserId = userId,
+            Content = "Çox faydalı məqalə idi, təşəkkür edirəm!",
+            Rating = 5,
+            IsApproved = true,
+            ParentCommentId = null
+        },
+        new()
+        {
+            BlogPostId = firstPost.Id,
+            UserId = userId,
+            Content = "İtimin baxımı üçün tam axtardığım məlumat idi.",
+            Rating = 4,
+            IsApproved = true,
+            ParentCommentId = null
+        },
+        new()
+        {
+            BlogPostId = secondPost.Id,
+            UserId = userId,
+            Content = "Yavru pişiyim üçün çox köməkçi oldu!",
+            Rating = 5,
+            IsApproved = true,
+            ParentCommentId = null
+        },
+        new()
+        {
+            BlogPostId = secondPost.Id,
+            UserId = adminId,
+            Content = "Suallarınız olsa şərh bölməsindən soruşa bilərsiniz.",
+            Rating = 5,
+            IsApproved = true,
+            ParentCommentId = null
+        },
+    };
+
+        await context.BlogComments.AddRangeAsync(comments);
+        await context.SaveChangesAsync();
+
+        // ── Reply şərh ───────────────────────────────────────────
+        var reply = new BlogComment
+        {
+            BlogPostId = firstPost.Id,
+            UserId = adminId,
+            Content = "Razıyam, gündəlik rutin çox vacibdir!",
+            Rating = 5,
+            IsApproved = true,
+            ParentCommentId = comments[0].Id
+        };
+
+        await context.BlogComments.AddAsync(reply);
+        await context.SaveChangesAsync();
+
+        // ── Author TotalPosts yenilə ──────────────────────────────
+        var adminProfile = await context.BlogAuthorProfiles
+            .FirstOrDefaultAsync(x => x.UserId == adminId);
+        var userProfile = await context.BlogAuthorProfiles
+            .FirstOrDefaultAsync(x => x.UserId == userId);
+
+        if (adminProfile != null)
+            adminProfile.TotalPosts = posts.Count(p => p.AuthorId == adminId
+                                                   && p.Status == BlogPostStatus.Published);
+        if (userProfile != null)
+            userProfile.TotalPosts = posts.Count(p => p.AuthorId == userId
+                                                  && p.Status == BlogPostStatus.Published);
 
         await context.SaveChangesAsync();
     }

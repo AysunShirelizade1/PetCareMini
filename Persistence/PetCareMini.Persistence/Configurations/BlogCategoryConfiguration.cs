@@ -10,18 +10,31 @@ public class BlogCategoryConfiguration : IEntityTypeConfiguration<BlogCategory>
     {
         builder.HasKey(x => x.Id);
 
-        builder.Property(x => x.Name)
+        builder.Property(x => x.NameAz)
+            .IsRequired()
+            .HasMaxLength(100);
+        builder.Property(x => x.NameEn)
             .IsRequired()
             .HasMaxLength(100);
 
-        builder.Property(x => x.Slug)
+        builder.Property(x => x.SlugAz)
             .IsRequired()
             .HasMaxLength(100);
 
-        builder.HasIndex(x => x.Slug)
+        builder.HasIndex(x => x.SlugAz)
             .IsUnique();
 
-        builder.Property(x => x.Description)
+        builder.Property(x => x.SlugEn)
+            .IsRequired()
+            .HasMaxLength(100);
+
+        builder.HasIndex(x => x.SlugEn)
+            .IsUnique();
+
+        builder.Property(x => x.DescriptionAz)
+            .HasMaxLength(500);
+
+        builder.Property(x => x.DescriptionEn)
             .HasMaxLength(500);
 
         builder.Property(x => x.IconUrl)

@@ -27,16 +27,16 @@ public class BlogController : ControllerBase
     // ── Public endpointlər ───────────────────────────────────
 
     [HttpGet]
-    public async Task<IActionResult> GetAll()
-        => Ok(new { data = await _service.GetAllPublishedAsync(), statusCode = 200 });
+    public async Task<IActionResult> GetAll(string lang = "az")
+    => Ok(new { data = await _service.GetAllPublishedAsync(lang), statusCode = 200 });
 
     [HttpGet("category/{slug}")]
-    public async Task<IActionResult> GetByCategory(string slug)
-        => Ok(new { data = await _service.GetByCategoryAsync(slug), statusCode = 200 });
+    public async Task<IActionResult> GetByCategory(string slug, string lang = "az")
+        => Ok(new { data = await _service.GetByCategoryAsync(slug, lang), statusCode = 200 });
 
     [HttpGet("{slug}")]
-    public async Task<IActionResult> GetBySlug(string slug)
-        => Ok(new { data = await _service.GetBySlugAsync(slug), statusCode = 200 });
+    public async Task<IActionResult> GetBySlug(string slug, string lang = "az")
+        => Ok(new { data = await _service.GetBySlugAsync(slug, lang), statusCode = 200 });
 
     [HttpGet("{postId}/comments")]
     public async Task<IActionResult> GetComments(int postId)
@@ -89,7 +89,6 @@ public class BlogController : ControllerBase
         await _commentService.DeleteAsync(userId, id);
         return Ok(new { message = "Şərh silindi.", statusCode = 200 });
     }
-
     [HttpGet("author/profile")]
     [Authorize]
     public async Task<IActionResult> GetMyProfile()

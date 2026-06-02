@@ -11,7 +11,7 @@ public interface IBlogPostRepository
     Task<List<BlogPost>> GetByAuthorAsync(int authorId);
     Task<List<BlogPost>> GetPendingAsync();                      // Admin — gözləyənlər
     Task<BlogPost?> GetByIdAsync(int id);
-    Task<BlogPost?> GetBySlugAsync(string slug);
+    Task<BlogPost?> GetBySlugAsync(string slug, string lang = "az");
     Task AddAsync(BlogPost post);
     void Update(BlogPost post);
     void Delete(BlogPost post);

@@ -1,0 +1,2 @@
+2026-06-02 10:27:29.019 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1247.4852 ms
+2026-06-02 10:28:27.731 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 472.6843 ms

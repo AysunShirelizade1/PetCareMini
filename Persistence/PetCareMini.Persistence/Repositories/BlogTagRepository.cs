@@ -16,7 +16,7 @@ public class BlogTagRepository : IBlogTagRepository
 
     public async Task<List<BlogTag>> GetAllAsync()
         => await _context.BlogTags
-            .OrderBy(x => x.Name)
+            .OrderBy(x => x.NameAz)
             .ToListAsync();
 
     public async Task<BlogTag?> GetByIdAsync(int id)

@@ -76,7 +76,7 @@ public class BlogPostRepository : IBlogPostRepository
                 .ThenInclude(x => x.User)
             .FirstOrDefaultAsync(x => x.Id == id);
 
-    public async Task<BlogPost?> GetBySlugAsync(string slug)
+    public async Task<BlogPost?> GetBySlugAsync(string slug, string lang = "az")
         => await _context.BlogPosts
             .Include(x => x.Author)
                 .ThenInclude(x => x.BlogAuthorProfile)
@@ -88,8 +88,8 @@ public class BlogPostRepository : IBlogPostRepository
                     .ThenInclude(x => x.User)
             .Include(x => x.Comments)
                 .ThenInclude(x => x.User)
-            .FirstOrDefaultAsync(x => x.Slug == slug
-                                   && x.Status == BlogPostStatus.Published);
+            .FirstOrDefaultAsync(x => (lang == "en" ? x.SlugEn : x.SlugAz) == slug
+                                && x.Status == BlogPostStatus.Published);
 
     public async Task AddAsync(BlogPost post)
         => await _context.BlogPosts.AddAsync(post);

@@ -5,9 +5,9 @@ namespace PetCareMini.Application.Abstracts.Services;
 public interface IBlogPostService
 {
     // Hamıya açıq
-    Task<List<BlogPostSummaryDto>> GetAllPublishedAsync();
-    Task<List<BlogPostSummaryDto>> GetByCategoryAsync(string categorySlug);
-    Task<BlogPostGetDto> GetBySlugAsync(string slug);
+    Task<List<BlogPostSummaryDto>> GetAllPublishedAsync(string lang = "az");
+    Task<List<BlogPostSummaryDto>> GetByCategoryAsync(string categorySlug, string lang = "az");
+    Task<BlogPostGetDto> GetBySlugAsync(string slug, string lang = "az");
 
     // Login user
     Task CreateAsync(int userId, BlogPostCreateDto dto);
@@ -15,8 +15,8 @@ public interface IBlogPostService
     Task DeleteAsync(int userId, int id);
 
     // Admin
-    Task<List<BlogPostSummaryDto>> GetAllAsync();
-    Task<List<BlogPostSummaryDto>> GetPendingAsync();
+    Task<List<BlogPostSummaryDto>> GetAllAsync(string lang = "az");
+    Task<List<BlogPostSummaryDto>> GetPendingAsync(string lang = "az");
     Task ApproveAsync(int id);
     Task RejectAsync(int id, BlogRejectDto dto);
 }
