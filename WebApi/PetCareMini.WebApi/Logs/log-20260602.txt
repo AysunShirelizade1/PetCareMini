@@ -1,2 +1,5 @@
 2026-06-02 10:27:29.019 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1247.4852 ms
 2026-06-02 10:28:27.731 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 472.6843 ms
+2026-06-02 21:59:33.346 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 566.6536 ms
+2026-06-02 21:59:56.146 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 39.6776 ms
+2026-06-02 22:00:06.194 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 79.6965 ms

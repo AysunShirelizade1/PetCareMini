@@ -22,6 +22,7 @@ public class BlogCommentService : IBlogCommentService
 
     public async Task CreateAsync(int userId, BlogCommentCreateDto dto)
     {
+
         if (dto.Rating < 1 || dto.Rating > 5)
             throw new ArgumentException("Rating 1 ilə 5 arasında olmalıdır.");
 

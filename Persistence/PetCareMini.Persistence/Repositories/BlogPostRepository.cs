@@ -34,6 +34,10 @@ public class BlogPostRepository : IBlogPostRepository
             .OrderByDescending(x => x.CreatedAt)
             .ToListAsync();
 
+    public async Task<int> CountPendingByAuthorAsync(int userId)
+    => await _context.BlogPosts
+        .CountAsync(b => b.AuthorId == userId && b.Status == BlogPostStatus.Pending);
+
     public async Task<List<BlogPost>> GetByCategoryAsync(int categoryId)
         => await _context.BlogPosts
             .Include(x => x.Author)
