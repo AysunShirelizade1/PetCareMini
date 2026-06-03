@@ -15,6 +15,7 @@ public class Veterinarian : BaseEntity
     public string? InstagramUrl { get; set; }
     public string? LinkedInUrl { get; set; }
     public bool IsAvailable { get; set; } = true;
-
+    public int? UserId { get; set; }
+    public User? User { get; set; }
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 }

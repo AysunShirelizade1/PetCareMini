@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PetCareMini.Application.Abstracts.Services;
+using PetCareMini.Application.DTOs.Appointment;
 using PetCareMini.Application.DTOs.Veterinarian;
+using PetCareMini.Persistence.Services;
+using System.Security.Claims;
 
 namespace PetCareMini.WebApi.Controllers;
 
@@ -27,10 +30,7 @@ public class VeterinariansController : ControllerBase
     public async Task<IActionResult> GetById(int id)
     {
         var data = await _vetService.GetByIdAsync(id);
-
-        if (data is null)
-            return NotFound();
-
+        if (data is null) return NotFound();
         return Ok(data);
     }
 
@@ -47,10 +47,7 @@ public class VeterinariansController : ControllerBase
     public async Task<IActionResult> Update(int id, [FromBody] VeterinarianUpdateDto dto)
     {
         var result = await _vetService.UpdateAsync(id, dto);
-
-        if (!result)
-            return NotFound();
-
+        if (!result) return NotFound();
         return Ok(new { message = "Veterinarian updated successfully" });
     }
 
@@ -59,10 +56,7 @@ public class VeterinariansController : ControllerBase
     public async Task<IActionResult> Delete(int id)
     {
         var result = await _vetService.DeleteAsync(id);
-
-        if (!result)
-            return NotFound();
-
+        if (!result) return NotFound();
         return Ok(new { message = "Veterinarian deleted successfully" });
     }
 }

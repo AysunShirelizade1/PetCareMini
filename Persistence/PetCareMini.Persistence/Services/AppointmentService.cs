@@ -19,6 +19,21 @@ public class AppointmentService : IAppointmentService
         _appointmentRepository = appointmentRepository;
         _context = context;
     }
+    public async Task<List<AppointmentGetDto>> GetVetAppointmentsAsync(int vetUserId, string lang = "az")
+    {
+        var appointments = await _appointmentRepository.GetByVeterinarianUserIdAsync(vetUserId);
+
+        return appointments.Select(a => new AppointmentGetDto
+        {
+            Id = a.Id,
+            PetName = a.Pet.Name,
+            VeterinarianName = a.Veterinarian.FullName,
+            ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
+            AppointmentDate = a.AppointmentDate,
+            Status = a.Status.ToString(),
+            Notes = a.Notes
+        }).ToList();
+    }
     public async Task<IEnumerable<AppointmentGetDto>> GetByUserAsync(int userId, string lang = "az")
     {
         var appointments = await _appointmentRepository.GetUserAppointmentsAsync(userId);
@@ -113,14 +128,14 @@ public class AppointmentService : IAppointmentService
         }).ToList();
     }
 
-    public async Task UpdateStatusAsync(int appointmentId, AppointmentStatusUpdateDto dto)
+    public async Task UpdateStatusAsync(int appointmentId, AppointmentStatusUpdateDto dto, int? vetUserId = null)
     {
-        var appointment = await _appointmentRepository.GetByIdAsync(appointmentId);
+        var appointment = await _appointmentRepository.GetByIdAsync(appointmentId)
+            ?? throw new KeyNotFoundException("Appointment not found.");
 
-        if (appointment is null)
-            throw new KeyNotFoundException("Appointment not found.");
+        if (vetUserId.HasValue && appointment.Veterinarian.UserId != vetUserId)
+            throw new UnauthorizedAccessException("Bu appointment sizə aid deyil.");
 
-        //  Validate enum range before casting
         if (!Enum.IsDefined(typeof(AppointmentStatus), dto.Status))
             throw new ArgumentException("Invalid appointment status value.");
 
