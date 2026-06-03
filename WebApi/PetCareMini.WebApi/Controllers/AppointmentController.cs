@@ -50,12 +50,24 @@ public class AppointmentsController : ControllerBase
         });
     }
 
-    [Authorize(Roles = "Admin")]
-    [HttpPatch("{id}/status")]
-    public async Task<IActionResult> UpdateStatus(
-        int id, [FromBody] AppointmentStatusUpdateDto dto)
+    [Authorize(Roles = "Veterinarian")]
+    [HttpGet("vet/my")]
+    public async Task<IActionResult> GetMyVetAppointments([FromQuery] string lang = "az")
     {
-        await _appointmentService.UpdateStatusAsync(id, dto);
+        int vetUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+        var result = await _appointmentService.GetVetAppointmentsAsync(vetUserId, lang);
+        return Ok(result);
+    }
+
+    [Authorize(Roles = "Admin,Veterinarian")]
+    [HttpPatch("{id}/status")]
+    public async Task<IActionResult> UpdateStatus(int id, [FromBody] AppointmentStatusUpdateDto dto)
+    {
+        int? vetUserId = User.IsInRole("Veterinarian")
+            ? int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!)
+            : null;
+
+        await _appointmentService.UpdateStatusAsync(id, dto, vetUserId);
         return Ok(new { message = "Appointment status updated successfully." });
     }
 }

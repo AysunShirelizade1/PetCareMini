@@ -16,7 +16,21 @@ public class CouponService : ICouponService
         _context = context;
         _cartService = cartService;
     }
-
+    public async Task<List<CouponGetDto>> GetAllAsync()
+    {
+        return await _context.Coupons
+            .OrderByDescending(c => c.CreatedAt)
+            .Select(c => new CouponGetDto
+            {
+                Id = c.Id,
+                Code = c.Code,
+                DiscountPercent = c.DiscountPercent,
+                IsActive = c.IsActive,
+                ExpireDate = c.ExpireDate,
+                CreatedAt = c.CreatedAt
+            })
+            .ToListAsync();
+    }
     public async Task<CouponResultDto> ApplyAsync(int userId, string code)
     {
         // Kupon mövcudluğu

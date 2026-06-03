@@ -63,15 +63,15 @@ public class BlogPostService : IBlogPostService
         if (dto.TitleEn.Length < 10 || dto.TitleEn.Length > 150)
             throw new ArgumentException("Title must be between 10 and 150 characters.");
 
-        if (dto.SummaryAz.Length < 50 || dto.SummaryAz.Length > 300)
-            throw new ArgumentException("Xülasə 50-300 simvol arasında olmalıdır.");
-        if (dto.SummaryEn.Length < 50 || dto.SummaryEn.Length > 300)
-            throw new ArgumentException("Summary must be between 50 and 300 characters.");
+        if (dto.SummaryAz.Length < 10 || dto.SummaryAz.Length > 300)
+            throw new ArgumentException("Xülasə 10-300 simvol arasında olmalıdır.");
+        if (dto.SummaryEn.Length < 10 || dto.SummaryEn.Length > 300)
+            throw new ArgumentException("Summary must be between 10 and 300 characters.");
 
-        if (dto.ContentAz.Length < 300 || dto.ContentAz.Length > 10000)
-            throw new ArgumentException("Məzmun 300-10,000 simvol arasında olmalıdır.");
-        if (dto.ContentEn.Length < 300 || dto.ContentEn.Length > 10000)
-            throw new ArgumentException("Content must be between 300 and 10,000 characters.");
+        if (dto.ContentAz.Length < 15 || dto.ContentAz.Length > 10000)
+            throw new ArgumentException("Məzmun 15-10,000 simvol arasında olmalıdır.");
+        if (dto.ContentEn.Length < 15 || dto.ContentEn.Length > 10000)
+            throw new ArgumentException("Content must be between 15 and 10,000 characters.");
         var tags = await _tagRepo.GetByIdsAsync(dto.TagIds);
 
         var post = new BlogPost

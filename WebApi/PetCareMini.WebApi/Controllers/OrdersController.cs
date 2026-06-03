@@ -16,6 +16,17 @@ public class OrdersController : ControllerBase
     {
         _orderService = orderService;
     }
+    [HttpGet]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetAll(
+    [FromQuery] string lang = "az",
+    [FromQuery] string? status = null,
+    [FromQuery] int page = 1,
+    [FromQuery] int pageSize = 20)
+    {
+        var data = await _orderService.GetAllAsync(lang, status, page, pageSize);
+        return Ok(data);
+    }
 
     [HttpGet("my-orders")]
     public async Task<IActionResult> GetMyOrders([FromQuery] string lang = "az")

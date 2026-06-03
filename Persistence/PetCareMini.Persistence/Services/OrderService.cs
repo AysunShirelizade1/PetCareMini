@@ -14,7 +14,41 @@ public class OrderService : IOrderService
     {
         _context = context;
     }
+    public async Task<List<OrderAdminDto>> GetAllAsync(string lang, string? status = null, int page = 1, int pageSize = 20)
+    {
+        var query = _context.Orders
+            .Include(x => x.User)
+            .Include(x => x.OrderItems)
+                .ThenInclude(x => x.Product)
+            .AsQueryable();
 
+        if (!string.IsNullOrWhiteSpace(status))
+            query = query.Where(x => x.Status == status);
+
+        var orders = await query
+            .OrderByDescending(x => x.CreatedAt)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+
+        var isEn = lang.ToLower() == "en";
+
+        return orders.Select(x => new OrderAdminDto
+        {
+            Id = x.Id,
+            UserFullName = x.User.FullName,
+            UserEmail = x.User.Email,
+            TotalPrice = x.TotalPrice,
+            Status = x.Status,
+            CreatedAt = x.CreatedAt,
+            Items = x.OrderItems.Select(i => new OrderItemGetDto
+            {
+                ProductName = isEn ? i.Product.NameEn : i.Product.NameAz,
+                Quantity = i.Quantity,
+                Price = i.Price
+            }).ToList()
+        }).ToList();
+    }
     public async Task<OrderGetDto?> CheckoutAsync(int userId, string lang, string? couponCode = null)
     {
         var cartItems = await _context.CartItems
