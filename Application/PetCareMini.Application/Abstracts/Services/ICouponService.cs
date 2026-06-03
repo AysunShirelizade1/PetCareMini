@@ -5,6 +5,7 @@ namespace PetCareMini.Application.Abstracts.Services;
 public interface ICouponService
 {
     Task<CouponResultDto> ApplyAsync(int userId, string code);
+    Task<List<CouponGetDto>> GetAllAsync();
     Task CreateAsync(string code, decimal discountPercent, DateTime expireDate);
     Task DeactivateAsync(int id);
 }

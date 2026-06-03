@@ -16,7 +16,13 @@ public class CouponController : ControllerBase
     {
         _service = service;
     }
-
+    [HttpGet]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetAll()
+    {
+        var result = await _service.GetAllAsync();
+        return Ok(result);
+    }
     [HttpPost("apply")]
     [Authorize]
     public async Task<IActionResult> Apply([FromBody] CouponApplyDto dto)
