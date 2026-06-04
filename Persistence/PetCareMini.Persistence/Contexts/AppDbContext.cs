@@ -17,6 +17,7 @@ public class AppDbContext : DbContext
     public DbSet<Product> Products => Set<Product>();
     public DbSet<ProductCategory> ProductCategories => Set<ProductCategory>();
     public DbSet<ContactMessage> ContactMessages => Set<ContactMessage>();
+    public DbSet<ContactInfo> ContactInfos => Set<ContactInfo>();
     public DbSet<WishlistItem> WishlistItems => Set<WishlistItem>();
     public DbSet<CartItem> CartItems => Set<CartItem>();
     public DbSet<Faq> Faqs => Set<Faq>();

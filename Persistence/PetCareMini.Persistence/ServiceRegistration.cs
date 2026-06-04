@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PetCareMini.Application.Abstracts.Repositories;
@@ -18,7 +19,10 @@ public static class ServiceRegistration
         IConfiguration configuration)
     {
         services.AddDbContext<AppDbContext>(options =>
-            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection")));
+        {
+            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
+            options.ConfigureWarnings(w => w.Ignore(RelationalEventId.PendingModelChangesWarning));
+        });
         // FluentValidation
         services.AddFluentValidationAutoValidation();
         services.AddValidatorsFromAssemblyContaining<LoginDtoValidator>();
@@ -62,6 +66,7 @@ public static class ServiceRegistration
         services.AddScoped<IProductCategoryService, ProductCategoryService>();
         services.AddScoped<IProductService, ProductService>();
         services.AddScoped<IContactMessageService, ContactMessageService>();
+        services.AddScoped<IContactInfoService, ContactInfoService>();
         services.AddScoped<IBlogPostService, BlogPostService>();
         services.AddScoped<IBlogCategoryService, BlogCategoryService>();
         services.AddScoped<IBlogCommentService, BlogCommentService>();

@@ -242,3 +242,9 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 2026-06-04 11:14:36.408 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 301.9454 ms
 2026-06-04 11:15:09.297 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 83.5631 ms
 2026-06-04 11:15:29.051 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 14.7379 ms
+2026-06-04 11:25:14.859 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 193.6339 ms
+2026-06-04 11:26:20.201 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 48.4123 ms
+2026-06-04 11:26:30.347 +04:00 [INF] HTTP GET /api/Coupon responded 200 in 72.2440 ms
+2026-06-04 11:54:25.936 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1282.5605 ms
+2026-06-04 11:54:45.351 +04:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-06-04 11:54:45.439 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 180.2562 ms
