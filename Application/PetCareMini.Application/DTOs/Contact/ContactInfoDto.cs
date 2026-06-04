@@ -1,12 +1,13 @@
-﻿
-using PetCareMini.Domain.Common;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace PetCareMini.Domain.Entities;
+namespace PetCareMini.Application.DTOs.Contact;
 
-public class ContactInfo : BaseEntity
+public class ContactInfoDto
 {
-    public string PhoneNumber { get; set; } = null!;
-    public string Email { get; set; } = null!;
+    public string PhoneNumber { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
     public string? Address { get; set; }
     public string? WorkingHours { get; set; }
     public string? FacebookUrl { get; set; }
