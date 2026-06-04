@@ -12,7 +12,7 @@ public class BlogPostSummaryDto
 
     public int ReadTimeMinutes { get; set; }
     public int ViewCount { get; set; }
-
+    public string Status { get; set; } = string.Empty;
     public DateTime? PublishedAt { get; set; }
 
     public string AuthorName { get; set; } = null!;

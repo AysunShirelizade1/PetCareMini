@@ -27,6 +27,7 @@ public class AppointmentService : IAppointmentService
         {
             Id = a.Id,
             PetName = a.Pet.Name,
+            UserFullName = a.User.FullName,
             VeterinarianName = a.Veterinarian.FullName,
             ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
             AppointmentDate = a.AppointmentDate,
@@ -42,6 +43,7 @@ public class AppointmentService : IAppointmentService
         {
             Id = a.Id,
             PetName = a.Pet.Name,
+            UserFullName = a.User.FullName,
             VeterinarianName = a.Veterinarian.FullName,
             ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
             AppointmentDate = a.AppointmentDate,
@@ -101,9 +103,9 @@ public class AppointmentService : IAppointmentService
         return appointments.Select(a => new AppointmentGetDto
         {
             Id = a.Id,
+            UserFullName = a.User.FullName,
             PetName = a.Pet.Name,
             VeterinarianName = a.Veterinarian.FullName,
-            // Fix: multilang ServiceName
             ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
             AppointmentDate = a.AppointmentDate,
             Status = a.Status.ToString(),
@@ -120,7 +122,7 @@ public class AppointmentService : IAppointmentService
             Id = a.Id,
             PetName = a.Pet.Name,
             VeterinarianName = a.Veterinarian.FullName,
-            // Fix: multilang ServiceName
+           
             ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
             AppointmentDate = a.AppointmentDate,
             Status = a.Status.ToString(),

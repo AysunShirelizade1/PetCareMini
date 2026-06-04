@@ -18,43 +18,42 @@ public class AppointmentRepository : IAppointmentRepository
     {
         await _context.Appointments.AddAsync(appointment);
     }
-    public async Task<List<Appointment>> GetByVeterinarianUserIdAsync(int vetUserId)
+    public async Task<Appointment?> GetByIdAsync(int id)
     => await _context.Appointments
         .Include(a => a.Pet)
         .Include(a => a.Veterinarian)
         .Include(a => a.Service)
-        .Where(a => a.Veterinarian.UserId == vetUserId)
-        .OrderByDescending(a => a.AppointmentDate)
-        .ToListAsync();
-    public async Task<Appointment?> GetByIdAsync(int id)
-    {
-        return await _context.Appointments
-            .Include(a => a.Pet)
-            .Include(a => a.Veterinarian)
-            .Include(a => a.Service)
-            .FirstOrDefaultAsync(a => a.Id == id);
-    }
+        .Include(a => a.User)
+        .FirstOrDefaultAsync(a => a.Id == id);
 
     public async Task<List<Appointment>> GetUserAppointmentsAsync(int userId)
-    {
-        return await _context.Appointments
+        => await _context.Appointments
             .Include(a => a.Pet)
             .Include(a => a.Veterinarian)
             .Include(a => a.Service)
+            .Include(a => a.User)
             .Where(a => a.UserId == userId)
             .OrderByDescending(a => a.AppointmentDate)
             .ToListAsync();
-    }
 
     public async Task<List<Appointment>> GetAllAsync()
-    {
-        return await _context.Appointments
+        => await _context.Appointments
             .Include(a => a.Pet)
             .Include(a => a.Veterinarian)
             .Include(a => a.Service)
+            .Include(a => a.User)
             .OrderByDescending(a => a.AppointmentDate)
             .ToListAsync();
-    }
+
+    public async Task<List<Appointment>> GetByVeterinarianUserIdAsync(int vetUserId)
+        => await _context.Appointments
+            .Include(a => a.Pet)
+            .Include(a => a.Veterinarian)
+            .Include(a => a.Service)
+            .Include(a => a.User)
+            .Where(a => a.Veterinarian.UserId == vetUserId)
+            .OrderByDescending(a => a.AppointmentDate)
+            .ToListAsync();
 
     public async Task<bool> ExistsConflictAsync(int veterinarianId, DateTime appointmentDate)
     {

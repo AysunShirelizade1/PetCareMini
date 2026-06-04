@@ -2,6 +2,7 @@
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Blog;
 using PetCareMini.Domain.Entities;
+using PetCareMini.Domain.Enums;
 
 namespace PetCareMini.Persistence.Services;
 
@@ -27,7 +28,7 @@ public class BlogCategoryService : IBlogCategoryService
             DescriptionAz = x.DescriptionAz,
             DescriptionEn = x.DescriptionEn,
             IconUrl = x.IconUrl,
-            PostCount = x.Posts.Count
+            PostCount = x.Posts.Count(p => p.Status == BlogPostStatus.Published)
         }).ToList();
     }
 
@@ -46,7 +47,7 @@ public class BlogCategoryService : IBlogCategoryService
             DescriptionAz = category.DescriptionAz,
             DescriptionEn = category.DescriptionEn,
             IconUrl = category.IconUrl,
-            PostCount = category.Posts.Count
+            PostCount = category.Posts.Count(p => p.Status == BlogPostStatus.Published)
         };
     }
 

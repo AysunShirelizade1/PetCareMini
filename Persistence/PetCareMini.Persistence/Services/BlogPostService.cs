@@ -201,7 +201,6 @@ public class BlogPostService : IBlogPostService
         await _repo.SaveChangesAsync();
     }
 
-    // ── Helpers ──────────────────────────────────────────────
 
     private async Task UpdateAuthorTotalPostsAsync(int userId)
     {
@@ -246,7 +245,7 @@ public class BlogPostService : IBlogPostService
         : p.SummaryEn,
 
         CoverImageUrl = p.CoverImageUrl,
-
+        Status = p.Status.ToString(),
         ReadTimeMinutes = p.ReadTimeMinutes,
         ViewCount = p.ViewCount,
 
