@@ -24,7 +24,6 @@ public class BlogController : ControllerBase
         _profileService = profileService;
     }
 
-    // ── Public endpointlər ───────────────────────────────────
 
     [HttpGet]
     public async Task<IActionResult> GetAll(string lang = "az")
@@ -42,7 +41,6 @@ public class BlogController : ControllerBase
     public async Task<IActionResult> GetComments(int postId)
         => Ok(new { data = await _commentService.GetByPostIdAsync(postId), statusCode = 200 });
 
-    // ── Login user endpointləri ──────────────────────────────
 
     [HttpPost]
     [Authorize]
@@ -107,7 +105,6 @@ public class BlogController : ControllerBase
         return Ok(new { message = "Profil yeniləndi.", statusCode = 200 });
     }
 
-    // ── Admin endpointləri ───────────────────────────────────
 
     [HttpGet("admin/all")]
     [Authorize(Roles = "Admin")]
@@ -143,7 +140,6 @@ public class BlogController : ControllerBase
         return Ok(new { message = "Şərh təsdiqləndi.", statusCode = 200 });
     }
 
-    // ── Helper ───────────────────────────────────────────────
 
     private int GetUserId()
         => int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);

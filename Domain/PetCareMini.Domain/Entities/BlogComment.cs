@@ -6,7 +6,7 @@ public class BlogComment : BaseEntity
 {
     public string Content { get; set; } = null!;
     public int Rating { get; set; }
-    public bool IsApproved { get; set; } = false;
+    public bool IsApproved { get; set; } = true;
 
     public int? ParentCommentId { get; set; }
     public BlogComment? ParentComment { get; set; }

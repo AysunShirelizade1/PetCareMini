@@ -3,6 +3,7 @@
 public class AppointmentGetDto
 {
     public int Id { get; set; }
+    public string UserFullName { get; set; } = string.Empty;
     public string PetName { get; set; } = string.Empty;
     public string VeterinarianName { get; set; } = string.Empty;
     public string ServiceName { get; set; } = string.Empty;
