@@ -34,7 +34,8 @@ public class AppointmentService : IAppointmentService
             ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
             AppointmentDate = a.AppointmentDate,
             Status = a.Status.ToString(),
-            Notes = a.Notes
+            Notes = a.Notes,
+            RejectReason = a.RejectionReason
         }).ToList();
     }
 
@@ -51,7 +52,8 @@ public class AppointmentService : IAppointmentService
             ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
             AppointmentDate = a.AppointmentDate,
             Status = a.Status.ToString(),
-            Notes = a.Notes
+            Notes = a.Notes,
+            RejectReason = a.RejectionReason
         }).ToList();
     }
     
@@ -69,7 +71,8 @@ public class AppointmentService : IAppointmentService
             ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
             AppointmentDate = a.AppointmentDate,
             Status = a.Status.ToString(),
-            Notes = a.Notes
+            Notes = a.Notes,
+            RejectReason = a.RejectionReason
         }).ToList();
     }
 
@@ -124,7 +127,8 @@ public class AppointmentService : IAppointmentService
             ServiceName = created.Service.NameAz,
             AppointmentDate = created.AppointmentDate,
             Status = created.Status.ToString(),
-            Notes = created.Notes
+            Notes = created.Notes,
+            RejectReason = created.RejectionReason
         };
     }
 
@@ -158,6 +162,12 @@ public class AppointmentService : IAppointmentService
             throw new ArgumentException("Invalid appointment status value.");
 
         appointment.Status = (AppointmentStatus)dto.Status;
+
+        if ((AppointmentStatus)dto.Status == AppointmentStatus.Canceled)
+        {
+            appointment.RejectionReason = dto.RejectionReason;
+        }
+
         await _appointmentRepository.SaveChangesAsync();
     }
 }

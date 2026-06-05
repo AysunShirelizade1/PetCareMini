@@ -84,6 +84,7 @@ public class AdminService : IAdminService
             throw new InvalidOperationException("Cannot demote an Admin");
 
         user.Role = role;
+
         if (role == UserRole.Veterinarian)
         {
             var alreadyExists = await _context.Veterinarians
@@ -100,6 +101,27 @@ public class AdminService : IAdminService
                 });
             }
         }
+        else
+        {
+            var vet = await _context.Veterinarians
+                .FirstOrDefaultAsync(v => v.UserId == userId);
+
+            if (vet != null)
+            {
+                // Əvvəlcə Appointments-ları sil
+                var appointments = _context.Appointments
+                    .Where(a => a.VeterinarianId == vet.Id);
+                _context.Appointments.RemoveRange(appointments);
+
+                // VeterinaryReviews varsa onları da sil
+                var vetReviews = _context.VeterinaryReviews
+                    .Where(r => r.VeterinarianId == vet.Id);
+                _context.VeterinaryReviews.RemoveRange(vetReviews);
+
+                _context.Veterinarians.Remove(vet);
+            }
+        }
+
         await _context.SaveChangesAsync();
     }
 
