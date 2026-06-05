@@ -15,6 +15,10 @@ public class User : BaseEntity
     public DateTime? RefreshTokenExpireDate { get; set; }
     public Veterinarian? VeterinarianProfile { get; set; }
     public BlogAuthorProfile? BlogAuthorProfile { get; set; }
+    public bool IsEmailConfirmed { get; set; } = false;
+    public string? EmailConfirmationToken { get; set; }
+    public string? PasswordResetToken { get; set; }
+    public DateTime? PasswordResetTokenExpireDate { get; set; }
     public ICollection<Pet> Pets { get; set; } = new List<Pet>();
     public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
     public ICollection<WishlistItem> WishlistItems { get; set; } = new List<WishlistItem>();

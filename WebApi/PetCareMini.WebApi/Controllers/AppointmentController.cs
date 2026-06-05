@@ -22,9 +22,8 @@ public class AppointmentsController : ControllerBase
     public async Task<IActionResult> Create([FromBody] AppointmentCreateDto dto)
     {
         int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-        await _appointmentService.CreateAsync(userId, dto);
-        
-        return StatusCode(201, new { message = "Appointment created successfully." });
+        var result = await _appointmentService.CreateAsync(userId, dto);
+        return StatusCode(201, result);
     }
 
     [Authorize]
@@ -32,7 +31,7 @@ public class AppointmentsController : ControllerBase
     public async Task<IActionResult> GetMyAppointments([FromQuery] string lang = "az")
     {
         int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
-        //  Fix: lang parameter passed
+        
         var result = await _appointmentService.GetUserAppointmentsAsync(userId, lang);
         return Ok(result);
     }

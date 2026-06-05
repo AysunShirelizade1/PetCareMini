@@ -60,8 +60,32 @@ public class AuthController : ControllerBase
 
         return Ok(result);
     }
+    [HttpPost("confirm-email")]
+    public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailDto dto)
+    {
+        await _authService.ConfirmEmailAsync(dto.Email, dto.Token);
+        return Ok(new { message = "Email uğurla təsdiqləndi." });
+    }
 
-    
+    [HttpPost("resend-confirmation")]
+    public async Task<IActionResult> ResendConfirmation([FromBody] ForgotPasswordDto dto)
+    {
+        await _authService.SendEmailConfirmationAsync(dto.Email);
+        return Ok(new { message = "Təsdiq kodu yenidən göndərildi." });
+    }
+    [HttpPost("forgot-password")]
+    public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDto dto)
+    {
+        await _authService.ForgotPasswordAsync(dto.Email);
+        return Ok(new { message = "Şifrə sıfırlama kodu emailinizə göndərildi." });
+    }
+
+    [HttpPost("reset-password")]
+    public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDto dto)
+    {
+        await _authService.ResetPasswordAsync(dto);
+        return Ok(new { message = "Şifrəniz uğurla yeniləndi." });
+    }
     [HttpPost("refresh-token")]
     public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenDto dto)
     {

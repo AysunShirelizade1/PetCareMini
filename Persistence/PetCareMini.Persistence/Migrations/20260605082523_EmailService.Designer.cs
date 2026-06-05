@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PetCareMini.Persistence.Contexts;
@@ -11,9 +12,11 @@ using PetCareMini.Persistence.Contexts;
 namespace PetCareMini.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260605082523_EmailService")]
+    partial class EmailService
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -541,7 +544,7 @@ namespace PetCareMini.Persistence.Migrations
                         {
                             Id = 1,
                             Address = "Germany — 785 15h Street, Office 478, Berlin",
-                            CreatedAt = new DateTime(2026, 6, 5, 12, 34, 17, 833, DateTimeKind.Local).AddTicks(8533),
+                            CreatedAt = new DateTime(2026, 6, 5, 12, 25, 22, 648, DateTimeKind.Local).AddTicks(1382),
                             Email = "hi@petfun.com",
                             PhoneNumber = "+00 12345678",
                             WorkingHours = "Monday - Friday: 9:30 AM - 5:00 PM"
@@ -943,9 +946,6 @@ namespace PetCareMini.Persistence.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
-                    b.Property<string>("EmailConfirmationToken")
-                        .HasColumnType("text");
-
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -953,9 +953,6 @@ namespace PetCareMini.Persistence.Migrations
 
                     b.Property<string>("ImageUrl")
                         .HasColumnType("text");
-
-                    b.Property<bool>("IsEmailConfirmed")
-                        .HasColumnType("boolean");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()

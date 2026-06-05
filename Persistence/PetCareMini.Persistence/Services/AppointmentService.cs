@@ -51,7 +51,7 @@ public class AppointmentService : IAppointmentService
             Notes = a.Notes
         });
     }
-    public async Task CreateAsync(int userId, AppointmentCreateDto dto)
+    public async Task<AppointmentGetDto> CreateAsync(int userId, AppointmentCreateDto dto)
     {
         if (dto.AppointmentDate <= DateTime.UtcNow)
             throw new ArgumentException("Appointment date must be in the future.");
@@ -92,6 +92,19 @@ public class AppointmentService : IAppointmentService
 
         await _appointmentRepository.CreateAsync(appointment);
         await _appointmentRepository.SaveChangesAsync();
+
+        var created = await _appointmentRepository.GetByIdAsync(appointment.Id)!;
+        return new AppointmentGetDto
+        {
+            Id = created!.Id,
+            PetName = created.Pet.Name,
+            UserFullName = created.User.FullName,
+            VeterinarianName = created.Veterinarian.FullName,
+            ServiceName = created.Service.NameAz,
+            AppointmentDate = created.AppointmentDate,
+            Status = created.Status.ToString(),
+            Notes = created.Notes
+        };
     }
 
     public async Task<List<AppointmentGetDto>> GetUserAppointmentsAsync(
@@ -121,8 +134,8 @@ public class AppointmentService : IAppointmentService
         {
             Id = a.Id,
             PetName = a.Pet.Name,
+            UserFullName = a.User.FullName,
             VeterinarianName = a.Veterinarian.FullName,
-           
             ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
             AppointmentDate = a.AppointmentDate,
             Status = a.Status.ToString(),
