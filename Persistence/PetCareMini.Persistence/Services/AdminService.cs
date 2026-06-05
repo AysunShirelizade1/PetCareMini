@@ -2,6 +2,7 @@
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Admin;
 using PetCareMini.Application.DTOs.User;
+using PetCareMini.Domain.Enums;
 using PetCareMini.Persistence.Contexts;
 
 namespace PetCareMini.Persistence.Services;
@@ -72,5 +73,43 @@ public class AdminService : IAdminService
             LowStockCount = lowStockCount,
             TopProducts = topProducts
         };
+    }
+    public async Task ChangeUserRoleAsync(int userId, UserRole role)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == userId)
+            ?? throw new KeyNotFoundException("User not found");
+
+        if (user.Role == UserRole.Admin && role != UserRole.Admin)
+            throw new InvalidOperationException("Cannot demote an Admin");
+
+        user.Role = role;
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task DeleteUserAsync(int userId)
+    {
+        var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == userId)
+            ?? throw new KeyNotFoundException("User not found");
+
+        if (user.Role == UserRole.Admin)
+            throw new InvalidOperationException("Admin user cannot be deleted");
+
+        // Bütün bağlı məlumatları düzgün sıra ilə sil
+            await _context.Database.ExecuteSqlRawAsync(@"
+        DELETE FROM ""BlogComments"" WHERE ""ParentCommentId"" IN (SELECT ""Id"" FROM ""BlogComments"" WHERE ""UserId"" = {0});
+        DELETE FROM ""BlogComments"" WHERE ""UserId"" = {0};
+        DELETE FROM ""BlogPostTags"" WHERE ""BlogPostId"" IN (SELECT ""Id"" FROM ""BlogPosts"" WHERE ""AuthorId"" = {0});
+        DELETE FROM ""BlogPosts"" WHERE ""AuthorId"" = {0};
+        DELETE FROM ""BlogAuthorProfiles"" WHERE ""UserId"" = {0};
+        DELETE FROM ""ProductReviews"" WHERE ""UserId"" = {0};
+        DELETE FROM ""VeterinaryReviews"" WHERE ""UserId"" = {0};
+        DELETE FROM ""WishlistItems"" WHERE ""UserId"" = {0};
+        DELETE FROM ""CartItems"" WHERE ""UserId"" = {0};
+        DELETE FROM ""Appointments"" WHERE ""UserId"" = {0};
+        DELETE FROM ""OrderItems"" WHERE ""OrderId"" IN (SELECT ""Id"" FROM ""Orders"" WHERE ""UserId"" = {0});
+        DELETE FROM ""Orders"" WHERE ""UserId"" = {0};
+        DELETE FROM ""Pets"" WHERE ""UserId"" = {0};
+        DELETE FROM ""Users"" WHERE ""Id"" = {0};
+    ", userId);
     }
 }
