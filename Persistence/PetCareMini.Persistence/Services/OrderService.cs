@@ -2,6 +2,7 @@
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Order;
 using PetCareMini.Domain.Entities;
+using PetCareMini.Domain.Enums;
 using PetCareMini.Persistence.Contexts;
 
 namespace PetCareMini.Persistence.Services;
@@ -14,7 +15,23 @@ public class OrderService : IOrderService
     {
         _context = context;
     }
-    public async Task<List<OrderAdminDto>> GetAllAsync(string lang, string? status = null, int page = 1, int pageSize = 20)
+    private bool CanMove(OrderStatus current, OrderStatus next)
+    {
+        return current switch
+        {
+            OrderStatus.Pending => next == OrderStatus.Accepted,
+            OrderStatus.Accepted => next == OrderStatus.Shipped,
+            OrderStatus.Shipped => next == OrderStatus.Delivered,
+            OrderStatus.Delivered => false,
+            OrderStatus.Cancelled => false,
+            _ => false
+        };
+    }
+    public async Task<List<OrderAdminDto>> GetAllAsync(
+        string lang,
+        string? status,
+        int page,
+        int pageSize)
     {
         var query = _context.Orders
             .Include(x => x.User)
@@ -22,8 +39,11 @@ public class OrderService : IOrderService
                 .ThenInclude(x => x.Product)
             .AsQueryable();
 
-        if (!string.IsNullOrWhiteSpace(status))
-            query = query.Where(x => x.Status == status);
+        if (!string.IsNullOrWhiteSpace(status) &&
+            Enum.TryParse<OrderStatus>(status, true, out var parsed))
+        {
+            query = query.Where(x => x.Status == parsed);
+        }
 
         var orders = await query
             .OrderByDescending(x => x.CreatedAt)
@@ -31,25 +51,28 @@ public class OrderService : IOrderService
             .Take(pageSize)
             .ToListAsync();
 
-        var isEn = lang.ToLower() == "en";
-
         return orders.Select(x => new OrderAdminDto
         {
             Id = x.Id,
             UserFullName = x.User.FullName,
             UserEmail = x.User.Email,
             TotalPrice = x.TotalPrice,
-            Status = x.Status,
+            Status = x.Status.ToString(),
+            RejectReason = x.RejectReason,
             CreatedAt = x.CreatedAt,
             Items = x.OrderItems.Select(i => new OrderItemGetDto
             {
-                ProductName = isEn ? i.Product.NameEn : i.Product.NameAz,
+                ProductName = i.Product.NameAz,
                 Quantity = i.Quantity,
                 Price = i.Price
             }).ToList()
         }).ToList();
     }
-    public async Task<OrderGetDto?> CheckoutAsync(int userId, string lang, string? couponCode = null)
+
+    public async Task<OrderGetDto> CheckoutAsync(
+        int userId,
+        string lang,
+        string? couponCode)
     {
         var cartItems = await _context.CartItems
             .Include(x => x.Product)
@@ -57,35 +80,13 @@ public class OrderService : IOrderService
             .ToListAsync();
 
         if (!cartItems.Any())
-            throw new InvalidOperationException("Your cart is empty.");
-
-        var totalPrice = cartItems.Sum(x => x.Product.Price * x.Quantity);
-        var discountAmount = 0m;
-        var usedCoupon = string.Empty;
-
-        if (!string.IsNullOrWhiteSpace(couponCode))
-        {
-            var coupon = await _context.Coupons
-                .FirstOrDefaultAsync(c =>
-                    c.Code == couponCode.ToUpper().Trim() &&
-                    c.IsActive &&
-                    c.ExpireDate > DateTime.UtcNow);
-
-            if (coupon is null)
-                throw new KeyNotFoundException("Coupon not found or expired.");
-
-            discountAmount = Math.Round(totalPrice * coupon.DiscountPercent / 100, 2);
-            usedCoupon = coupon.Code;
-        }
-
-        var finalPrice = totalPrice - discountAmount;
+            throw new Exception("Cart is empty");
 
         var order = new Order
         {
             UserId = userId,
-            TotalPrice = finalPrice,
-            Status = "Pending",
-            CreatedAt = DateTime.UtcNow,
+            Status = OrderStatus.Pending,
+            TotalPrice = cartItems.Sum(x => x.Product.Price * x.Quantity),
             OrderItems = cartItems.Select(x => new OrderItem
             {
                 ProductId = x.ProductId,
@@ -95,20 +96,31 @@ public class OrderService : IOrderService
         };
 
         await _context.Orders.AddAsync(order);
-
         _context.CartItems.RemoveRange(cartItems);
-
         await _context.SaveChangesAsync();
 
-        var createdOrder = await _context.Orders
-            .Include(x => x.OrderItems)
-                .ThenInclude(x => x.Product)
-            .FirstOrDefaultAsync(x => x.Id == order.Id);
-
-        return createdOrder is null ? null : MapToDto(createdOrder, lang);
+        return Map(order, lang);
     }
+    public async Task RejectOrderAsync(int orderId, string reason)
+    {
+        var order = await _context.Orders
+            .FirstOrDefaultAsync(x => x.Id == orderId)
+            ?? throw new KeyNotFoundException("Order not found");
 
-    public async Task<List<OrderGetDto>> GetMyOrdersAsync(int userId, string lang)
+        if (order.Status == OrderStatus.Delivered)
+            throw new InvalidOperationException("Delivered order cannot be rejected");
+
+        if (order.Status == OrderStatus.Shipped)
+            throw new InvalidOperationException("Shipped order cannot be rejected");
+
+        order.Status = OrderStatus.Rejected;
+        order.RejectReason = reason;
+
+        await _context.SaveChangesAsync();
+    }
+    public async Task<List<OrderGetDto>> GetMyOrdersAsync(
+        int userId,
+        string lang)
     {
         var orders = await _context.Orders
             .Include(x => x.OrderItems)
@@ -117,22 +129,34 @@ public class OrderService : IOrderService
             .OrderByDescending(x => x.CreatedAt)
             .ToListAsync();
 
-        return orders.Select(x => MapToDto(x, lang)).ToList();
+        return orders.Select(x => Map(x, lang)).ToList();
     }
-
-    private OrderGetDto MapToDto(Order order, string lang)
+    public async Task UpdateStatusAsync(int orderId, OrderStatus status)
     {
-        var isEn = lang.ToLower() == "en";
+        var order = await _context.Orders
+            .FirstOrDefaultAsync(x => x.Id == orderId)
+            ?? throw new KeyNotFoundException("Order not found");
 
+        if (!CanMove(order.Status, status))
+            throw new InvalidOperationException(
+                $"Invalid transition {order.Status} → {status}");
+
+        order.Status = status;
+
+        await _context.SaveChangesAsync();
+    }
+    private OrderGetDto Map(Order order, string lang)
+    {
         return new OrderGetDto
         {
             Id = order.Id,
             TotalPrice = order.TotalPrice,
-            Status = order.Status,
+            Status = order.Status.ToString(),
             CreatedAt = order.CreatedAt,
+
             Items = order.OrderItems.Select(x => new OrderItemGetDto
             {
-                ProductName = isEn ? x.Product.NameEn : x.Product.NameAz,
+                ProductName = x.Product.NameAz,
                 Quantity = x.Quantity,
                 Price = x.Price
             }).ToList()

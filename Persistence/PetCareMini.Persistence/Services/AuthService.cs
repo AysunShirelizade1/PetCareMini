@@ -6,7 +6,7 @@ using PetCareMini.Application.DTOs.Auth;
 using PetCareMini.Domain.Entities;
 using PetCareMini.Persistence.Contexts;
 using PetCareMini.Persistence.Helpers;
-
+using Microsoft.Extensions.Logging;
 namespace PetCareMini.Persistence.Services;
 
 public class AuthService : IAuthService
@@ -15,16 +15,19 @@ public class AuthService : IAuthService
     private readonly IJwtTokenService _jwtTokenService;
     private readonly AppDbContext _context;
     private readonly IEmailService _emailService;
+    private readonly ILogger<AuthService> _logger;
     public AuthService(
     IUserRepository userRepository,
     IJwtTokenService jwtTokenService,
     AppDbContext context,
-    IEmailService emailService)
+    IEmailService emailService,
+    ILogger<AuthService> logger)
     {
         _userRepository = userRepository;
         _jwtTokenService = jwtTokenService;
         _context = context;
         _emailService = emailService;
+        _logger = logger;
     }
 
     public async Task<AuthResponseDto> RegisterAsync(RegisterDto dto)
@@ -53,11 +56,18 @@ public class AuthService : IAuthService
         user.EmailConfirmationToken = confirmToken;
         await _userRepository.SaveChangesAsync();
 
-        await _emailService.SendAsync(
-            dto.Email,
-            "Email Təsdiqi",
-            $"<h2>Xoş gəldiniz, {dto.FullName}!</h2><p>Təsdiq kodunuz: <strong>{confirmToken}</strong></p>"
-        );
+        try
+        {
+            await _emailService.SendAsync(
+                dto.Email,
+                "Email Təsdiqi",
+                $"<h2>Xoş gəldiniz, {dto.FullName}!</h2><p>Təsdiq kodunuz: <strong>{confirmToken}</strong></p>"
+            );
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Email sending failed");
+        }
         var token = _jwtTokenService.GenerateToken(user);
 
         return new AuthResponseDto
@@ -82,8 +92,8 @@ public class AuthService : IAuthService
         if (!passwordIsCorrect)
             return null;
 
-        if (!user.IsEmailConfirmed)
-            throw new InvalidOperationException("Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.");
+        //if (!user.IsEmailConfirmed)
+        //    throw new InvalidOperationException("Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.");
         var refreshToken = _jwtTokenService.GenerateRefreshToken();
         user.RefreshToken = refreshToken;
         user.RefreshTokenExpireDate = DateTime.UtcNow.AddDays(7);

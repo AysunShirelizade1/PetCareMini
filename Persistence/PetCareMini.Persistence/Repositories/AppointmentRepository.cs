@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PetCareMini.Application.Abstracts.Repositories;
 using PetCareMini.Domain.Entities;
+using PetCareMini.Domain.Enums;
 using PetCareMini.Persistence.Contexts;
 
 namespace PetCareMini.Persistence.Repositories;
@@ -18,13 +19,14 @@ public class AppointmentRepository : IAppointmentRepository
     {
         await _context.Appointments.AddAsync(appointment);
     }
+
     public async Task<Appointment?> GetByIdAsync(int id)
-    => await _context.Appointments
-        .Include(a => a.Pet)
-        .Include(a => a.Veterinarian)
-        .Include(a => a.Service)
-        .Include(a => a.User)
-        .FirstOrDefaultAsync(a => a.Id == id);
+        => await _context.Appointments
+            .Include(a => a.Pet)
+            .Include(a => a.Veterinarian)
+            .Include(a => a.Service)
+            .Include(a => a.User)
+            .FirstOrDefaultAsync(a => a.Id == id);
 
     public async Task<List<Appointment>> GetUserAppointmentsAsync(int userId)
         => await _context.Appointments
@@ -32,7 +34,8 @@ public class AppointmentRepository : IAppointmentRepository
             .Include(a => a.Veterinarian)
             .Include(a => a.Service)
             .Include(a => a.User)
-            .Where(a => a.UserId == userId)
+            .Where(a => a.UserId == userId &&
+                        a.Status != AppointmentStatus.Canceled)
             .OrderByDescending(a => a.AppointmentDate)
             .ToListAsync();
 
@@ -42,6 +45,7 @@ public class AppointmentRepository : IAppointmentRepository
             .Include(a => a.Veterinarian)
             .Include(a => a.Service)
             .Include(a => a.User)
+            .Where(a => a.Status != AppointmentStatus.Canceled)
             .OrderByDescending(a => a.AppointmentDate)
             .ToListAsync();
 
@@ -51,7 +55,8 @@ public class AppointmentRepository : IAppointmentRepository
             .Include(a => a.Veterinarian)
             .Include(a => a.Service)
             .Include(a => a.User)
-            .Where(a => a.Veterinarian.UserId == vetUserId)
+            .Where(a => a.Veterinarian.UserId == vetUserId &&
+                        a.Status != AppointmentStatus.Canceled)
             .OrderByDescending(a => a.AppointmentDate)
             .ToListAsync();
 
@@ -60,7 +65,7 @@ public class AppointmentRepository : IAppointmentRepository
         return await _context.Appointments.AnyAsync(a =>
             a.VeterinarianId == veterinarianId &&
             a.AppointmentDate == appointmentDate &&
-            a.Status != Domain.Enums.AppointmentStatus.Canceled);
+            a.Status != AppointmentStatus.Canceled);
     }
 
     public async Task SaveChangesAsync()

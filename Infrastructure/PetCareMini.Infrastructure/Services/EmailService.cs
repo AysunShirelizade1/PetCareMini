@@ -27,5 +27,8 @@ public class EmailService : IEmailService
         await smtp.AuthenticateAsync(_settings.SenderEmail, _settings.Password);
         await smtp.SendAsync(email);
         await smtp.DisconnectAsync(true);
+        Console.WriteLine($"Email: {_settings.SenderEmail}");
+        Console.WriteLine($"Password: {_settings.Password}");
     }
+
 }
