@@ -142,7 +142,23 @@ public class AppointmentService : IAppointmentService
             Notes = a.Notes
         }).ToList();
     }
+    public async Task CancelAsync(int appointmentId, int userId)
+    {
+        var appointment = await _appointmentRepository.GetByIdAsync(appointmentId)
+            ?? throw new KeyNotFoundException("Appointment tapılmadı.");
 
+        if (appointment.UserId != userId)
+            throw new UnauthorizedAccessException("Bu appointment sizə aid deyil.");
+
+        if (appointment.Status == AppointmentStatus.Completed)
+            throw new InvalidOperationException("Tamamlanmış appointment ləğv edilə bilməz.");
+
+        if (appointment.Status == AppointmentStatus.Canceled)
+            throw new InvalidOperationException("Appointment artıq ləğv edilib.");
+
+        appointment.Status = AppointmentStatus.Canceled;
+        await _appointmentRepository.SaveChangesAsync();
+    }
     public async Task UpdateStatusAsync(int appointmentId, AppointmentStatusUpdateDto dto, int? vetUserId = null)
     {
         var appointment = await _appointmentRepository.GetByIdAsync(appointmentId)

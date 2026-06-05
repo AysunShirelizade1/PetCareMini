@@ -57,7 +57,14 @@ public class AppointmentsController : ControllerBase
         var result = await _appointmentService.GetVetAppointmentsAsync(vetUserId, lang);
         return Ok(result);
     }
-
+    [Authorize]
+    [HttpPatch("{id}/cancel")]
+    public async Task<IActionResult> Cancel(int id)
+    {
+        int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+        await _appointmentService.CancelAsync(id, userId);
+        return Ok(new { message = "Appointment uğurla ləğv edildi." });
+    }
     [Authorize(Roles = "Admin,Veterinarian")]
     [HttpPatch("{id}/status")]
     public async Task<IActionResult> UpdateStatus(int id, [FromBody] AppointmentStatusUpdateDto dto)
