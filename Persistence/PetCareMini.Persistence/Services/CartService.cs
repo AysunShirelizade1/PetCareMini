@@ -31,15 +31,21 @@ public class CartService : ICartService
 
     public async Task AddToCartAsync(int userId, int productId)
     {
-        // Product exists check
-        var exists = await _productRepo.ExistsAsync(productId);
-        if (!exists)
-            throw new KeyNotFoundException($"Product with id {productId} not found.");
+        var product = await _productRepo.GetByIdAsync(productId);
+
+        if (product == null)
+            throw new KeyNotFoundException("Product not found.");
+
+        if (product.StockQuantity <= 0)
+            throw new InvalidOperationException("Out of stock.");
 
         var item = await _cartRepo.GetAsync(userId, productId);
 
         if (item != null)
         {
+            if (item.Quantity + 1 > product.StockQuantity)
+                throw new InvalidOperationException("Not enough stock.");
+
             item.Quantity++;
             _cartRepo.Update(item);
         }

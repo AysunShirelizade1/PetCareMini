@@ -19,6 +19,43 @@ public class AppointmentService : IAppointmentService
         _appointmentRepository = appointmentRepository;
         _context = context;
     }
+
+   
+    public async Task<List<AppointmentGetDto>> GetAllAsync(string lang = "az")
+    {
+        var appointments = await _appointmentRepository.GetAllAsync();
+
+        return appointments.Select(a => new AppointmentGetDto
+        {
+            Id = a.Id,
+            PetName = a.Pet.Name,
+            UserFullName = a.User.FullName,
+            VeterinarianName = a.Veterinarian.FullName,
+            ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
+            AppointmentDate = a.AppointmentDate,
+            Status = a.Status.ToString(),
+            Notes = a.Notes
+        }).ToList();
+    }
+
+    public async Task<List<AppointmentGetDto>> GetUserAppointmentsAsync(int userId, string lang = "az")
+    {
+        var appointments = await _appointmentRepository.GetUserAppointmentsAsync(userId);
+
+        return appointments.Select(a => new AppointmentGetDto
+        {
+            Id = a.Id,
+            PetName = a.Pet.Name,
+            UserFullName = a.User.FullName,
+            VeterinarianName = a.Veterinarian.FullName,
+            ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
+            AppointmentDate = a.AppointmentDate,
+            Status = a.Status.ToString(),
+            Notes = a.Notes
+        }).ToList();
+    }
+    
+
     public async Task<List<AppointmentGetDto>> GetVetAppointmentsAsync(int vetUserId, string lang = "az")
     {
         var appointments = await _appointmentRepository.GetByVeterinarianUserIdAsync(vetUserId);
@@ -35,46 +72,28 @@ public class AppointmentService : IAppointmentService
             Notes = a.Notes
         }).ToList();
     }
-    public async Task<IEnumerable<AppointmentGetDto>> GetByUserAsync(int userId, string lang = "az")
-    {
-        var appointments = await _appointmentRepository.GetUserAppointmentsAsync(userId);
 
-        return appointments.Select(a => new AppointmentGetDto
-        {
-            Id = a.Id,
-            PetName = a.Pet.Name,
-            UserFullName = a.User.FullName,
-            VeterinarianName = a.Veterinarian.FullName,
-            ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
-            AppointmentDate = a.AppointmentDate,
-            Status = a.Status.ToString(),
-            Notes = a.Notes
-        });
-    }
-    public async Task CreateAsync(int userId, AppointmentCreateDto dto)
+    public async Task<AppointmentGetDto> CreateAsync(int userId, AppointmentCreateDto dto)
     {
         if (dto.AppointmentDate <= DateTime.UtcNow)
             throw new ArgumentException("Appointment date must be in the future.");
 
-        var pet = await _context.Pets.FindAsync(dto.PetId);
-        if (pet is null)
-            throw new KeyNotFoundException("Pet not found.");
+        var pet = await _context.Pets.FindAsync(dto.PetId)
+            ?? throw new KeyNotFoundException("Pet not found.");
 
         if (pet.OwnerId != userId)
             throw new UnauthorizedAccessException("This pet does not belong to you.");
 
-        var veterinarian = await _context.Veterinarians.FindAsync(dto.VeterinarianId);
-        if (veterinarian is null)
-            throw new KeyNotFoundException("Veterinarian not found.");
+        var vet = await _context.Veterinarians.FindAsync(dto.VeterinarianId)
+            ?? throw new KeyNotFoundException("Veterinarian not found.");
 
-        if (!veterinarian.IsAvailable)
+        if (!vet.IsAvailable)
             throw new InvalidOperationException("Veterinarian is not available.");
 
-        var service = await _context.Services.FindAsync(dto.ServiceId);
-        if (service is null)
-            throw new KeyNotFoundException("Service not found.");
+        var service = await _context.Services.FindAsync(dto.ServiceId)
+            ?? throw new KeyNotFoundException("Service not found.");
 
-        bool existsConflict = await _appointmentRepository
+        var existsConflict = await _appointmentRepository
             .ExistsConflictAsync(dto.VeterinarianId, dto.AppointmentDate);
 
         if (existsConflict)
@@ -92,42 +111,39 @@ public class AppointmentService : IAppointmentService
 
         await _appointmentRepository.CreateAsync(appointment);
         await _appointmentRepository.SaveChangesAsync();
+
+        var created = await _appointmentRepository.GetByIdAsync(appointment.Id)
+            ?? throw new Exception("Failed to load created appointment");
+
+        return new AppointmentGetDto
+        {
+            Id = created!.Id,
+            PetName = created.Pet.Name,
+            UserFullName = created.User.FullName,
+            VeterinarianName = created.Veterinarian.FullName,
+            ServiceName = created.Service.NameAz,
+            AppointmentDate = created.AppointmentDate,
+            Status = created.Status.ToString(),
+            Notes = created.Notes
+        };
     }
 
-    public async Task<List<AppointmentGetDto>> GetUserAppointmentsAsync(
-        int userId, string lang = "az")
+    public async Task CancelAsync(int appointmentId, int userId)
     {
-        var appointments = await _appointmentRepository
-            .GetUserAppointmentsAsync(userId);
+        var appointment = await _appointmentRepository.GetByIdAsync(appointmentId)
+            ?? throw new KeyNotFoundException("Appointment tapılmadı.");
 
-        return appointments.Select(a => new AppointmentGetDto
-        {
-            Id = a.Id,
-            UserFullName = a.User.FullName,
-            PetName = a.Pet.Name,
-            VeterinarianName = a.Veterinarian.FullName,
-            ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
-            AppointmentDate = a.AppointmentDate,
-            Status = a.Status.ToString(),
-            Notes = a.Notes
-        }).ToList();
-    }
+        if (appointment.UserId != userId)
+            throw new UnauthorizedAccessException("Bu appointment sizə aid deyil.");
 
-    public async Task<List<AppointmentGetDto>> GetAllAsync(string lang = "az")
-    {
-        var appointments = await _appointmentRepository.GetAllAsync();
+        if (appointment.Status == AppointmentStatus.Completed)
+            throw new InvalidOperationException("Tamamlanmış appointment ləğv edilə bilməz.");
 
-        return appointments.Select(a => new AppointmentGetDto
-        {
-            Id = a.Id,
-            PetName = a.Pet.Name,
-            VeterinarianName = a.Veterinarian.FullName,
-           
-            ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
-            AppointmentDate = a.AppointmentDate,
-            Status = a.Status.ToString(),
-            Notes = a.Notes
-        }).ToList();
+        if (appointment.Status == AppointmentStatus.Canceled)
+            throw new InvalidOperationException("Appointment artıq ləğv edilib.");
+
+        appointment.Status = AppointmentStatus.Canceled;
+        await _appointmentRepository.SaveChangesAsync();
     }
 
     public async Task UpdateStatusAsync(int appointmentId, AppointmentStatusUpdateDto dto, int? vetUserId = null)

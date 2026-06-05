@@ -1,11 +1,18 @@
-﻿using PetCareMini.Application.DTOs.Order;
-
+﻿
 namespace PetCareMini.Application.Abstracts.Services;
+
+using PetCareMini.Application.DTOs.Order;
+using PetCareMini.Domain.Enums;
+
 
 public interface IOrderService
 {
-    Task<OrderGetDto?> CheckoutAsync(int userId, string lang, string? couponCode = null);
+    Task<List<OrderAdminDto>> GetAllAsync(string lang, string? status, int page, int pageSize);
+
+    Task<OrderGetDto> CheckoutAsync(int userId, string lang, string? couponCode);
 
     Task<List<OrderGetDto>> GetMyOrdersAsync(int userId, string lang);
-    Task<List<OrderAdminDto>> GetAllAsync(string lang, string? status = null, int page = 1, int pageSize = 20);
+
+    Task UpdateStatusAsync(int orderId, OrderStatus status);
+    Task RejectOrderAsync(int orderId, string reason);
 }

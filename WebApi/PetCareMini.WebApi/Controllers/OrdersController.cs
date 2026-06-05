@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PetCareMini.Application.Abstracts.Services;
+using PetCareMini.Application.DTOs.Order;
+using PetCareMini.Domain.Enums;
 using System.Security.Claims;
 
 namespace PetCareMini.WebApi.Controllers;
@@ -16,24 +18,25 @@ public class OrdersController : ControllerBase
     {
         _orderService = orderService;
     }
+
     [HttpGet]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetAll(
-    [FromQuery] string lang = "az",
-    [FromQuery] string? status = null,
-    [FromQuery] int page = 1,
-    [FromQuery] int pageSize = 20)
+        [FromQuery] string lang = "az",
+        [FromQuery] string? status = null,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 20)
     {
-        var data = await _orderService.GetAllAsync(lang, status, page, pageSize);
-        return Ok(data);
+        var result = await _orderService.GetAllAsync(lang, status, page, pageSize);
+        return Ok(result);
     }
 
-    [HttpGet("my-orders")]
+    [HttpGet("my")]
     public async Task<IActionResult> GetMyOrders([FromQuery] string lang = "az")
     {
         var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
-        var data = await _orderService.GetMyOrdersAsync(userId, lang);
-        return Ok(data);
+        var result = await _orderService.GetMyOrdersAsync(userId, lang);
+        return Ok(result);
     }
 
     [HttpPost("checkout")]
@@ -44,5 +47,31 @@ public class OrdersController : ControllerBase
         var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         var result = await _orderService.CheckoutAsync(userId, lang, couponCode);
         return Ok(result);
+    }
+
+    [HttpPatch("{id}/status")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> UpdateStatus(int id, [FromBody] UpdateOrderStatusDto dto)
+    {
+        await _orderService.UpdateStatusAsync(id, dto.Status);
+
+        return Ok(new
+        {
+            message = "Order status updated successfully",
+            status = dto.Status.ToString()
+        });
+    }
+
+    [HttpPatch("{id}/reject")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> RejectOrder(int id, [FromBody] RejectOrderDto dto)
+    {
+        await _orderService.RejectOrderAsync(id, dto.Reason);
+
+        return Ok(new
+        {
+            message = "Order rejected successfully",
+            reason = dto.Reason
+        });
     }
 }

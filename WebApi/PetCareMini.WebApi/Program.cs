@@ -20,7 +20,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog();
 
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-
 builder.Services.AddControllers();
 builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
@@ -97,6 +96,7 @@ if (app.Environment.IsDevelopment())
         options.RoutePrefix = string.Empty;
     }); 
 }
+
 
 app.UseMiddleware<PetCareMini.WebApi.Middlewares.ExceptionMiddleware>();
 app.UseRouting();

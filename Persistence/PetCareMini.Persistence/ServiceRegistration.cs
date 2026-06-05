@@ -7,6 +7,8 @@ using Microsoft.Extensions.DependencyInjection;
 using PetCareMini.Application.Abstracts.Repositories;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.Validators.Auth;
+using PetCareMini.Infrastructure.Services;
+using PetCareMini.Infrastructure.Settings;
 using PetCareMini.Persistence.Contexts;
 using PetCareMini.Persistence.Repositories;
 using PetCareMini.Persistence.Services;
@@ -71,6 +73,9 @@ public static class ServiceRegistration
         services.AddScoped<IBlogCategoryService, BlogCategoryService>();
         services.AddScoped<IBlogCommentService, BlogCommentService>();
         services.AddScoped<IBlogAuthorProfileService, BlogAuthorProfileService>();
+
+        services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
+        services.AddScoped<IEmailService, EmailService>();
         #endregion
         return services;
     }
