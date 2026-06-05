@@ -64,7 +64,8 @@ public class AppointmentRepository : IAppointmentRepository
     {
         return await _context.Appointments.AnyAsync(a =>
             a.VeterinarianId == veterinarianId &&
-            a.AppointmentDate == appointmentDate &&
+            a.AppointmentDate.Date == appointmentDate.Date &&
+            a.AppointmentDate.Hour == appointmentDate.Hour &&
             a.Status != AppointmentStatus.Canceled);
     }
 

@@ -20,7 +20,7 @@ public class AppointmentService : IAppointmentService
         _context = context;
     }
 
-    // 🔥 ALL
+   
     public async Task<List<AppointmentGetDto>> GetAllAsync(string lang = "az")
     {
         var appointments = await _appointmentRepository.GetAllAsync();
@@ -54,22 +54,7 @@ public class AppointmentService : IAppointmentService
             Notes = a.Notes
         }).ToList();
     }
-    public async Task<IEnumerable<AppointmentGetDto>> GetByUserAsync(int userId, string lang = "az")
-    {
-        var appointments = await _appointmentRepository.GetUserAppointmentsAsync(userId);
-
-        return appointments.Select(a => new AppointmentGetDto
-        {
-            Id = a.Id,
-            PetName = a.Pet.Name,
-            UserFullName = a.User.FullName,
-            VeterinarianName = a.Veterinarian.FullName,
-            ServiceName = lang == "en" ? a.Service.NameEn : a.Service.NameAz,
-            AppointmentDate = a.AppointmentDate,
-            Status = a.Status.ToString(),
-            Notes = a.Notes
-        });
-    }
+    
 
     public async Task<List<AppointmentGetDto>> GetVetAppointmentsAsync(int vetUserId, string lang = "az")
     {
@@ -127,7 +112,8 @@ public class AppointmentService : IAppointmentService
         await _appointmentRepository.CreateAsync(appointment);
         await _appointmentRepository.SaveChangesAsync();
 
-        var created = await _appointmentRepository.GetByIdAsync(appointment.Id)!;
+        var created = await _appointmentRepository.GetByIdAsync(appointment.Id)
+            ?? throw new Exception("Failed to load created appointment");
 
         return new AppointmentGetDto
         {

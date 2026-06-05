@@ -1608,3 +1608,45 @@ System.InvalidOperationException: Invalid transition Delivered → Rejected
    at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-05 21:37:16.107 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 474.7418 ms
+2026-06-05 21:39:27.069 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 158.5244 ms
+2026-06-05 21:39:58.780 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 24.9369 ms
+2026-06-05 21:41:24.276 +04:00 [INF] HTTP GET /api/Pets responded 200 in 193.9058 ms
+2026-06-05 21:42:22.149 +04:00 [INF] HTTP POST /api/Pets responded 201 in 186.1465 ms
+2026-06-05 21:42:26.839 +04:00 [INF] HTTP GET /api/Pets responded 200 in 18.1515 ms
+2026-06-05 21:42:49.500 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 89.4452 ms
+2026-06-05 21:43:05.550 +04:00 [INF] HTTP GET /api/Services responded 200 in 66.2348 ms
+2026-06-05 21:43:47.614 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 209.0333 ms
+2026-06-05 21:44:02.621 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 32.5605 ms
+2026-06-05 21:44:11.286 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 9.3733 ms
+2026-06-05 21:45:05.624 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 10.6347 ms
+2026-06-05 21:45:34.683 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 48.5640 ms
+2026-06-05 21:46:19.190 +04:00 [INF] HTTP PATCH /api/Appointments/4/cancel responded 200 in 27.5006 ms
+2026-06-05 21:46:27.468 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 176.7276 ms
+2026-06-05 21:46:34.713 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 4.2001 ms
+2026-06-05 21:47:05.924 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 6.4401 ms
+2026-06-05 21:47:32.516 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.2250 ms
+2026-06-05 21:47:39.192 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 47.5040 ms
+2026-06-05 21:48:06.144 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 7.5083 ms
+2026-06-05 21:49:31.053 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 19.8362 ms
+2026-06-05 22:01:27.598 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 436.7806 ms
+2026-06-05 22:01:51.800 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 128.1404 ms
+2026-06-05 22:02:39.044 +04:00 [INF] HTTP POST /api/Auth/register responded 400 in 52.8904 ms
+2026-06-05 22:03:00.680 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 4974.8574 ms
+2026-06-05 22:03:29.193 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 13.5139 ms
+2026-06-05 22:04:10.686 +04:00 [INF] HTTP PATCH /api/Admin/users/9/role responded 200 in 182.5022 ms
+2026-06-05 22:04:14.410 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 2.9443 ms
+2026-06-05 22:04:32.989 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 30.0153 ms
+2026-06-05 22:05:20.973 +04:00 [INF] HTTP GET /api/Pets responded 200 in 94.2095 ms
+2026-06-05 22:05:48.317 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 233.9883 ms
+2026-06-05 22:06:09.163 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 97.7109 ms
+2026-06-05 22:07:00.657 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 7.3633 ms
+2026-06-05 22:07:21.494 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 82.8080 ms
+2026-06-05 22:07:40.369 +04:00 [INF] HTTP PATCH /api/Appointments/9/status responded 200 in 32.4048 ms
+2026-06-05 22:07:47.857 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 4.2461 ms
+2026-06-05 22:08:18.433 +04:00 [INF] HTTP PATCH /api/Appointments/9/status responded 200 in 20.1165 ms
+2026-06-05 22:08:26.113 +04:00 [INF] HTTP PATCH /api/Appointments/9/status responded 200 in 8.8069 ms
+2026-06-05 22:08:50.767 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 2.2989 ms
+2026-06-05 22:08:54.017 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 1.8635 ms
+2026-06-05 22:09:17.552 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 7.0579 ms
+2026-06-05 22:09:39.780 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 35.8218 ms

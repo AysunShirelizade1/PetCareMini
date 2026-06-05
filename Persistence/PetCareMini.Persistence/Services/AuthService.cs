@@ -1,12 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using Org.BouncyCastle.Crypto.Generators;
 using PetCareMini.Application.Abstracts.Repositories;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Auth;
 using PetCareMini.Domain.Entities;
+using PetCareMini.Domain.Enums;
 using PetCareMini.Persistence.Contexts;
 using PetCareMini.Persistence.Helpers;
-using Microsoft.Extensions.Logging;
 namespace PetCareMini.Persistence.Services;
 
 public class AuthService : IAuthService
@@ -44,6 +45,7 @@ public class AuthService : IAuthService
         {
             FullName = dto.FullName,
             Email = dto.Email,
+            Role = UserRole.User,
             PasswordHash = PasswordHasher.HashPassword(dto.Password),
             RefreshToken = refreshToken,
             RefreshTokenExpireDate = DateTime.UtcNow.AddDays(7)

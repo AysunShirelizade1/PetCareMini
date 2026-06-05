@@ -2,6 +2,7 @@
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Admin;
 using PetCareMini.Application.DTOs.User;
+using PetCareMini.Domain.Entities;
 using PetCareMini.Domain.Enums;
 using PetCareMini.Persistence.Contexts;
 
@@ -83,6 +84,22 @@ public class AdminService : IAdminService
             throw new InvalidOperationException("Cannot demote an Admin");
 
         user.Role = role;
+        if (role == UserRole.Veterinarian)
+        {
+            var alreadyExists = await _context.Veterinarians
+                .AnyAsync(v => v.UserId == userId);
+
+            if (!alreadyExists)
+            {
+                await _context.Veterinarians.AddAsync(new Veterinarian
+                {
+                    UserId = user.Id,
+                    FullName = user.FullName,
+                    Email = user.Email,
+                    IsAvailable = true
+                });
+            }
+        }
         await _context.SaveChangesAsync();
     }
 
