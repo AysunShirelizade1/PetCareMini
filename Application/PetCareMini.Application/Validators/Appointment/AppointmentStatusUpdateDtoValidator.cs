@@ -8,6 +8,6 @@ public class AppointmentStatusUpdateDtoValidator : AbstractValidator<Appointment
     public AppointmentStatusUpdateDtoValidator()
     {
         RuleFor(x => x.Status)
-            .InclusiveBetween(0, 3).WithMessage("Status must be between 0 and 3. (0=Pending, 1=Approved, 2=Completed, 3=Canceled)");
+            .InclusiveBetween(1, 4).WithMessage("Status must be between 1 and 4. (1=Pending, 2=Approved, 3=Completed, 4=Canceled)");
     }
 }

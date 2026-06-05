@@ -14,7 +14,7 @@ public class Appointment : BaseEntity
 
     public int VeterinarianId { get; set; }
     public Veterinarian Veterinarian { get; set; } = null!;
-
+    public string? RejectionReason { get; set; }
     public int ServiceId { get; set; }
     public Service Service { get; set; } = null!;
 
