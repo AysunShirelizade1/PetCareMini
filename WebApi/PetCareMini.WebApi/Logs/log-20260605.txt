@@ -1464,3 +1464,147 @@ System.InvalidOperationException: Cannot demote an Admin
    at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-05 20:22:25.981 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 777.3139 ms
+2026-06-05 20:22:47.062 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 289.5106 ms
+2026-06-05 20:22:52.518 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 68.9266 ms
+2026-06-05 20:23:09.195 +04:00 [INF] HTTP PATCH /api/Admin/users/2/role responded 200 in 43.4164 ms
+2026-06-05 20:24:25.557 +04:00 [INF] HTTP GET /api/Pets responded 200 in 85.4043 ms
+2026-06-05 20:25:23.792 +04:00 [INF] HTTP POST /api/Pets responded 201 in 223.9555 ms
+2026-06-05 20:25:28.305 +04:00 [INF] HTTP GET /api/Pets responded 200 in 10.6325 ms
+2026-06-05 20:26:10.804 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 105.3150 ms
+2026-06-05 20:26:25.200 +04:00 [INF] HTTP GET /api/Services responded 200 in 90.9468 ms
+2026-06-05 20:26:54.756 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 338.8910 ms
+2026-06-05 20:27:27.431 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 92.2848 ms
+2026-06-05 20:28:09.363 +04:00 [INF] HTTP PATCH /api/Appointments/3/cancel responded 200 in 34.6066 ms
+2026-06-05 20:28:14.972 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.4737 ms
+2026-06-05 20:28:18.334 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.8330 ms
+2026-06-05 20:28:44.155 +04:00 [INF] HTTP PATCH /api/Appointments/1/cancel responded 200 in 8.6214 ms
+2026-06-05 20:28:48.717 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 7.0894 ms
+2026-06-05 20:29:14.897 +04:00 [INF] HTTP PATCH /api/Appointments/7/status responded 200 in 21.1854 ms
+2026-06-05 20:30:15.725 +04:00 [INF] HTTP GET /api/Orders responded 200 in 199.5366 ms
+2026-06-05 20:30:26.526 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 45.4260 ms
+2026-06-05 20:30:44.941 +04:00 [INF] HTTP GET /api/Cart responded 200 in 46.5982 ms
+2026-06-05 20:31:05.137 +04:00 [INF] HTTP GET /api/Products responded 200 in 60.7920 ms
+2026-06-05 20:31:14.235 +04:00 [INF] HTTP POST /api/Cart/15 responded 200 in 86.0426 ms
+2026-06-05 20:31:29.725 +04:00 [INF] HTTP POST /api/Cart/14 responded 200 in 8.9707 ms
+2026-06-05 20:31:33.684 +04:00 [INF] HTTP POST /api/Cart/13 responded 200 in 6.0057 ms
+2026-06-05 20:31:37.081 +04:00 [INF] HTTP POST /api/Cart/12 responded 200 in 6.4224 ms
+2026-06-05 20:31:40.000 +04:00 [INF] HTTP POST /api/Cart/11 responded 200 in 5.8415 ms
+2026-06-05 20:31:43.417 +04:00 [INF] HTTP POST /api/Cart/10 responded 200 in 5.6633 ms
+2026-06-05 20:31:54.177 +04:00 [INF] HTTP GET /api/Coupon responded 200 in 19.9620 ms
+2026-06-05 20:32:09.256 +04:00 [INF] HTTP GET /api/Orders responded 200 in 6.7378 ms
+2026-06-05 20:32:24.073 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.2110 ms
+2026-06-05 20:32:46.182 +04:00 [ERR] HTTP PATCH /api/Orders/11/status responded 500 in 80.0022 ms
+System.Collections.Generic.KeyNotFoundException: Order not found
+   at PetCareMini.Persistence.Services.OrderService.UpdateStatusAsync(Int32 orderId, OrderStatus status) in C:\Users\ASUS\Desktop\Final\Persistence\PetCareMini.Persistence\Services\OrderService.cs:line 136
+   at PetCareMini.WebApi.Controllers.OrdersController.UpdateStatus(Int32 id, UpdateOrderStatusDto dto) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Controllers\OrdersController.cs:line 56
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-05 20:32:46.261 +04:00 [ERR] Unhandled exception: Order not found
+System.Collections.Generic.KeyNotFoundException: Order not found
+   at PetCareMini.Persistence.Services.OrderService.UpdateStatusAsync(Int32 orderId, OrderStatus status) in C:\Users\ASUS\Desktop\Final\Persistence\PetCareMini.Persistence\Services\OrderService.cs:line 136
+   at PetCareMini.WebApi.Controllers.OrdersController.UpdateStatus(Int32 id, UpdateOrderStatusDto dto) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Controllers\OrdersController.cs:line 56
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-05 20:38:50.853 +04:00 [INF] HTTP POST /api/Cart/10 responded 200 in 63.3423 ms
+2026-06-05 20:39:32.879 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 13.6526 ms
+2026-06-05 20:40:27.688 +04:00 [INF] HTTP POST /api/Orders/checkout responded 200 in 151.9231 ms
+2026-06-05 20:41:34.394 +04:00 [ERR] HTTP PATCH /api/Orders/14/status responded 500 in 2.0553 ms
+System.Collections.Generic.KeyNotFoundException: Order not found
+   at PetCareMini.Persistence.Services.OrderService.UpdateStatusAsync(Int32 orderId, OrderStatus status) in C:\Users\ASUS\Desktop\Final\Persistence\PetCareMini.Persistence\Services\OrderService.cs:line 136
+   at PetCareMini.WebApi.Controllers.OrdersController.UpdateStatus(Int32 id, UpdateOrderStatusDto dto) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Controllers\OrdersController.cs:line 56
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-05 20:41:34.399 +04:00 [ERR] Unhandled exception: Order not found
+System.Collections.Generic.KeyNotFoundException: Order not found
+   at PetCareMini.Persistence.Services.OrderService.UpdateStatusAsync(Int32 orderId, OrderStatus status) in C:\Users\ASUS\Desktop\Final\Persistence\PetCareMini.Persistence\Services\OrderService.cs:line 136
+   at PetCareMini.WebApi.Controllers.OrdersController.UpdateStatus(Int32 id, UpdateOrderStatusDto dto) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Controllers\OrdersController.cs:line 56
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-05 20:42:54.231 +04:00 [INF] HTTP GET /api/Orders responded 200 in 4.0158 ms
+2026-06-05 20:45:54.045 +04:00 [INF] HTTP POST /api/Cart/10 responded 200 in 58.5957 ms
+2026-06-05 20:46:02.293 +04:00 [INF] HTTP POST /api/Cart/14 responded 200 in 6.5401 ms
+2026-06-05 21:06:36.606 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 3144.7898 ms
+2026-06-05 21:07:14.043 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 169.5401 ms
+2026-06-05 21:08:02.140 +04:00 [INF] HTTP GET /api/Products responded 200 in 182.7289 ms
+2026-06-05 21:08:23.687 +04:00 [INF] HTTP POST /api/Cart/15 responded 200 in 171.3509 ms
+2026-06-05 21:08:36.216 +04:00 [INF] HTTP GET /api/Cart responded 200 in 29.9695 ms
+2026-06-05 21:08:40.935 +04:00 [INF] HTTP GET /api/Cart responded 200 in 12.1177 ms
+2026-06-05 21:09:07.029 +04:00 [INF] HTTP PUT /api/Cart/15 responded 200 in 37.4872 ms
+2026-06-05 21:09:28.694 +04:00 [INF] HTTP POST /api/Orders/checkout responded 200 in 169.7113 ms
+2026-06-05 21:09:58.686 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.4775 ms
+2026-06-05 21:10:13.804 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 49.5133 ms
+2026-06-05 21:11:23.592 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 73.7553 ms
+2026-06-05 21:11:50.151 +04:00 [INF] HTTP GET /api/Orders responded 200 in 48.7088 ms
+2026-06-05 21:12:07.898 +04:00 [INF] HTTP PATCH /api/Orders/4/status responded 200 in 34.2043 ms
+2026-06-05 21:12:15.683 +04:00 [INF] HTTP PATCH /api/Orders/4/status responded 200 in 5.3092 ms
+2026-06-05 21:12:22.543 +04:00 [INF] HTTP PATCH /api/Orders/4/status responded 200 in 5.4631 ms
+2026-06-05 21:12:27.906 +04:00 [ERR] HTTP PATCH /api/Orders/4/status responded 500 in 3.5563 ms
+System.InvalidOperationException: Invalid transition Delivered → Rejected
+   at PetCareMini.Persistence.Services.OrderService.UpdateStatusAsync(Int32 orderId, OrderStatus status) in C:\Users\ASUS\Desktop\Final\Persistence\PetCareMini.Persistence\Services\OrderService.cs:line 170
+   at PetCareMini.WebApi.Controllers.OrdersController.UpdateStatus(Int32 id, UpdateOrderStatusDto dto) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Controllers\OrdersController.cs:line 56
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-05 21:12:27.974 +04:00 [ERR] Unhandled exception: Invalid transition Delivered → Rejected
+System.InvalidOperationException: Invalid transition Delivered → Rejected
+   at PetCareMini.Persistence.Services.OrderService.UpdateStatusAsync(Int32 orderId, OrderStatus status) in C:\Users\ASUS\Desktop\Final\Persistence\PetCareMini.Persistence\Services\OrderService.cs:line 170
+   at PetCareMini.WebApi.Controllers.OrdersController.UpdateStatus(Int32 id, UpdateOrderStatusDto dto) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Controllers\OrdersController.cs:line 56
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Desktop\Final\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21

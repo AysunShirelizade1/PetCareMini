@@ -70,10 +70,12 @@ public class OrderService : IOrderService
     }
 
     public async Task<OrderGetDto> CheckoutAsync(
-        int userId,
-        string lang,
-        string? couponCode)
+    int userId,
+    string lang,
+    string? couponCode)
     {
+        using var transaction = await _context.Database.BeginTransactionAsync();
+
         var cartItems = await _context.CartItems
             .Include(x => x.Product)
             .Where(x => x.UserId == userId)
@@ -82,11 +84,27 @@ public class OrderService : IOrderService
         if (!cartItems.Any())
             throw new Exception("Cart is empty");
 
+        
+        foreach (var item in cartItems)
+        {
+            if (item.Product == null)
+                throw new Exception("Product not found");
+
+            if (item.Product.StockQuantity < item.Quantity)
+                throw new Exception(
+                    $"Not enough stock for product: {item.Product.NameAz}");
+        }
+
+        var totalPrice = cartItems.Sum(x => x.Product.Price * x.Quantity);
+
+        // (optional future: coupon logic)
+        // if (couponCode is not null) { apply discount }
+
         var order = new Order
         {
             UserId = userId,
             Status = OrderStatus.Pending,
-            TotalPrice = cartItems.Sum(x => x.Product.Price * x.Quantity),
+            TotalPrice = totalPrice,
             OrderItems = cartItems.Select(x => new OrderItem
             {
                 ProductId = x.ProductId,
@@ -96,8 +114,19 @@ public class OrderService : IOrderService
         };
 
         await _context.Orders.AddAsync(order);
+
+        
+        foreach (var item in cartItems)
+        {
+            item.Product.StockQuantity -= item.Quantity;
+        }
+
         _context.CartItems.RemoveRange(cartItems);
+
+ 
         await _context.SaveChangesAsync();
+
+        await transaction.CommitAsync();
 
         return Map(order, lang);
     }
