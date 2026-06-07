@@ -20,7 +20,7 @@ public class UserRepository : IUserRepository
             .FirstOrDefaultAsync(u => u.Email == email);
     }
 
-    // ✅ New method
+    
     public async Task<User?> GetByRefreshTokenAsync(string refreshToken)
     {
         return await _context.Users

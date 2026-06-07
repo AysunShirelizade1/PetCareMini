@@ -170,6 +170,7 @@ public class AuthService : IAuthService
         user.PasswordHash = PasswordHasher.HashPassword(dto.NewPassword);
         user.PasswordResetToken = null;
         user.PasswordResetTokenExpireDate = null;
+        user.IsEmailConfirmed = true;
         await _context.SaveChangesAsync();
     }
 
