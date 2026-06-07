@@ -60,8 +60,8 @@ public class AuthService : IAuthService
 
         try
         {
-            await _emailService.SendAsync(
-                dto.Email,
+            await _emailService.SendEmailAsync(
+                new List<string> { dto.Email },
                 "Email Təsdiqi",
                 $"<h2>Xoş gəldiniz, {dto.FullName}!</h2><p>Təsdiq kodunuz: <strong>{confirmToken}</strong></p>"
             );
@@ -93,9 +93,10 @@ public class AuthService : IAuthService
 
         if (!passwordIsCorrect)
             return null;
-
+        // Email təsdiqlənməyibsə, girişə icazə vermirik heleki test yoxlamaq üçün bu şərti şimdilik yorum satırı yaptım, gerçek uygulamada aktif olmalı
         //if (!user.IsEmailConfirmed)
         //    throw new InvalidOperationException("Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.");
+
         var refreshToken = _jwtTokenService.GenerateRefreshToken();
         user.RefreshToken = refreshToken;
         user.RefreshTokenExpireDate = DateTime.UtcNow.AddDays(7);
@@ -123,8 +124,8 @@ public class AuthService : IAuthService
         user.PasswordResetTokenExpireDate = DateTime.UtcNow.AddMinutes(15);
         await _context.SaveChangesAsync();
 
-        await _emailService.SendAsync(
-            email,
+        await _emailService.SendEmailAsync(
+            new List<string> { email },
             "Şifrə Sıfırlama",
             $"<h2>Şifrə Sıfırlama Kodu</h2><p>Kodunuz: <strong>{token}</strong></p><p>Bu kod 15 dəqiqə ərzində etibarlıdır.</p>"
         );
@@ -141,8 +142,8 @@ public class AuthService : IAuthService
         user.EmailConfirmationToken = token;
         await _context.SaveChangesAsync();
 
-        await _emailService.SendAsync(
-            email,
+        await _emailService.SendEmailAsync(
+            new List<string> { email },
             "Email Təsdiqi",
             $"<h2>Email Təsdiqi</h2><p>Təsdiq kodunuz: <strong>{token}</strong></p>"
         );

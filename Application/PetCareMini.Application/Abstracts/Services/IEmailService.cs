@@ -2,5 +2,5 @@
 
 public interface IEmailService
 {
-    Task SendAsync(string toEmail, string subject, string body);
+    Task SendEmailAsync(IEnumerable<string> toEmails, string subject, string body);
 }

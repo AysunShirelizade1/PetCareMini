@@ -1,0 +1,4 @@
+2026-06-07 12:49:09.301 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 2851.7723 ms
+2026-06-07 12:49:58.190 +04:00 [INF] HTTP POST /api/Auth/confirm-email responded 200 in 220.4124 ms
+2026-06-07 12:50:33.891 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 125.0337 ms
+2026-06-07 12:51:42.426 +04:00 [INF] HTTP POST /api/Auth/forgot-password responded 200 in 1817.7245 ms
