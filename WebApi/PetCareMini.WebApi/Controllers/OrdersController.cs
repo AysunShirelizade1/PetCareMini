@@ -38,7 +38,14 @@ public class OrdersController : ControllerBase
         var result = await _orderService.GetMyOrdersAsync(userId, lang);
         return Ok(result);
     }
-
+    [HttpPatch("{id}/cancel")]
+    [Authorize]
+    public async Task<IActionResult> Cancel(int id)
+    {
+        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+        await _orderService.CancelOrderAsync(userId, id);
+        return Ok(new { message = "Sifariş ləğv edildi.", statusCode = 200 });
+    }
     [HttpPost("checkout")]
     public async Task<IActionResult> Checkout(
         [FromQuery] string lang = "az",

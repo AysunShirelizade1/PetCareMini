@@ -2287,3 +2287,760 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 2026-06-07 16:07:49.995 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 24.2635 ms
 2026-06-07 16:07:49.996 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 10.0279 ms
 2026-06-07 16:07:52.223 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 25.0611 ms
+2026-06-07 16:15:33.707 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 879.0477 ms
+2026-06-07 16:22:34.871 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 520.8783 ms
+2026-06-07 16:22:48.444 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 17.2573 ms
+2026-06-07 16:36:05.427 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 88.1858 ms
+2026-06-07 16:36:05.972 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 61.3332 ms
+2026-06-07 16:36:06.036 +04:00 [INF] HTTP GET /api/Cart responded 200 in 122.8050 ms
+2026-06-07 16:36:08.160 +04:00 [INF] HTTP GET /api/Cart responded 200 in 13.3619 ms
+2026-06-07 16:36:08.160 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 11.0141 ms
+2026-06-07 16:36:08.476 +04:00 [INF] HTTP GET /api/Cart responded 200 in 106.5408 ms
+2026-06-07 16:36:08.484 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 113.8578 ms
+2026-06-07 16:36:08.585 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 303.8343 ms
+2026-06-07 16:36:08.588 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 306.2196 ms
+2026-06-07 16:36:08.666 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 307.8167 ms
+2026-06-07 16:36:08.739 +04:00 [INF] HTTP GET /api/Orders responded 200 in 381.4967 ms
+2026-06-07 16:36:08.754 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 6.8962 ms
+2026-06-07 16:36:08.761 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 403.9362 ms
+2026-06-07 16:36:08.768 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 20.8090 ms
+2026-06-07 16:36:08.860 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 25.6221 ms
+2026-06-07 16:36:08.927 +04:00 [INF] HTTP GET /api/Orders responded 200 in 19.6299 ms
+2026-06-07 16:36:08.958 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 30.2434 ms
+2026-06-07 16:36:10.702 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.6204 ms
+2026-06-07 16:36:10.710 +04:00 [INF] HTTP GET /api/Cart responded 200 in 12.4816 ms
+2026-06-07 16:36:10.881 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 52.0573 ms
+2026-06-07 16:36:10.890 +04:00 [INF] HTTP GET /api/Pets responded 200 in 61.2882 ms
+2026-06-07 16:36:10.913 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.4926 ms
+2026-06-07 16:36:10.917 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.2255 ms
+2026-06-07 16:36:10.929 +04:00 [INF] HTTP GET /api/products responded 200 in 93.8834 ms
+2026-06-07 16:36:10.951 +04:00 [INF] HTTP GET /api/Services responded 200 in 41.4891 ms
+2026-06-07 16:36:11.080 +04:00 [INF] HTTP GET /api/Pets responded 200 in 5.4380 ms
+2026-06-07 16:36:11.088 +04:00 [INF] HTTP GET /api/products responded 200 in 13.8938 ms
+2026-06-07 16:36:11.092 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 8.9280 ms
+2026-06-07 16:36:11.142 +04:00 [INF] HTTP GET /api/Services responded 200 in 7.7191 ms
+2026-06-07 16:36:13.468 +04:00 [INF] HTTP GET /api/Pets responded 200 in 8.2676 ms
+2026-06-07 16:36:13.586 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 51.9580 ms
+2026-06-07 16:36:13.608 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 73.8645 ms
+2026-06-07 16:36:13.614 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 71.8701 ms
+2026-06-07 16:36:13.630 +04:00 [INF] HTTP GET /api/Pets responded 200 in 6.3141 ms
+2026-06-07 16:36:13.853 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 6.0687 ms
+2026-06-07 16:36:13.860 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 4.0555 ms
+2026-06-07 16:36:13.861 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 15.8387 ms
+2026-06-07 16:36:19.249 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 23.5298 ms
+2026-06-07 16:36:33.883 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-07 16:36:34.183 +04:00 [INF] HTTP DELETE /api/blog/15 responded 200 in 376.4512 ms
+2026-06-07 16:36:38.102 +04:00 [INF] HTTP DELETE /api/blog/14 responded 200 in 73.2569 ms
+2026-06-07 16:36:43.880 +04:00 [ERR] Failed executing DbCommand (9ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Pets"
+WHERE "Id" = @p0;
+2026-06-07 16:36:43.915 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'PetCareMini.Persistence.Contexts.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23001: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23001
+    MessageText: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Appointments
+    ConstraintName: FK_Appointments_Pets_PetId
+    File: ri_triggers.c
+    Line: 2797
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23001: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23001
+    MessageText: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Appointments
+    ConstraintName: FK_Appointments_Pets_PetId
+    File: ri_triggers.c
+    Line: 2797
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-07 16:36:43.930 +04:00 [ERR] HTTP DELETE /api/Pets/11 responded 500 in 132.7531 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23001: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23001
+    MessageText: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Appointments
+    ConstraintName: FK_Appointments_Pets_PetId
+    File: ri_triggers.c
+    Line: 2797
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Repositories.PetRepository.SaveChangesAsync() in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Repositories\PetRepository.cs:line 43
+   at PetCareMini.Persistence.Services.PetService.DeleteAsync(Int32 id, Int32 ownerId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\PetService.cs:line 110
+   at PetCareMini.WebApi.Controllers.PetsController.Delete(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\PetsController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 16:36:43.985 +04:00 [ERR] Unhandled exception: An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23001: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23001
+    MessageText: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Appointments
+    ConstraintName: FK_Appointments_Pets_PetId
+    File: ri_triggers.c
+    Line: 2797
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Repositories.PetRepository.SaveChangesAsync() in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Repositories\PetRepository.cs:line 43
+   at PetCareMini.Persistence.Services.PetService.DeleteAsync(Int32 id, Int32 ownerId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\PetService.cs:line 110
+   at PetCareMini.WebApi.Controllers.PetsController.Delete(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\PetsController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-07 16:37:25.499 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.7728 ms
+2026-06-07 16:37:35.964 +04:00 [ERR] Failed executing DbCommand (12ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Pets"
+WHERE "Id" = @p0;
+2026-06-07 16:37:35.970 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'PetCareMini.Persistence.Contexts.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23001: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23001
+    MessageText: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Appointments
+    ConstraintName: FK_Appointments_Pets_PetId
+    File: ri_triggers.c
+    Line: 2797
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23001: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23001
+    MessageText: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Appointments
+    ConstraintName: FK_Appointments_Pets_PetId
+    File: ri_triggers.c
+    Line: 2797
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-07 16:37:35.984 +04:00 [ERR] HTTP DELETE /api/Pets/11 responded 500 in 38.2913 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23001: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23001
+    MessageText: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Appointments
+    ConstraintName: FK_Appointments_Pets_PetId
+    File: ri_triggers.c
+    Line: 2797
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Repositories.PetRepository.SaveChangesAsync() in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Repositories\PetRepository.cs:line 43
+   at PetCareMini.Persistence.Services.PetService.DeleteAsync(Int32 id, Int32 ownerId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\PetService.cs:line 110
+   at PetCareMini.WebApi.Controllers.PetsController.Delete(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\PetsController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 16:37:36.005 +04:00 [ERR] Unhandled exception: An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23001: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23001
+    MessageText: update or delete on table "Pets" violates RESTRICT setting of foreign key constraint "FK_Appointments_Pets_PetId" on table "Appointments"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Appointments
+    ConstraintName: FK_Appointments_Pets_PetId
+    File: ri_triggers.c
+    Line: 2797
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Repositories.PetRepository.SaveChangesAsync() in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Repositories\PetRepository.cs:line 43
+   at PetCareMini.Persistence.Services.PetService.DeleteAsync(Int32 id, Int32 ownerId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\PetService.cs:line 110
+   at PetCareMini.WebApi.Controllers.PetsController.Delete(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\PetsController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-07 16:38:07.264 +04:00 [INF] HTTP PATCH /api/Appointments/19/cancel responded 200 in 117.0210 ms
+2026-06-07 16:38:14.256 +04:00 [INF] HTTP PATCH /api/Orders/7/cancel responded 200 in 203.9233 ms
+2026-06-07 16:38:24.111 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 10.3263 ms
+2026-06-07 16:38:28.462 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 11.2687 ms
+2026-06-07 16:40:56.559 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 938.6410 ms
+2026-06-07 16:41:21.191 +04:00 [INF] HTTP DELETE /api/Pets/11 responded 200 in 778.6120 ms
+2026-06-07 16:41:37.847 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 355.8891 ms
+2026-06-07 16:43:07.291 +04:00 [INF] HTTP GET /api/User/me responded 200 in 134.7160 ms
+2026-06-07 16:43:07.414 +04:00 [INF] HTTP GET /api/Pets responded 200 in 60.5611 ms
+2026-06-07 16:43:07.544 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 197.0395 ms
+2026-06-07 16:43:07.617 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 262.6263 ms
+2026-06-07 16:45:41.961 +04:00 [INF] HTTP PUT /api/User/avatar responded 400 in 66.9729 ms
+2026-06-07 16:48:23.731 +04:00 [INF] HTTP GET /api/User/me responded 200 in 215.8473 ms
+2026-06-07 16:48:23.769 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 112.7817 ms
+2026-06-07 16:48:23.777 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 121.0828 ms
+2026-06-07 16:48:23.778 +04:00 [INF] HTTP GET /api/Pets responded 200 in 121.6655 ms
+2026-06-07 16:48:23.810 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 154.5662 ms
+2026-06-07 16:48:23.820 +04:00 [INF] HTTP GET /api/Cart responded 200 in 174.2919 ms
+2026-06-07 16:48:23.933 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.7487 ms
+2026-06-07 16:48:23.942 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 13.6610 ms
+2026-06-07 16:48:23.945 +04:00 [INF] HTTP GET /api/Pets responded 200 in 6.9055 ms
+2026-06-07 16:48:23.955 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 17.1388 ms
+2026-06-07 16:48:24.015 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 6.4728 ms
+2026-06-07 16:48:24.019 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.6909 ms
+2026-06-07 16:48:31.413 +04:00 [INF] HTTP PUT /api/User/avatar responded 200 in 1772.0665 ms
+2026-06-07 16:48:31.744 +04:00 [INF] HTTP GET /api/User/me responded 200 in 8.1267 ms
+2026-06-07 16:48:35.488 +04:00 [INF] HTTP GET /api/User/me responded 200 in 9.6536 ms
+2026-06-07 16:48:35.686 +04:00 [INF] HTTP GET /api/User/me responded 200 in 9.2549 ms
+2026-06-07 16:48:35.694 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 17.4418 ms
+2026-06-07 16:48:35.716 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 29.5388 ms
+2026-06-07 16:48:35.768 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.9489 ms
+2026-06-07 16:48:35.776 +04:00 [INF] HTTP GET /api/Cart responded 200 in 11.2854 ms
+2026-06-07 16:48:35.776 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 10.6402 ms
+2026-06-07 16:48:35.855 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 15.1320 ms
+2026-06-07 16:48:35.878 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 23.3788 ms
+2026-06-07 16:48:35.941 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.9863 ms
+2026-06-07 16:48:35.953 +04:00 [INF] HTTP GET /api/Cart responded 200 in 15.9778 ms
+2026-06-07 16:48:35.954 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 8.7408 ms
+2026-06-07 16:48:41.936 +04:00 [INF] HTTP PUT /api/User/avatar responded 200 in 1077.1414 ms
+2026-06-07 16:48:43.010 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.3694 ms
+2026-06-07 16:51:38.870 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.8852 ms
+2026-06-07 16:51:38.931 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 6.0698 ms
+2026-06-07 16:51:38.940 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 6.2837 ms
+2026-06-07 16:51:38.944 +04:00 [INF] HTTP GET /api/Cart responded 200 in 9.5987 ms
+2026-06-07 16:51:38.944 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.3773 ms
+2026-06-07 16:51:38.947 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.4793 ms
+2026-06-07 16:51:39.022 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.6765 ms
+2026-06-07 16:51:39.103 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.8643 ms
+2026-06-07 16:51:39.121 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.8913 ms
+2026-06-07 16:51:39.122 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.6727 ms
+2026-06-07 16:51:39.266 +04:00 [INF] HTTP GET /api/Pets responded 200 in 6.1843 ms
+2026-06-07 16:51:39.267 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.9734 ms
+2026-06-07 16:51:44.715 +04:00 [INF] HTTP PUT /api/User/avatar responded 200 in 1751.3627 ms
+2026-06-07 16:51:45.010 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.9672 ms
+2026-06-07 16:51:51.524 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.9163 ms
+2026-06-07 16:51:51.533 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.1126 ms
+2026-06-07 16:51:51.532 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.9145 ms
+2026-06-07 16:51:51.527 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 7.0098 ms
+2026-06-07 16:51:51.534 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.5378 ms
+2026-06-07 16:51:51.536 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 5.5570 ms
+2026-06-07 16:51:51.694 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.6049 ms
+2026-06-07 16:51:51.695 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.1621 ms
+2026-06-07 16:51:51.733 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.5835 ms
+2026-06-07 16:51:51.752 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.6965 ms
+2026-06-07 16:51:51.759 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.3322 ms
+2026-06-07 16:51:51.763 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 12.4208 ms
+2026-06-07 16:52:43.901 +04:00 [INF] HTTP PUT /api/User/avatar responded 200 in 1601.7284 ms
+2026-06-07 16:52:44.397 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.3940 ms
+2026-06-07 16:53:10.918 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.4773 ms
+2026-06-07 16:53:10.930 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 17.0981 ms
+2026-06-07 16:53:11.060 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.1666 ms
+2026-06-07 16:53:11.060 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.8413 ms
+2026-06-07 16:53:11.081 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.7926 ms
+2026-06-07 16:53:11.083 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 7.3039 ms
+2026-06-07 16:53:11.117 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.4638 ms
+2026-06-07 16:53:11.127 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 2.3592 ms
+2026-06-07 16:53:11.224 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.5332 ms
+2026-06-07 16:53:11.233 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.1180 ms
+2026-06-07 16:53:11.331 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.4895 ms
+2026-06-07 16:53:11.332 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.0098 ms
+2026-06-07 16:53:24.545 +04:00 [INF] HTTP GET /api/Pets responded 200 in 57.4297 ms
+2026-06-07 16:53:24.590 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 102.5763 ms
+2026-06-07 16:53:24.690 +04:00 [INF] HTTP GET /api/Cart responded 200 in 8.5184 ms
+2026-06-07 16:53:24.707 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 6.0493 ms
+2026-06-07 16:53:24.749 +04:00 [INF] HTTP GET /api/Services responded 200 in 48.7887 ms
+2026-06-07 16:53:24.787 +04:00 [INF] HTTP GET /api/products responded 200 in 105.0058 ms
+2026-06-07 16:53:24.800 +04:00 [INF] HTTP GET /api/Pets responded 200 in 8.0519 ms
+2026-06-07 16:53:24.802 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 8.0669 ms
+2026-06-07 16:53:24.849 +04:00 [INF] HTTP GET /api/Cart responded 200 in 8.9039 ms
+2026-06-07 16:53:24.972 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.4084 ms
+2026-06-07 16:53:24.973 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 5.7515 ms
+2026-06-07 16:53:25.484 +04:00 [INF] HTTP GET /api/products responded 200 in 11.9355 ms
+2026-06-07 16:53:26.069 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.4800 ms
+2026-06-07 16:53:26.204 +04:00 [INF] HTTP GET /api/User/me responded 200 in 7.2171 ms
+2026-06-07 16:53:26.237 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 16.9031 ms
+2026-06-07 16:53:26.242 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.4108 ms
+2026-06-07 16:53:26.242 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 15.5809 ms
+2026-06-07 16:53:26.356 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.8983 ms
+2026-06-07 16:53:26.406 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.8964 ms
+2026-06-07 16:53:26.418 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 7.3370 ms
+2026-06-07 16:53:35.153 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.1691 ms
+2026-06-07 16:53:35.162 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 12.1670 ms
+2026-06-07 16:53:35.286 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.1752 ms
+2026-06-07 16:53:35.295 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 12.1696 ms
+2026-06-07 16:53:35.300 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.5383 ms
+2026-06-07 16:53:35.300 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.7481 ms
+2026-06-07 16:53:35.371 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.1085 ms
+2026-06-07 16:53:35.374 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.3479 ms
+2026-06-07 16:53:35.535 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.5411 ms
+2026-06-07 16:53:35.536 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.1267 ms
+2026-06-07 16:53:35.544 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.1688 ms
+2026-06-07 16:53:35.544 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.1743 ms
+2026-06-07 16:53:41.553 +04:00 [INF] HTTP PUT /api/User/avatar responded 200 in 1165.3897 ms
+2026-06-07 16:53:41.848 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.6213 ms
+2026-06-07 16:54:08.221 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.1335 ms
+2026-06-07 16:54:08.294 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.7637 ms
+2026-06-07 16:54:08.306 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.9024 ms
+2026-06-07 16:54:08.472 +04:00 [INF] HTTP GET /api/Pets responded 200 in 4.1284 ms
+2026-06-07 16:54:08.472 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.4703 ms
+2026-06-07 16:54:08.482 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.1059 ms
+2026-06-07 16:54:08.484 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 6.7741 ms
+2026-06-07 16:54:08.539 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.6883 ms
+2026-06-07 16:54:08.554 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 75.2963 ms
+2026-06-07 16:54:08.658 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.4967 ms
+2026-06-07 16:54:08.658 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.5337 ms
+2026-06-07 16:54:08.690 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 24.0859 ms
+2026-06-07 16:54:11.207 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 22.7367 ms
+2026-06-07 16:54:20.199 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.3799 ms
+2026-06-07 16:54:20.201 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.8605 ms
+2026-06-07 16:54:20.267 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 5.2403 ms
+2026-06-07 16:54:20.306 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.7526 ms
+2026-06-07 16:54:20.317 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.3377 ms
+2026-06-07 16:54:20.317 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.7049 ms
+2026-06-07 16:54:20.387 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.0667 ms
+2026-06-07 16:54:20.389 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.5192 ms
+2026-06-07 16:54:20.490 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.7154 ms
+2026-06-07 16:54:20.492 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 5.5245 ms
+2026-06-07 16:54:20.502 +04:00 [INF] HTTP GET /api/Pets responded 200 in 4.2174 ms
+2026-06-07 16:54:20.503 +04:00 [INF] HTTP GET /api/Cart responded 200 in 4.7029 ms
+2026-06-07 16:54:34.826 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 31.2224 ms
+2026-06-07 16:55:29.221 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.4052 ms
+2026-06-07 16:55:29.223 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.7247 ms
+2026-06-07 16:55:29.239 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.7072 ms
+2026-06-07 16:55:29.329 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.7805 ms
+2026-06-07 16:55:29.329 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.6458 ms
+2026-06-07 16:55:29.374 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 10.4822 ms
+2026-06-07 16:55:29.376 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.6169 ms
+2026-06-07 16:55:29.393 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.0630 ms
+2026-06-07 16:55:29.521 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.9859 ms
+2026-06-07 16:55:29.526 +04:00 [INF] HTTP GET /api/Cart responded 200 in 8.9726 ms
+2026-06-07 16:55:29.528 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.3590 ms
+2026-06-07 16:55:29.654 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.4864 ms
+2026-06-07 16:55:33.783 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.5536 ms
+2026-06-07 16:55:33.788 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 7.8170 ms
+2026-06-07 16:55:33.856 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.6193 ms
+2026-06-07 16:55:33.856 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.5979 ms
+2026-06-07 16:55:33.858 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 6.3665 ms
+2026-06-07 16:55:33.927 +04:00 [INF] HTTP GET /api/Pets responded 200 in 74.2440 ms
+2026-06-07 16:55:33.940 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.5786 ms
+2026-06-07 16:55:33.942 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 6.1871 ms
+2026-06-07 16:55:34.099 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.8834 ms
+2026-06-07 16:55:34.115 +04:00 [INF] HTTP GET /api/Cart responded 200 in 18.4858 ms
+2026-06-07 16:55:34.125 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.5767 ms
+2026-06-07 16:55:34.127 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 5.6367 ms
+2026-06-07 16:56:50.129 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 6.0613 ms
+2026-06-07 16:56:50.134 +04:00 [INF] HTTP GET /api/User/me responded 200 in 11.1891 ms
+2026-06-07 16:56:50.141 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.8303 ms
+2026-06-07 16:56:50.138 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.8125 ms
+2026-06-07 16:56:50.137 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.4725 ms
+2026-06-07 16:56:50.295 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.2987 ms
+2026-06-07 16:56:50.304 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.7864 ms
+2026-06-07 16:56:50.305 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.1008 ms
+2026-06-07 16:56:50.309 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 7.4043 ms
+2026-06-07 16:56:50.320 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 28.8075 ms
+2026-06-07 16:56:50.400 +04:00 [INF] HTTP GET /api/Cart responded 200 in 98.3036 ms
+2026-06-07 16:56:50.464 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.6672 ms
+2026-06-07 16:56:56.126 +04:00 [INF] HTTP PUT /api/User/profile responded 200 in 84.1593 ms
+2026-06-07 16:57:12.121 +04:00 [INF] HTTP PUT /api/User/change-password responded 200 in 39.8586 ms
+2026-06-07 16:57:28.031 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 63.7906 ms
+2026-06-07 16:57:28.463 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.6831 ms
+2026-06-07 16:57:28.468 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 8.5282 ms
+2026-06-07 16:57:31.338 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.7790 ms
+2026-06-07 16:57:31.416 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.3557 ms
+2026-06-07 16:57:31.537 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.7120 ms
+2026-06-07 16:57:31.552 +04:00 [INF] HTTP GET /api/products responded 200 in 18.8893 ms
+2026-06-07 16:57:31.621 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.0570 ms
+2026-06-07 16:57:31.630 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 11.6117 ms
+2026-06-07 16:57:31.798 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 7.2932 ms
+2026-06-07 16:57:31.799 +04:00 [INF] HTTP GET /api/Services responded 200 in 7.6715 ms
+2026-06-07 16:57:31.802 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.4376 ms
+2026-06-07 16:57:31.811 +04:00 [INF] HTTP GET /api/products responded 200 in 15.0401 ms
+2026-06-07 16:57:31.960 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.6733 ms
+2026-06-07 16:57:31.960 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.9979 ms
+2026-06-07 16:57:32.945 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.5603 ms
+2026-06-07 16:57:33.014 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.0245 ms
+2026-06-07 16:57:33.014 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.2106 ms
+2026-06-07 16:57:33.033 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 6.4327 ms
+2026-06-07 16:57:33.181 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.6051 ms
+2026-06-07 16:57:33.183 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.4928 ms
+2026-06-07 16:57:33.192 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.4001 ms
+2026-06-07 16:57:33.307 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 19.4360 ms
+2026-06-07 16:57:38.847 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 3.7362 ms
+2026-06-07 17:12:18.950 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 104.3069 ms
+2026-06-07 17:12:20.214 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 15.6916 ms
+2026-06-07 17:12:20.295 +04:00 [INF] HTTP GET /api/User/me responded 200 in 97.1549 ms
+2026-06-07 17:12:20.337 +04:00 [INF] HTTP GET /api/Cart responded 200 in 10.1779 ms
+2026-06-07 17:12:20.350 +04:00 [INF] HTTP GET /api/Pets responded 200 in 7.0907 ms
+2026-06-07 17:12:20.364 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 28.5149 ms
+2026-06-07 17:12:20.420 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.4931 ms
+2026-06-07 17:12:20.441 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 97.6712 ms
+2026-06-07 17:12:20.545 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.1223 ms
+2026-06-07 17:12:20.566 +04:00 [INF] HTTP GET /api/Pets responded 200 in 6.9323 ms
+2026-06-07 17:12:20.570 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 26.0433 ms
+2026-06-07 17:12:20.571 +04:00 [INF] HTTP GET /api/Cart responded 200 in 12.5354 ms
+2026-06-07 17:12:20.600 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.7427 ms
+2026-06-07 17:12:29.680 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.0019 ms
+2026-06-07 17:12:29.694 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 16.1100 ms
+2026-06-07 17:12:29.712 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.2979 ms
+2026-06-07 17:12:29.713 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 2.8969 ms
+2026-06-07 17:12:29.715 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.7117 ms
+2026-06-07 17:12:29.718 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.3673 ms
+2026-06-07 17:12:29.840 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.6396 ms
+2026-06-07 17:12:29.895 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.4902 ms
+2026-06-07 17:12:29.908 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 17.8041 ms
+2026-06-07 17:12:29.908 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 29.4974 ms
+2026-06-07 17:12:30.004 +04:00 [INF] HTTP GET /api/Cart responded 200 in 111.5808 ms
+2026-06-07 17:12:30.081 +04:00 [INF] HTTP GET /api/Pets responded 200 in 187.9565 ms
+2026-06-07 17:12:36.413 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 19.4599 ms
+2026-06-07 17:14:31.200 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.0633 ms
+2026-06-07 17:14:31.303 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.8889 ms
+2026-06-07 17:14:31.314 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.5541 ms
+2026-06-07 17:14:31.314 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.1093 ms
+2026-06-07 17:14:31.320 +04:00 [INF] HTTP GET /api/Cart responded 200 in 9.9526 ms
+2026-06-07 17:14:31.324 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 24.1780 ms
+2026-06-07 17:14:31.394 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.0254 ms
+2026-06-07 17:14:31.464 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.3159 ms
+2026-06-07 17:14:31.469 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.0437 ms
+2026-06-07 17:14:31.472 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.9944 ms
+2026-06-07 17:14:31.477 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2820 ms
+2026-06-07 17:14:31.482 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 5.6735 ms
+2026-06-07 17:14:34.103 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 5.5008 ms
+2026-06-07 17:15:02.075 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.3768 ms
+2026-06-07 17:15:02.086 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 8.8763 ms
+2026-06-07 17:15:02.087 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 9.4091 ms
+2026-06-07 17:15:02.087 +04:00 [INF] HTTP GET /api/Cart responded 200 in 10.4356 ms
+2026-06-07 17:15:02.092 +04:00 [INF] HTTP GET /api/products responded 200 in 14.3047 ms
+2026-06-07 17:15:02.095 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.7154 ms
+2026-06-07 17:15:02.247 +04:00 [INF] HTTP GET /api/Services responded 200 in 3.1219 ms
+2026-06-07 17:15:02.259 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 9.0285 ms
+2026-06-07 17:15:02.265 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.8194 ms
+2026-06-07 17:15:02.265 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.0237 ms
+2026-06-07 17:15:02.265 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.6612 ms
+2026-06-07 17:15:02.274 +04:00 [INF] HTTP GET /api/products responded 200 in 12.4313 ms
+2026-06-07 17:15:04.490 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2001 ms
+2026-06-07 17:15:04.583 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.6097 ms
+2026-06-07 17:15:04.586 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.4296 ms
+2026-06-07 17:15:04.627 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 5.2777 ms
+2026-06-07 17:15:04.665 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.9980 ms
+2026-06-07 17:15:04.783 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.2205 ms
+2026-06-07 17:15:04.785 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.5731 ms
+2026-06-07 17:15:04.798 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.0538 ms
+2026-06-07 17:15:08.923 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 19.5070 ms
+2026-06-07 17:16:02.606 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 16.9768 ms
+2026-06-07 17:19:55.951 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 65.6852 ms
+2026-06-07 17:20:05.332 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 5.8892 ms
+2026-06-07 17:21:04.811 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 7.1927 ms
+2026-06-07 17:21:04.970 +04:00 [INF] HTTP GET /api/Services responded 200 in 5.7727 ms
+2026-06-07 17:21:05.003 +04:00 [INF] HTTP GET /api/Pets responded 200 in 8.0538 ms
+2026-06-07 17:21:05.048 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 83.6544 ms
+2026-06-07 17:21:05.128 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.7233 ms
+2026-06-07 17:21:05.228 +04:00 [INF] HTTP GET /api/Pets responded 200 in 6.3823 ms
+2026-06-07 17:21:07.835 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.7510 ms
+2026-06-07 17:21:08.005 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.9414 ms
+2026-06-07 17:21:08.011 +04:00 [INF] HTTP GET /api/User/me responded 200 in 9.5945 ms
+2026-06-07 17:21:08.157 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 13.8682 ms
+2026-06-07 17:21:08.162 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 18.2967 ms
+2026-06-07 17:21:08.171 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.8172 ms
+2026-06-07 17:21:08.355 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.2612 ms
+2026-06-07 17:21:08.356 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.0761 ms
+2026-06-07 17:21:26.999 +04:00 [INF] HTTP POST /api/Pets responded 201 in 161.2285 ms
+2026-06-07 17:21:27.190 +04:00 [INF] HTTP GET /api/Pets responded 200 in 17.3096 ms
+2026-06-07 17:21:30.574 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.0916 ms
+2026-06-07 17:21:30.656 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.5666 ms
+2026-06-07 17:21:30.664 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.1838 ms
+2026-06-07 17:21:30.730 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2400 ms
+2026-06-07 17:21:30.832 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.4643 ms
+2026-06-07 17:21:30.835 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 4.4707 ms
+2026-06-07 17:21:54.231 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 308.7008 ms
+2026-06-07 17:21:56.836 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.7085 ms
+2026-06-07 17:21:56.837 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.4850 ms
+2026-06-07 17:21:57.021 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 9.4782 ms
+2026-06-07 17:21:57.022 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 10.6509 ms
+2026-06-07 17:21:57.131 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.5165 ms
+2026-06-07 17:21:57.131 +04:00 [INF] HTTP GET /api/User/me responded 200 in 1.5262 ms
+2026-06-07 17:21:57.291 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 6.6460 ms
+2026-06-07 17:21:57.299 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.5869 ms
+2026-06-07 17:22:02.195 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 20.8673 ms
+2026-06-07 17:26:23.141 +04:00 [INF] HTTP PATCH /api/Appointments/20/cancel responded 200 in 103.5397 ms
+2026-06-07 17:26:26.722 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 26.3898 ms
+2026-06-07 17:26:26.836 +04:00 [INF] HTTP GET /api/User/me responded 200 in 1.3535 ms
+2026-06-07 17:26:26.846 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 10.3207 ms
+2026-06-07 17:26:26.911 +04:00 [INF] HTTP GET /api/Cart responded 200 in 68.4154 ms
+2026-06-07 17:26:26.958 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 10.6563 ms
+2026-06-07 17:26:26.970 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 21.7788 ms
+2026-06-07 17:26:27.010 +04:00 [INF] HTTP GET /api/Pets responded 200 in 168.6946 ms
+2026-06-07 17:26:27.050 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.7710 ms
+2026-06-07 17:26:27.050 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.8931 ms
+2026-06-07 17:26:27.129 +04:00 [INF] HTTP GET /api/Cart responded 200 in 9.1670 ms
+2026-06-07 17:26:27.290 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.6011 ms
+2026-06-07 17:26:27.301 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 12.8791 ms
+2026-06-07 17:26:33.565 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 21.8230 ms
+2026-06-07 17:27:11.177 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 16.0328 ms
+2026-06-07 17:27:43.382 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 17.0931 ms
+2026-06-07 17:28:34.881 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.2977 ms
+2026-06-07 17:28:34.881 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.1012 ms
+2026-06-07 17:28:34.964 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.7074 ms
+2026-06-07 17:28:35.052 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.1452 ms
+2026-06-07 17:28:35.054 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.9605 ms
+2026-06-07 17:28:35.138 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.1392 ms
+2026-06-07 17:28:52.945 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 31.5016 ms
+2026-06-07 17:28:56.104 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.7536 ms
+2026-06-07 17:28:56.104 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.3112 ms
+2026-06-07 17:28:56.236 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.7092 ms
+2026-06-07 17:28:56.237 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 5.8529 ms
+2026-06-07 17:28:56.281 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.3611 ms
+2026-06-07 17:28:56.286 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.3636 ms
+2026-06-07 17:28:56.425 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.8963 ms
+2026-06-07 17:28:56.428 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 6.5603 ms
+2026-06-07 17:29:12.794 +04:00 [INF] HTTP POST /api/Auth/login responded 401 in 15.1472 ms
+2026-06-07 17:30:33.668 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 9.3011 ms
+2026-06-07 17:30:34.077 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.0250 ms
+2026-06-07 17:30:34.077 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.4647 ms
+2026-06-07 17:30:37.767 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.9306 ms
+2026-06-07 17:30:37.767 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.5863 ms
+2026-06-07 17:30:37.900 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 70.9228 ms
+2026-06-07 17:30:37.954 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.6327 ms
+2026-06-07 17:30:38.008 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 179.2064 ms
+2026-06-07 17:30:38.023 +04:00 [INF] HTTP GET /api/Orders responded 200 in 90.0744 ms
+2026-06-07 17:30:38.071 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 120.7760 ms
+2026-06-07 17:30:38.079 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.5794 ms
+2026-06-07 17:30:38.083 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 6.2773 ms
+2026-06-07 17:30:38.186 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 13.0385 ms
+2026-06-07 17:30:38.212 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 272.0148 ms
+2026-06-07 17:30:38.243 +04:00 [INF] HTTP GET /api/Orders responded 200 in 6.8708 ms
+2026-06-07 17:30:38.262 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 13.8609 ms
+2026-06-07 17:30:38.391 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.7136 ms
+2026-06-07 17:30:40.380 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.0053 ms
+2026-06-07 17:30:40.544 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.8431 ms
+2026-06-07 17:30:44.463 +04:00 [INF] HTTP DELETE /api/Veterinarians/4 responded 200 in 50.6947 ms
+2026-06-07 17:30:44.668 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.9989 ms
+2026-06-07 17:31:01.840 +04:00 [INF] HTTP PUT /api/Veterinarians/8 responded 200 in 47.2670 ms
+2026-06-07 17:31:02.179 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.8434 ms
+2026-06-07 17:35:36.520 +04:00 [INF] HTTP POST /api/Veterinarians responded 201 in 118.2405 ms
+2026-06-07 17:35:36.782 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 4.2959 ms
+2026-06-07 17:36:17.260 +04:00 [INF] HTTP PUT /api/Veterinarians/8 responded 200 in 9.6959 ms
+2026-06-07 17:36:17.692 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.8961 ms
+2026-06-07 17:39:08.686 +04:00 [INF] HTTP PUT /api/Veterinarians/11 responded 200 in 7.5043 ms
+2026-06-07 17:39:09.012 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.2338 ms
