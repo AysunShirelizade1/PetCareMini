@@ -93,9 +93,9 @@ public class AuthService : IAuthService
 
         if (!passwordIsCorrect)
             return null;
-        // Email təsdiqlənməyibsə, girişə icazə vermirik heleki test yoxlamaq üçün bu şərti şimdilik yorum satırı yaptım, gerçek uygulamada aktif olmalı
-        //if (!user.IsEmailConfirmed)
-        //    throw new InvalidOperationException("Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.");
+        // Email təsdiqlənməyibsə, girişə icazə vermirik heleki test yoxla
+        if (!user.IsEmailConfirmed)
+            throw new InvalidOperationException("Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.");
 
         var refreshToken = _jwtTokenService.GenerateRefreshToken();
         user.RefreshToken = refreshToken;
@@ -167,7 +167,7 @@ public class AuthService : IAuthService
                 && u.PasswordResetTokenExpireDate > DateTime.UtcNow)
             ?? throw new InvalidOperationException("Token yanlış və ya müddəti bitib.");
 
-        user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
+        user.PasswordHash = PasswordHasher.HashPassword(dto.NewPassword);
         user.PasswordResetToken = null;
         user.PasswordResetTokenExpireDate = null;
         await _context.SaveChangesAsync();

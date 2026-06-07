@@ -68,7 +68,27 @@ public class OrderService : IOrderService
             }).ToList()
         }).ToList();
     }
+    public async Task CancelOrderAsync(int userId, int orderId)
+    {
+        var order = await _context.Orders
+            .Include(x => x.OrderItems)
+                .ThenInclude(x => x.Product)
+            .FirstOrDefaultAsync(x => x.Id == orderId && x.UserId == userId)
+            ?? throw new KeyNotFoundException("Sifariş tapılmadı.");
 
+        if (order.Status != OrderStatus.Pending)
+            throw new InvalidOperationException("Yalnız gözləmədə olan sifarişlər ləğv edilə bilər.");
+
+        // Stoku geri qaytar
+        foreach (var item in order.OrderItems)
+        {
+            if (item.Product != null)
+                item.Product.StockQuantity += item.Quantity;
+        }
+
+        order.Status = OrderStatus.Cancelled;
+        await _context.SaveChangesAsync();
+    }
     public async Task<OrderGetDto> CheckoutAsync(
     int userId,
     string lang,

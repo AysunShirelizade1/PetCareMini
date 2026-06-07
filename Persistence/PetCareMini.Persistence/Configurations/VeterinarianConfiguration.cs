@@ -44,6 +44,6 @@ public class VeterinarianConfiguration : IEntityTypeConfiguration<Veterinarian>
         builder.HasMany(x => x.Appointments)
             .WithOne(x => x.Veterinarian)
             .HasForeignKey(x => x.VeterinarianId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PetCareMini.Persistence.Contexts;
@@ -11,9 +12,11 @@ using PetCareMini.Persistence.Contexts;
 namespace PetCareMini.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260607110949_CascadeDeleteFix")]
+    partial class CascadeDeleteFix
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -546,7 +549,7 @@ namespace PetCareMini.Persistence.Migrations
                         {
                             Id = 1,
                             Address = "Germany — 785 15h Street, Office 478, Berlin",
-                            CreatedAt = new DateTime(2026, 6, 7, 16, 40, 21, 486, DateTimeKind.Local).AddTicks(5560),
+                            CreatedAt = new DateTime(2026, 6, 7, 15, 9, 48, 84, DateTimeKind.Local).AddTicks(2333),
                             Email = "hi@petfun.com",
                             PhoneNumber = "+00 12345678",
                             WorkingHours = "Monday - Friday: 9:30 AM - 5:00 PM"
@@ -1188,7 +1191,7 @@ namespace PetCareMini.Persistence.Migrations
                     b.HasOne("PetCareMini.Domain.Entities.Pet", "Pet")
                         .WithMany("Appointments")
                         .HasForeignKey("PetId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("PetCareMini.Domain.Entities.Service", "Service")
@@ -1206,7 +1209,7 @@ namespace PetCareMini.Persistence.Migrations
                     b.HasOne("PetCareMini.Domain.Entities.Veterinarian", "Veterinarian")
                         .WithMany("Appointments")
                         .HasForeignKey("VeterinarianId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Pet");
