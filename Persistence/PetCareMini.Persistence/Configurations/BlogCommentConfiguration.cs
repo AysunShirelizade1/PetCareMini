@@ -28,7 +28,7 @@ public class BlogCommentConfiguration : IEntityTypeConfiguration<BlogComment>
         builder.HasOne(x => x.User)
             .WithMany()
             .HasForeignKey(x => x.UserId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.Cascade);
 
         // Self-referencing — reply üçün
         builder.HasOne(x => x.ParentComment)

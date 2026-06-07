@@ -51,7 +51,15 @@ public class AdminService : IAdminService
 
         var lowStockCount = await _context.Products
             .CountAsync(p => p.IsActive && p.StockQuantity < 5);
-
+        var lowStockProducts = await _context.Products
+            .Where(p => p.IsActive && p.StockQuantity < 5)
+            .Select(p => new LowStockProductDto
+            {
+                Id = p.Id,
+                Name = p.NameAz,
+                StockQuantity = p.StockQuantity
+            })
+            .ToListAsync();
         var topProducts = await _context.OrderItems
             .GroupBy(oi => oi.Product.NameAz)
             .Select(g => new TopProductDto
@@ -72,6 +80,7 @@ public class AdminService : IAdminService
             TotalReviews = totalReviews,
             ActiveCoupons = activeCoupons,
             LowStockCount = lowStockCount,
+            LowStockProducts = lowStockProducts,
             TopProducts = topProducts
         };
     }

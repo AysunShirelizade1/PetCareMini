@@ -93,9 +93,9 @@ public class AuthService : IAuthService
 
         if (!passwordIsCorrect)
             return null;
-        // Email təsdiqlənməyibsə, girişə icazə vermirik heleki test yoxlamaq üçün bu şərti şimdilik yorum satırı yaptım, gerçek uygulamada aktif olmalı
-        //if (!user.IsEmailConfirmed)
-        //    throw new InvalidOperationException("Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.");
+        // Email təsdiqlənməyibsə, girişə icazə vermirik heleki test yoxla
+        if (!user.IsEmailConfirmed)
+            throw new InvalidOperationException("Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.");
 
         var refreshToken = _jwtTokenService.GenerateRefreshToken();
         user.RefreshToken = refreshToken;

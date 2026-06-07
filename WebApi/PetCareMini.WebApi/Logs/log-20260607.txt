@@ -2,3 +2,750 @@
 2026-06-07 12:49:58.190 +04:00 [INF] HTTP POST /api/Auth/confirm-email responded 200 in 220.4124 ms
 2026-06-07 12:50:33.891 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 125.0337 ms
 2026-06-07 12:51:42.426 +04:00 [INF] HTTP POST /api/Auth/forgot-password responded 200 in 1817.7245 ms
+2026-06-07 13:10:39.230 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1453.2776 ms
+2026-06-07 13:11:02.779 +04:00 [INF] HTTP GET /api/User/me responded 200 in 87.2800 ms
+2026-06-07 13:11:44.015 +04:00 [INF] HTTP PUT /api/User/profile responded 400 in 78.5460 ms
+2026-06-07 13:11:58.297 +04:00 [INF] HTTP PUT /api/User/profile responded 200 in 35.0871 ms
+2026-06-07 13:12:06.954 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.4062 ms
+2026-06-07 13:12:35.990 +04:00 [INF] HTTP PUT /api/User/avatar responded 200 in 2355.5963 ms
+2026-06-07 13:12:47.656 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.5782 ms
+2026-06-07 14:17:50.271 +04:00 [INF] HTTP GET /api/Products responded 200 in 665.8695 ms
+2026-06-07 14:18:13.740 +04:00 [INF] HTTP GET /api/products responded 200 in 65.7112 ms
+2026-06-07 14:18:13.901 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 227.0178 ms
+2026-06-07 14:18:13.911 +04:00 [INF] HTTP GET /api/products responded 200 in 21.9549 ms
+2026-06-07 14:18:14.068 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 6.8703 ms
+2026-06-07 14:20:30.443 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 105.7352 ms
+2026-06-07 14:20:30.662 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 72.8355 ms
+2026-06-07 14:20:30.663 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 240.7411 ms
+2026-06-07 14:20:30.842 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 8.7908 ms
+2026-06-07 14:20:33.806 +04:00 [INF] HTTP GET /api/products responded 200 in 11.2082 ms
+2026-06-07 14:20:33.817 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 11.9908 ms
+2026-06-07 14:20:33.965 +04:00 [INF] HTTP GET /api/products responded 200 in 6.9587 ms
+2026-06-07 14:20:33.972 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.8224 ms
+2026-06-07 14:21:23.483 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 9.7357 ms
+2026-06-07 14:21:23.489 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 15.3872 ms
+2026-06-07 14:21:23.645 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 6.2089 ms
+2026-06-07 14:21:23.646 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.8799 ms
+2026-06-07 14:22:12.566 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.3291 ms
+2026-06-07 14:22:12.584 +04:00 [INF] HTTP GET /api/products responded 200 in 6.8815 ms
+2026-06-07 14:22:12.694 +04:00 [INF] HTTP GET /api/Pets responded 200 in 115.3160 ms
+2026-06-07 14:22:12.743 +04:00 [INF] HTTP GET /api/Services responded 200 in 95.1493 ms
+2026-06-07 14:22:12.793 +04:00 [INF] HTTP GET /api/Cart responded 200 in 132.3327 ms
+2026-06-07 14:22:12.822 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.4536 ms
+2026-06-07 14:22:12.831 +04:00 [INF] HTTP GET /api/products responded 200 in 5.9689 ms
+2026-06-07 14:22:12.856 +04:00 [INF] HTTP GET /api/Pets responded 200 in 9.6282 ms
+2026-06-07 14:22:12.886 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 225.3547 ms
+2026-06-07 14:22:12.903 +04:00 [INF] HTTP GET /api/Services responded 200 in 7.1199 ms
+2026-06-07 14:22:12.980 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.3111 ms
+2026-06-07 14:22:13.080 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 5.1097 ms
+2026-06-07 14:22:15.078 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 5.6992 ms
+2026-06-07 14:22:15.079 +04:00 [INF] HTTP GET /api/products responded 200 in 7.6944 ms
+2026-06-07 14:22:15.341 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 6.2963 ms
+2026-06-07 14:22:15.344 +04:00 [INF] HTTP GET /api/products responded 200 in 9.8571 ms
+2026-06-07 14:22:29.420 +04:00 [INF] HTTP GET /api/products responded 200 in 10.1692 ms
+2026-06-07 14:22:29.427 +04:00 [INF] HTTP GET /api/Pets responded 200 in 17.8766 ms
+2026-06-07 14:22:29.468 +04:00 [INF] HTTP GET /api/Services responded 200 in 10.6768 ms
+2026-06-07 14:22:29.518 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 4.2265 ms
+2026-06-07 14:22:29.600 +04:00 [INF] HTTP GET /api/products responded 200 in 5.6960 ms
+2026-06-07 14:22:29.600 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.0430 ms
+2026-06-07 14:22:29.627 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.5377 ms
+2026-06-07 14:22:29.684 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 6.8981 ms
+2026-06-07 14:22:46.871 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.9125 ms
+2026-06-07 14:22:46.892 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 23.7656 ms
+2026-06-07 14:22:47.027 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.5291 ms
+2026-06-07 14:22:47.041 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 4.2735 ms
+2026-06-07 14:22:48.640 +04:00 [INF] HTTP GET /api/Services responded 200 in 3.5869 ms
+2026-06-07 14:22:48.640 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.6230 ms
+2026-06-07 14:22:48.649 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.4608 ms
+2026-06-07 14:22:48.800 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.9011 ms
+2026-06-07 14:22:48.800 +04:00 [INF] HTTP GET /api/Pets responded 200 in 4.2863 ms
+2026-06-07 14:22:48.832 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.7622 ms
+2026-06-07 14:31:42.103 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 78.3683 ms
+2026-06-07 14:31:42.113 +04:00 [INF] HTTP GET /api/products responded 200 in 87.3102 ms
+2026-06-07 14:31:42.280 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 6.4280 ms
+2026-06-07 14:31:42.283 +04:00 [INF] HTTP GET /api/products responded 200 in 9.3145 ms
+2026-06-07 14:31:45.756 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 7.4546 ms
+2026-06-07 14:31:45.769 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 19.6188 ms
+2026-06-07 14:31:45.912 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.4957 ms
+2026-06-07 14:31:46.060 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 3.7620 ms
+2026-06-07 14:31:53.149 +04:00 [INF] HTTP GET /api/Veterinarians/10 responded 200 in 44.1108 ms
+2026-06-07 14:31:53.198 +04:00 [INF] HTTP GET /api/veterinary-reviews/veterinarian/10 responded 200 in 65.2558 ms
+2026-06-07 14:31:53.299 +04:00 [INF] HTTP GET /api/Veterinarians/10 responded 200 in 4.0754 ms
+2026-06-07 14:31:53.309 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 204.5005 ms
+2026-06-07 14:31:53.380 +04:00 [INF] HTTP GET /api/veterinary-reviews/veterinarian/10 responded 200 in 5.3341 ms
+2026-06-07 14:31:53.464 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 7.4133 ms
+2026-06-07 14:31:53.689 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.8210 ms
+2026-06-07 14:31:53.868 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.4321 ms
+2026-06-07 14:31:55.371 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.5897 ms
+2026-06-07 14:31:55.456 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 10.2779 ms
+2026-06-07 14:31:55.596 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.7849 ms
+2026-06-07 14:31:55.604 +04:00 [INF] HTTP GET /api/veterinary-reviews/featured responded 200 in 2.7214 ms
+2026-06-07 14:32:05.005 +04:00 [INF] HTTP GET /api/Pets responded 200 in 6.9359 ms
+2026-06-07 14:32:05.009 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 10.7932 ms
+2026-06-07 14:32:05.020 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 53.6157 ms
+2026-06-07 14:32:05.116 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 178.9539 ms
+2026-06-07 14:32:05.225 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 7.1562 ms
+2026-06-07 14:32:05.229 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.7555 ms
+2026-06-07 14:32:05.237 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 19.8362 ms
+2026-06-07 14:32:05.338 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 6.6159 ms
+2026-06-07 14:32:18.094 +04:00 [ERR] HTTP POST /api/Auth/login responded 500 in 135.9860 ms
+System.InvalidOperationException: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+   at PetCareMini.Persistence.Services.AuthService.LoginAsync(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AuthService.cs:line 98
+   at PetCareMini.WebApi.Controllers.AuthController.Login(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AuthController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 14:32:18.168 +04:00 [ERR] Unhandled exception: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+System.InvalidOperationException: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+   at PetCareMini.Persistence.Services.AuthService.LoginAsync(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AuthService.cs:line 98
+   at PetCareMini.WebApi.Controllers.AuthController.Login(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AuthController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-07 14:32:28.718 +04:00 [ERR] HTTP POST /api/Auth/login responded 500 in 20.0409 ms
+System.InvalidOperationException: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+   at PetCareMini.Persistence.Services.AuthService.LoginAsync(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AuthService.cs:line 98
+   at PetCareMini.WebApi.Controllers.AuthController.Login(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AuthController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 14:32:28.730 +04:00 [ERR] Unhandled exception: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+System.InvalidOperationException: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+   at PetCareMini.Persistence.Services.AuthService.LoginAsync(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AuthService.cs:line 98
+   at PetCareMini.WebApi.Controllers.AuthController.Login(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AuthController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-07 14:32:46.754 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 2296.9155 ms
+2026-06-07 14:32:54.889 +04:00 [ERR] HTTP POST /api/Auth/login responded 500 in 7.2072 ms
+System.InvalidOperationException: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+   at PetCareMini.Persistence.Services.AuthService.LoginAsync(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AuthService.cs:line 98
+   at PetCareMini.WebApi.Controllers.AuthController.Login(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AuthController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 14:32:54.899 +04:00 [ERR] Unhandled exception: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+System.InvalidOperationException: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+   at PetCareMini.Persistence.Services.AuthService.LoginAsync(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AuthService.cs:line 98
+   at PetCareMini.WebApi.Controllers.AuthController.Login(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AuthController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-07 14:40:42.932 +04:00 [ERR] HTTP POST /api/Auth/login responded 500 in 88.4203 ms
+System.InvalidOperationException: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+   at PetCareMini.Persistence.Services.AuthService.LoginAsync(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AuthService.cs:line 98
+   at PetCareMini.WebApi.Controllers.AuthController.Login(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AuthController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 14:40:42.942 +04:00 [ERR] Unhandled exception: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+System.InvalidOperationException: Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.
+   at PetCareMini.Persistence.Services.AuthService.LoginAsync(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AuthService.cs:line 98
+   at PetCareMini.WebApi.Controllers.AuthController.Login(LoginDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AuthController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-07 14:41:11.974 +04:00 [INF] HTTP POST /api/Auth/register responded 400 in 6.8000 ms
+2026-06-07 14:42:11.788 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 1787.8274 ms
+2026-06-07 14:42:29.573 +04:00 [INF] HTTP POST /api/Auth/confirm-email responded 200 in 42.8098 ms
+2026-06-07 14:42:51.462 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 9.8942 ms
+2026-06-07 14:42:52.031 +04:00 [INF] HTTP GET /api/Cart responded 200 in 16.7454 ms
+2026-06-07 14:42:52.106 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 91.6372 ms
+2026-06-07 14:42:53.207 +04:00 [INF] HTTP GET /api/products responded 200 in 10.0414 ms
+2026-06-07 14:42:53.286 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 5.5003 ms
+2026-06-07 14:42:53.368 +04:00 [INF] HTTP GET /api/products responded 200 in 5.5772 ms
+2026-06-07 14:42:53.469 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.9549 ms
+2026-06-07 14:45:40.495 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 11.2202 ms
+2026-06-07 14:45:41.076 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.4623 ms
+2026-06-07 14:45:41.076 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.5017 ms
+2026-06-07 14:45:45.320 +04:00 [INF] HTTP GET /api/Cart responded 200 in 73.3807 ms
+2026-06-07 14:45:45.326 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 77.4512 ms
+2026-06-07 14:45:45.461 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 85.6768 ms
+2026-06-07 14:45:45.502 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 68.3692 ms
+2026-06-07 14:45:45.517 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.6312 ms
+2026-06-07 14:45:45.517 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 5.6144 ms
+2026-06-07 14:45:45.536 +04:00 [INF] HTTP GET /api/Orders responded 200 in 81.0393 ms
+2026-06-07 14:45:45.549 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 173.1271 ms
+2026-06-07 14:45:45.653 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 5.0009 ms
+2026-06-07 14:45:45.654 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 3.5447 ms
+2026-06-07 14:45:45.705 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 272.0788 ms
+2026-06-07 14:45:45.792 +04:00 [INF] HTTP GET /api/Orders responded 200 in 5.6513 ms
+2026-06-07 14:45:45.822 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 35.2337 ms
+2026-06-07 14:45:45.876 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 25.3767 ms
+2026-06-07 14:46:06.728 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 10.7244 ms
+2026-06-07 14:46:06.901 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 15.2605 ms
+2026-06-07 14:46:09.777 +04:00 [INF] HTTP PATCH /api/veterinary-reviews/17/approve responded 200 in 87.9183 ms
+2026-06-07 14:46:10.055 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 3.2736 ms
+2026-06-07 14:46:16.156 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 18.8580 ms
+2026-06-07 14:46:16.333 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 15.0037 ms
+2026-06-07 14:47:33.873 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 5.9611 ms
+2026-06-07 14:47:34.071 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 6.6737 ms
+2026-06-07 14:48:31.693 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.7523 ms
+2026-06-07 14:48:31.704 +04:00 [INF] HTTP GET /api/products responded 200 in 14.5128 ms
+2026-06-07 14:48:31.740 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.2380 ms
+2026-06-07 14:48:31.740 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.4252 ms
+2026-06-07 14:48:31.747 +04:00 [INF] HTTP GET /api/Cart responded 200 in 8.8272 ms
+2026-06-07 14:48:31.796 +04:00 [INF] HTTP GET /api/Pets responded 200 in 58.4092 ms
+2026-06-07 14:48:32.085 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 4.0298 ms
+2026-06-07 14:48:32.134 +04:00 [INF] HTTP GET /api/products responded 200 in 8.0282 ms
+2026-06-07 14:48:32.141 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.9677 ms
+2026-06-07 14:48:32.141 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.6913 ms
+2026-06-07 14:48:32.146 +04:00 [INF] HTTP GET /api/Cart responded 200 in 9.1990 ms
+2026-06-07 14:48:32.156 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.1391 ms
+2026-06-07 14:48:33.690 +04:00 [INF] HTTP GET /api/Pets responded 200 in 6.0245 ms
+2026-06-07 14:48:33.773 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 2.9589 ms
+2026-06-07 14:48:33.872 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 9.1242 ms
+2026-06-07 14:48:33.872 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 9.2673 ms
+2026-06-07 14:48:33.873 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.7057 ms
+2026-06-07 14:48:33.936 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 2.9071 ms
+2026-06-07 14:48:34.050 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.7731 ms
+2026-06-07 14:48:34.075 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 2.6396 ms
+2026-06-07 14:50:55.938 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 12.3727 ms
+2026-06-07 14:50:56.577 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 10.0125 ms
+2026-06-07 14:50:56.659 +04:00 [INF] HTTP GET /api/Cart responded 200 in 91.8049 ms
+2026-06-07 14:51:01.383 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.5565 ms
+2026-06-07 14:51:01.477 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.0664 ms
+2026-06-07 14:51:01.528 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.4371 ms
+2026-06-07 14:51:01.543 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 19.3904 ms
+2026-06-07 14:51:01.686 +04:00 [INF] HTTP GET /api/Orders responded 200 in 5.6503 ms
+2026-06-07 14:51:01.695 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.9209 ms
+2026-06-07 14:51:01.708 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 27.2987 ms
+2026-06-07 14:51:01.730 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 36.7561 ms
+2026-06-07 14:51:01.767 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 73.7757 ms
+2026-06-07 14:51:01.783 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 17.2184 ms
+2026-06-07 14:51:01.846 +04:00 [INF] HTTP GET /api/Orders responded 200 in 4.6886 ms
+2026-06-07 14:51:01.888 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 15.2441 ms
+2026-06-07 14:51:01.938 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 3.3363 ms
+2026-06-07 14:51:01.940 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 4.7744 ms
+2026-06-07 14:51:03.901 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 64.5031 ms
+2026-06-07 14:51:04.185 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 3.3194 ms
+2026-06-07 14:51:34.364 +04:00 [ERR] Failed executing DbCommand (84ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+        DELETE FROM "BlogComments" WHERE "ParentCommentId" IN (SELECT "Id" FROM "BlogComments" WHERE "UserId" = @p0);
+        DELETE FROM "BlogComments" WHERE "UserId" = @p0;
+        DELETE FROM "BlogPostTags" WHERE "BlogPostId" IN (SELECT "Id" FROM "BlogPosts" WHERE "AuthorId" = @p0);
+        DELETE FROM "BlogPosts" WHERE "AuthorId" = @p0;
+        DELETE FROM "BlogAuthorProfiles" WHERE "UserId" = @p0;
+        DELETE FROM "ProductReviews" WHERE "UserId" = @p0;
+        DELETE FROM "VeterinaryReviews" WHERE "UserId" = @p0;
+        DELETE FROM "WishlistItems" WHERE "UserId" = @p0;
+        DELETE FROM "CartItems" WHERE "UserId" = @p0;
+        DELETE FROM "Appointments" WHERE "UserId" = @p0;
+        DELETE FROM "OrderItems" WHERE "OrderId" IN (SELECT "Id" FROM "Orders" WHERE "UserId" = @p0);
+        DELETE FROM "Orders" WHERE "UserId" = @p0;
+        DELETE FROM "Pets" WHERE "UserId" = @p0;
+        DELETE FROM "Users" WHERE "Id" = @p0;
+2026-06-07 14:51:34.380 +04:00 [ERR] HTTP DELETE /api/Admin/users/16 responded 500 in 190.3225 ms
+Npgsql.PostgresException (0x80004005): 42703: column "UserId" does not exist
+
+POSITION: 26
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlRawAsync(DatabaseFacade databaseFacade, String sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 137
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "UserId" does not exist
+    Hint: Perhaps you meant to reference the column "Pets.OwnerId".
+    Position: 26
+    File: parse_relation.c
+    Line: 3838
+    Routine: errorMissingColumn
+2026-06-07 14:51:34.424 +04:00 [ERR] Unhandled exception: 42703: column "UserId" does not exist
+
+POSITION: 26
+Npgsql.PostgresException (0x80004005): 42703: column "UserId" does not exist
+
+POSITION: 26
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlRawAsync(DatabaseFacade databaseFacade, String sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 137
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "UserId" does not exist
+    Hint: Perhaps you meant to reference the column "Pets.OwnerId".
+    Position: 26
+    File: parse_relation.c
+    Line: 3838
+    Routine: errorMissingColumn
+2026-06-07 14:51:46.421 +04:00 [ERR] Failed executing DbCommand (19ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+        DELETE FROM "BlogComments" WHERE "ParentCommentId" IN (SELECT "Id" FROM "BlogComments" WHERE "UserId" = @p0);
+        DELETE FROM "BlogComments" WHERE "UserId" = @p0;
+        DELETE FROM "BlogPostTags" WHERE "BlogPostId" IN (SELECT "Id" FROM "BlogPosts" WHERE "AuthorId" = @p0);
+        DELETE FROM "BlogPosts" WHERE "AuthorId" = @p0;
+        DELETE FROM "BlogAuthorProfiles" WHERE "UserId" = @p0;
+        DELETE FROM "ProductReviews" WHERE "UserId" = @p0;
+        DELETE FROM "VeterinaryReviews" WHERE "UserId" = @p0;
+        DELETE FROM "WishlistItems" WHERE "UserId" = @p0;
+        DELETE FROM "CartItems" WHERE "UserId" = @p0;
+        DELETE FROM "Appointments" WHERE "UserId" = @p0;
+        DELETE FROM "OrderItems" WHERE "OrderId" IN (SELECT "Id" FROM "Orders" WHERE "UserId" = @p0);
+        DELETE FROM "Orders" WHERE "UserId" = @p0;
+        DELETE FROM "Pets" WHERE "UserId" = @p0;
+        DELETE FROM "Users" WHERE "Id" = @p0;
+2026-06-07 14:51:46.428 +04:00 [ERR] HTTP DELETE /api/Admin/users/5 responded 500 in 38.2021 ms
+Npgsql.PostgresException (0x80004005): 42703: column "UserId" does not exist
+
+POSITION: 26
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlRawAsync(DatabaseFacade databaseFacade, String sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 137
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "UserId" does not exist
+    Hint: Perhaps you meant to reference the column "Pets.OwnerId".
+    Position: 26
+    File: parse_relation.c
+    Line: 3838
+    Routine: errorMissingColumn
+2026-06-07 14:51:46.445 +04:00 [ERR] Unhandled exception: 42703: column "UserId" does not exist
+
+POSITION: 26
+Npgsql.PostgresException (0x80004005): 42703: column "UserId" does not exist
+
+POSITION: 26
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlRawAsync(DatabaseFacade databaseFacade, String sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 137
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "UserId" does not exist
+    Hint: Perhaps you meant to reference the column "Pets.OwnerId".
+    Position: 26
+    File: parse_relation.c
+    Line: 3838
+    Routine: errorMissingColumn
+2026-06-07 14:52:14.216 +04:00 [ERR] Failed executing DbCommand (44ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+        DELETE FROM "BlogComments" WHERE "ParentCommentId" IN (SELECT "Id" FROM "BlogComments" WHERE "UserId" = @p0);
+        DELETE FROM "BlogComments" WHERE "UserId" = @p0;
+        DELETE FROM "BlogPostTags" WHERE "BlogPostId" IN (SELECT "Id" FROM "BlogPosts" WHERE "AuthorId" = @p0);
+        DELETE FROM "BlogPosts" WHERE "AuthorId" = @p0;
+        DELETE FROM "BlogAuthorProfiles" WHERE "UserId" = @p0;
+        DELETE FROM "ProductReviews" WHERE "UserId" = @p0;
+        DELETE FROM "VeterinaryReviews" WHERE "UserId" = @p0;
+        DELETE FROM "WishlistItems" WHERE "UserId" = @p0;
+        DELETE FROM "CartItems" WHERE "UserId" = @p0;
+        DELETE FROM "Appointments" WHERE "UserId" = @p0;
+        DELETE FROM "OrderItems" WHERE "OrderId" IN (SELECT "Id" FROM "Orders" WHERE "UserId" = @p0);
+        DELETE FROM "Orders" WHERE "UserId" = @p0;
+        DELETE FROM "Pets" WHERE "UserId" = @p0;
+        DELETE FROM "Users" WHERE "Id" = @p0;
+2026-06-07 14:52:14.220 +04:00 [ERR] HTTP DELETE /api/Admin/users/5 responded 500 in 79.9040 ms
+Npgsql.PostgresException (0x80004005): 42703: column "UserId" does not exist
+
+POSITION: 26
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlRawAsync(DatabaseFacade databaseFacade, String sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 137
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "UserId" does not exist
+    Hint: Perhaps you meant to reference the column "Pets.OwnerId".
+    Position: 26
+    File: parse_relation.c
+    Line: 3838
+    Routine: errorMissingColumn
+2026-06-07 14:52:14.239 +04:00 [ERR] Unhandled exception: 42703: column "UserId" does not exist
+
+POSITION: 26
+Npgsql.PostgresException (0x80004005): 42703: column "UserId" does not exist
+
+POSITION: 26
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlRawAsync(DatabaseFacade databaseFacade, String sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 137
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "UserId" does not exist
+    Hint: Perhaps you meant to reference the column "Pets.OwnerId".
+    Position: 26
+    File: parse_relation.c
+    Line: 3838
+    Routine: errorMissingColumn
+2026-06-07 14:53:07.670 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 14.5377 ms
+2026-06-07 14:53:21.471 +04:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+
+        DELETE FROM "BlogComments" WHERE "ParentCommentId" IN (SELECT "Id" FROM "BlogComments" WHERE "UserId" = @p0);
+        DELETE FROM "BlogComments" WHERE "UserId" = @p0;
+        DELETE FROM "BlogPostTags" WHERE "BlogPostId" IN (SELECT "Id" FROM "BlogPosts" WHERE "AuthorId" = @p0);
+        DELETE FROM "BlogPosts" WHERE "AuthorId" = @p0;
+        DELETE FROM "BlogAuthorProfiles" WHERE "UserId" = @p0;
+        DELETE FROM "ProductReviews" WHERE "UserId" = @p0;
+        DELETE FROM "VeterinaryReviews" WHERE "UserId" = @p0;
+        DELETE FROM "WishlistItems" WHERE "UserId" = @p0;
+        DELETE FROM "CartItems" WHERE "UserId" = @p0;
+        DELETE FROM "Appointments" WHERE "UserId" = @p0;
+        DELETE FROM "OrderItems" WHERE "OrderId" IN (SELECT "Id" FROM "Orders" WHERE "UserId" = @p0);
+        DELETE FROM "Orders" WHERE "UserId" = @p0;
+        DELETE FROM "Pets" WHERE "UserId" = @p0;
+        DELETE FROM "Users" WHERE "Id" = @p0;
+2026-06-07 14:53:21.476 +04:00 [ERR] HTTP DELETE /api/Admin/users/5 responded 500 in 13.4728 ms
+Npgsql.PostgresException (0x80004005): 42703: column "UserId" does not exist
+
+POSITION: 26
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlRawAsync(DatabaseFacade databaseFacade, String sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 137
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "UserId" does not exist
+    Hint: Perhaps you meant to reference the column "Pets.OwnerId".
+    Position: 26
+    File: parse_relation.c
+    Line: 3838
+    Routine: errorMissingColumn
+2026-06-07 14:53:21.495 +04:00 [ERR] Unhandled exception: 42703: column "UserId" does not exist
+
+POSITION: 26
+Npgsql.PostgresException (0x80004005): 42703: column "UserId" does not exist
+
+POSITION: 26
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteNonQuery(Boolean async, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQueryAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.ExecuteSqlRawAsync(DatabaseFacade databaseFacade, String sql, IEnumerable`1 parameters, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 137
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+  Exception data:
+    Severity: ERROR
+    SqlState: 42703
+    MessageText: column "UserId" does not exist
+    Hint: Perhaps you meant to reference the column "Pets.OwnerId".
+    Position: 26
+    File: parse_relation.c
+    Line: 3838
+    Routine: errorMissingColumn
+2026-06-07 14:53:58.902 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 619.2167 ms
+2026-06-07 14:53:59.121 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 56.5550 ms
+2026-06-07 14:56:07.928 +04:00 [INF] HTTP GET /api/Products responded 200 in 245.8709 ms
+2026-06-07 14:56:41.098 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 25.5166 ms
+2026-06-07 15:00:53.454 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 509.1321 ms
+2026-06-07 15:00:53.624 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 9.5341 ms
+2026-06-07 15:01:05.134 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 226.6614 ms
+2026-06-07 15:01:05.204 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 298.9256 ms
+2026-06-07 15:01:05.335 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 6.1748 ms
+2026-06-07 15:01:05.371 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 11.1424 ms
+2026-06-07 15:01:41.458 +04:00 [INF] HTTP POST /api/blog responded 201 in 535.1784 ms
+2026-06-07 15:01:41.786 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 13.2745 ms
+2026-06-07 15:01:44.968 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 8.0786 ms
+2026-06-07 15:01:45.175 +04:00 [INF] HTTP GET /api/Cart responded 200 in 52.3648 ms
+2026-06-07 15:01:45.185 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.0736 ms
+2026-06-07 15:01:45.241 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 16.9059 ms
+2026-06-07 15:01:45.250 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 26.5859 ms
+2026-06-07 15:01:45.280 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 56.2719 ms
+2026-06-07 15:01:45.420 +04:00 [INF] HTTP GET /api/Cart responded 200 in 59.3051 ms
+2026-06-07 15:01:45.442 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 215.7833 ms
+2026-06-07 15:01:45.452 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.5399 ms
+2026-06-07 15:01:45.463 +04:00 [INF] HTTP GET /api/Orders responded 200 in 235.3846 ms
+2026-06-07 15:01:45.466 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 17.3863 ms
+2026-06-07 15:01:45.486 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 47.1581 ms
+2026-06-07 15:01:45.610 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 7.4262 ms
+2026-06-07 15:01:45.703 +04:00 [INF] HTTP GET /api/Orders responded 200 in 5.2056 ms
+2026-06-07 15:01:46.728 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 18.1972 ms
+2026-06-07 15:01:46.863 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 9.2331 ms
+2026-06-07 15:01:46.883 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 8.8539 ms
+2026-06-07 15:01:47.013 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 4.9985 ms
+2026-06-07 15:01:48.449 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-07 15:01:48.647 +04:00 [INF] HTTP PATCH /api/blog/admin/12/approve responded 200 in 262.2462 ms
+2026-06-07 15:01:48.963 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 8.0558 ms
+2026-06-07 15:01:51.523 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 7.6397 ms
+2026-06-07 15:01:51.739 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 6.1355 ms
+2026-06-07 15:01:51.758 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 25.8289 ms
+2026-06-07 15:01:51.799 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 4.1250 ms
+2026-06-07 15:01:51.805 +04:00 [INF] HTTP GET /api/Cart responded 200 in 9.9047 ms
+2026-06-07 15:01:51.814 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 19.2007 ms
+2026-06-07 15:01:51.823 +04:00 [INF] HTTP GET /api/Orders responded 200 in 10.3054 ms
+2026-06-07 15:01:51.832 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 12.0013 ms
+2026-06-07 15:01:51.956 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 6.2039 ms
+2026-06-07 15:01:51.971 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 21.4237 ms
+2026-06-07 15:01:52.112 +04:00 [INF] HTTP GET /api/Orders responded 200 in 6.9284 ms
+2026-06-07 15:01:52.112 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 7.1902 ms
+2026-06-07 15:01:52.118 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.8176 ms
+2026-06-07 15:01:52.119 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.2018 ms
+2026-06-07 15:01:54.206 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 4.9960 ms
+2026-06-07 15:01:54.233 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 65.8894 ms
+2026-06-07 15:01:54.233 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 67.5290 ms
+2026-06-07 15:01:54.382 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 4.7559 ms
+2026-06-07 15:01:54.410 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 7.5736 ms
+2026-06-07 15:01:54.410 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 5.9005 ms
+2026-06-07 15:02:06.153 +04:00 [INF] HTTP POST /api/ProductCategories responded 200 in 49.8355 ms
+2026-06-07 15:02:06.776 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 3.9657 ms
+2026-06-07 15:02:06.777 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 5.2994 ms
+2026-06-07 15:02:13.778 +04:00 [INF] HTTP PUT /api/ProductCategories/6 responded 200 in 50.8682 ms
+2026-06-07 15:02:14.327 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 4.0982 ms
+2026-06-07 15:02:14.327 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 4.0344 ms
+2026-06-07 15:02:18.524 +04:00 [INF] HTTP DELETE /api/ProductCategories/6 responded 200 in 50.9331 ms
+2026-06-07 15:02:18.756 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 3.3322 ms
+2026-06-07 15:02:18.756 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 3.6731 ms
+2026-06-07 15:02:48.574 +04:00 [INF] HTTP GET /api/Services responded 200 in 49.6875 ms
+2026-06-07 15:02:48.574 +04:00 [INF] HTTP GET /api/Services responded 200 in 49.7515 ms
+2026-06-07 15:02:48.863 +04:00 [INF] HTTP GET /api/Services responded 200 in 6.6522 ms
+2026-06-07 15:02:48.863 +04:00 [INF] HTTP GET /api/Services responded 200 in 6.7021 ms
+2026-06-07 15:03:34.862 +04:00 [INF] HTTP GET /api/products responded 200 in 24.7617 ms
+2026-06-07 15:03:34.865 +04:00 [INF] HTTP GET /api/Services responded 200 in 3.2441 ms
+2026-06-07 15:03:34.892 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 54.5875 ms
+2026-06-07 15:03:34.949 +04:00 [INF] HTTP GET /api/Pets responded 200 in 87.7318 ms
+2026-06-07 15:03:35.028 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.2950 ms
+2026-06-07 15:03:35.035 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 11.5370 ms
+2026-06-07 15:03:35.046 +04:00 [INF] HTTP GET /api/products responded 200 in 7.6955 ms
+2026-06-07 15:03:35.144 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.6319 ms
+2026-06-07 15:03:35.146 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.1289 ms
+2026-06-07 15:03:35.162 +04:00 [INF] HTTP GET /api/Pets responded 200 in 5.8722 ms
+2026-06-07 15:03:35.239 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.1438 ms
+2026-06-07 15:03:35.240 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.7067 ms
+2026-06-07 15:03:36.754 +04:00 [INF] HTTP GET /api/Pets responded 200 in 5.3223 ms
+2026-06-07 15:03:36.941 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.9568 ms
+2026-06-07 15:03:36.948 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 56.6628 ms
+2026-06-07 15:03:36.954 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 63.0139 ms
+2026-06-07 15:03:36.975 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 63.2349 ms
+2026-06-07 15:03:37.154 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.3254 ms
+2026-06-07 15:03:37.157 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 6.5090 ms
+2026-06-07 15:03:37.227 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 2.3325 ms
+2026-06-07 15:07:13.769 +04:00 [INF] HTTP POST /api/Auth/forgot-password responded 200 in 2150.3544 ms
+2026-06-07 15:07:40.344 +04:00 [INF] HTTP POST /api/Auth/reset-password responded 200 in 700.6322 ms
+2026-06-07 15:09:56.194 +04:00 [INF] HTTP POST /api/Auth/forgot-password responded 200 in 3589.4796 ms
