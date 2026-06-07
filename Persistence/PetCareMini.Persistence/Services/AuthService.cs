@@ -167,7 +167,7 @@ public class AuthService : IAuthService
                 && u.PasswordResetTokenExpireDate > DateTime.UtcNow)
             ?? throw new InvalidOperationException("Token yanlış və ya müddəti bitib.");
 
-        user.PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
+        user.PasswordHash = PasswordHasher.HashPassword(dto.NewPassword);
         user.PasswordResetToken = null;
         user.PasswordResetTokenExpireDate = null;
         await _context.SaveChangesAsync();

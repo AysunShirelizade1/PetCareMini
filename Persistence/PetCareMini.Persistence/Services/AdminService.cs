@@ -142,22 +142,7 @@ public class AdminService : IAdminService
         if (user.Role == UserRole.Admin)
             throw new InvalidOperationException("Admin user cannot be deleted");
 
-        // Bütün bağlı məlumatları düzgün sıra ilə sil
-            await _context.Database.ExecuteSqlRawAsync(@"
-        DELETE FROM ""BlogComments"" WHERE ""ParentCommentId"" IN (SELECT ""Id"" FROM ""BlogComments"" WHERE ""UserId"" = {0});
-        DELETE FROM ""BlogComments"" WHERE ""UserId"" = {0};
-        DELETE FROM ""BlogPostTags"" WHERE ""BlogPostId"" IN (SELECT ""Id"" FROM ""BlogPosts"" WHERE ""AuthorId"" = {0});
-        DELETE FROM ""BlogPosts"" WHERE ""AuthorId"" = {0};
-        DELETE FROM ""BlogAuthorProfiles"" WHERE ""UserId"" = {0};
-        DELETE FROM ""ProductReviews"" WHERE ""UserId"" = {0};
-        DELETE FROM ""VeterinaryReviews"" WHERE ""UserId"" = {0};
-        DELETE FROM ""WishlistItems"" WHERE ""UserId"" = {0};
-        DELETE FROM ""CartItems"" WHERE ""UserId"" = {0};
-        DELETE FROM ""Appointments"" WHERE ""UserId"" = {0};
-        DELETE FROM ""OrderItems"" WHERE ""OrderId"" IN (SELECT ""Id"" FROM ""Orders"" WHERE ""UserId"" = {0});
-        DELETE FROM ""Orders"" WHERE ""UserId"" = {0};
-        DELETE FROM ""Pets"" WHERE ""UserId"" = {0};
-        DELETE FROM ""Users"" WHERE ""Id"" = {0};
-    ", userId);
+        _context.Users.Remove(user);
+        await _context.SaveChangesAsync();
     }
 }

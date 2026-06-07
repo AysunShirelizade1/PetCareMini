@@ -36,7 +36,11 @@ public class BlogPostService : IBlogPostService
             .Select(p => MapToSummary(p, lang))
             .ToList();
     }
-
+    public async Task<List<BlogPostSummaryDto>> GetMyPostsAsync(int userId, string lang = "az")
+    {
+        var posts = await _repo.GetByAuthorAsync(userId);
+        return posts.Select(p => MapToSummary(p, lang)).ToList();
+    }
     public async Task<BlogPostGetDto> GetBySlugAsync(string slug, string lang = "az")
     {
         var post = await _repo.GetBySlugAsync(slug, lang)

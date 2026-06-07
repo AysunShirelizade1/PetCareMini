@@ -4,6 +4,7 @@ namespace PetCareMini.Application.Abstracts.Services;
 
 public interface IBlogPostService
 {
+    Task<List<BlogPostSummaryDto>> GetMyPostsAsync(int userId, string lang = "az");
     // Hamıya açıq
     Task<List<BlogPostSummaryDto>> GetAllPublishedAsync(string lang = "az");
     Task<List<BlogPostSummaryDto>> GetByCategoryAsync(string categorySlug, string lang = "az");
