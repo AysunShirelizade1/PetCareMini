@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.Blog;
+using PetCareMini.Persistence.Services;
 using System.Security.Claims;
 
 namespace PetCareMini.WebApi.Controllers;
@@ -41,6 +42,14 @@ public class BlogController : ControllerBase
     public async Task<IActionResult> GetComments(int postId)
         => Ok(new { data = await _commentService.GetByPostIdAsync(postId), statusCode = 200 });
 
+    [HttpGet("my")]
+    [Authorize]
+    public async Task<IActionResult> GetMyPosts([FromQuery] string lang = "az")
+    {
+        var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
+        var result = await _service.GetMyPostsAsync(userId, lang);
+        return Ok(result);
+    }
 
     [HttpPost]
     [Authorize]
@@ -65,7 +74,8 @@ public class BlogController : ControllerBase
     public async Task<IActionResult> Delete(int id)
     {
         var userId = GetUserId();
-        await _service.DeleteAsync(userId, id);
+        var isAdmin = User.IsInRole("Admin");
+        await _service.DeleteAsync(userId, id, isAdmin);
         return Ok(new { message = "Post silindi.", statusCode = 200 });
     }
 

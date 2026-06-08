@@ -36,6 +36,6 @@ public class PetConfiguration : IEntityTypeConfiguration<Pet>
         builder.HasMany(x => x.Appointments)
             .WithOne(x => x.Pet)
             .HasForeignKey(x => x.PetId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

@@ -12,6 +12,7 @@ public interface IOrderService
     Task<OrderGetDto> CheckoutAsync(int userId, string lang, string? couponCode);
 
     Task<List<OrderGetDto>> GetMyOrdersAsync(int userId, string lang);
+    Task CancelOrderAsync(int userId, int orderId);
 
     Task UpdateStatusAsync(int orderId, OrderStatus status);
     Task RejectOrderAsync(int orderId, string reason);

@@ -41,6 +41,26 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         builder.HasMany(x => x.Appointments)
             .WithOne(x => x.User)
             .HasForeignKey(x => x.UserId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasMany(x => x.WishlistItems)
+            .WithOne(x => x.User)
+            .HasForeignKey(x => x.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasMany(x => x.CartItems)
+            .WithOne(x => x.User)
+            .HasForeignKey(x => x.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasMany(x => x.Reviews)
+            .WithOne(x => x.User)
+            .HasForeignKey(x => x.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
+
+        builder.HasMany(x => x.Orders)
+            .WithOne(x => x.User)
+            .HasForeignKey(x => x.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

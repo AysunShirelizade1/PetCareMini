@@ -25,7 +25,7 @@ public class AppointmentConfiguration : IEntityTypeConfiguration<Appointment>
         builder.HasOne(x => x.User)
             .WithMany(x => x.Appointments)
             .HasForeignKey(x => x.UserId)
-            .OnDelete(DeleteBehavior.Restrict);
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasOne(x => x.Pet)
             .WithMany(x => x.Appointments)

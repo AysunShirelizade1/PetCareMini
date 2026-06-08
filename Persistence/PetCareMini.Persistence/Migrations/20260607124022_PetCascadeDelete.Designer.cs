@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PetCareMini.Persistence.Contexts;
@@ -11,9 +12,11 @@ using PetCareMini.Persistence.Contexts;
 namespace PetCareMini.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260607124022_PetCascadeDelete")]
+    partial class PetCascadeDelete
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -546,7 +549,7 @@ namespace PetCareMini.Persistence.Migrations
                         {
                             Id = 1,
                             Address = "Germany — 785 15h Street, Office 478, Berlin",
-                            CreatedAt = new DateTime(2026, 6, 8, 9, 32, 17, 671, DateTimeKind.Local).AddTicks(3101),
+                            CreatedAt = new DateTime(2026, 6, 7, 16, 40, 21, 486, DateTimeKind.Local).AddTicks(5560),
                             Email = "hi@petfun.com",
                             PhoneNumber = "+00 12345678",
                             WorkingHours = "Monday - Friday: 9:30 AM - 5:00 PM"
@@ -1057,15 +1060,9 @@ namespace PetCareMini.Persistence.Migrations
                     b.Property<int?>("UserId")
                         .HasColumnType("integer");
 
-                    b.Property<int?>("UserId1")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
                     b.HasIndex("UserId")
-                        .IsUnique();
-
-                    b.HasIndex("UserId1")
                         .IsUnique();
 
                     b.ToTable("Veterinarians");
@@ -1373,13 +1370,8 @@ namespace PetCareMini.Persistence.Migrations
             modelBuilder.Entity("PetCareMini.Domain.Entities.Veterinarian", b =>
                 {
                     b.HasOne("PetCareMini.Domain.Entities.User", "User")
-                        .WithOne()
-                        .HasForeignKey("PetCareMini.Domain.Entities.Veterinarian", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("PetCareMini.Domain.Entities.User", null)
                         .WithOne("VeterinarianProfile")
-                        .HasForeignKey("PetCareMini.Domain.Entities.Veterinarian", "UserId1");
+                        .HasForeignKey("PetCareMini.Domain.Entities.Veterinarian", "UserId");
 
                     b.Navigation("User");
                 });

@@ -9,6 +9,7 @@ public class AdminStatisticsDto
     public decimal TotalRevenue { get; set; }
     public int TotalReviews { get; set; }
     public int ActiveCoupons { get; set; }
+    public List<LowStockProductDto> LowStockProducts { get; set; } = new();
     public int LowStockCount { get; set; }// Number of products with low stock
     public List<TopProductDto> TopProducts { get; set; } = new();
 
