@@ -1,0 +1,863 @@
+2026-06-08 09:00:47.512 +04:00 [INF] HTTP GET /api/Services responded 200 in 321.1153 ms
+2026-06-08 09:00:47.514 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 413.8228 ms
+2026-06-08 09:00:47.623 +04:00 [INF] HTTP GET /api/products responded 200 in 522.7564 ms
+2026-06-08 09:00:47.954 +04:00 [INF] HTTP GET /api/Services responded 200 in 5.5218 ms
+2026-06-08 09:00:47.964 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 4.5274 ms
+2026-06-08 09:00:48.090 +04:00 [INF] HTTP GET /api/products responded 200 in 22.1356 ms
+2026-06-08 09:01:19.111 +04:00 [INF] HTTP GET /api/products responded 200 in 17.8760 ms
+2026-06-08 09:01:36.908 +04:00 [INF] HTTP GET /api/products responded 200 in 23.3015 ms
+2026-06-08 09:01:36.934 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 47.8361 ms
+2026-06-08 09:01:37.381 +04:00 [INF] HTTP GET /api/products responded 200 in 5.7213 ms
+2026-06-08 09:01:37.416 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 4.3793 ms
+2026-06-08 09:01:39.070 +04:00 [INF] HTTP GET /api/products responded 200 in 5.1750 ms
+2026-06-08 09:01:39.072 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 7.3035 ms
+2026-06-08 09:01:39.323 +04:00 [INF] HTTP GET /api/Services responded 200 in 6.9095 ms
+2026-06-08 09:01:39.565 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.2221 ms
+2026-06-08 09:01:39.568 +04:00 [INF] HTTP GET /api/products responded 200 in 5.6738 ms
+2026-06-08 09:01:39.772 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.2511 ms
+2026-06-08 09:02:58.190 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 5.3881 ms
+2026-06-08 09:02:58.429 +04:00 [INF] HTTP GET /api/Services responded 200 in 3.0448 ms
+2026-06-08 09:02:58.636 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.3040 ms
+2026-06-08 09:02:58.873 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.8527 ms
+2026-06-08 09:09:29.026 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1215.1537 ms
+2026-06-08 09:09:29.029 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 1084.0305 ms
+2026-06-08 09:09:29.637 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 44.6391 ms
+2026-06-08 09:09:29.637 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 42.1970 ms
+2026-06-08 09:09:30.531 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 175.5199 ms
+2026-06-08 09:09:30.531 +04:00 [INF] HTTP GET /api/Cart responded 200 in 175.4143 ms
+2026-06-08 09:09:31.613 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 6.2397 ms
+2026-06-08 09:09:31.613 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.1893 ms
+2026-06-08 09:09:32.150 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 342.5814 ms
+2026-06-08 09:09:32.174 +04:00 [INF] HTTP GET /api/Cart responded 200 in 51.2640 ms
+2026-06-08 09:09:32.180 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 55.6833 ms
+2026-06-08 09:09:32.222 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 175.5775 ms
+2026-06-08 09:09:32.226 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 418.1408 ms
+2026-06-08 09:09:32.257 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 321.9700 ms
+2026-06-08 09:09:32.311 +04:00 [INF] HTTP GET /api/Orders responded 200 in 258.8647 ms
+2026-06-08 09:09:32.604 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 11.9488 ms
+2026-06-08 09:09:32.688 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 23.0660 ms
+2026-06-08 09:09:32.710 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 34.6210 ms
+2026-06-08 09:09:32.730 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 28.5981 ms
+2026-06-08 09:09:32.901 +04:00 [INF] HTTP GET /api/Orders responded 200 in 15.8604 ms
+2026-06-08 09:09:33.037 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 68.9041 ms
+2026-06-08 09:09:33.485 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 4.1174 ms
+2026-06-08 09:09:45.206 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 54.8709 ms
+2026-06-08 09:09:45.242 +04:00 [INF] HTTP GET /api/products responded 200 in 90.8948 ms
+2026-06-08 09:09:45.365 +04:00 [INF] HTTP GET /api/Pets responded 200 in 47.1596 ms
+2026-06-08 09:09:45.412 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.6619 ms
+2026-06-08 09:09:45.449 +04:00 [INF] HTTP GET /api/Services responded 200 in 49.6762 ms
+2026-06-08 09:09:45.547 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.0843 ms
+2026-06-08 09:09:45.651 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.9506 ms
+2026-06-08 09:09:45.701 +04:00 [INF] HTTP GET /api/products responded 200 in 9.6100 ms
+2026-06-08 09:09:45.814 +04:00 [INF] HTTP GET /api/Pets responded 200 in 6.4482 ms
+2026-06-08 09:09:45.858 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.1722 ms
+2026-06-08 09:09:45.897 +04:00 [INF] HTTP GET /api/Services responded 200 in 5.4379 ms
+2026-06-08 09:09:45.994 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.8227 ms
+2026-06-08 09:09:46.684 +04:00 [INF] HTTP GET /api/Pets responded 200 in 13.4879 ms
+2026-06-08 09:09:47.006 +04:00 [INF] HTTP GET /api/User/me responded 200 in 35.6069 ms
+2026-06-08 09:09:47.039 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 63.9561 ms
+2026-06-08 09:09:47.139 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.3925 ms
+2026-06-08 09:09:47.201 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 75.3448 ms
+2026-06-08 09:09:47.461 +04:00 [INF] HTTP GET /api/User/me responded 200 in 6.2120 ms
+2026-06-08 09:09:47.497 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 16.3028 ms
+2026-06-08 09:09:47.665 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 16.8654 ms
+2026-06-08 09:09:58.152 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 9.2457 ms
+2026-06-08 09:09:58.152 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 9.4061 ms
+2026-06-08 09:09:59.105 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.3420 ms
+2026-06-08 09:09:59.109 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 8.2594 ms
+2026-06-08 09:10:00.497 +04:00 [INF] HTTP GET /api/Cart responded 200 in 9.2554 ms
+2026-06-08 09:10:00.750 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 6.7114 ms
+2026-06-08 09:10:00.942 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.0284 ms
+2026-06-08 09:10:01.020 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 84.1179 ms
+2026-06-08 09:10:01.195 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.1100 ms
+2026-06-08 09:10:01.476 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 6.8073 ms
+2026-06-08 09:10:10.583 +04:00 [INF] HTTP PATCH /api/Appointments/18/status responded 200 in 184.5347 ms
+2026-06-08 09:10:11.627 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 16.0711 ms
+2026-06-08 09:10:33.313 +04:00 [INF] HTTP PATCH /api/Appointments/15/status responded 200 in 25.9846 ms
+2026-06-08 09:10:34.210 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 6.2034 ms
+2026-06-08 09:10:38.140 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.5501 ms
+2026-06-08 09:10:38.148 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 7.9456 ms
+2026-06-08 09:10:38.370 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.1577 ms
+2026-06-08 09:10:38.611 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.1837 ms
+2026-06-08 09:10:38.613 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 5.5691 ms
+2026-06-08 09:10:38.816 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.5100 ms
+2026-06-08 09:20:09.171 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 364.1882 ms
+2026-06-08 09:20:09.171 +04:00 [INF] HTTP GET /api/Cart responded 200 in 363.7201 ms
+2026-06-08 09:20:09.171 +04:00 [INF] HTTP GET /api/Pets responded 200 in 359.5865 ms
+2026-06-08 09:20:09.212 +04:00 [INF] HTTP GET /api/products responded 200 in 413.0195 ms
+2026-06-08 09:20:09.256 +04:00 [INF] HTTP GET /api/Services responded 200 in 456.2215 ms
+2026-06-08 09:20:09.265 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 466.1479 ms
+2026-06-08 09:20:09.682 +04:00 [INF] HTTP GET /api/Pets responded 200 in 9.4488 ms
+2026-06-08 09:20:09.685 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 15.9581 ms
+2026-06-08 09:20:09.821 +04:00 [INF] HTTP GET /api/Cart responded 200 in 10.8177 ms
+2026-06-08 09:20:09.826 +04:00 [INF] HTTP GET /api/products responded 200 in 21.4924 ms
+2026-06-08 09:20:09.850 +04:00 [INF] HTTP GET /api/Services responded 200 in 7.9397 ms
+2026-06-08 09:20:09.892 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 9.0402 ms
+2026-06-08 09:20:11.400 +04:00 [INF] HTTP GET /api/Pets responded 200 in 13.1067 ms
+2026-06-08 09:20:11.705 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 117.5835 ms
+2026-06-08 09:20:11.734 +04:00 [INF] HTTP GET /api/User/me responded 200 in 143.9935 ms
+2026-06-08 09:20:11.851 +04:00 [INF] HTTP GET /api/Pets responded 200 in 6.9364 ms
+2026-06-08 09:20:11.868 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 126.3709 ms
+2026-06-08 09:20:12.157 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 10.6163 ms
+2026-06-08 09:20:12.186 +04:00 [INF] HTTP GET /api/User/me responded 200 in 9.7884 ms
+2026-06-08 09:20:12.332 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 23.0222 ms
+2026-06-08 09:21:28.749 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 320.7865 ms
+2026-06-08 09:21:28.749 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 320.6985 ms
+2026-06-08 09:21:29.755 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 10.6308 ms
+2026-06-08 09:21:29.755 +04:00 [INF] HTTP GET /api/Cart responded 200 in 14.0243 ms
+2026-06-08 09:21:31.481 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.4748 ms
+2026-06-08 09:21:31.485 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.7583 ms
+2026-06-08 09:21:31.850 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 166.4923 ms
+2026-06-08 09:21:31.873 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 189.6052 ms
+2026-06-08 09:21:32.006 +04:00 [INF] HTTP GET /api/Orders responded 200 in 189.3428 ms
+2026-06-08 09:21:32.026 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 101.6390 ms
+2026-06-08 09:21:32.064 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.8759 ms
+2026-06-08 09:21:32.121 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.0845 ms
+2026-06-08 09:21:32.150 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 243.2844 ms
+2026-06-08 09:21:32.316 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 23.5654 ms
+2026-06-08 09:21:32.336 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 16.2693 ms
+2026-06-08 09:21:32.473 +04:00 [INF] HTTP GET /api/Orders responded 200 in 14.0562 ms
+2026-06-08 09:21:32.484 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 16.0598 ms
+2026-06-08 09:21:32.618 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 23.5701 ms
+2026-06-08 09:21:35.499 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 10.2772 ms
+2026-06-08 09:21:36.007 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.5654 ms
+2026-06-08 09:21:52.570 +04:00 [INF] HTTP PUT /api/Veterinarians/8 responded 200 in 90.3108 ms
+2026-06-08 09:21:53.716 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.7081 ms
+2026-06-08 09:22:02.639 +04:00 [INF] HTTP PUT /api/Veterinarians/11 responded 200 in 10.0860 ms
+2026-06-08 09:22:03.644 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.2059 ms
+2026-06-08 09:22:07.750 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.6543 ms
+2026-06-08 09:22:07.762 +04:00 [INF] HTTP GET /api/products responded 200 in 15.2659 ms
+2026-06-08 09:22:07.917 +04:00 [INF] HTTP GET /api/Services responded 200 in 6.1211 ms
+2026-06-08 09:22:08.043 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.1814 ms
+2026-06-08 09:22:08.063 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.6285 ms
+2026-06-08 09:22:08.129 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.5712 ms
+2026-06-08 09:22:08.201 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 4.0837 ms
+2026-06-08 09:22:08.210 +04:00 [INF] HTTP GET /api/products responded 200 in 8.9517 ms
+2026-06-08 09:22:08.363 +04:00 [INF] HTTP GET /api/Services responded 200 in 3.2577 ms
+2026-06-08 09:22:08.493 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 5.6969 ms
+2026-06-08 09:22:08.510 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.4890 ms
+2026-06-08 09:22:08.575 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.2819 ms
+2026-06-08 09:22:08.958 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.5231 ms
+2026-06-08 09:22:09.151 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.1856 ms
+2026-06-08 09:22:09.156 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.5457 ms
+2026-06-08 09:22:09.187 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 10.5466 ms
+2026-06-08 09:22:09.404 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.8554 ms
+2026-06-08 09:22:09.629 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.8495 ms
+2026-06-08 09:22:09.638 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 12.4221 ms
+2026-06-08 09:22:09.810 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.3710 ms
+2026-06-08 09:22:39.434 +04:00 [INF] HTTP POST /api/Auth/register responded 400 in 54.1878 ms
+2026-06-08 09:22:39.434 +04:00 [INF] HTTP POST /api/Auth/register responded 400 in 54.3652 ms
+2026-06-08 09:22:50.763 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 14.6968 ms
+2026-06-08 09:22:50.766 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 17.0747 ms
+2026-06-08 09:22:51.744 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.8066 ms
+2026-06-08 09:22:51.747 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 6.5247 ms
+2026-06-08 09:22:55.595 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 15.2494 ms
+2026-06-08 09:22:57.700 +04:00 [INF] HTTP GET /api/Cart responded 200 in 7.9376 ms
+2026-06-08 09:22:57.753 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.2810 ms
+2026-06-08 09:22:58.148 +04:00 [INF] HTTP GET /api/Cart responded 200 in 4.3320 ms
+2026-06-08 09:22:58.212 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.7728 ms
+2026-06-08 09:23:09.718 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 57.8429 ms
+2026-06-08 09:23:11.536 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 9.1060 ms
+2026-06-08 09:23:11.538 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 5.0708 ms
+2026-06-08 09:23:12.484 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.2053 ms
+2026-06-08 09:23:12.486 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.8212 ms
+2026-06-08 09:23:18.320 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.3784 ms
+2026-06-08 09:23:18.323 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.4039 ms
+2026-06-08 09:23:18.773 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.7600 ms
+2026-06-08 09:23:18.777 +04:00 [INF] HTTP GET /api/Cart responded 200 in 8.2569 ms
+2026-06-08 09:23:32.197 +04:00 [INF] HTTP POST /api/Auth/login responded 401 in 2.8679 ms
+2026-06-08 09:23:32.199 +04:00 [INF] HTTP POST /api/Auth/login responded 401 in 1.3711 ms
+2026-06-08 09:24:22.672 +04:00 [ERR] Failed executing DbCommand (30ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Users"
+WHERE "Id" = @p0;
+2026-06-08 09:24:22.725 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'PetCareMini.Persistence.Contexts.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Veterinarians
+    ConstraintName: FK_Veterinarians_Users_UserId
+    File: ri_triggers.c
+    Line: 2811
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Veterinarians
+    ConstraintName: FK_Veterinarians_Users_UserId
+    File: ri_triggers.c
+    Line: 2811
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-08 09:24:22.742 +04:00 [ERR] HTTP DELETE /api/Admin/users/14 responded 500 in 168.9760 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Veterinarians
+    ConstraintName: FK_Veterinarians_Users_UserId
+    File: ri_triggers.c
+    Line: 2811
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 146
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-08 09:24:22.804 +04:00 [ERR] Unhandled exception: An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Veterinarians
+    ConstraintName: FK_Veterinarians_Users_UserId
+    File: ri_triggers.c
+    Line: 2811
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 146
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-08 09:24:28.257 +04:00 [ERR] Failed executing DbCommand (9ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Boolean), @p6='?', @p7='?', @p8='?' (DbType = DateTime), @p9='?', @p10='?', @p11='?' (DbType = DateTime), @p12='?' (DbType = Int32), @p13='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("CreatedAt", "Email", "EmailConfirmationToken", "FullName", "ImageUrl", "IsEmailConfirmed", "PasswordHash", "PasswordResetToken", "PasswordResetTokenExpireDate", "PhoneNumber", "RefreshToken", "RefreshTokenExpireDate", "Role", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13)
+RETURNING "Id";
+2026-06-08 09:24:28.269 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'PetCareMini.Persistence.Contexts.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "IX_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "IX_Users_Email"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ConstraintName: IX_Users_Email
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "IX_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "IX_Users_Email"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ConstraintName: IX_Users_Email
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-08 09:24:28.291 +04:00 [INF] HTTP POST /api/Auth/register responded 400 in 101.7692 ms
+2026-06-08 09:24:31.527 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 3344.6166 ms
+2026-06-08 09:24:50.568 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 7.9349 ms
+2026-06-08 09:24:50.569 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 8.2467 ms
+2026-06-08 09:24:51.528 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.8300 ms
+2026-06-08 09:24:51.533 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.2178 ms
+2026-06-08 09:24:51.839 +04:00 [INF] HTTP GET /api/products responded 200 in 14.5146 ms
+2026-06-08 09:24:51.877 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 52.3603 ms
+2026-06-08 09:24:52.381 +04:00 [INF] HTTP GET /api/products responded 200 in 4.6905 ms
+2026-06-08 09:24:52.391 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 7.2526 ms
+2026-06-08 09:24:58.589 +04:00 [INF] HTTP GET /api/products responded 200 in 4.1774 ms
+2026-06-08 09:24:58.590 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.5274 ms
+2026-06-08 09:24:58.725 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.6174 ms
+2026-06-08 09:24:58.831 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.6967 ms
+2026-06-08 09:24:58.834 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.8224 ms
+2026-06-08 09:24:58.873 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.4784 ms
+2026-06-08 09:24:59.039 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.2727 ms
+2026-06-08 09:24:59.044 +04:00 [INF] HTTP GET /api/products responded 200 in 7.2563 ms
+2026-06-08 09:24:59.166 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.7050 ms
+2026-06-08 09:24:59.278 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.3884 ms
+2026-06-08 09:24:59.281 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.0120 ms
+2026-06-08 09:24:59.420 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.8780 ms
+2026-06-08 09:24:59.654 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2228 ms
+2026-06-08 09:25:00.091 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.4971 ms
+2026-06-08 09:25:00.101 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.0826 ms
+2026-06-08 09:25:00.139 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.8653 ms
+2026-06-08 09:25:00.141 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.3641 ms
+2026-06-08 09:25:00.593 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.5052 ms
+2026-06-08 09:25:00.599 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 8.1513 ms
+2026-06-08 09:25:00.726 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 2.5301 ms
+2026-06-08 09:25:12.971 +04:00 [INF] HTTP POST /api/Auth/login responded 401 in 61.3691 ms
+2026-06-08 09:25:12.972 +04:00 [INF] HTTP POST /api/Auth/login responded 401 in 61.8714 ms
+2026-06-08 09:25:20.888 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 14.3714 ms
+2026-06-08 09:25:20.891 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 16.3056 ms
+2026-06-08 09:25:21.846 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 12.6816 ms
+2026-06-08 09:25:21.847 +04:00 [INF] HTTP GET /api/Cart responded 200 in 9.7050 ms
+2026-06-08 09:25:23.506 +04:00 [INF] HTTP GET /api/Cart responded 200 in 7.1943 ms
+2026-06-08 09:25:23.617 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.8376 ms
+2026-06-08 09:25:23.829 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 20.1441 ms
+2026-06-08 09:25:23.834 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 30.4900 ms
+2026-06-08 09:25:23.951 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.6421 ms
+2026-06-08 09:25:24.069 +04:00 [INF] HTTP GET /api/Orders responded 200 in 5.8864 ms
+2026-06-08 09:25:24.076 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 13.4740 ms
+2026-06-08 09:25:24.210 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.9770 ms
+2026-06-08 09:25:24.231 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 32.3292 ms
+2026-06-08 09:25:24.292 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 12.6385 ms
+2026-06-08 09:25:24.300 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 15.6500 ms
+2026-06-08 09:25:24.528 +04:00 [INF] HTTP GET /api/Orders responded 200 in 4.4537 ms
+2026-06-08 09:25:24.531 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 7.7044 ms
+2026-06-08 09:25:24.687 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.3917 ms
+2026-06-08 09:25:25.211 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 3.8917 ms
+2026-06-08 09:25:25.659 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 2.1397 ms
+2026-06-08 09:25:41.242 +04:00 [ERR] Failed executing DbCommand (12ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Users"
+WHERE "Id" = @p0;
+2026-06-08 09:25:41.255 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'PetCareMini.Persistence.Contexts.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Veterinarians
+    ConstraintName: FK_Veterinarians_Users_UserId
+    File: ri_triggers.c
+    Line: 2811
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Veterinarians
+    ConstraintName: FK_Veterinarians_Users_UserId
+    File: ri_triggers.c
+    Line: 2811
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-08 09:25:41.280 +04:00 [ERR] HTTP DELETE /api/Admin/users/14 responded 500 in 54.3905 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Veterinarians
+    ConstraintName: FK_Veterinarians_Users_UserId
+    File: ri_triggers.c
+    Line: 2811
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 146
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-08 09:25:41.296 +04:00 [ERR] Unhandled exception: An error occurred while saving the entity changes. See the inner exception for details.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Veterinarians
+    ConstraintName: FK_Veterinarians_Users_UserId
+    File: ri_triggers.c
+    Line: 2811
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at PetCareMini.Persistence.Services.AdminService.DeleteUserAsync(Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AdminService.cs:line 146
+   at PetCareMini.WebApi.Controllers.AdminController.DeleteUser(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AdminController.cs:line 42
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-08 09:26:09.610 +04:00 [INF] HTTP DELETE /api/Admin/users/13 responded 200 in 15.9083 ms
+2026-06-08 09:26:16.573 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 4.1606 ms
+2026-06-08 09:26:16.582 +04:00 [INF] HTTP GET /api/products responded 200 in 9.8036 ms
+2026-06-08 09:26:16.810 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.8453 ms
+2026-06-08 09:26:16.810 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.2025 ms
+2026-06-08 09:26:16.945 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.6449 ms
+2026-06-08 09:26:16.949 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.0033 ms
+2026-06-08 09:26:17.026 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.1728 ms
+2026-06-08 09:26:17.033 +04:00 [INF] HTTP GET /api/products responded 200 in 6.5916 ms
+2026-06-08 09:26:17.257 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.8583 ms
+2026-06-08 09:26:17.257 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.0720 ms
+2026-06-08 09:26:17.392 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.1248 ms
+2026-06-08 09:26:17.401 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.3445 ms
+2026-06-08 09:26:17.841 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.6621 ms
+2026-06-08 09:26:18.064 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.5283 ms
+2026-06-08 09:26:18.067 +04:00 [INF] HTTP GET /api/User/me responded 200 in 1.9341 ms
+2026-06-08 09:26:18.111 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.3389 ms
+2026-06-08 09:26:18.299 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.9047 ms
+2026-06-08 09:26:18.513 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.1193 ms
+2026-06-08 09:26:18.514 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 2.8397 ms
+2026-06-08 09:26:18.672 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.0692 ms
+2026-06-08 09:26:49.044 +04:00 [ERR] Failed executing DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Boolean), @p6='?', @p7='?', @p8='?' (DbType = DateTime), @p9='?', @p10='?', @p11='?' (DbType = DateTime), @p12='?' (DbType = Int32), @p13='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("CreatedAt", "Email", "EmailConfirmationToken", "FullName", "ImageUrl", "IsEmailConfirmed", "PasswordHash", "PasswordResetToken", "PasswordResetTokenExpireDate", "PhoneNumber", "RefreshToken", "RefreshTokenExpireDate", "Role", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13)
+RETURNING "Id";
+2026-06-08 09:26:49.053 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'PetCareMini.Persistence.Contexts.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "IX_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "IX_Users_Email"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ConstraintName: IX_Users_Email
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "IX_Users_Email"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "IX_Users_Email"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Users
+    ConstraintName: IX_Users_Email
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-08 09:26:49.075 +04:00 [INF] HTTP POST /api/Auth/register responded 400 in 37.2500 ms
+2026-06-08 09:26:50.980 +04:00 [INF] HTTP POST /api/Auth/register responded 200 in 1941.5765 ms
+2026-06-08 09:27:05.952 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 8.0418 ms
+2026-06-08 09:27:05.952 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 8.5282 ms
+2026-06-08 09:27:06.934 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.8515 ms
+2026-06-08 09:27:06.934 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.8599 ms
+2026-06-08 09:27:07.143 +04:00 [INF] HTTP GET /api/products responded 200 in 6.0161 ms
+2026-06-08 09:27:07.146 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 8.8608 ms
+2026-06-08 09:27:07.595 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 1.5092 ms
+2026-06-08 09:27:07.600 +04:00 [INF] HTTP GET /api/products responded 200 in 7.3949 ms
+2026-06-08 09:27:15.455 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.1174 ms
+2026-06-08 09:27:15.455 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.6730 ms
+2026-06-08 09:27:15.628 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.7676 ms
+2026-06-08 09:27:15.628 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2453 ms
+2026-06-08 09:27:15.903 +04:00 [INF] HTTP GET /api/User/me responded 200 in 1.9716 ms
+2026-06-08 09:27:15.906 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.9249 ms
+2026-06-08 09:27:16.074 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.5168 ms
+2026-06-08 09:27:16.076 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 2.7835 ms
+2026-06-08 09:27:23.542 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 6.1101 ms
+2026-06-08 09:27:23.542 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 6.2730 ms
+2026-06-08 09:27:24.663 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.8254 ms
+2026-06-08 09:27:24.663 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.1320 ms
+2026-06-08 09:27:26.908 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.3617 ms
+2026-06-08 09:27:26.909 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.3532 ms
+2026-06-08 09:27:27.234 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 6.2234 ms
+2026-06-08 09:27:27.244 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 18.1717 ms
+2026-06-08 09:27:27.355 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.6199 ms
+2026-06-08 09:27:27.355 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 5.6857 ms
+2026-06-08 09:27:27.399 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.6257 ms
+2026-06-08 09:27:27.416 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 22.0418 ms
+2026-06-08 09:27:27.490 +04:00 [INF] HTTP GET /api/Orders responded 200 in 4.0547 ms
+2026-06-08 09:27:27.687 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 3.5605 ms
+2026-06-08 09:27:27.699 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 7.5035 ms
+2026-06-08 09:27:27.806 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 5.4446 ms
+2026-06-08 09:27:27.851 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 2.1223 ms
+2026-06-08 09:27:27.872 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 7.3384 ms
+2026-06-08 09:27:28.003 +04:00 [INF] HTTP GET /api/Orders responded 200 in 7.3712 ms
+2026-06-08 09:27:28.302 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 2.9966 ms
+2026-06-08 09:28:09.904 +04:00 [INF] HTTP PATCH /api/Admin/users/22/role responded 200 in 946.4466 ms
+2026-06-08 09:28:11.076 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 154.9335 ms
+2026-06-08 09:28:21.340 +04:00 [INF] HTTP PATCH /api/Admin/users/24/role responded 200 in 34.0562 ms
+2026-06-08 09:28:22.265 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 5.9763 ms
+2026-06-08 09:28:28.413 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 2.3557 ms
+2026-06-08 09:29:02.791 +04:00 [INF] HTTP PATCH /api/Admin/users/14/role responded 200 in 217.8462 ms
+2026-06-08 09:29:17.949 +04:00 [INF] HTTP PATCH /api/Admin/users/14/role responded 200 in 8.5707 ms
+2026-06-08 09:29:26.545 +04:00 [ERR] Failed executing DbCommand (17ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "Users"
+WHERE "Id" = @p0;
+2026-06-08 09:29:26.584 +04:00 [ERR] An exception occurred in the database while saving changes for context type 'PetCareMini.Persistence.Contexts.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Veterinarians
+    ConstraintName: FK_Veterinarians_Users_UserId
+    File: ri_triggers.c
+    Line: 2811
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: update or delete on table "Users" violates foreign key constraint "FK_Veterinarians_Users_UserId" on table "Veterinarians"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Veterinarians
+    ConstraintName: FK_Veterinarians_Users_UserId
+    File: ri_triggers.c
+    Line: 2811
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-08 09:29:26.600 +04:00 [ERR] HTTP DELETE /api/Admin/users/14 responded 500 in 103.6088 ms
+2026-06-08 09:32:15.143 +04:00 [WRN] The foreign key property 'Veterinarian.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.

@@ -56,9 +56,16 @@ public class AuthController : ControllerBase
             return Unauthorized(new { message = "Invalid token." });
 
         var userId = int.Parse(userIdClaim.Value);
-        var result = await _userService.GetMeAsync(userId);
 
-        return Ok(result);
+        try
+        {
+            var result = await _userService.GetMeAsync(userId);
+            return Ok(result);
+        }
+        catch (KeyNotFoundException)
+        {
+            return Unauthorized(new { message = "User not found." });
+        }
     }
     [HttpPost("confirm-email")]
     public async Task<IActionResult> ConfirmEmail([FromBody] ConfirmEmailDto dto)

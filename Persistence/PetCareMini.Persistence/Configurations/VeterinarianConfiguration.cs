@@ -19,6 +19,10 @@ public class VeterinarianConfiguration : IEntityTypeConfiguration<Veterinarian>
 
         builder.Property(x => x.Bio)
             .HasMaxLength(1000);
+        builder.HasOne(x => x.User)
+            .WithOne()
+            .HasForeignKey<Veterinarian>(x => x.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         builder.Property(x => x.ProfileImageUrl)
             .HasMaxLength(255);

@@ -36,10 +36,23 @@ public class AdminController : ControllerBase
         return Ok(new { message = "User role updated successfully", role = dto.Role.ToString() });
     }
 
+    //[HttpDelete("users/{id}")]
+    //public async Task<IActionResult> DeleteUser(int id)
+    //{
+    //    await _service.DeleteUserAsync(id);
+    //    return Ok(new { message = "User deleted successfully" });
+    //}
     [HttpDelete("users/{id}")]
     public async Task<IActionResult> DeleteUser(int id)
     {
-        await _service.DeleteUserAsync(id);
-        return Ok(new { message = "User deleted successfully" });
+        try
+        {
+            await _service.DeleteUserAsync(id);
+            return Ok(new { message = "User deleted successfully" });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = ex.Message, inner = ex.InnerException?.Message });
+        }
     }
 }

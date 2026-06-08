@@ -29,15 +29,14 @@ public class AppointmentRepository : IAppointmentRepository
             .FirstOrDefaultAsync(a => a.Id == id);
 
     public async Task<List<Appointment>> GetUserAppointmentsAsync(int userId)
-        => await _context.Appointments
-            .Include(a => a.Pet)
-            .Include(a => a.Veterinarian)
-            .Include(a => a.Service)
-            .Include(a => a.User)
-            .Where(a => a.UserId == userId &&
-                        a.Status != AppointmentStatus.Canceled)
-            .OrderByDescending(a => a.AppointmentDate)
-            .ToListAsync();
+    => await _context.Appointments
+        .Include(a => a.Pet)
+        .Include(a => a.Veterinarian)
+        .Include(a => a.Service)
+        .Include(a => a.User)
+        .Where(a => a.UserId == userId)
+        .OrderByDescending(a => a.AppointmentDate)
+        .ToListAsync();
 
     public async Task<List<Appointment>> GetAllAsync()
         => await _context.Appointments
@@ -50,15 +49,14 @@ public class AppointmentRepository : IAppointmentRepository
             .ToListAsync();
 
     public async Task<List<Appointment>> GetByVeterinarianUserIdAsync(int vetUserId)
-        => await _context.Appointments
-            .Include(a => a.Pet)
-            .Include(a => a.Veterinarian)
-            .Include(a => a.Service)
-            .Include(a => a.User)
-            .Where(a => a.Veterinarian.UserId == vetUserId &&
-                        a.Status != AppointmentStatus.Canceled)
-            .OrderByDescending(a => a.AppointmentDate)
-            .ToListAsync();
+    => await _context.Appointments
+        .Include(a => a.Pet)
+        .Include(a => a.Veterinarian)
+        .Include(a => a.Service)
+        .Include(a => a.User)
+        .Where(a => a.Veterinarian.UserId == vetUserId)
+        .OrderByDescending(a => a.AppointmentDate)
+        .ToListAsync();
 
     public async Task<bool> ExistsConflictAsync(int veterinarianId, DateTime appointmentDate)
     {

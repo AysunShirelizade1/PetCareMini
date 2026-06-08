@@ -94,8 +94,8 @@ public class AuthService : IAuthService
         if (!passwordIsCorrect)
             return null;
         // Email təsdiqlənməyibsə, girişə icazə vermirik heleki test yoxla
-        if (!user.IsEmailConfirmed)
-            throw new InvalidOperationException("Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.");
+        //if (!user.IsEmailConfirmed)
+        //    throw new InvalidOperationException("Email təsdiqlənməyib. Zəhmət olmasa emailinizi təsdiqləyin.");
 
         var refreshToken = _jwtTokenService.GenerateRefreshToken();
         user.RefreshToken = refreshToken;
@@ -170,6 +170,7 @@ public class AuthService : IAuthService
         user.PasswordHash = PasswordHasher.HashPassword(dto.NewPassword);
         user.PasswordResetToken = null;
         user.PasswordResetTokenExpireDate = null;
+        user.IsEmailConfirmed = true;
         await _context.SaveChangesAsync();
     }
 
