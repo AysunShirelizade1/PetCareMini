@@ -155,18 +155,18 @@ public class BlogPostService : IBlogPostService
         await _repo.SaveChangesAsync();
     }
 
-    public async Task DeleteAsync(int userId, int id)
+    public async Task DeleteAsync(int userId, int id, bool isAdmin = false)
     {
         var post = await _repo.GetByIdAsync(id)
             ?? throw new KeyNotFoundException("Post tapılmadı.");
 
-        if (post.AuthorId != userId)
+        if (!isAdmin && post.AuthorId != userId)
             throw new UnauthorizedAccessException("Bu postu silmək icazəniz yoxdur.");
 
         _repo.Delete(post);
         await _repo.SaveChangesAsync();
 
-        await UpdateAuthorTotalPostsAsync(userId);
+        await UpdateAuthorTotalPostsAsync(post.AuthorId);
     }
 
     public async Task<List<BlogPostSummaryDto>> GetAllAsync(string lang = "az")

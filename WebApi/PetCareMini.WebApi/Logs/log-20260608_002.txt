@@ -37,3 +37,615 @@
 2026-06-08 09:34:52.039 +04:00 [INF] HTTP GET /api/Pets responded 200 in 4.0784 ms
 2026-06-08 09:34:52.255 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.4356 ms
 2026-06-08 09:34:52.256 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 5.3665 ms
+2026-06-08 09:35:18.198 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 263.8760 ms
+2026-06-08 09:35:42.849 +04:00 [INF] HTTP GET /api/Pets responded 200 in 5.7356 ms
+2026-06-08 09:35:42.853 +04:00 [INF] HTTP GET /api/User/me responded 200 in 8.7377 ms
+2026-06-08 09:35:43.103 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 8.0448 ms
+2026-06-08 09:35:43.110 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 15.3670 ms
+2026-06-08 09:35:43.307 +04:00 [INF] HTTP GET /api/Pets responded 200 in 4.4117 ms
+2026-06-08 09:35:43.313 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.1280 ms
+2026-06-08 09:35:43.565 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 8.4395 ms
+2026-06-08 09:35:43.565 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.6074 ms
+2026-06-08 09:35:58.070 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 52.9769 ms
+2026-06-08 09:35:58.070 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 53.0146 ms
+2026-06-08 09:35:59.029 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 6.1891 ms
+2026-06-08 09:35:59.029 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.5435 ms
+2026-06-08 09:36:03.343 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.6691 ms
+2026-06-08 09:36:03.593 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.0335 ms
+2026-06-08 09:36:03.797 +04:00 [INF] HTTP GET /api/Cart responded 200 in 4.0388 ms
+2026-06-08 09:36:03.837 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 43.1134 ms
+2026-06-08 09:36:04.042 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.2731 ms
+2026-06-08 09:36:04.292 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 3.5923 ms
+2026-06-08 09:36:07.465 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 2.0018 ms
+2026-06-08 09:36:07.920 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.4394 ms
+2026-06-08 09:36:07.922 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 4.5410 ms
+2026-06-08 09:36:08.054 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 6.6375 ms
+2026-06-08 09:36:08.376 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.8823 ms
+2026-06-08 09:36:08.509 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.4473 ms
+2026-06-08 09:36:09.710 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.1928 ms
+2026-06-08 09:36:09.968 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.0016 ms
+2026-06-08 09:36:10.265 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.7524 ms
+2026-06-08 09:36:10.268 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.0794 ms
+2026-06-08 09:36:10.888 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.8619 ms
+2026-06-08 09:36:10.889 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 2.9866 ms
+2026-06-08 09:36:11.019 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.3143 ms
+2026-06-08 09:36:11.352 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 4.2340 ms
+2026-06-08 09:36:53.511 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 18.0280 ms
+2026-06-08 09:36:53.513 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 19.6904 ms
+2026-06-08 09:36:54.474 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.9108 ms
+2026-06-08 09:36:54.475 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.6312 ms
+2026-06-08 09:36:55.889 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.1636 ms
+2026-06-08 09:36:55.889 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.3846 ms
+2026-06-08 09:36:56.220 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 49.3445 ms
+2026-06-08 09:36:56.260 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 99.6517 ms
+2026-06-08 09:36:56.304 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 52.1717 ms
+2026-06-08 09:36:56.380 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.6243 ms
+2026-06-08 09:36:56.463 +04:00 [INF] HTTP GET /api/Orders responded 200 in 93.9474 ms
+2026-06-08 09:36:56.466 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.6048 ms
+2026-06-08 09:36:56.501 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 128.3921 ms
+2026-06-08 09:36:56.677 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 5.5682 ms
+2026-06-08 09:36:56.727 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 16.1229 ms
+2026-06-08 09:36:56.757 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 5.8985 ms
+2026-06-08 09:36:56.917 +04:00 [INF] HTTP GET /api/Orders responded 200 in 5.6885 ms
+2026-06-08 09:36:56.973 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 22.1088 ms
+2026-06-08 09:36:58.188 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.4133 ms
+2026-06-08 09:36:58.191 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.8856 ms
+2026-06-08 09:36:58.509 +04:00 [INF] HTTP GET /api/products responded 200 in 6.3373 ms
+2026-06-08 09:36:58.512 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.8482 ms
+2026-06-08 09:36:58.638 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.0148 ms
+2026-06-08 09:36:58.639 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.3113 ms
+2026-06-08 09:36:58.757 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.8484 ms
+2026-06-08 09:36:58.763 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.2839 ms
+2026-06-08 09:36:58.977 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.4184 ms
+2026-06-08 09:36:58.979 +04:00 [INF] HTTP GET /api/products responded 200 in 7.0783 ms
+2026-06-08 09:36:59.205 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2309 ms
+2026-06-08 09:36:59.209 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.6391 ms
+2026-06-08 09:36:59.424 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.1930 ms
+2026-06-08 09:36:59.650 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.8715 ms
+2026-06-08 09:36:59.656 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.6206 ms
+2026-06-08 09:36:59.874 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.8133 ms
+2026-06-08 09:37:00.099 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.9216 ms
+2026-06-08 09:37:00.099 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.3336 ms
+2026-06-08 09:37:10.159 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 12.0659 ms
+2026-06-08 09:37:14.644 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.3857 ms
+2026-06-08 09:37:14.646 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.0973 ms
+2026-06-08 09:37:14.779 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.7142 ms
+2026-06-08 09:37:14.901 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2157 ms
+2026-06-08 09:37:15.093 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.2376 ms
+2026-06-08 09:37:15.105 +04:00 [INF] HTTP GET /api/User/me responded 200 in 1.8924 ms
+2026-06-08 09:37:15.233 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 5.1337 ms
+2026-06-08 09:37:15.356 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.3204 ms
+2026-06-08 09:37:24.728 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 6.9243 ms
+2026-06-08 09:37:24.755 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 5.6903 ms
+2026-06-08 09:37:25.678 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.6275 ms
+2026-06-08 09:37:25.680 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.1054 ms
+2026-06-08 09:37:27.779 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.6543 ms
+2026-06-08 09:37:28.035 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.9433 ms
+2026-06-08 09:37:28.226 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.2991 ms
+2026-06-08 09:37:28.228 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 4.4309 ms
+2026-06-08 09:37:28.485 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.7868 ms
+2026-06-08 09:37:28.676 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 2.6332 ms
+2026-06-08 09:37:52.438 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 64.0258 ms
+2026-06-08 09:37:52.443 +04:00 [INF] HTTP GET /api/Cart responded 200 in 70.0051 ms
+2026-06-08 09:37:52.889 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.6680 ms
+2026-06-08 09:37:52.892 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.6947 ms
+2026-06-08 09:38:20.218 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 14.4121 ms
+2026-06-08 09:38:20.221 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 16.7084 ms
+2026-06-08 09:38:21.163 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.3470 ms
+2026-06-08 09:38:21.163 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.3123 ms
+2026-06-08 09:38:22.496 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.3838 ms
+2026-06-08 09:38:22.621 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.3745 ms
+2026-06-08 09:38:22.726 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 24.0295 ms
+2026-06-08 09:38:22.726 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 16.5976 ms
+2026-06-08 09:38:22.837 +04:00 [INF] HTTP GET /api/Orders responded 200 in 7.3866 ms
+2026-06-08 09:38:22.941 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.5507 ms
+2026-06-08 09:38:22.969 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 28.3920 ms
+2026-06-08 09:38:23.074 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.5592 ms
+2026-06-08 09:38:23.091 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 22.5540 ms
+2026-06-08 09:38:23.182 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 6.7827 ms
+2026-06-08 09:38:23.204 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 26.9451 ms
+2026-06-08 09:38:23.295 +04:00 [INF] HTTP GET /api/Orders responded 200 in 6.3795 ms
+2026-06-08 09:38:23.469 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 19.5294 ms
+2026-06-08 09:38:23.545 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 5.0573 ms
+2026-06-08 09:38:23.860 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 2.6914 ms
+2026-06-08 09:38:24.359 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 3.6614 ms
+2026-06-08 09:38:49.928 +04:00 [INF] HTTP PATCH /api/Admin/users/4/role responded 200 in 78.3641 ms
+2026-06-08 09:38:50.846 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 2.6286 ms
+2026-06-08 09:38:55.270 +04:00 [INF] HTTP DELETE /api/Admin/users/4 responded 200 in 29.1675 ms
+2026-06-08 09:38:55.778 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 1.9680 ms
+2026-06-08 09:40:23.794 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 6.1065 ms
+2026-06-08 09:40:25.624 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.0872 ms
+2026-06-08 09:40:36.200 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.7055 ms
+2026-06-08 09:40:51.216 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.0250 ms
+2026-06-08 09:41:38.056 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 12.9494 ms
+2026-06-08 09:41:39.775 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 9.2234 ms
+2026-06-08 09:41:50.887 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 5.7454 ms
+2026-06-08 09:42:17.739 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 7.0016 ms
+2026-06-08 09:42:39.219 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 5.6892 ms
+2026-06-08 09:43:08.836 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 71.2108 ms
+2026-06-08 09:44:04.383 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.6764 ms
+2026-06-08 09:44:04.605 +04:00 [INF] HTTP GET /api/Cart responded 200 in 8.9284 ms
+2026-06-08 09:44:04.642 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 45.8785 ms
+2026-06-08 09:44:04.692 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.7046 ms
+2026-06-08 09:44:04.711 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 7.7419 ms
+2026-06-08 09:44:04.712 +04:00 [INF] HTTP GET /api/products responded 200 in 9.3200 ms
+2026-06-08 09:44:04.830 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.0471 ms
+2026-06-08 09:44:05.053 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.5401 ms
+2026-06-08 09:44:05.085 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.5757 ms
+2026-06-08 09:44:05.142 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.1449 ms
+2026-06-08 09:44:05.200 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.7534 ms
+2026-06-08 09:44:05.295 +04:00 [INF] HTTP GET /api/products responded 200 in 6.3463 ms
+2026-06-08 09:44:05.789 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.6406 ms
+2026-06-08 09:44:05.789 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2658 ms
+2026-06-08 09:44:05.904 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.6048 ms
+2026-06-08 09:44:06.339 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.1794 ms
+2026-06-08 09:44:06.343 +04:00 [INF] HTTP GET /api/Pets responded 200 in 5.7974 ms
+2026-06-08 09:44:06.486 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.3371 ms
+2026-06-08 09:44:17.670 +04:00 [ERR] HTTP POST /api/Appointments responded 500 in 13.2755 ms
+System.InvalidOperationException: This time slot is already booked.
+   at PetCareMini.Persistence.Services.AppointmentService.CreateAsync(Int32 userId, AppointmentCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AppointmentService.cs:line 103
+   at PetCareMini.WebApi.Controllers.AppointmentsController.Create(AppointmentCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AppointmentController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-08 09:44:17.741 +04:00 [ERR] Unhandled exception: This time slot is already booked.
+System.InvalidOperationException: This time slot is already booked.
+   at PetCareMini.Persistence.Services.AppointmentService.CreateAsync(Int32 userId, AppointmentCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AppointmentService.cs:line 103
+   at PetCareMini.WebApi.Controllers.AppointmentsController.Create(AppointmentCreateDto dto) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AppointmentController.cs:line 25
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-08 09:44:43.230 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 28.7769 ms
+2026-06-08 09:44:48.054 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.2066 ms
+2026-06-08 09:44:48.060 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 7.8857 ms
+2026-06-08 09:44:48.301 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.1480 ms
+2026-06-08 09:44:48.308 +04:00 [INF] HTTP GET /api/User/me responded 200 in 1.4387 ms
+2026-06-08 09:44:48.511 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.4865 ms
+2026-06-08 09:44:48.511 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 1.7779 ms
+2026-06-08 09:44:48.755 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.7470 ms
+2026-06-08 09:44:48.763 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 9.8677 ms
+2026-06-08 09:45:02.085 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 4.6427 ms
+2026-06-08 09:45:20.023 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.8792 ms
+2026-06-08 09:45:20.051 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 30.3120 ms
+2026-06-08 09:45:20.160 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 7.6874 ms
+2026-06-08 09:45:20.290 +04:00 [INF] HTTP GET /api/Orders responded 200 in 6.4421 ms
+2026-06-08 09:45:20.297 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 13.9032 ms
+2026-06-08 09:45:20.313 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.6819 ms
+2026-06-08 09:45:20.388 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 21.3418 ms
+2026-06-08 09:45:20.482 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.6795 ms
+2026-06-08 09:45:20.507 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 11.0269 ms
+2026-06-08 09:45:20.610 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 4.6756 ms
+2026-06-08 09:45:20.754 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 5.6955 ms
+2026-06-08 09:45:20.757 +04:00 [INF] HTTP GET /api/Orders responded 200 in 8.3310 ms
+2026-06-08 09:45:20.793 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 8.0884 ms
+2026-06-08 09:45:20.892 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 38.9871 ms
+2026-06-08 09:45:38.569 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.6253 ms
+2026-06-08 09:45:39.024 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.9696 ms
+2026-06-08 09:45:58.713 +04:00 [INF] HTTP DELETE /api/Veterinarians/13 responded 200 in 50.4714 ms
+2026-06-08 09:45:59.624 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.4045 ms
+2026-06-08 09:47:24.744 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 11.0582 ms
+2026-06-08 09:47:46.363 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 7.7197 ms
+2026-06-08 09:49:47.466 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 225.7253 ms
+2026-06-08 09:49:57.021 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.0696 ms
+2026-06-08 09:49:57.049 +04:00 [INF] HTTP GET /api/Cart responded 200 in 15.1193 ms
+2026-06-08 09:49:57.129 +04:00 [INF] HTTP GET /api/products responded 200 in 91.3871 ms
+2026-06-08 09:49:57.130 +04:00 [INF] HTTP GET /api/Services responded 200 in 92.6048 ms
+2026-06-08 09:49:57.137 +04:00 [INF] HTTP GET /api/Pets responded 200 in 98.7122 ms
+2026-06-08 09:49:57.143 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 104.0507 ms
+2026-06-08 09:49:57.515 +04:00 [INF] HTTP GET /api/User/me responded 200 in 5.3233 ms
+2026-06-08 09:49:57.518 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.4058 ms
+2026-06-08 09:49:57.545 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 7.8180 ms
+2026-06-08 09:49:57.548 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 10.8510 ms
+2026-06-08 09:49:57.548 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.6083 ms
+2026-06-08 09:49:57.633 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.3950 ms
+2026-06-08 09:49:57.636 +04:00 [INF] HTTP GET /api/products responded 200 in 7.1310 ms
+2026-06-08 09:49:57.774 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.1422 ms
+2026-06-08 09:49:57.774 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.3432 ms
+2026-06-08 09:49:58.012 +04:00 [INF] HTTP GET /api/User/me responded 200 in 9.4879 ms
+2026-06-08 09:49:58.045 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 12.9540 ms
+2026-06-08 09:49:58.058 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 25.1324 ms
+2026-06-08 09:49:58.276 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.1302 ms
+2026-06-08 09:49:58.772 +04:00 [INF] HTTP GET /api/Pets responded 200 in 7.4787 ms
+2026-06-08 09:50:01.197 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 67.7397 ms
+2026-06-08 09:50:03.876 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 76.2982 ms
+2026-06-08 09:50:03.906 +04:00 [INF] HTTP GET /api/blog responded 200 in 105.8998 ms
+2026-06-08 09:50:04.383 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 13.7908 ms
+2026-06-08 09:50:04.426 +04:00 [INF] HTTP GET /api/blog responded 200 in 23.6347 ms
+2026-06-08 09:50:28.535 +04:00 [INF] HTTP POST /api/blog responded 201 in 247.8731 ms
+2026-06-08 09:50:33.589 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 19.7817 ms
+2026-06-08 09:50:33.603 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 15.3153 ms
+2026-06-08 09:50:33.614 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 41.6970 ms
+2026-06-08 09:50:33.826 +04:00 [INF] HTTP GET /api/Orders responded 200 in 5.9467 ms
+2026-06-08 09:50:33.834 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.0430 ms
+2026-06-08 09:50:33.834 +04:00 [INF] HTTP GET /api/Cart responded 200 in 4.1556 ms
+2026-06-08 09:50:33.834 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 4.9323 ms
+2026-06-08 09:50:34.088 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 5.8641 ms
+2026-06-08 09:50:34.109 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 16.3913 ms
+2026-06-08 09:50:34.126 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 20.1288 ms
+2026-06-08 09:50:34.336 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.0803 ms
+2026-06-08 09:50:34.341 +04:00 [INF] HTTP GET /api/Orders responded 200 in 13.5157 ms
+2026-06-08 09:50:34.343 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 10.0334 ms
+2026-06-08 09:50:34.347 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 14.0843 ms
+2026-06-08 09:50:35.439 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 7.8931 ms
+2026-06-08 09:50:35.924 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 8.2917 ms
+2026-06-08 09:50:35.943 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 11.2103 ms
+2026-06-08 09:50:36.422 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 2.9395 ms
+2026-06-08 09:52:26.386 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-08 09:52:26.482 +04:00 [INF] HTTP PATCH /api/blog/admin/18/reject responded 200 in 148.3086 ms
+2026-06-08 09:52:27.672 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.7258 ms
+2026-06-08 09:52:35.077 +04:00 [INF] HTTP GET /api/products responded 200 in 6.9416 ms
+2026-06-08 09:52:35.129 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.4097 ms
+2026-06-08 09:52:35.312 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.6033 ms
+2026-06-08 09:52:35.342 +04:00 [INF] HTTP GET /api/Cart responded 200 in 4.0288 ms
+2026-06-08 09:52:35.344 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.3084 ms
+2026-06-08 09:52:35.348 +04:00 [INF] HTTP GET /api/Services responded 200 in 7.8008 ms
+2026-06-08 09:52:35.570 +04:00 [INF] HTTP GET /api/products responded 200 in 6.5729 ms
+2026-06-08 09:52:35.623 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.0094 ms
+2026-06-08 09:52:35.801 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2082 ms
+2026-06-08 09:52:35.834 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.7420 ms
+2026-06-08 09:52:35.851 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.8991 ms
+2026-06-08 09:52:35.854 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.7425 ms
+2026-06-08 09:52:36.341 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2447 ms
+2026-06-08 09:52:36.820 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.1821 ms
+2026-06-08 09:52:36.826 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 7.8540 ms
+2026-06-08 09:52:36.849 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.7459 ms
+2026-06-08 09:52:36.864 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 17.1418 ms
+2026-06-08 09:52:37.406 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.0392 ms
+2026-06-08 09:52:37.407 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.6303 ms
+2026-06-08 09:52:37.427 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 13.1769 ms
+2026-06-08 09:52:38.582 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 11.3790 ms
+2026-06-08 09:52:45.087 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.0888 ms
+2026-06-08 09:52:45.088 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.2275 ms
+2026-06-08 09:52:45.283 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 7.5581 ms
+2026-06-08 09:52:45.292 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.1559 ms
+2026-06-08 09:52:45.293 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.8183 ms
+2026-06-08 09:52:45.293 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.5357 ms
+2026-06-08 09:52:45.582 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.3787 ms
+2026-06-08 09:52:45.583 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.0313 ms
+2026-06-08 09:52:45.795 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 7.1994 ms
+2026-06-08 09:52:45.801 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.1076 ms
+2026-06-08 09:52:45.801 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.8895 ms
+2026-06-08 09:52:45.808 +04:00 [INF] HTTP GET /api/Cart responded 200 in 9.0408 ms
+2026-06-08 09:52:48.558 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 4.4386 ms
+2026-06-08 09:54:45.345 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 3.4176 ms
+2026-06-08 09:56:00.841 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 75.2610 ms
+2026-06-08 09:56:00.955 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 188.8998 ms
+2026-06-08 09:56:01.925 +04:00 [INF] HTTP GET /api/Cart responded 200 in 13.0220 ms
+2026-06-08 09:56:01.925 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 14.3433 ms
+2026-06-08 09:56:03.082 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.2943 ms
+2026-06-08 09:56:03.309 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.1550 ms
+2026-06-08 09:56:03.570 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 15.2781 ms
+2026-06-08 09:56:03.575 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.1603 ms
+2026-06-08 09:56:03.805 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.6863 ms
+2026-06-08 09:56:04.079 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 20.2213 ms
+2026-06-08 09:56:13.300 +04:00 [INF] HTTP PATCH /api/Appointments/25/status responded 200 in 39.3972 ms
+2026-06-08 09:56:14.399 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 5.8369 ms
+2026-06-08 09:56:25.963 +04:00 [INF] HTTP PATCH /api/Appointments/26/status responded 200 in 13.9626 ms
+2026-06-08 09:56:26.967 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 5.7383 ms
+2026-06-08 09:57:53.598 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.7012 ms
+2026-06-08 09:57:53.933 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.9424 ms
+2026-06-08 09:57:53.933 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.2032 ms
+2026-06-08 09:57:53.939 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.7309 ms
+2026-06-08 09:57:53.939 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.5892 ms
+2026-06-08 09:57:54.016 +04:00 [INF] HTTP GET /api/products responded 200 in 78.6015 ms
+2026-06-08 09:57:54.180 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.9423 ms
+2026-06-08 09:57:54.434 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.1363 ms
+2026-06-08 09:57:54.435 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.7260 ms
+2026-06-08 09:57:54.447 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.7832 ms
+2026-06-08 09:57:54.447 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.7112 ms
+2026-06-08 09:57:54.533 +04:00 [INF] HTTP GET /api/products responded 200 in 11.9796 ms
+2026-06-08 09:57:54.941 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.8086 ms
+2026-06-08 09:57:55.298 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.0872 ms
+2026-06-08 09:57:55.306 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 10.9656 ms
+2026-06-08 09:57:55.311 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.1971 ms
+2026-06-08 09:57:55.450 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.1857 ms
+2026-06-08 09:57:55.798 +04:00 [INF] HTTP GET /api/User/me responded 200 in 5.5713 ms
+2026-06-08 09:57:55.810 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 11.3761 ms
+2026-06-08 09:57:55.818 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.0910 ms
+2026-06-08 09:58:12.001 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 8.8522 ms
+2026-06-08 09:58:12.002 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 9.5679 ms
+2026-06-08 09:58:13.034 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.7952 ms
+2026-06-08 09:58:13.036 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.9046 ms
+2026-06-08 09:58:15.645 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.1822 ms
+2026-06-08 09:58:15.645 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.8314 ms
+2026-06-08 09:58:15.885 +04:00 [INF] HTTP GET /api/products responded 200 in 5.9271 ms
+2026-06-08 09:58:15.888 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 9.0379 ms
+2026-06-08 09:58:16.142 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.4178 ms
+2026-06-08 09:58:16.144 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.1084 ms
+2026-06-08 09:58:16.154 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.8977 ms
+2026-06-08 09:58:16.159 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.6044 ms
+2026-06-08 09:58:16.394 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.0722 ms
+2026-06-08 09:58:16.402 +04:00 [INF] HTTP GET /api/products responded 200 in 10.1098 ms
+2026-06-08 09:58:16.650 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.9350 ms
+2026-06-08 09:58:16.650 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.0542 ms
+2026-06-08 09:58:17.104 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.7041 ms
+2026-06-08 09:58:17.105 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.0271 ms
+2026-06-08 09:58:17.131 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 6.0432 ms
+2026-06-08 09:58:17.162 +04:00 [INF] HTTP GET /api/Pets responded 200 in 6.7083 ms
+2026-06-08 09:58:17.602 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.7635 ms
+2026-06-08 09:58:17.612 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 11.7612 ms
+2026-06-08 09:58:17.635 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 5.7417 ms
+2026-06-08 09:58:17.668 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.9115 ms
+2026-06-08 09:58:42.735 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 8.8692 ms
+2026-06-08 09:58:42.736 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 9.9672 ms
+2026-06-08 09:58:43.242 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 7.4192 ms
+2026-06-08 09:58:43.242 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 35.1346 ms
+2026-06-08 09:58:44.062 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.0585 ms
+2026-06-08 09:58:44.062 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.3551 ms
+2026-06-08 09:58:46.692 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.0879 ms
+2026-06-08 09:58:46.702 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.5734 ms
+2026-06-08 09:58:46.956 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 5.6327 ms
+2026-06-08 09:58:47.189 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.5526 ms
+2026-06-08 09:58:47.200 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.7484 ms
+2026-06-08 09:58:47.456 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 6.0527 ms
+2026-06-08 09:59:18.292 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 8.7787 ms
+2026-06-08 09:59:24.728 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 7.7432 ms
+2026-06-08 09:59:39.815 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 3.2019 ms
+2026-06-08 09:59:48.534 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 6.6029 ms
+2026-06-08 10:00:10.441 +04:00 [ERR] HTTP PATCH /api/Appointments/23/cancel responded 500 in 21.3518 ms
+System.UnauthorizedAccessException: Bu appointment sizə aid deyil.
+   at PetCareMini.Persistence.Services.AppointmentService.CancelAsync(Int32 appointmentId, Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AppointmentService.cs:line 141
+   at PetCareMini.WebApi.Controllers.AppointmentsController.Cancel(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AppointmentController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-08 10:00:10.453 +04:00 [ERR] Unhandled exception: Bu appointment sizə aid deyil.
+System.UnauthorizedAccessException: Bu appointment sizə aid deyil.
+   at PetCareMini.Persistence.Services.AppointmentService.CancelAsync(Int32 appointmentId, Int32 userId) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\AppointmentService.cs:line 141
+   at PetCareMini.WebApi.Controllers.AppointmentsController.Cancel(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\AppointmentController.cs:line 65
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-08 10:00:53.479 +04:00 [INF] HTTP GET /api/Auth/me responded 200 in 1.2048 ms
+2026-06-08 10:01:45.033 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 49.6750 ms
+2026-06-08 10:01:45.877 +04:00 [INF] HTTP PATCH /api/Appointments/23/status responded 200 in 27.4151 ms
+2026-06-08 10:01:47.079 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 5.9652 ms
+2026-06-08 10:02:26.706 +04:00 [INF] HTTP GET /api/products responded 200 in 13.7904 ms
+2026-06-08 10:02:27.030 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 8.2818 ms
+2026-06-08 10:02:27.086 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 62.0413 ms
+2026-06-08 10:02:27.181 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.6584 ms
+2026-06-08 10:02:27.209 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.3376 ms
+2026-06-08 10:02:27.213 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.8799 ms
+2026-06-08 10:02:27.420 +04:00 [INF] HTTP GET /api/products responded 200 in 3.4320 ms
+2026-06-08 10:02:27.526 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.6822 ms
+2026-06-08 10:02:27.583 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.3654 ms
+2026-06-08 10:02:27.675 +04:00 [INF] HTTP GET /api/Services responded 200 in 0.8738 ms
+2026-06-08 10:02:27.755 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.4193 ms
+2026-06-08 10:02:27.755 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.0590 ms
+2026-06-08 10:02:28.011 +04:00 [INF] HTTP GET /api/User/me responded 200 in 7.4543 ms
+2026-06-08 10:02:28.015 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 11.6676 ms
+2026-06-08 10:02:28.167 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 14.3055 ms
+2026-06-08 10:02:28.253 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.7131 ms
+2026-06-08 10:02:28.512 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.1875 ms
+2026-06-08 10:02:28.518 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.3702 ms
+2026-06-08 10:02:28.756 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 2.2979 ms
+2026-06-08 10:02:28.761 +04:00 [INF] HTTP GET /api/Pets responded 200 in 4.5233 ms
+2026-06-08 10:02:31.660 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 7.2840 ms
+2026-06-08 10:02:37.602 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 5.6946 ms
+2026-06-08 10:02:37.604 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 7.3939 ms
+2026-06-08 10:02:38.651 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 6.4941 ms
+2026-06-08 10:02:38.652 +04:00 [INF] HTTP GET /api/Cart responded 200 in 7.6111 ms
+2026-06-08 10:02:41.424 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.0373 ms
+2026-06-08 10:02:41.681 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.5842 ms
+2026-06-08 10:02:41.972 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.3732 ms
+2026-06-08 10:02:41.975 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 5.3951 ms
+2026-06-08 10:02:42.187 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.0893 ms
+2026-06-08 10:02:42.473 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 4.3745 ms
+2026-06-08 10:02:45.860 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.3345 ms
+2026-06-08 10:02:45.865 +04:00 [INF] HTTP GET /api/products responded 200 in 6.6407 ms
+2026-06-08 10:02:45.882 +04:00 [INF] HTTP GET /api/Services responded 200 in 3.0729 ms
+2026-06-08 10:02:45.888 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.4139 ms
+2026-06-08 10:02:46.103 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.0639 ms
+2026-06-08 10:02:46.113 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.6034 ms
+2026-06-08 10:02:46.358 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.2171 ms
+2026-06-08 10:02:46.365 +04:00 [INF] HTTP GET /api/products responded 200 in 5.6921 ms
+2026-06-08 10:02:46.381 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.8620 ms
+2026-06-08 10:02:46.612 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.7221 ms
+2026-06-08 10:02:46.623 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.1604 ms
+2026-06-08 10:02:46.623 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.4943 ms
+2026-06-08 10:02:47.149 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.0857 ms
+2026-06-08 10:02:47.458 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.3507 ms
+2026-06-08 10:02:47.467 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 11.4962 ms
+2026-06-08 10:02:47.654 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.6068 ms
+2026-06-08 10:02:47.657 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 3.8966 ms
+2026-06-08 10:02:47.952 +04:00 [INF] HTTP GET /api/User/me responded 200 in 1.9197 ms
+2026-06-08 10:02:47.965 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 5.1281 ms
+2026-06-08 10:02:48.153 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 1.9001 ms
+2026-06-08 10:02:53.573 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 5.2768 ms
+2026-06-08 10:02:53.573 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 5.6263 ms
+2026-06-08 10:02:54.623 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.5489 ms
+2026-06-08 10:02:54.623 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.6321 ms
+2026-06-08 10:02:55.905 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.2210 ms
+2026-06-08 10:02:55.908 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.1277 ms
+2026-06-08 10:02:56.161 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 7.6980 ms
+2026-06-08 10:02:56.171 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 15.0401 ms
+2026-06-08 10:02:56.230 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 91.3142 ms
+2026-06-08 10:02:56.240 +04:00 [INF] HTTP GET /api/Orders responded 200 in 82.5124 ms
+2026-06-08 10:02:56.240 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 83.4345 ms
+2026-06-08 10:02:56.406 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.4158 ms
+2026-06-08 10:02:56.416 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.6485 ms
+2026-06-08 10:02:56.665 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 5.2463 ms
+2026-06-08 10:02:56.672 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 8.6018 ms
+2026-06-08 10:02:56.748 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 22.8551 ms
+2026-06-08 10:02:56.752 +04:00 [INF] HTTP GET /api/Orders responded 200 in 11.0282 ms
+2026-06-08 10:02:56.761 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 15.4165 ms
+2026-06-08 10:02:57.489 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.0048 ms
+2026-06-08 10:02:57.729 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 9.3720 ms
+2026-06-08 10:02:57.973 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.6878 ms
+2026-06-08 10:02:57.974 +04:00 [INF] HTTP GET /api/products responded 200 in 6.0104 ms
+2026-06-08 10:02:57.984 +04:00 [INF] HTTP GET /api/Pets responded 200 in 4.8555 ms
+2026-06-08 10:02:57.986 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.2236 ms
+2026-06-08 10:02:57.988 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.1295 ms
+2026-06-08 10:02:58.234 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.8265 ms
+2026-06-08 10:02:58.479 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.0857 ms
+2026-06-08 10:02:58.485 +04:00 [INF] HTTP GET /api/products responded 200 in 8.4946 ms
+2026-06-08 10:02:58.498 +04:00 [INF] HTTP GET /api/Services responded 200 in 3.2873 ms
+2026-06-08 10:02:58.503 +04:00 [INF] HTTP GET /api/Pets responded 200 in 7.3783 ms
+2026-06-08 10:02:59.159 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.7178 ms
+2026-06-08 10:02:59.645 +04:00 [INF] HTTP GET /api/User/me responded 200 in 0.9949 ms
+2026-06-08 10:02:59.647 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.0234 ms
+2026-06-08 10:02:59.659 +04:00 [INF] HTTP GET /api/Pets responded 200 in 1.8554 ms
+2026-06-08 10:02:59.668 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 8.2923 ms
+2026-06-08 10:03:00.146 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.1790 ms
+2026-06-08 10:03:00.146 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 2.9186 ms
+2026-06-08 10:03:00.195 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 15.8592 ms
+2026-06-08 10:03:03.841 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 21.5744 ms
+2026-06-08 10:03:47.248 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 6.0632 ms
+2026-06-08 10:04:11.387 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 4.2122 ms
+2026-06-08 10:04:41.459 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.8170 ms
+2026-06-08 10:05:03.223 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 5.0700 ms
+2026-06-08 10:05:38.841 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 7.5516 ms
+2026-06-08 10:05:40.377 +04:00 [INF] HTTP PATCH /api/Appointments/27/status responded 200 in 6.9736 ms
+2026-06-08 10:05:55.363 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.6919 ms
+2026-06-08 10:06:17.469 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 4.4673 ms
+2026-06-08 10:06:36.860 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 2.4085 ms
+2026-06-08 10:07:44.854 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 186.8735 ms
+2026-06-08 10:07:44.888 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 5.4326 ms
+2026-06-08 10:07:45.875 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.2090 ms
+2026-06-08 10:07:45.913 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 44.2492 ms
+2026-06-08 10:07:48.579 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.5284 ms
+2026-06-08 10:07:48.826 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.6853 ms
+2026-06-08 10:07:49.081 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.2873 ms
+2026-06-08 10:07:49.103 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 24.1812 ms
+2026-06-08 10:07:49.330 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 8.6564 ms
+2026-06-08 10:07:49.612 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 4.3541 ms
+2026-06-08 10:07:56.333 +04:00 [INF] HTTP PATCH /api/Appointments/24/status responded 200 in 24.8076 ms
+2026-06-08 10:07:57.377 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 3.9022 ms
+2026-06-08 10:08:02.444 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.6523 ms
+2026-06-08 10:08:45.204 +04:00 [INF] HTTP GET /api/products responded 200 in 27.9910 ms
+2026-06-08 10:08:45.236 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 60.2884 ms
+2026-06-08 10:08:45.792 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 5.7281 ms
+2026-06-08 10:08:45.792 +04:00 [INF] HTTP GET /api/products responded 200 in 6.2300 ms
+2026-06-08 10:09:11.979 +04:00 [INF] HTTP PATCH /api/Appointments/23/status responded 400 in 37.7217 ms
+2026-06-08 10:11:40.046 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 8.9551 ms
+2026-06-08 10:11:40.262 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 7.6662 ms
+2026-06-08 10:11:41.083 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.8145 ms
+2026-06-08 10:11:41.083 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.3671 ms
+2026-06-08 10:11:44.472 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.7901 ms
+2026-06-08 10:11:44.473 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.5418 ms
+2026-06-08 10:11:44.721 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 7.0377 ms
+2026-06-08 10:11:44.751 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 35.8679 ms
+2026-06-08 10:11:44.792 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 77.0961 ms
+2026-06-08 10:11:44.972 +04:00 [INF] HTTP GET /api/Orders responded 200 in 6.6499 ms
+2026-06-08 10:11:44.986 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 26.7878 ms
+2026-06-08 10:11:44.993 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.4570 ms
+2026-06-08 10:11:45.000 +04:00 [INF] HTTP GET /api/Cart responded 200 in 10.1854 ms
+2026-06-08 10:11:45.230 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 6.5302 ms
+2026-06-08 10:11:45.264 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 22.3870 ms
+2026-06-08 10:11:45.305 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 7.1225 ms
+2026-06-08 10:11:45.487 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 7.5056 ms
+2026-06-08 10:11:45.491 +04:00 [INF] HTTP GET /api/Orders responded 200 in 23.0574 ms
+2026-06-08 10:11:46.643 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 22.5237 ms
+2026-06-08 10:11:47.120 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 5.4891 ms
+2026-06-08 10:11:47.156 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 19.4987 ms
+2026-06-08 10:11:47.621 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.5439 ms
+2026-06-08 10:11:51.900 +04:00 [ERR] HTTP DELETE /api/blog/11 responded 500 in 57.1867 ms
+System.UnauthorizedAccessException: Bu postu silmək icazəniz yoxdur.
+   at PetCareMini.Persistence.Services.BlogPostService.DeleteAsync(Int32 userId, Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\BlogPostService.cs:line 164
+   at PetCareMini.WebApi.Controllers.BlogController.Delete(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\BlogController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-08 10:11:51.909 +04:00 [ERR] Unhandled exception: Bu postu silmək icazəniz yoxdur.
+System.UnauthorizedAccessException: Bu postu silmək icazəniz yoxdur.
+   at PetCareMini.Persistence.Services.BlogPostService.DeleteAsync(Int32 userId, Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\Persistence\PetCareMini.Persistence\Services\BlogPostService.cs:line 164
+   at PetCareMini.WebApi.Controllers.BlogController.Delete(Int32 id) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Controllers\BlogController.cs:line 77
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\source\repos\aztu-peervertex\aff\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-08 10:14:16.449 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.6409 ms
+2026-06-08 10:14:16.455 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.3492 ms
+2026-06-08 10:14:16.461 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.9903 ms
+2026-06-08 10:14:16.521 +04:00 [INF] HTTP GET /api/products responded 200 in 76.7649 ms
+2026-06-08 10:14:16.523 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 69.1112 ms
+2026-06-08 10:14:16.530 +04:00 [INF] HTTP GET /api/Pets responded 200 in 75.5019 ms
+2026-06-08 10:14:16.948 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.0077 ms
+2026-06-08 10:14:16.954 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 8.9323 ms
+2026-06-08 10:14:16.970 +04:00 [INF] HTTP GET /api/Cart responded 200 in 10.6504 ms
+2026-06-08 10:14:17.031 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 4.2821 ms
+2026-06-08 10:14:17.033 +04:00 [INF] HTTP GET /api/products responded 200 in 4.5604 ms
+2026-06-08 10:14:17.038 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.7064 ms
+2026-06-08 10:14:18.843 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.0829 ms
+2026-06-08 10:14:19.101 +04:00 [INF] HTTP GET /api/User/me responded 200 in 7.3123 ms
+2026-06-08 10:14:19.108 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 15.3024 ms
+2026-06-08 10:14:19.338 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 17.4911 ms
+2026-06-08 10:14:19.348 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.7132 ms
+2026-06-08 10:14:19.596 +04:00 [INF] HTTP GET /api/User/me responded 200 in 3.5462 ms
+2026-06-08 10:14:19.601 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.0966 ms
+2026-06-08 10:14:19.927 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.2592 ms
+2026-06-08 10:14:23.305 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.8613 ms
+2026-06-08 10:14:23.310 +04:00 [INF] HTTP GET /api/Pets responded 200 in 8.3434 ms
+2026-06-08 10:14:23.317 +04:00 [INF] HTTP GET /api/Services responded 200 in 5.5691 ms
+2026-06-08 10:14:23.806 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.8935 ms
+2026-06-08 10:14:23.806 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.3791 ms
+2026-06-08 10:14:23.826 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.4942 ms
+2026-06-08 10:14:47.900 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.0688 ms
+2026-06-08 10:15:11.438 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.7918 ms
+2026-06-08 10:15:31.346 +04:00 [INF] HTTP POST /api/Appointments responded 201 in 20.1195 ms
+2026-06-08 10:15:47.802 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 3.7085 ms
+2026-06-08 10:15:47.803 +04:00 [INF] HTTP GET /api/User/me responded 200 in 4.6820 ms
+2026-06-08 10:15:47.829 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 4.8272 ms
+2026-06-08 10:15:48.103 +04:00 [INF] HTTP GET /api/Pets responded 200 in 5.1941 ms
+2026-06-08 10:15:48.300 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 4.1526 ms
+2026-06-08 10:15:48.307 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.0781 ms
+2026-06-08 10:15:48.350 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 2.9323 ms
+2026-06-08 10:15:48.607 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.6814 ms
+2026-06-08 10:16:11.856 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 12.1994 ms
+2026-06-08 10:16:30.705 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 6.1799 ms
+2026-06-08 10:17:00.344 +04:00 [INF] HTTP PATCH /api/Appointments/28/status responded 200 in 12.4797 ms
+2026-06-08 10:17:06.034 +04:00 [INF] HTTP GET /api/Appointments/vet/my responded 200 in 4.4815 ms
+2026-06-08 10:17:43.045 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 8.1070 ms
+2026-06-08 10:17:56.609 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 76.4153 ms
+2026-06-08 10:21:56.463 +04:00 [WRN] The foreign key property 'Veterinarian.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2026-06-08 10:22:55.442 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 901.0310 ms

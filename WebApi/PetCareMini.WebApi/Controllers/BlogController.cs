@@ -74,7 +74,8 @@ public class BlogController : ControllerBase
     public async Task<IActionResult> Delete(int id)
     {
         var userId = GetUserId();
-        await _service.DeleteAsync(userId, id);
+        var isAdmin = User.IsInRole("Admin");
+        await _service.DeleteAsync(userId, id, isAdmin);
         return Ok(new { message = "Post silindi.", statusCode = 200 });
     }
 
