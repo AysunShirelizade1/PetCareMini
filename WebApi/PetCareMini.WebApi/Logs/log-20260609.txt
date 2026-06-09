@@ -495,3 +495,9 @@
 2026-06-09 12:03:58.762 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.0179 ms
 2026-06-09 12:04:10.394 +04:00 [INF] HTTP PATCH /api/Notifications/read-all responded 200 in 87.4015 ms
 2026-06-09 12:04:16.146 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.7536 ms
+2026-06-09 12:11:46.265 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 248.7597 ms
+2026-06-09 12:12:19.626 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 86.4866 ms
+2026-06-09 12:12:54.914 +04:00 [INF] HTTP GET /api/Notifications responded 200 in 4.6608 ms
+2026-06-09 12:13:12.172 +04:00 [INF] HTTP PATCH /api/Notifications/read-all responded 200 in 2.3338 ms
+2026-06-09 12:22:55.562 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 150.9172 ms
+2026-06-09 12:23:10.413 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 59.0293 ms

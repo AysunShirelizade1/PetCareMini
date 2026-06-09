@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.Shared.Settings;
 using PetCareMini.Infrastructure.Services;
+using PetCareMini.Infrastructure.Settings;
 
 namespace PetCareMini.Infrastructure;
 
@@ -14,9 +15,11 @@ public static class InfrastructureServiceRegistration
     {
         services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
         services.Configure<CloudinarySettings>(configuration.GetSection("CloudinarySettings"));
+        services.Configure<AnthropicSettings>(configuration.GetSection("Anthropic"));
 
         services.AddScoped<IEmailService, EmailService>();
         services.AddScoped<ICloudinaryService, CloudinaryService>();
+        services.AddHttpClient<IAnthropicService, AnthropicService>();
 
         return services;
     }
