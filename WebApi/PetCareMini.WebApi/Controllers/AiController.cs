@@ -27,16 +27,23 @@ public class AiController : ControllerBase
         if (string.IsNullOrWhiteSpace(dto.Message))
             return BadRequest(new { message = "Mesaj boş ola bilməz." });
 
-        var products = await _context.Products
-            .Where(p => p.IsActive)
-            .Select(p => $"{p.NameAz} - {p.Price} AZN")
-            .ToListAsync();
+        try
+        {
+            var products = await _context.Products
+                .Where(p => p.IsActive)
+                .Select(p => $"{p.NameAz} - {p.Price} AZN")
+                .ToListAsync();
 
-        var productContext = products.Any()
-            ? "Platformanın mövcud məhsulları:\n" + string.Join("\n", products)
-            : null;
+            var productContext = products.Any()
+                ? "Platformanın mövcud məhsulları:\n" + string.Join("\n", products)
+                : null;
 
-        var reply = await _anthropicService.AskAsync(dto.Message, dto.History, productContext);
-        return Ok(new AiChatResponseDto { Reply = reply });
+            var reply = await _anthropicService.AskAsync(dto.Message, dto.History, productContext);
+            return Ok(new AiChatResponseDto { Reply = reply });
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { message = ex.Message, inner = ex.InnerException?.Message });
+        }
     }
 }
