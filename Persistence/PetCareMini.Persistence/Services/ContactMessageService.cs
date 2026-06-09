@@ -2,19 +2,23 @@
 using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Application.DTOs.ContactMessage;
 using PetCareMini.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PetCareMini.Persistence.Services;
 
 public class ContactMessageService : IContactMessageService
 {
     private readonly IContactMessageRepository _repo;
+    private readonly IEmailService _emailService;
+    private readonly INotificationService _notificationService;
 
-    public ContactMessageService(IContactMessageRepository repo)
+    public ContactMessageService(
+        IContactMessageRepository repo,
+        IEmailService emailService,
+        INotificationService notificationService)
     {
         _repo = repo;
+        _emailService = emailService;
+        _notificationService = notificationService;
     }
 
     public async Task SendMessageAsync(int userId, ContactMessageCreateDto dto)
@@ -73,6 +77,26 @@ public class ContactMessageService : IContactMessageService
         message.IsRead = true;
         message.ReadAt ??= DateTime.UtcNow;
         await _repo.UpdateAsync(message);
+
+        // Email göndər
+        try
+        {
+            await _emailService.SendEmailAsync(
+                new List<string> { message.User.Email },
+                $"Re: {message.Subject}",
+                $"<h3>Mesajınıza cavab:</h3><p>{dto.ReplyMessage}</p>"
+            );
+        }
+        catch { }
+
+        // Notification göndər
+        await _notificationService.SendAsync(
+            message.UserId,
+            "Mesajınıza cavab verildi",
+            $"\"{message.Subject}\" mövzusundakı mesajınıza admin cavab verdi.",
+            "contact",
+            message.Id
+        );
     }
 
     public async Task ArchiveAsync(int id)
@@ -103,7 +127,7 @@ public class ContactMessageService : IContactMessageService
         ReplyMessage = m.ReplyMessage,
         RepliedAt = m.RepliedAt,
         CreatedAt = m.CreatedAt,
-        UserFullName = $"{m.User.FullName}",
+        UserFullName = m.User.FullName,
         UserEmail = m.User.Email
     };
 }
