@@ -45,6 +45,7 @@ public static class ServiceRegistration
         services.AddScoped<IBlogTagRepository, BlogTagRepository>();
         services.AddScoped<IBlogCommentRepository, BlogCommentRepository>();
         services.AddScoped<IBlogAuthorProfileRepository, BlogAuthorProfileRepository>();
+        services.AddScoped<INotificationRepository, NotificationRepository>();
 
         #endregion
         #region Services
@@ -71,8 +72,8 @@ public static class ServiceRegistration
         services.AddScoped<IBlogCategoryService, BlogCategoryService>();
         services.AddScoped<IBlogCommentService, BlogCommentService>();
         services.AddScoped<IBlogAuthorProfileService, BlogAuthorProfileService>();
+        services.AddScoped<INotificationService, NotificationService>();
 
-        
         #endregion
         return services;
     }

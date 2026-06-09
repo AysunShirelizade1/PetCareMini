@@ -1,10 +1,16 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PetCareMini.Application.Abstracts.Hubs;
+using PetCareMini.Application.Abstracts.Services;
 using PetCareMini.Infrastructure;
 using PetCareMini.Persistence;
 using PetCareMini.Persistence.Contexts;
 using PetCareMini.Persistence.Seed;
+using PetCareMini.Persistence.Services;
+using PetCareMini.WebApi;
+using PetCareMini.WebApi.Hubs;
 using Serilog;
 using System.Text;
 
@@ -26,6 +32,12 @@ builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddPersistenceServices(builder.Configuration);
 builder.Services.AddInfrastructureServices(builder.Configuration);
+// SignalR
+builder.Services.AddSignalR();
+builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddScoped<INotificationHub, NotificationHub>();
+// UserIdentifier üçün (JWT claim)
+builder.Services.AddSingleton<IUserIdProvider, NameIdentifierUserIdProvider>();
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -99,7 +111,7 @@ if (app.Environment.IsDevelopment())
     }); 
 }
 
-
+app.MapHub<NotificationHub>("/hubs/notifications");
 app.UseMiddleware<PetCareMini.WebApi.Middlewares.ExceptionMiddleware>();
 app.UseRouting();
 app.UseCors("AllowAll");
