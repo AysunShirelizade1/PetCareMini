@@ -23,6 +23,7 @@ public class CartService : ICartService
         return items.Select(x => new CartItemGetDto
         {
             ProductId = x.ProductId,
+            ProductImageUrl = x.Product.ImageUrl,
             ProductName = lang == "en" ? x.Product.NameEn : x.Product.NameAz,
             Price = x.Product.Price,
             Quantity = x.Quantity

@@ -61,6 +61,7 @@ public class OrderService : IOrderService
             Items = x.OrderItems.Select(i => new OrderItemGetDto
             {
                 ProductName = i.Product.NameAz,
+                ProductImageUrl = i.Product.ImageUrl,
                 Quantity = i.Quantity,
                 Price = i.Price
             }).ToList()
@@ -127,6 +128,7 @@ public class OrderService : IOrderService
             OrderItems = cartItems.Select(x => new OrderItem
             {
                 ProductId = x.ProductId,
+                ProductImageUrl = x.Product.ImageUrl,
                 Quantity = x.Quantity,
                 Price = x.Product.Price
             }).ToList()
@@ -230,6 +232,7 @@ public class OrderService : IOrderService
             Items = order.OrderItems.Select(x => new OrderItemGetDto
             {
                 ProductName = x.Product.NameAz,
+                ProductImageUrl = x.Product.ImageUrl,
                 Quantity = x.Quantity,
                 Price = x.Price
             }).ToList()
