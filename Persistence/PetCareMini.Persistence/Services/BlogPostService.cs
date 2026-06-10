@@ -11,15 +11,18 @@ public class BlogPostService : IBlogPostService
     private readonly IBlogPostRepository _repo;
     private readonly IBlogTagRepository _tagRepo;
     private readonly IBlogAuthorProfileRepository _profileRepo;
+    private readonly INotificationService _notificationService;
 
     public BlogPostService(
         IBlogPostRepository repo,
         IBlogTagRepository tagRepo,
-        IBlogAuthorProfileRepository profileRepo)
+        IBlogAuthorProfileRepository profileRepo,
+        INotificationService notificationService)
     {
         _repo = repo;
         _tagRepo = tagRepo;
         _profileRepo = profileRepo;
+        _notificationService = notificationService;
     }
 
     public async Task<List<BlogPostSummaryDto>> GetAllPublishedAsync(string lang = "az")
@@ -191,6 +194,14 @@ public class BlogPostService : IBlogPostService
 
         _repo.Update(post);
         await _repo.SaveChangesAsync();
+
+        await _notificationService.SendAsync(
+            post.AuthorId,
+            "Blog postunuz təsdiqləndi",
+            $"\"{post.TitleAz}\" adlı postunuz yayımlandı.",
+            "blog",
+            post.Id
+        );
     }
 
     public async Task RejectAsync(int id, BlogRejectDto dto)
@@ -203,6 +214,14 @@ public class BlogPostService : IBlogPostService
 
         _repo.Update(post);
         await _repo.SaveChangesAsync();
+
+        await _notificationService.SendAsync(
+            post.AuthorId,
+            "Blog postunuz rədd edildi",
+            $"\"{post.TitleAz}\" adlı postunuz rədd edildi. Səbəb: {dto.RejectionReason}",
+            "blog",
+            post.Id
+        );
     }
 
 

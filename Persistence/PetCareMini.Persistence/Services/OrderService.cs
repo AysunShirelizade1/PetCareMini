@@ -10,11 +10,14 @@ namespace PetCareMini.Persistence.Services;
 public class OrderService : IOrderService
 {
     private readonly AppDbContext _context;
+    private readonly INotificationService _notificationService;
 
-    public OrderService(AppDbContext context)
+    public OrderService(AppDbContext context, INotificationService notificationService)
     {
         _context = context;
+        _notificationService = notificationService;
     }
+
     private bool CanMove(OrderStatus current, OrderStatus next)
     {
         return current switch
@@ -27,11 +30,8 @@ public class OrderService : IOrderService
             _ => false
         };
     }
-    public async Task<List<OrderAdminDto>> GetAllAsync(
-        string lang,
-        string? status,
-        int page,
-        int pageSize)
+
+    public async Task<List<OrderAdminDto>> GetAllAsync(string lang, string? status, int page, int pageSize)
     {
         var query = _context.Orders
             .Include(x => x.User)
@@ -41,9 +41,7 @@ public class OrderService : IOrderService
 
         if (!string.IsNullOrWhiteSpace(status) &&
             Enum.TryParse<OrderStatus>(status, true, out var parsed))
-        {
             query = query.Where(x => x.Status == parsed);
-        }
 
         var orders = await query
             .OrderByDescending(x => x.CreatedAt)
@@ -68,6 +66,7 @@ public class OrderService : IOrderService
             }).ToList()
         }).ToList();
     }
+
     public async Task CancelOrderAsync(int userId, int orderId)
     {
         var order = await _context.Orders
@@ -79,7 +78,6 @@ public class OrderService : IOrderService
         if (order.Status != OrderStatus.Pending)
             throw new InvalidOperationException("Yalnız gözləmədə olan sifarişlər ləğv edilə bilər.");
 
-        // Stoku geri qaytar
         foreach (var item in order.OrderItems)
         {
             if (item.Product != null)
@@ -88,11 +86,17 @@ public class OrderService : IOrderService
 
         order.Status = OrderStatus.Cancelled;
         await _context.SaveChangesAsync();
+
+        await _notificationService.SendAsync(
+            userId,
+            "Sifariş ləğv edildi",
+            $"#{order.Id} nömrəli sifarişiniz ləğv edildi.",
+            "order",
+            order.Id
+        );
     }
-    public async Task<OrderGetDto> CheckoutAsync(
-    int userId,
-    string lang,
-    string? couponCode)
+
+    public async Task<OrderGetDto> CheckoutAsync(int userId, string lang, string? couponCode)
     {
         using var transaction = await _context.Database.BeginTransactionAsync();
 
@@ -104,21 +108,16 @@ public class OrderService : IOrderService
         if (!cartItems.Any())
             throw new Exception("Cart is empty");
 
-        
         foreach (var item in cartItems)
         {
             if (item.Product == null)
                 throw new Exception("Product not found");
 
             if (item.Product.StockQuantity < item.Quantity)
-                throw new Exception(
-                    $"Not enough stock for product: {item.Product.NameAz}");
+                throw new Exception($"Not enough stock for product: {item.Product.NameAz}");
         }
 
         var totalPrice = cartItems.Sum(x => x.Product.Price * x.Quantity);
-
-        // (optional future: coupon logic)
-        // if (couponCode is not null) { apply discount }
 
         var order = new Order
         {
@@ -135,21 +134,24 @@ public class OrderService : IOrderService
 
         await _context.Orders.AddAsync(order);
 
-        
         foreach (var item in cartItems)
-        {
             item.Product.StockQuantity -= item.Quantity;
-        }
 
         _context.CartItems.RemoveRange(cartItems);
-
- 
         await _context.SaveChangesAsync();
-
         await transaction.CommitAsync();
+
+        await _notificationService.SendAsync(
+            userId,
+            "Sifariş verildi",
+            $"#{order.Id} nömrəli sifarişiniz qəbul edildi. Ümumi məbləğ: {order.TotalPrice} AZN.",
+            "order",
+            order.Id
+        );
 
         return Map(order, lang);
     }
+
     public async Task RejectOrderAsync(int orderId, string reason)
     {
         var order = await _context.Orders
@@ -164,12 +166,19 @@ public class OrderService : IOrderService
 
         order.Status = OrderStatus.Rejected;
         order.RejectReason = reason;
-
         await _context.SaveChangesAsync();
+
+        await _notificationService.SendAsync(
+            order.UserId,
+            "Sifariş rədd edildi",
+            $"#{order.Id} nömrəli sifarişiniz rədd edildi. Səbəb: {reason}",
+            "order",
+            order.Id
+        );
     }
-    public async Task<List<OrderGetDto>> GetMyOrdersAsync(
-        int userId,
-        string lang)
+    // (optional future: coupon logic)
+    // if (couponCode is not null) { apply discount }
+    public async Task<List<OrderGetDto>> GetMyOrdersAsync(int userId, string lang)
     {
         var orders = await _context.Orders
             .Include(x => x.OrderItems)
@@ -180,6 +189,7 @@ public class OrderService : IOrderService
 
         return orders.Select(x => Map(x, lang)).ToList();
     }
+
     public async Task UpdateStatusAsync(int orderId, OrderStatus status)
     {
         var order = await _context.Orders
@@ -187,13 +197,28 @@ public class OrderService : IOrderService
             ?? throw new KeyNotFoundException("Order not found");
 
         if (!CanMove(order.Status, status))
-            throw new InvalidOperationException(
-                $"Invalid transition {order.Status} → {status}");
+            throw new InvalidOperationException($"Invalid transition {order.Status} → {status}");
 
         order.Status = status;
-
         await _context.SaveChangesAsync();
+
+        var message = status switch
+        {
+            OrderStatus.Accepted => "Sifarişiniz qəbul edildi.",
+            OrderStatus.Shipped => "Sifarişiniz göndərildi.",
+            OrderStatus.Delivered => "Sifarişiniz çatdırıldı.",
+            _ => "Sifariş statusunuz yeniləndi."
+        };
+
+        await _notificationService.SendAsync(
+            order.UserId,
+            "Sifariş statusu dəyişdi",
+            message,
+            "order",
+            order.Id
+        );
     }
+
     private OrderGetDto Map(Order order, string lang)
     {
         return new OrderGetDto
@@ -202,7 +227,6 @@ public class OrderService : IOrderService
             TotalPrice = order.TotalPrice,
             Status = order.Status.ToString(),
             CreatedAt = order.CreatedAt,
-
             Items = order.OrderItems.Select(x => new OrderItemGetDto
             {
                 ProductName = x.Product.NameAz,

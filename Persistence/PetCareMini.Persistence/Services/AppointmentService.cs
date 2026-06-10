@@ -11,20 +11,21 @@ public class AppointmentService : IAppointmentService
 {
     private readonly IAppointmentRepository _appointmentRepository;
     private readonly AppDbContext _context;
+    private readonly INotificationService _notificationService;
 
     public AppointmentService(
         IAppointmentRepository appointmentRepository,
-        AppDbContext context)
+        AppDbContext context,
+        INotificationService notificationService)
     {
         _appointmentRepository = appointmentRepository;
         _context = context;
+        _notificationService = notificationService;
     }
 
-   
     public async Task<List<AppointmentGetDto>> GetAllAsync(string lang = "az")
     {
         var appointments = await _appointmentRepository.GetAllAsync();
-
         return appointments.Select(a => new AppointmentGetDto
         {
             Id = a.Id,
@@ -42,7 +43,6 @@ public class AppointmentService : IAppointmentService
     public async Task<List<AppointmentGetDto>> GetUserAppointmentsAsync(int userId, string lang = "az")
     {
         var appointments = await _appointmentRepository.GetUserAppointmentsAsync(userId);
-
         return appointments.Select(a => new AppointmentGetDto
         {
             Id = a.Id,
@@ -56,12 +56,10 @@ public class AppointmentService : IAppointmentService
             RejectReason = a.RejectionReason
         }).ToList();
     }
-    
 
     public async Task<List<AppointmentGetDto>> GetVetAppointmentsAsync(int vetUserId, string lang = "az")
     {
         var appointments = await _appointmentRepository.GetByVeterinarianUserIdAsync(vetUserId);
-
         return appointments.Select(a => new AppointmentGetDto
         {
             Id = a.Id,
@@ -118,9 +116,17 @@ public class AppointmentService : IAppointmentService
         var created = await _appointmentRepository.GetByIdAsync(appointment.Id)
             ?? throw new Exception("Failed to load created appointment");
 
+        await _notificationService.SendAsync(
+            userId,
+            "Randevu yaradıldı",
+            $"{created.Veterinarian.FullName} ilə randevunuz uğurla qeydə alındı.",
+            "appointment",
+            created.Id
+        );
+
         return new AppointmentGetDto
         {
-            Id = created!.Id,
+            Id = created.Id,
             PetName = created.Pet.Name,
             UserFullName = created.User.FullName,
             VeterinarianName = created.Veterinarian.FullName,
@@ -148,6 +154,14 @@ public class AppointmentService : IAppointmentService
 
         appointment.Status = AppointmentStatus.Canceled;
         await _appointmentRepository.SaveChangesAsync();
+
+        await _notificationService.SendAsync(
+            userId,
+            "Randevu ləğv edildi",
+            $"{appointment.AppointmentDate:dd.MM.yyyy} tarixli randevunuz ləğv edildi.",
+            "appointment",
+            appointmentId
+        );
     }
 
     public async Task UpdateStatusAsync(int appointmentId, AppointmentStatusUpdateDto dto, int? vetUserId = null)
@@ -164,10 +178,24 @@ public class AppointmentService : IAppointmentService
         appointment.Status = (AppointmentStatus)dto.Status;
 
         if ((AppointmentStatus)dto.Status == AppointmentStatus.Canceled)
-        {
             appointment.RejectionReason = dto.RejectionReason;
-        }
 
         await _appointmentRepository.SaveChangesAsync();
+
+        var message = (AppointmentStatus)dto.Status switch
+        {
+            AppointmentStatus.Approved => "Randevunuz təsdiqləndi.",
+            AppointmentStatus.Completed => "Randevunuz tamamlandı.",
+            AppointmentStatus.Canceled => $"Randevunuz ləğv edildi. Səbəb: {dto.RejectionReason}",
+            _ => "Randevu statusunuz yeniləndi."
+        };
+
+        await _notificationService.SendAsync(
+            appointment.UserId,
+            "Randevu statusu dəyişdi",
+            message,
+            "appointment",
+            appointmentId
+        );
     }
 }

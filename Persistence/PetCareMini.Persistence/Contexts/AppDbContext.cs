@@ -32,6 +32,7 @@ public class AppDbContext : DbContext
     public DbSet<BlogPostTag> BlogPostTags => Set<BlogPostTag>();
     public DbSet<BlogComment> BlogComments => Set<BlogComment>();
     public DbSet<BlogAuthorProfile> BlogAuthorProfiles => Set<BlogAuthorProfile>();
+    public DbSet<Notification> Notifications => Set<Notification>();
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
