@@ -1,0 +1,772 @@
+2026-06-11 11:29:07.726 +04:00 [WRN] The foreign key property 'Veterinarian.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2026-06-11 11:29:53.141 +04:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-06-11 11:29:53.317 +04:00 [INF] HTTP GET /api/Services responded 200 in 202.0977 ms
+2026-06-11 11:29:53.316 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 193.9633 ms
+2026-06-11 11:29:53.322 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 393.5880 ms
+2026-06-11 11:29:53.456 +04:00 [INF] HTTP GET /api/products responded 200 in 526.4999 ms
+2026-06-11 11:29:53.812 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 4.2585 ms
+2026-06-11 11:29:53.813 +04:00 [INF] HTTP GET /api/Services responded 200 in 5.3251 ms
+2026-06-11 11:29:53.834 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 4.7136 ms
+2026-06-11 11:29:53.993 +04:00 [INF] HTTP GET /api/products responded 200 in 26.3625 ms
+2026-06-11 11:30:03.623 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 758.7129 ms
+2026-06-11 11:30:03.623 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 757.9132 ms
+2026-06-11 11:30:03.734 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 28.2096 ms
+2026-06-11 11:30:03.968 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 11.1712 ms
+2026-06-11 11:30:04.765 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 9.4746 ms
+2026-06-11 11:30:04.810 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 52.0109 ms
+2026-06-11 11:30:04.829 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 70.4701 ms
+2026-06-11 11:30:04.884 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 125.3591 ms
+2026-06-11 11:30:04.888 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 129.0126 ms
+2026-06-11 11:30:04.914 +04:00 [INF] HTTP GET /api/Cart responded 200 in 155.9641 ms
+2026-06-11 11:30:04.964 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 205.3611 ms
+2026-06-11 11:30:04.999 +04:00 [INF] HTTP GET /api/Orders responded 200 in 239.9815 ms
+2026-06-11 11:30:05.029 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 269.9023 ms
+2026-06-11 11:30:05.386 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 3.8277 ms
+2026-06-11 11:30:05.399 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 13.7231 ms
+2026-06-11 11:30:05.493 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 15.3433 ms
+2026-06-11 11:30:05.540 +04:00 [INF] HTTP GET /api/Orders responded 200 in 16.8265 ms
+2026-06-11 11:30:05.572 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 15.7843 ms
+2026-06-11 11:30:06.198 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 121.7182 ms
+2026-06-11 11:30:06.722 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 21.8134 ms
+2026-06-11 11:30:10.820 +04:00 [INF] HTTP GET /api/Orders responded 200 in 25.7541 ms
+2026-06-11 11:30:11.334 +04:00 [INF] HTTP GET /api/Orders responded 200 in 13.6651 ms
+2026-06-11 11:30:23.059 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 4.2218 ms
+2026-06-11 11:30:23.068 +04:00 [INF] HTTP GET /api/products responded 200 in 9.1737 ms
+2026-06-11 11:30:23.082 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 6.5889 ms
+2026-06-11 11:30:23.084 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 2.2092 ms
+2026-06-11 11:30:23.087 +04:00 [INF] HTTP GET /api/Services responded 200 in 6.0457 ms
+2026-06-11 11:30:23.113 +04:00 [INF] HTTP GET /api/Pets responded 200 in 38.6560 ms
+2026-06-11 11:30:23.317 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 6.4967 ms
+2026-06-11 11:30:23.317 +04:00 [INF] HTTP GET /api/Cart responded 200 in 7.4923 ms
+2026-06-11 11:30:23.566 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 10.0700 ms
+2026-06-11 11:30:23.577 +04:00 [INF] HTTP GET /api/products responded 200 in 13.2481 ms
+2026-06-11 11:30:23.584 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 4.5787 ms
+2026-06-11 11:30:23.589 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 8.7981 ms
+2026-06-11 11:30:23.609 +04:00 [INF] HTTP GET /api/Services responded 200 in 8.6201 ms
+2026-06-11 11:30:23.622 +04:00 [INF] HTTP GET /api/Pets responded 200 in 5.7932 ms
+2026-06-11 11:30:23.833 +04:00 [INF] HTTP GET /api/Cart responded 200 in 9.1053 ms
+2026-06-11 11:30:23.833 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 9.1276 ms
+2026-06-11 11:30:26.880 +04:00 [INF] HTTP GET /api/Notifications responded 200 in 66.0109 ms
+2026-06-11 11:30:36.915 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 75.3990 ms
+2026-06-11 11:30:36.958 +04:00 [INF] HTTP GET /api/blog responded 200 in 118.0757 ms
+2026-06-11 11:30:44.366 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 24.1927 ms
+2026-06-11 11:30:58.862 +04:00 [INF] HTTP GET /api/blog responded 200 in 22.4384 ms
+2026-06-11 11:31:01.525 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 42.7678 ms
+2026-06-11 11:31:01.527 +04:00 [INF] HTTP GET /api/blog responded 200 in 2.8234 ms
+2026-06-11 11:31:01.530 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.9894 ms
+2026-06-11 11:31:01.677 +04:00 [INF] HTTP GET /api/products responded 200 in 31.0425 ms
+2026-06-11 11:31:02.211 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.3246 ms
+2026-06-11 11:31:02.211 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.0982 ms
+2026-06-11 11:31:02.213 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 3.1260 ms
+2026-06-11 11:31:02.214 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.4033 ms
+2026-06-11 11:31:02.217 +04:00 [INF] HTTP GET /api/blog responded 200 in 7.6417 ms
+2026-06-11 11:31:02.237 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 23.2819 ms
+2026-06-11 11:31:02.467 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 2.4611 ms
+2026-06-11 11:31:02.468 +04:00 [INF] HTTP GET /api/products responded 200 in 2.8262 ms
+2026-06-11 11:31:02.789 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 1.5605 ms
+2026-06-11 11:31:02.789 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.3791 ms
+2026-06-11 11:31:02.927 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.6716 ms
+2026-06-11 11:31:02.951 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 3.1474 ms
+2026-06-11 11:31:25.978 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 42.9482 ms
+2026-06-11 11:31:26.247 +04:00 [INF] HTTP GET /api/User/me responded 200 in 22.6589 ms
+2026-06-11 11:31:26.266 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 36.2353 ms
+2026-06-11 11:31:26.523 +04:00 [INF] HTTP GET /api/Pets responded 200 in 5.4951 ms
+2026-06-11 11:31:26.902 +04:00 [INF] HTTP GET /api/Appointments/my responded 200 in 14.0510 ms
+2026-06-11 11:31:27.111 +04:00 [INF] HTTP GET /api/User/me responded 200 in 2.7061 ms
+2026-06-11 11:31:27.124 +04:00 [INF] HTTP GET /api/Pets responded 200 in 4.3218 ms
+2026-06-11 11:31:27.190 +04:00 [INF] HTTP GET /api/Orders/my responded 200 in 1.8718 ms
+2026-06-11 11:31:49.107 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.9896 ms
+2026-06-11 11:32:51.315 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 6.6240 ms
+2026-06-11 11:33:02.564 +04:00 [INF] HTTP GET /api/blog/my responded 200 in 82.2132 ms
+2026-06-11 11:33:23.311 +04:00 [INF] HTTP GET /api/products responded 200 in 6.6328 ms
+2026-06-11 11:33:23.819 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.8656 ms
+2026-06-11 11:33:23.819 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.3960 ms
+2026-06-11 11:33:23.822 +04:00 [INF] HTTP GET /api/products responded 200 in 4.7473 ms
+2026-06-11 11:33:23.826 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.7644 ms
+2026-06-11 11:33:24.326 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.3579 ms
+2026-06-11 11:33:24.350 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2974 ms
+2026-06-11 11:33:24.576 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.0489 ms
+2026-06-11 11:33:35.790 +04:00 [INF] HTTP GET /api/products responded 200 in 5.2950 ms
+2026-06-11 11:33:35.801 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 4.9817 ms
+2026-06-11 11:33:36.296 +04:00 [INF] HTTP GET /api/products responded 200 in 6.9309 ms
+2026-06-11 11:33:36.298 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 1.6370 ms
+2026-06-11 11:33:41.279 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.7296 ms
+2026-06-11 11:33:41.281 +04:00 [INF] HTTP GET /api/Pets responded 200 in 3.9264 ms
+2026-06-11 11:33:41.317 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.8231 ms
+2026-06-11 11:33:41.781 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.0631 ms
+2026-06-11 11:33:41.781 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.5672 ms
+2026-06-11 11:33:42.037 +04:00 [INF] HTTP GET /api/Services responded 200 in 3.6997 ms
+2026-06-11 11:33:43.676 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.1528 ms
+2026-06-11 11:33:43.679 +04:00 [INF] HTTP GET /api/blog responded 200 in 6.0691 ms
+2026-06-11 11:33:44.185 +04:00 [INF] HTTP GET /api/blog responded 200 in 6.8130 ms
+2026-06-11 11:33:44.185 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 7.2468 ms
+2026-06-11 11:33:48.421 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.4269 ms
+2026-06-11 11:34:48.606 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 169.9191 ms
+2026-06-11 11:35:48.633 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.3781 ms
+2026-06-11 11:36:23.626 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 24.0752 ms
+2026-06-11 11:36:23.934 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 11.9037 ms
+2026-06-11 11:36:23.999 +04:00 [INF] HTTP GET /api/Orders responded 200 in 20.6871 ms
+2026-06-11 11:36:24.040 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 117.3670 ms
+2026-06-11 11:36:24.063 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 82.3738 ms
+2026-06-11 11:36:24.070 +04:00 [INF] HTTP GET /api/Cart responded 200 in 89.3186 ms
+2026-06-11 11:36:24.075 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 94.3675 ms
+2026-06-11 11:36:24.206 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 6.8292 ms
+2026-06-11 11:36:24.523 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 5.6323 ms
+2026-06-11 11:36:24.771 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.9793 ms
+2026-06-11 11:36:24.791 +04:00 [INF] HTTP GET /api/Orders responded 200 in 23.5991 ms
+2026-06-11 11:36:24.795 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 16.8422 ms
+2026-06-11 11:36:25.022 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 10.6009 ms
+2026-06-11 11:36:25.025 +04:00 [INF] HTTP GET /api/Cart responded 200 in 4.6327 ms
+2026-06-11 11:36:25.980 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 29.0080 ms
+2026-06-11 11:36:26.558 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 13.7988 ms
+2026-06-11 11:36:29.392 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.7801 ms
+2026-06-11 11:36:29.939 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.2247 ms
+2026-06-11 11:36:39.452 +04:00 [INF] HTTP GET /api/Orders responded 200 in 6.6381 ms
+2026-06-11 11:36:40.000 +04:00 [INF] HTTP GET /api/Orders responded 200 in 3.1315 ms
+2026-06-11 11:36:42.502 +04:00 [INF] HTTP GET /api/Products responded 200 in 9.7352 ms
+2026-06-11 11:36:42.502 +04:00 [INF] HTTP GET /api/Products responded 200 in 9.8002 ms
+2026-06-11 11:36:42.819 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 5.4029 ms
+2026-06-11 11:36:43.359 +04:00 [INF] HTTP GET /api/Products responded 200 in 5.0519 ms
+2026-06-11 11:36:43.359 +04:00 [INF] HTTP GET /api/Products responded 200 in 5.1407 ms
+2026-06-11 11:36:43.426 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.2537 ms
+2026-06-11 11:36:45.352 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 9.3910 ms
+2026-06-11 11:36:45.904 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 4.5835 ms
+2026-06-11 11:36:50.110 +04:00 [INF] HTTP GET /api/Coupon responded 200 in 36.0474 ms
+2026-06-11 11:36:50.826 +04:00 [INF] HTTP GET /api/Coupon responded 200 in 3.3292 ms
+2026-06-11 11:36:53.509 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 7.0283 ms
+2026-06-11 11:36:54.058 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.6855 ms
+2026-06-11 11:36:57.164 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.3743 ms
+2026-06-11 11:36:57.182 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 21.0701 ms
+2026-06-11 11:36:58.081 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 12.9409 ms
+2026-06-11 11:36:58.090 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 22.8204 ms
+2026-06-11 11:37:07.693 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.6122 ms
+2026-06-11 11:37:08.850 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.7810 ms
+2026-06-11 11:38:55.161 +04:00 [INF] HTTP GET /api/Contact responded 200 in 37.2399 ms
+2026-06-11 11:38:56.001 +04:00 [INF] HTTP GET /api/Contact responded 200 in 4.0223 ms
+2026-06-11 11:39:00.927 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 7.6482 ms
+2026-06-11 11:39:02.895 +04:00 [INF] HTTP PATCH /api/Contact/10/read responded 200 in 77.0275 ms
+2026-06-11 11:39:05.812 +04:00 [INF] HTTP PATCH /api/Contact/6/read responded 200 in 11.2440 ms
+2026-06-11 11:39:16.723 +04:00 [INF] HTTP GET /api/Products responded 200 in 3.1061 ms
+2026-06-11 11:39:16.724 +04:00 [INF] HTTP GET /api/Products responded 200 in 5.5584 ms
+2026-06-11 11:39:16.735 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 1.4386 ms
+2026-06-11 11:39:17.316 +04:00 [INF] HTTP GET /api/Products responded 200 in 4.1692 ms
+2026-06-11 11:39:17.318 +04:00 [INF] HTTP GET /api/Products responded 200 in 4.9864 ms
+2026-06-11 11:39:17.329 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.3451 ms
+2026-06-11 11:39:24.165 +04:00 [INF] HTTP GET /api/Contact responded 200 in 5.0058 ms
+2026-06-11 11:39:24.728 +04:00 [INF] HTTP GET /api/Contact responded 200 in 2.5036 ms
+2026-06-11 11:39:28.347 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.1154 ms
+2026-06-11 11:39:28.350 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.5310 ms
+2026-06-11 11:39:28.922 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 2.1460 ms
+2026-06-11 11:39:28.925 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 3.6207 ms
+2026-06-11 11:39:47.071 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.3917 ms
+2026-06-11 11:39:47.638 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 3.4440 ms
+2026-06-11 11:39:50.744 +04:00 [INF] HTTP GET /api/Services responded 200 in 65.7588 ms
+2026-06-11 11:39:50.745 +04:00 [INF] HTTP GET /api/Services responded 200 in 66.7773 ms
+2026-06-11 11:39:51.833 +04:00 [INF] HTTP GET /api/Services responded 200 in 3.2645 ms
+2026-06-11 11:39:51.833 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.2588 ms
+2026-06-11 11:39:53.870 +04:00 [INF] HTTP GET /api/Contact responded 200 in 8.0585 ms
+2026-06-11 11:39:54.458 +04:00 [INF] HTTP GET /api/Contact responded 200 in 9.7875 ms
+2026-06-11 11:39:55.586 +04:00 [INF] HTTP GET /api/Orders responded 200 in 14.3593 ms
+2026-06-11 11:39:56.158 +04:00 [INF] HTTP GET /api/Orders responded 200 in 12.3180 ms
+2026-06-11 11:39:58.011 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 61.3311 ms
+2026-06-11 11:39:58.513 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 4.0543 ms
+2026-06-11 11:40:08.624 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 16.9038 ms
+2026-06-11 11:40:09.132 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 9.4577 ms
+2026-06-11 11:40:10.614 +04:00 [INF] HTTP GET /api/Products responded 200 in 5.6247 ms
+2026-06-11 11:40:10.614 +04:00 [INF] HTTP GET /api/Products responded 200 in 5.8453 ms
+2026-06-11 11:40:10.726 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.6451 ms
+2026-06-11 11:40:11.604 +04:00 [INF] HTTP GET /api/Products responded 200 in 4.1499 ms
+2026-06-11 11:40:11.605 +04:00 [INF] HTTP GET /api/Products responded 200 in 4.3398 ms
+2026-06-11 11:40:11.855 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 1.7226 ms
+2026-06-11 11:40:12.871 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 1.3395 ms
+2026-06-11 11:40:12.871 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 1.5408 ms
+2026-06-11 11:40:13.142 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 15.6928 ms
+2026-06-11 11:40:13.380 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.3961 ms
+2026-06-11 11:40:13.386 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 1.6240 ms
+2026-06-11 11:40:13.650 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 12.0447 ms
+2026-06-11 11:41:14.236 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 4.3855 ms
+2026-06-11 11:41:14.247 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 15.6513 ms
+2026-06-11 11:41:14.983 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.9629 ms
+2026-06-11 11:41:14.994 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 14.7483 ms
+2026-06-11 11:41:15.143 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.2781 ms
+2026-06-11 11:41:15.958 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.6409 ms
+2026-06-11 11:41:43.460 +04:00 [INF] HTTP DELETE /api/Veterinarians/17 responded 200 in 45.8099 ms
+2026-06-11 11:41:44.613 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.1806 ms
+2026-06-11 11:42:52.541 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 3.3159 ms
+2026-06-11 11:42:53.038 +04:00 [INF] HTTP GET /api/Admin/users responded 200 in 2.5637 ms
+2026-06-11 11:42:53.913 +04:00 [INF] HTTP GET /api/Orders responded 200 in 3.4828 ms
+2026-06-11 11:42:54.420 +04:00 [INF] HTTP GET /api/Orders responded 200 in 6.5010 ms
+2026-06-11 11:42:55.950 +04:00 [INF] HTTP GET /api/Contact responded 200 in 3.5301 ms
+2026-06-11 11:42:56.448 +04:00 [INF] HTTP GET /api/Contact responded 200 in 2.9568 ms
+2026-06-11 11:42:57.764 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 4.9789 ms
+2026-06-11 11:42:58.259 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 2.9025 ms
+2026-06-11 11:42:59.635 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.1806 ms
+2026-06-11 11:42:59.638 +04:00 [INF] HTTP GET /api/Products responded 200 in 4.8670 ms
+2026-06-11 11:42:59.892 +04:00 [INF] HTTP GET /api/Products responded 200 in 6.0081 ms
+2026-06-11 11:43:00.132 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 1.6919 ms
+2026-06-11 11:43:00.134 +04:00 [INF] HTTP GET /api/Products responded 200 in 4.0664 ms
+2026-06-11 11:43:00.389 +04:00 [INF] HTTP GET /api/Products responded 200 in 3.1779 ms
+2026-06-11 11:43:01.846 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.5088 ms
+2026-06-11 11:43:01.846 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.1747 ms
+2026-06-11 11:43:02.091 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 4.2683 ms
+2026-06-11 11:43:02.343 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 1.9499 ms
+2026-06-11 11:43:02.344 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.3202 ms
+2026-06-11 11:43:02.588 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 2.7399 ms
+2026-06-11 11:43:03.512 +04:00 [INF] HTTP GET /api/Services responded 200 in 18.9084 ms
+2026-06-11 11:43:03.512 +04:00 [INF] HTTP GET /api/Services responded 200 in 19.0387 ms
+2026-06-11 11:43:04.017 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.7752 ms
+2026-06-11 11:43:04.017 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.6328 ms
+2026-06-11 11:43:05.262 +04:00 [INF] HTTP GET /api/Coupon responded 200 in 9.8404 ms
+2026-06-11 11:43:05.768 +04:00 [INF] HTTP GET /api/Coupon responded 200 in 6.7783 ms
+2026-06-11 11:43:06.964 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.2836 ms
+2026-06-11 11:43:07.461 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.6070 ms
+2026-06-11 11:43:08.734 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.2133 ms
+2026-06-11 11:43:08.735 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.2398 ms
+2026-06-11 11:43:09.313 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 2.8926 ms
+2026-06-11 11:43:09.316 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.0206 ms
+2026-06-11 11:43:44.157 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.9877 ms
+2026-06-11 11:47:07.850 +04:00 [INF] HTTP GET /api/Orders responded 200 in 84.3329 ms
+2026-06-11 11:47:07.897 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 4.0249 ms
+2026-06-11 11:47:07.935 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 169.7018 ms
+2026-06-11 11:47:07.945 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 49.4347 ms
+2026-06-11 11:47:07.968 +04:00 [INF] HTTP GET /api/Cart responded 200 in 4.3031 ms
+2026-06-11 11:47:07.972 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 10.1747 ms
+2026-06-11 11:47:07.974 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 11.9249 ms
+2026-06-11 11:47:08.310 +04:00 [INF] HTTP GET /api/Orders responded 200 in 10.6127 ms
+2026-06-11 11:47:08.351 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 2.7771 ms
+2026-06-11 11:47:08.513 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.5016 ms
+2026-06-11 11:47:08.524 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 4.9741 ms
+2026-06-11 11:47:08.550 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.0121 ms
+2026-06-11 11:47:08.606 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 21.4183 ms
+2026-06-11 11:47:08.612 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 19.4044 ms
+2026-06-11 11:47:09.531 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 12.1948 ms
+2026-06-11 11:47:09.987 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 5.6931 ms
+2026-06-11 11:47:13.632 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 5.1723 ms
+2026-06-11 11:47:14.374 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 6.0875 ms
+2026-06-11 11:47:17.142 +04:00 [INF] HTTP GET /api/Products responded 200 in 12.9878 ms
+2026-06-11 11:47:17.143 +04:00 [INF] HTTP GET /api/Products responded 200 in 15.0109 ms
+2026-06-11 11:47:17.357 +04:00 [INF] HTTP GET /api/ProductCategories responded 200 in 2.2424 ms
+2026-06-11 11:47:21.777 +04:00 [WRN] The foreign key property 'Veterinarian.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2026-06-11 11:50:34.473 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 277.3112 ms
+2026-06-11 11:50:34.940 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 17.3113 ms
+2026-06-11 11:52:00.922 +04:00 [INF] HTTP GET /api/Contact responded 200 in 296.5484 ms
+2026-06-11 11:52:01.382 +04:00 [INF] HTTP GET /api/Contact responded 200 in 11.9251 ms
+2026-06-11 11:52:02.464 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 54.7956 ms
+2026-06-11 11:52:08.614 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 235.5024 ms
+2026-06-11 11:52:08.667 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 4.0768 ms
+2026-06-11 11:52:08.771 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 99.6581 ms
+2026-06-11 11:52:08.794 +04:00 [INF] HTTP GET /api/Cart responded 200 in 138.5940 ms
+2026-06-11 11:52:08.810 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 430.4834 ms
+2026-06-11 11:52:08.868 +04:00 [INF] HTTP GET /api/Orders responded 200 in 214.5782 ms
+2026-06-11 11:52:08.982 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 225.2177 ms
+2026-06-11 11:52:09.065 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 7.7484 ms
+2026-06-11 11:52:09.114 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 6.9765 ms
+2026-06-11 11:52:09.228 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 9.5728 ms
+2026-06-11 11:52:09.249 +04:00 [INF] HTTP GET /api/Cart responded 200 in 9.8523 ms
+2026-06-11 11:52:09.284 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 13.8402 ms
+2026-06-11 11:52:09.341 +04:00 [INF] HTTP GET /api/Orders responded 200 in 21.3779 ms
+2026-06-11 11:52:09.457 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 20.0496 ms
+2026-06-11 11:52:10.399 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 146.5468 ms
+2026-06-11 11:52:10.871 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 24.7144 ms
+2026-06-11 11:52:13.362 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 12.1983 ms
+2026-06-11 11:52:13.421 +04:00 [INF] HTTP GET /api/Cart responded 200 in 13.4579 ms
+2026-06-11 11:52:13.662 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 29.0986 ms
+2026-06-11 11:52:13.712 +04:00 [INF] HTTP GET /api/products responded 200 in 78.6022 ms
+2026-06-11 11:52:13.897 +04:00 [INF] HTTP GET /api/Services responded 200 in 32.9249 ms
+2026-06-11 11:52:13.923 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 10.8830 ms
+2026-06-11 11:52:13.939 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 10.3813 ms
+2026-06-11 11:52:13.942 +04:00 [INF] HTTP GET /api/Cart responded 200 in 10.0113 ms
+2026-06-11 11:52:13.945 +04:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-06-11 11:52:13.971 +04:00 [INF] HTTP GET /api/Pets responded 200 in 53.7531 ms
+2026-06-11 11:52:14.011 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 96.5211 ms
+2026-06-11 11:52:14.110 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 7.0575 ms
+2026-06-11 11:52:14.167 +04:00 [INF] HTTP GET /api/products responded 200 in 9.2437 ms
+2026-06-11 11:52:14.345 +04:00 [INF] HTTP GET /api/Services responded 200 in 5.4467 ms
+2026-06-11 11:52:14.373 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.9644 ms
+2026-06-11 11:52:14.419 +04:00 [INF] HTTP GET /api/Pets responded 200 in 4.5839 ms
+2026-06-11 11:52:14.561 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 4.7331 ms
+2026-06-11 11:52:27.632 +04:00 [INF] HTTP POST /api/Contact responded 200 in 270.6055 ms
+2026-06-11 11:52:36.377 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 10.9658 ms
+2026-06-11 11:52:36.628 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 16.2493 ms
+2026-06-11 11:52:36.746 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.1105 ms
+2026-06-11 11:52:36.838 +04:00 [INF] HTTP GET /api/Orders responded 200 in 8.7204 ms
+2026-06-11 11:52:36.947 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.4076 ms
+2026-06-11 11:52:36.954 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 3.7752 ms
+2026-06-11 11:52:36.958 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 6.9679 ms
+2026-06-11 11:52:36.970 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 17.6194 ms
+2026-06-11 11:52:37.077 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 4.8445 ms
+2026-06-11 11:52:37.196 +04:00 [INF] HTTP GET /api/Cart responded 200 in 4.5214 ms
+2026-06-11 11:52:37.293 +04:00 [INF] HTTP GET /api/Orders responded 200 in 8.1743 ms
+2026-06-11 11:52:37.392 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.7299 ms
+2026-06-11 11:52:37.401 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 2.9924 ms
+2026-06-11 11:52:37.508 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 4.5034 ms
+2026-06-11 11:52:38.237 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 25.1373 ms
+2026-06-11 11:52:38.697 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 13.5319 ms
+2026-06-11 11:52:38.851 +04:00 [INF] HTTP GET /api/Contact responded 200 in 3.1186 ms
+2026-06-11 11:52:39.304 +04:00 [INF] HTTP GET /api/Contact responded 200 in 4.0036 ms
+2026-06-11 11:52:39.890 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 8.0907 ms
+2026-06-11 11:52:41.742 +04:00 [INF] HTTP PATCH /api/Contact/15/read responded 200 in 69.1369 ms
+2026-06-11 11:52:49.298 +04:00 [INF] HTTP POST /api/Contact/15/reply responded 200 in 2273.9747 ms
+2026-06-11 11:52:54.440 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 5.4341 ms
+2026-06-11 11:52:54.443 +04:00 [INF] HTTP GET /api/products responded 200 in 7.0569 ms
+2026-06-11 11:52:54.646 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.6375 ms
+2026-06-11 11:52:54.652 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.4375 ms
+2026-06-11 11:52:54.707 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.5767 ms
+2026-06-11 11:52:54.781 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 41.2503 ms
+2026-06-11 11:52:54.781 +04:00 [INF] HTTP GET /api/Services responded 200 in 43.5347 ms
+2026-06-11 11:52:54.781 +04:00 [INF] HTTP GET /api/Pets responded 200 in 42.8343 ms
+2026-06-11 11:52:54.888 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.6429 ms
+2026-06-11 11:52:54.893 +04:00 [INF] HTTP GET /api/products responded 200 in 4.4029 ms
+2026-06-11 11:52:55.098 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.1386 ms
+2026-06-11 11:52:55.101 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.0114 ms
+2026-06-11 11:52:55.157 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.5293 ms
+2026-06-11 11:52:55.225 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 1.2045 ms
+2026-06-11 11:52:55.306 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.1761 ms
+2026-06-11 11:52:55.312 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.1187 ms
+2026-06-11 11:53:02.202 +04:00 [INF] HTTP GET /api/Notifications responded 200 in 36.7772 ms
+2026-06-11 11:53:06.618 +04:00 [INF] HTTP PATCH /api/Notifications/38/read responded 200 in 35.3162 ms
+2026-06-11 11:53:10.094 +04:00 [INF] HTTP PATCH /api/Notifications/37/read responded 200 in 9.9658 ms
+2026-06-11 11:53:11.132 +04:00 [INF] HTTP PATCH /api/Notifications/36/read responded 200 in 5.7495 ms
+2026-06-11 11:53:58.313 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 4.1104 ms
+2026-06-11 11:54:54.887 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 5.5162 ms
+2026-06-11 11:55:12.754 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 8.2814 ms
+2026-06-11 11:55:12.894 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 6.7760 ms
+2026-06-11 11:55:12.968 +04:00 [INF] HTTP GET /api/Orders responded 200 in 7.9283 ms
+2026-06-11 11:55:13.090 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 2.4013 ms
+2026-06-11 11:55:13.099 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 6.0908 ms
+2026-06-11 11:55:13.103 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 3.2610 ms
+2026-06-11 11:55:13.130 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.4235 ms
+2026-06-11 11:55:13.215 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 12.8138 ms
+2026-06-11 11:55:13.361 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 19.0692 ms
+2026-06-11 11:55:13.454 +04:00 [INF] HTTP GET /api/Orders responded 200 in 6.5707 ms
+2026-06-11 11:55:13.696 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 6.0454 ms
+2026-06-11 11:55:13.696 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 3.3145 ms
+2026-06-11 11:55:13.838 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.6824 ms
+2026-06-11 11:55:13.838 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.1255 ms
+2026-06-11 11:55:14.407 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 10.2295 ms
+2026-06-11 11:55:14.881 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 10.2605 ms
+2026-06-11 11:55:17.061 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.3615 ms
+2026-06-11 11:55:17.516 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.9755 ms
+2026-06-11 11:55:33.816 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.8416 ms
+2026-06-11 11:55:33.818 +04:00 [INF] HTTP GET /api/products responded 200 in 3.9339 ms
+2026-06-11 11:55:34.022 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 1.4188 ms
+2026-06-11 11:55:34.034 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.4860 ms
+2026-06-11 11:55:34.066 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2163 ms
+2026-06-11 11:55:34.081 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.3739 ms
+2026-06-11 11:55:34.082 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.8350 ms
+2026-06-11 11:55:34.088 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 1.4311 ms
+2026-06-11 11:55:34.260 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.7100 ms
+2026-06-11 11:55:34.270 +04:00 [INF] HTTP GET /api/products responded 200 in 5.3423 ms
+2026-06-11 11:55:34.471 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 3.3576 ms
+2026-06-11 11:55:34.484 +04:00 [INF] HTTP GET /api/Cart responded 200 in 4.3729 ms
+2026-06-11 11:55:34.520 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.6830 ms
+2026-06-11 11:55:34.661 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.4334 ms
+2026-06-11 11:55:34.662 +04:00 [INF] HTTP GET /api/Services responded 200 in 1.2322 ms
+2026-06-11 11:55:34.677 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.0326 ms
+2026-06-11 11:55:48.163 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 83.9662 ms
+2026-06-11 11:55:48.182 +04:00 [INF] HTTP GET /api/blog responded 200 in 99.9528 ms
+2026-06-11 11:55:48.616 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 7.3345 ms
+2026-06-11 11:55:48.636 +04:00 [INF] HTTP GET /api/blog responded 200 in 5.2083 ms
+2026-06-11 11:56:01.275 +04:00 [INF] HTTP GET /favicon.ico responded 404 in 0.0655 ms
+2026-06-11 11:56:34.482 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.7849 ms
+2026-06-11 11:57:34.993 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 40.8672 ms
+2026-06-11 11:58:34.489 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.9846 ms
+2026-06-11 11:59:34.541 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.8285 ms
+2026-06-11 12:00:35.228 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.0279 ms
+2026-06-11 12:01:35.734 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.9696 ms
+2026-06-11 12:02:57.119 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 79.1390 ms
+2026-06-11 12:03:56.489 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.3452 ms
+2026-06-11 12:04:56.516 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 4.4513 ms
+2026-06-11 12:05:57.036 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.0106 ms
+2026-06-11 12:06:56.979 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.2942 ms
+2026-06-11 12:07:56.518 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.3177 ms
+2026-06-11 12:08:56.557 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 71.2669 ms
+2026-06-11 12:09:56.900 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.7850 ms
+2026-06-11 12:10:56.492 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.1244 ms
+2026-06-11 12:11:56.891 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.2623 ms
+2026-06-11 12:12:56.879 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.0885 ms
+2026-06-11 12:13:56.487 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.1188 ms
+2026-06-11 12:14:56.971 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 70.8924 ms
+2026-06-11 12:15:56.481 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.8002 ms
+2026-06-11 12:16:56.476 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.4760 ms
+2026-06-11 12:17:56.906 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.0797 ms
+2026-06-11 12:18:56.883 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.7158 ms
+2026-06-11 12:19:56.482 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.7496 ms
+2026-06-11 12:20:57.066 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 88.7585 ms
+2026-06-11 12:21:56.508 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.1218 ms
+2026-06-11 12:22:57.120 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.7941 ms
+2026-06-11 12:23:56.529 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.1378 ms
+2026-06-11 12:24:56.913 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.1871 ms
+2026-06-11 12:25:56.489 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.5229 ms
+2026-06-11 12:26:56.554 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 84.0890 ms
+2026-06-11 12:27:56.473 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.4986 ms
+2026-06-11 12:28:56.883 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.9433 ms
+2026-06-11 12:29:56.477 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.5782 ms
+2026-06-11 12:30:56.479 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 4.3055 ms
+2026-06-11 12:31:56.922 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 61.1187 ms
+2026-06-11 12:32:56.481 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.6876 ms
+2026-06-11 12:33:56.462 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.3878 ms
+2026-06-11 12:34:56.863 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.7560 ms
+2026-06-11 12:46:04.668 +04:00 [INF] HTTP GET /api/blog responded 200 in 197.2114 ms
+2026-06-11 12:46:04.677 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 58.1419 ms
+2026-06-11 12:46:15.457 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 2.5354 ms
+2026-06-11 12:46:15.467 +04:00 [INF] HTTP GET /api/blog responded 200 in 11.9154 ms
+2026-06-11 12:49:44.588 +04:00 [WRN] The foreign key property 'Veterinarian.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2026-06-11 12:51:52.051 +04:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-06-11 12:51:52.255 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 237.7882 ms
+2026-06-11 12:51:52.320 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 325.9991 ms
+2026-06-11 12:51:52.509 +04:00 [INF] HTTP GET /api/blog responded 200 in 794.1467 ms
+2026-06-11 12:51:52.708 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 5.2357 ms
+2026-06-11 12:51:52.787 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 13.8541 ms
+2026-06-11 12:51:52.976 +04:00 [INF] HTTP GET /api/blog responded 200 in 15.0502 ms
+2026-06-11 12:54:19.346 +04:00 [INF] HTTP GET /api/blog responded 200 in 63.2854 ms
+2026-06-11 12:54:19.428 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 8.4316 ms
+2026-06-11 12:54:19.638 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 11.6816 ms
+2026-06-11 12:54:19.805 +04:00 [INF] HTTP GET /api/blog responded 200 in 13.5082 ms
+2026-06-11 12:54:19.883 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 4.9090 ms
+2026-06-11 12:54:20.206 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 8.6669 ms
+2026-06-11 12:55:58.444 +04:00 [WRN] The foreign key property 'Veterinarian.UserId1' was created in shadow state because a conflicting property with the simple name 'UserId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2026-06-11 12:56:23.935 +04:00 [WRN] The query uses the 'First'/'FirstOrDefault' operator without 'OrderBy' and filter operators. This may lead to unpredictable results.
+2026-06-11 12:56:24.155 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 408.2134 ms
+2026-06-11 12:56:24.245 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 429.2323 ms
+2026-06-11 12:56:24.410 +04:00 [INF] HTTP GET /api/blog responded 200 in 594.4726 ms
+2026-06-11 12:56:24.660 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 8.6779 ms
+2026-06-11 12:56:38.496 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 25.4055 ms
+2026-06-11 12:56:38.998 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 4.4770 ms
+2026-06-11 12:56:52.951 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 3.1050 ms
+2026-06-11 12:56:53.042 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 117.1552 ms
+2026-06-11 12:56:53.047 +04:00 [INF] HTTP GET /api/Services responded 200 in 89.3760 ms
+2026-06-11 12:56:53.149 +04:00 [INF] HTTP GET /api/products responded 200 in 224.0192 ms
+2026-06-11 12:56:53.454 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 3.3858 ms
+2026-06-11 12:56:53.568 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 6.0827 ms
+2026-06-11 12:56:53.571 +04:00 [INF] HTTP GET /api/Services responded 200 in 8.6833 ms
+2026-06-11 12:56:53.685 +04:00 [INF] HTTP GET /api/products responded 200 in 20.8903 ms
+2026-06-11 12:57:05.503 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 342.7338 ms
+2026-06-11 12:57:05.503 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 343.9140 ms
+2026-06-11 12:57:06.570 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 3.6567 ms
+2026-06-11 12:57:06.610 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 42.8094 ms
+2026-06-11 12:57:06.616 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 48.4844 ms
+2026-06-11 12:57:06.699 +04:00 [INF] HTTP GET /api/Cart responded 200 in 131.6865 ms
+2026-06-11 12:57:06.874 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 47.5994 ms
+2026-06-11 12:57:06.950 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 122.4222 ms
+2026-06-11 12:57:06.997 +04:00 [INF] HTTP GET /api/Orders responded 200 in 196.1116 ms
+2026-06-11 12:57:07.107 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 279.8372 ms
+2026-06-11 12:57:07.108 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 281.9325 ms
+2026-06-11 12:57:07.378 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 6.2106 ms
+2026-06-11 12:57:07.468 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 16.4166 ms
+2026-06-11 12:57:07.546 +04:00 [INF] HTTP GET /api/Orders responded 200 in 30.8097 ms
+2026-06-11 12:57:07.639 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 24.5798 ms
+2026-06-11 12:57:07.639 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 22.5553 ms
+2026-06-11 12:57:08.718 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 163.9011 ms
+2026-06-11 12:57:09.267 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 18.5755 ms
+2026-06-11 12:57:12.731 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 5.2125 ms
+2026-06-11 12:57:12.739 +04:00 [INF] HTTP GET /api/products responded 200 in 13.4728 ms
+2026-06-11 12:57:12.750 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 6.5301 ms
+2026-06-11 12:57:12.752 +04:00 [INF] HTTP GET /api/Services responded 200 in 8.2590 ms
+2026-06-11 12:57:12.997 +04:00 [INF] HTTP GET /api/Cart responded 200 in 13.6417 ms
+2026-06-11 12:57:12.997 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 8.9414 ms
+2026-06-11 12:57:13.009 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 13.9639 ms
+2026-06-11 12:57:13.050 +04:00 [INF] HTTP GET /api/Pets responded 200 in 55.6279 ms
+2026-06-11 12:57:13.232 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 5.4424 ms
+2026-06-11 12:57:13.246 +04:00 [INF] HTTP GET /api/products responded 200 in 11.2093 ms
+2026-06-11 12:57:13.265 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.6573 ms
+2026-06-11 12:57:13.270 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 6.0403 ms
+2026-06-11 12:57:13.501 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.7503 ms
+2026-06-11 12:57:13.512 +04:00 [INF] HTTP GET /api/Cart responded 200 in 13.2712 ms
+2026-06-11 12:57:13.521 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 12.8678 ms
+2026-06-11 12:57:13.553 +04:00 [INF] HTTP GET /api/Pets responded 200 in 4.6153 ms
+2026-06-11 12:57:15.495 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 21.8494 ms
+2026-06-11 12:57:15.498 +04:00 [INF] HTTP GET /api/blog responded 200 in 25.0802 ms
+2026-06-11 12:57:16.017 +04:00 [INF] HTTP GET /api/blog responded 200 in 13.4259 ms
+2026-06-11 12:57:16.018 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 13.7606 ms
+2026-06-11 12:57:58.903 +04:00 [ERR] HTTP POST /api/blog responded 500 in 789.5326 ms
+System.ArgumentException: Başlıq 10-150 simvol arasında olmalıdır.
+   at PetCareMini.Persistence.Services.BlogPostService.CreateAsync(Int32 userId, BlogPostCreateDto dto) in C:\Users\ASUS\Desktop\yoxlama\Persistence\PetCareMini.Persistence\Services\BlogPostService.cs:line 73
+   at PetCareMini.WebApi.Controllers.BlogController.Create(BlogPostCreateDto dto) in C:\Users\ASUS\Desktop\yoxlama\WebApi\PetCareMini.WebApi\Controllers\BlogController.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-11 12:57:58.974 +04:00 [ERR] Unhandled exception: Başlıq 10-150 simvol arasında olmalıdır.
+System.ArgumentException: Başlıq 10-150 simvol arasında olmalıdır.
+   at PetCareMini.Persistence.Services.BlogPostService.CreateAsync(Int32 userId, BlogPostCreateDto dto) in C:\Users\ASUS\Desktop\yoxlama\Persistence\PetCareMini.Persistence\Services\BlogPostService.cs:line 73
+   at PetCareMini.WebApi.Controllers.BlogController.Create(BlogPostCreateDto dto) in C:\Users\ASUS\Desktop\yoxlama\WebApi\PetCareMini.WebApi\Controllers\BlogController.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Desktop\yoxlama\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-11 12:58:12.746 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 12.4539 ms
+2026-06-11 12:58:21.265 +04:00 [INF] HTTP POST /api/blog responded 201 in 2719.8238 ms
+2026-06-11 12:58:30.296 +04:00 [INF] HTTP GET /api/Notifications responded 200 in 56.1233 ms
+2026-06-11 12:58:39.358 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 13.0987 ms
+2026-06-11 12:58:39.361 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 16.4965 ms
+2026-06-11 12:58:39.374 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 10.8768 ms
+2026-06-11 12:58:39.376 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 13.3335 ms
+2026-06-11 12:58:39.395 +04:00 [INF] HTTP GET /api/Orders responded 200 in 17.0401 ms
+2026-06-11 12:58:39.604 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.6112 ms
+2026-06-11 12:58:39.608 +04:00 [INF] HTTP GET /api/Cart responded 200 in 5.7082 ms
+2026-06-11 12:58:39.863 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 6.6730 ms
+2026-06-11 12:58:39.864 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 8.3799 ms
+2026-06-11 12:58:39.872 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 1.8291 ms
+2026-06-11 12:58:39.881 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 11.7535 ms
+2026-06-11 12:58:39.903 +04:00 [INF] HTTP GET /api/Orders responded 200 in 5.5220 ms
+2026-06-11 12:58:40.114 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.4200 ms
+2026-06-11 12:58:40.115 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.1571 ms
+2026-06-11 12:58:40.434 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 13.4883 ms
+2026-06-11 12:58:40.943 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 11.9392 ms
+2026-06-11 12:58:42.088 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 7.0490 ms
+2026-06-11 12:58:42.582 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 4.5647 ms
+2026-06-11 12:58:42.602 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 6.9974 ms
+2026-06-11 12:58:43.088 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 5.7333 ms
+2026-06-11 13:02:30.819 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 98.0828 ms
+2026-06-11 13:02:30.829 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 108.4507 ms
+2026-06-11 13:02:30.833 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 102.9452 ms
+2026-06-11 13:02:30.835 +04:00 [INF] HTTP GET /api/Orders responded 200 in 104.7436 ms
+2026-06-11 13:02:30.838 +04:00 [INF] HTTP GET /api/Cart responded 200 in 95.3768 ms
+2026-06-11 13:02:30.844 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 103.4491 ms
+2026-06-11 13:02:30.959 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 9.9318 ms
+2026-06-11 13:02:31.323 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 4.5078 ms
+2026-06-11 13:02:31.348 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 18.3273 ms
+2026-06-11 13:02:31.358 +04:00 [INF] HTTP GET /api/Cart responded 200 in 8.7479 ms
+2026-06-11 13:02:31.366 +04:00 [INF] HTTP GET /api/Orders responded 200 in 16.8589 ms
+2026-06-11 13:02:31.371 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 20.8566 ms
+2026-06-11 13:02:31.374 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 25.0391 ms
+2026-06-11 13:02:31.582 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 6.9626 ms
+2026-06-11 13:02:32.421 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 31.3640 ms
+2026-06-11 13:02:32.939 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 19.1287 ms
+2026-06-11 13:02:32.969 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 32.8152 ms
+2026-06-11 13:02:33.438 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 12.4925 ms
+2026-06-11 13:02:33.468 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 23.9785 ms
+2026-06-11 13:02:33.939 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 4.9367 ms
+2026-06-11 13:16:06.969 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-11 13:16:07.192 +04:00 [INF] HTTP PATCH /api/blog/admin/21/approve responded 200 in 269.8166 ms
+2026-06-11 13:16:08.211 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.6895 ms
+2026-06-11 13:16:13.239 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 7.3144 ms
+2026-06-11 13:16:13.265 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 4.6415 ms
+2026-06-11 13:16:13.331 +04:00 [INF] HTTP GET /api/blog responded 200 in 68.0113 ms
+2026-06-11 13:16:13.512 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 3.2650 ms
+2026-06-11 13:16:13.516 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.7149 ms
+2026-06-11 13:16:13.571 +04:00 [INF] HTTP GET /api/Cart responded 200 in 62.1986 ms
+2026-06-11 13:16:13.739 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.1557 ms
+2026-06-11 13:16:13.767 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 4.7723 ms
+2026-06-11 13:16:13.852 +04:00 [INF] HTTP GET /api/blog responded 200 in 25.0704 ms
+2026-06-11 13:16:14.013 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 1.7593 ms
+2026-06-11 13:16:14.013 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 2.2868 ms
+2026-06-11 13:16:14.072 +04:00 [INF] HTTP GET /api/Cart responded 200 in 2.7664 ms
+2026-06-11 13:16:15.982 +04:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-11 13:16:16.115 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 174.1639 ms
+2026-06-11 13:16:16.634 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 22.7593 ms
+2026-06-11 13:16:18.351 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 6.0179 ms
+2026-06-11 13:16:18.352 +04:00 [INF] HTTP GET /api/blog responded 200 in 7.4535 ms
+2026-06-11 13:16:18.854 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.9911 ms
+2026-06-11 13:16:18.858 +04:00 [INF] HTTP GET /api/blog responded 200 in 7.2678 ms
+2026-06-11 13:17:13.809 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 8.3104 ms
+2026-06-11 13:17:13.818 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 17.1203 ms
+2026-06-11 13:17:14.331 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 12.0069 ms
+2026-06-11 13:18:13.529 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 6.4499 ms
+2026-06-11 13:18:46.136 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 5.7328 ms
+2026-06-11 13:18:46.139 +04:00 [INF] HTTP GET /api/blog responded 200 in 8.4057 ms
+2026-06-11 13:18:47.034 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.6539 ms
+2026-06-11 13:18:47.280 +04:00 [INF] HTTP GET /api/blog responded 200 in 6.2617 ms
+2026-06-11 13:18:49.348 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 14.2711 ms
+2026-06-11 13:18:50.109 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 13.9589 ms
+2026-06-11 13:19:01.871 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 23.7689 ms
+2026-06-11 13:19:02.347 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 18.7304 ms
+2026-06-11 13:19:02.360 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 7.5714 ms
+2026-06-11 13:19:02.367 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.4133 ms
+2026-06-11 13:19:02.590 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 7.0802 ms
+2026-06-11 13:19:02.606 +04:00 [INF] HTTP GET /api/Orders responded 200 in 21.3591 ms
+2026-06-11 13:19:02.610 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 7.9949 ms
+2026-06-11 13:19:02.612 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 9.0884 ms
+2026-06-11 13:19:03.087 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 6.8944 ms
+2026-06-11 13:19:03.093 +04:00 [INF] HTTP GET /api/Cart responded 200 in 4.1369 ms
+2026-06-11 13:19:03.100 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 19.1744 ms
+2026-06-11 13:19:03.309 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.5810 ms
+2026-06-11 13:19:03.317 +04:00 [INF] HTTP GET /api/Orders responded 200 in 13.2393 ms
+2026-06-11 13:19:03.336 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.0089 ms
+2026-06-11 13:19:03.851 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 24.8048 ms
+2026-06-11 13:19:04.360 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 11.1616 ms
+2026-06-11 13:19:04.846 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.0794 ms
+2026-06-11 13:19:05.341 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 2.9531 ms
+2026-06-11 13:19:05.351 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 8.7630 ms
+2026-06-11 13:19:05.845 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.8153 ms
+2026-06-11 13:19:07.610 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 11.5741 ms
+2026-06-11 13:19:09.805 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 25.1851 ms
+2026-06-11 13:21:46.129 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 67.2691 ms
+2026-06-11 13:21:46.138 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 76.8160 ms
+2026-06-11 13:24:02.691 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 34.9899 ms
+2026-06-11 13:24:03.212 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 12.6704 ms
+2026-06-11 13:24:46.168 +04:00 [ERR] HTTP POST /api/blog responded 500 in 1224.6251 ms
+System.ArgumentException: Məzmun 15-10,000 simvol arasında olmalıdır.
+   at PetCareMini.Persistence.Services.BlogPostService.CreateAsync(Int32 userId, BlogPostCreateDto dto) in C:\Users\ASUS\Desktop\yoxlama\Persistence\PetCareMini.Persistence\Services\BlogPostService.cs:line 83
+   at PetCareMini.WebApi.Controllers.BlogController.Create(BlogPostCreateDto dto) in C:\Users\ASUS\Desktop\yoxlama\WebApi\PetCareMini.WebApi\Controllers\BlogController.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-11 13:24:46.185 +04:00 [ERR] Unhandled exception: Məzmun 15-10,000 simvol arasında olmalıdır.
+System.ArgumentException: Məzmun 15-10,000 simvol arasında olmalıdır.
+   at PetCareMini.Persistence.Services.BlogPostService.CreateAsync(Int32 userId, BlogPostCreateDto dto) in C:\Users\ASUS\Desktop\yoxlama\Persistence\PetCareMini.Persistence\Services\BlogPostService.cs:line 83
+   at PetCareMini.WebApi.Controllers.BlogController.Create(BlogPostCreateDto dto) in C:\Users\ASUS\Desktop\yoxlama\WebApi\PetCareMini.WebApi\Controllers\BlogController.cs:line 60
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Desktop\yoxlama\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-11 13:25:04.641 +04:00 [INF] HTTP POST /api/blog responded 201 in 2245.2524 ms
+2026-06-11 13:25:05.668 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 7.1356 ms
+2026-06-11 13:25:10.224 +04:00 [INF] HTTP PATCH /api/blog/admin/22/approve responded 200 in 22.3923 ms
+2026-06-11 13:25:11.241 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 5.8041 ms
+2026-06-11 13:25:18.317 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 5.1149 ms
+2026-06-11 13:25:18.318 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.9897 ms
+2026-06-11 13:25:18.326 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 2.8900 ms
+2026-06-11 13:25:18.334 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 12.1122 ms
+2026-06-11 13:25:18.391 +04:00 [INF] HTTP GET /api/Cart responded 200 in 67.6140 ms
+2026-06-11 13:25:18.396 +04:00 [INF] HTTP GET /api/blog responded 200 in 81.8220 ms
+2026-06-11 13:25:18.845 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 27.2392 ms
+2026-06-11 13:25:18.846 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 28.3345 ms
+2026-06-11 13:25:18.853 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 3.5018 ms
+2026-06-11 13:25:18.855 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 4.8233 ms
+2026-06-11 13:25:18.907 +04:00 [INF] HTTP GET /api/blog responded 200 in 6.5552 ms
+2026-06-11 13:25:18.908 +04:00 [INF] HTTP GET /api/Cart responded 200 in 7.4045 ms
+2026-06-11 13:25:22.526 +04:00 [INF] HTTP GET /api/blog/lunanin-heyati responded 200 in 35.8490 ms
+2026-06-11 13:25:23.045 +04:00 [INF] HTTP GET /api/blog/lunanin-heyati responded 200 in 21.8892 ms
+2026-06-11 13:25:34.526 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 17.6468 ms
+2026-06-11 13:25:34.531 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 23.0740 ms
+2026-06-11 13:25:34.562 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 7.7340 ms
+2026-06-11 13:25:34.571 +04:00 [INF] HTTP GET /api/Orders responded 200 in 16.9514 ms
+2026-06-11 13:25:34.797 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 5.9846 ms
+2026-06-11 13:25:34.797 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.8287 ms
+2026-06-11 13:25:34.803 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 10.0400 ms
+2026-06-11 13:25:35.060 +04:00 [INF] HTTP GET /api/veterinary-reviews responded 200 in 8.8919 ms
+2026-06-11 13:25:35.075 +04:00 [INF] HTTP GET /api/Appointments responded 200 in 24.6018 ms
+2026-06-11 13:25:35.083 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 8.7843 ms
+2026-06-11 13:25:35.093 +04:00 [INF] HTTP GET /api/Orders responded 200 in 12.4153 ms
+2026-06-11 13:25:35.321 +04:00 [INF] HTTP GET /api/Contact/unread responded 200 in 1.3752 ms
+2026-06-11 13:25:35.321 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 1.1553 ms
+2026-06-11 13:25:35.322 +04:00 [INF] HTTP GET /api/Cart responded 200 in 1.4835 ms
+2026-06-11 13:25:35.855 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 26.8653 ms
+2026-06-11 13:25:36.386 +04:00 [INF] HTTP GET /api/Admin/statistics responded 200 in 21.9524 ms
+2026-06-11 13:25:37.247 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 6.3550 ms
+2026-06-11 13:25:37.741 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 4.2359 ms
+2026-06-11 13:25:37.753 +04:00 [INF] HTTP GET /api/blog/admin/all responded 200 in 8.2216 ms
+2026-06-11 13:25:38.254 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 3.2888 ms
+2026-06-11 13:25:40.227 +04:00 [INF] HTTP GET /api/blog/lunalunalunalunalunaluna responded 200 in 16.3304 ms
+2026-06-11 13:25:44.771 +04:00 [INF] HTTP GET /api/blog/lunanin-heyati responded 200 in 17.3095 ms
+2026-06-11 13:28:01.699 +04:00 [INF] HTTP POST /api/Auth/login responded 200 in 19.2107 ms
+2026-06-11 13:28:26.625 +04:00 [INF] HTTP GET /api/products responded 200 in 10.9350 ms
+2026-06-11 13:28:26.625 +04:00 [INF] HTTP GET /api/Pets responded 200 in 11.3990 ms
+2026-06-11 13:28:26.703 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 80.5256 ms
+2026-06-11 13:28:26.851 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 7.8881 ms
+2026-06-11 13:28:26.856 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 2.4706 ms
+2026-06-11 13:28:26.857 +04:00 [INF] HTTP GET /api/Services responded 200 in 4.9273 ms
+2026-06-11 13:28:26.858 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 5.7951 ms
+2026-06-11 13:28:26.890 +04:00 [INF] HTTP GET /api/Cart responded 200 in 3.2281 ms
+2026-06-11 13:28:27.125 +04:00 [INF] HTTP GET /api/Pets responded 200 in 2.2262 ms
+2026-06-11 13:28:27.132 +04:00 [INF] HTTP GET /api/products responded 200 in 10.6368 ms
+2026-06-11 13:28:27.237 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 6.0600 ms
+2026-06-11 13:28:27.375 +04:00 [INF] HTTP GET /api/Services responded 200 in 2.4386 ms
+2026-06-11 13:28:27.379 +04:00 [INF] HTTP GET /api/contact-info responded 200 in 2.0816 ms
+2026-06-11 13:28:27.379 +04:00 [INF] HTTP GET /api/Veterinarians responded 200 in 2.6868 ms
+2026-06-11 13:28:27.380 +04:00 [INF] HTTP GET /api/Wishlist responded 200 in 9.4341 ms
+2026-06-11 13:28:27.390 +04:00 [INF] HTTP GET /api/Cart responded 200 in 6.7149 ms
+2026-06-11 13:28:28.502 +04:00 [INF] HTTP GET /api/blog responded 200 in 6.4119 ms
+2026-06-11 13:28:28.514 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 16.3942 ms
+2026-06-11 13:28:29.005 +04:00 [INF] HTTP GET /api/blog responded 200 in 4.9343 ms
+2026-06-11 13:28:29.012 +04:00 [INF] HTTP GET /api/blog-categories responded 200 in 2.5149 ms
+2026-06-11 13:28:30.792 +04:00 [INF] HTTP GET /api/blog/lunanin-heyati responded 200 in 27.1749 ms
+2026-06-11 13:28:31.345 +04:00 [INF] HTTP GET /api/blog/lunanin-heyati responded 200 in 16.8803 ms
+2026-06-11 13:28:40.099 +04:00 [ERR] HTTP GET /api/blog/unanin-heyati responded 500 in 19.8280 ms
+System.Collections.Generic.KeyNotFoundException: Post 'unanin-heyati' tapılmadı.
+   at PetCareMini.Persistence.Services.BlogPostService.GetBySlugAsync(String slug, String lang) in C:\Users\ASUS\Desktop\yoxlama\Persistence\PetCareMini.Persistence\Services\BlogPostService.cs:line 53
+   at PetCareMini.WebApi.Controllers.BlogController.GetBySlug(String slug, String lang) in C:\Users\ASUS\Desktop\yoxlama\WebApi\PetCareMini.WebApi\Controllers\BlogController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-11 13:28:40.108 +04:00 [ERR] Unhandled exception: Post 'unanin-heyati' tapılmadı.
+System.Collections.Generic.KeyNotFoundException: Post 'unanin-heyati' tapılmadı.
+   at PetCareMini.Persistence.Services.BlogPostService.GetBySlugAsync(String slug, String lang) in C:\Users\ASUS\Desktop\yoxlama\Persistence\PetCareMini.Persistence\Services\BlogPostService.cs:line 53
+   at PetCareMini.WebApi.Controllers.BlogController.GetBySlug(String slug, String lang) in C:\Users\ASUS\Desktop\yoxlama\WebApi\PetCareMini.WebApi\Controllers\BlogController.cs:line 39
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at PetCareMini.WebApi.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\ASUS\Desktop\yoxlama\WebApi\PetCareMini.WebApi\Middlewares\ExceptionMiddleware.cs:line 21
+2026-06-11 13:28:44.748 +04:00 [INF] HTTP GET /api/blog/lunanin-heyati responded 200 in 16.2213 ms
+2026-06-11 13:29:28.356 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.9171 ms
+2026-06-11 13:30:27.523 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 9.0644 ms
+2026-06-11 13:31:27.524 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 4.3171 ms
+2026-06-11 13:32:27.601 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 62.7637 ms
+2026-06-11 13:33:27.928 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.5614 ms
+2026-06-11 13:34:27.517 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.9978 ms
+2026-06-11 13:35:27.519 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.8151 ms
+2026-06-11 13:36:52.095 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.5802 ms
+2026-06-11 13:37:27.605 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.0597 ms
+2026-06-11 13:38:56.964 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 58.6865 ms
+2026-06-11 13:39:56.906 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.9806 ms
+2026-06-11 13:40:56.509 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.1781 ms
+2026-06-11 13:41:56.909 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.9762 ms
+2026-06-11 13:42:56.908 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.1940 ms
+2026-06-11 13:43:56.636 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.3525 ms
+2026-06-11 13:44:56.940 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 62.5486 ms
+2026-06-11 13:45:56.914 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.7029 ms
+2026-06-11 13:46:56.505 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.0082 ms
+2026-06-11 13:47:56.910 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 1.7872 ms
+2026-06-11 13:48:56.535 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.1418 ms
+2026-06-11 13:49:56.509 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.0271 ms
+2026-06-11 13:50:57.101 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 179.1739 ms
+2026-06-11 13:51:56.517 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 4.4678 ms
+2026-06-11 13:52:57.454 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.2167 ms
+2026-06-11 13:53:56.512 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.2699 ms
+2026-06-11 13:54:57.124 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 4.9043 ms
+2026-06-11 13:55:56.986 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.3490 ms
+2026-06-11 13:56:56.584 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 82.7632 ms
+2026-06-11 13:57:56.494 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.3969 ms
+2026-06-11 13:58:56.899 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 3.3714 ms
+2026-06-11 13:59:56.487 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.5548 ms
+2026-06-11 14:00:57.255 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 2.4956 ms
+2026-06-11 14:01:57.036 +04:00 [INF] HTTP GET /api/Notifications/unread-count responded 200 in 186.1526 ms
