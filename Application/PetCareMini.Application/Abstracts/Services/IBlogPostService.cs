@@ -6,6 +6,8 @@ public interface IBlogPostService
 {
     Task<List<BlogPostSummaryDto>> GetMyPostsAsync(int userId, string lang = "az");
     // Hamıya açıq
+
+  
     Task<List<BlogPostSummaryDto>> GetAllPublishedAsync(string lang = "az");
     Task<List<BlogPostSummaryDto>> GetByCategoryAsync(string categorySlug, string lang = "az");
     Task<BlogPostGetDto> GetBySlugAsync(string slug, string lang = "az");
@@ -13,6 +15,7 @@ public interface IBlogPostService
     // Login user
     Task CreateAsync(int userId, BlogPostCreateDto dto);
     Task UpdateAsync(int userId, int id, BlogPostUpdateDto dto);
+    // imzalar eyni qalır, dəyişən yoxdur
     Task DeleteAsync(int userId, int id, bool isAdmin = false);
 
     // Admin

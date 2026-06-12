@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -12,7 +13,8 @@ public class BlogPostCreateDto
     public string ContentEn { get; set; } = null!;
     public string SummaryAz { get; set; } = null!;
     public string SummaryEn { get; set; } = null!;
-    public string? CoverImageUrl { get; set; }
+    public IFormFile? CoverImage { get; set; }
+    
     public int CategoryId { get; set; }
     public List<int> TagIds { get; set; } = new();
 }
