@@ -272,6 +272,10 @@ public class BlogPostService : IBlogPostService
         ? p.TitleAz
         : p.TitleEn,
 
+        Content = lang == "az"
+        ? p.ContentAz
+        :p.ContentEn,
+
         Slug = lang == "az"
         ? p.SlugAz
         : p.SlugEn,
