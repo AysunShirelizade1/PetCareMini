@@ -24,10 +24,12 @@ public class ProductCreateDtoValidator : AbstractValidator<ProductCreateDto>
         RuleFor(x => x.CategoryId)
             .GreaterThan(0).WithMessage("A valid category must be selected.");
 
-        RuleFor(x => x.ImageUrl)
-            .MaximumLength(500).WithMessage("Image URL must not exceed 500 characters.")
-            .Must(url => url == null || url.StartsWith("http://") || url.StartsWith("https://"))
-            .WithMessage("Image URL must be a valid URL starting with http:// or https://.")
-            .When(x => x.ImageUrl != null);
+        RuleFor(x => x.Image)
+            .Must(file => file == null || file.Length <= 5 * 1024 * 1024)
+            .WithMessage("Image size must not exceed 5MB.")
+            .Must(file => file == null || new[] { ".jpg", ".jpeg", ".png", ".webp" }
+                .Contains(Path.GetExtension(file.FileName).ToLower()))
+            .WithMessage("Only .jpg, .jpeg, .png, .webp files are allowed.")
+            .When(x => x.Image != null);
     }
 }

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PetCareMini.Persistence.Contexts;
@@ -11,9 +12,11 @@ using PetCareMini.Persistence.Contexts;
 namespace PetCareMini.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260613155414_FixProductImageUrlColumnTypeNew")]
+    partial class FixProductImageUrlColumnTypeNew
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -552,7 +555,7 @@ namespace PetCareMini.Persistence.Migrations
                         {
                             Id = 1,
                             Address = "Germany — 785 15h Street, Office 478, Berlin",
-                            CreatedAt = new DateTime(2026, 6, 13, 19, 59, 26, 110, DateTimeKind.Local).AddTicks(3281),
+                            CreatedAt = new DateTime(2026, 6, 13, 19, 54, 13, 774, DateTimeKind.Local).AddTicks(4304),
                             Email = "hi@petfun.com",
                             PhoneNumber = "+00 12345678",
                             WorkingHours = "Monday - Friday: 9:30 AM - 5:00 PM"
@@ -1296,7 +1299,7 @@ namespace PetCareMini.Persistence.Migrations
                     b.HasOne("PetCareMini.Domain.Entities.BlogComment", "ParentComment")
                         .WithMany("Replies")
                         .HasForeignKey("ParentCommentId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.HasOne("PetCareMini.Domain.Entities.User", "User")
                         .WithMany()

@@ -53,7 +53,8 @@ public class BlogController : ControllerBase
 
     [HttpPost]
     [Authorize]
-    public async Task<IActionResult> Create([FromBody] BlogPostCreateDto dto)
+    public async Task<IActionResult> Create([FromForm] BlogPostCreateDto dto)
+
     {
         var userId = GetUserId();
         await _service.CreateAsync(userId, dto);
@@ -62,7 +63,8 @@ public class BlogController : ControllerBase
 
     [HttpPut("{id}")]
     [Authorize]
-    public async Task<IActionResult> Update(int id, [FromBody] BlogPostUpdateDto dto)
+    public async Task<IActionResult> Update(int id, [FromForm] BlogPostUpdateDto dto)
+
     {
         var userId = GetUserId();
         await _service.UpdateAsync(userId, id, dto);

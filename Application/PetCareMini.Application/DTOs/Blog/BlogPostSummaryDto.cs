@@ -7,7 +7,8 @@ public class BlogPostSummaryDto
     public string Title { get; set; } = null!;
     public string Slug { get; set; } = null!;
     public string Summary { get; set; } = null!;
-
+    public string Content { get; set; } = null!;
+    
     public string? CoverImageUrl { get; set; }
 
     public int ReadTimeMinutes { get; set; }

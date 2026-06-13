@@ -13,16 +13,20 @@ public class BlogPostService : IBlogPostService
     private readonly IBlogAuthorProfileRepository _profileRepo;
     private readonly INotificationService _notificationService;
 
+    private readonly ICloudinaryService _cloudinaryService;
+
     public BlogPostService(
         IBlogPostRepository repo,
         IBlogTagRepository tagRepo,
         IBlogAuthorProfileRepository profileRepo,
-        INotificationService notificationService)
+        INotificationService notificationService,
+        ICloudinaryService cloudinaryService)
     {
         _repo = repo;
         _tagRepo = tagRepo;
         _profileRepo = profileRepo;
         _notificationService = notificationService;
+        _cloudinaryService = cloudinaryService;
     }
 
     public async Task<List<BlogPostSummaryDto>> GetAllPublishedAsync(string lang = "az")
@@ -80,7 +84,12 @@ public class BlogPostService : IBlogPostService
         if (dto.ContentEn.Length < 15 || dto.ContentEn.Length > 10000)
             throw new ArgumentException("Content must be between 15 and 10,000 characters.");
         var tags = await _tagRepo.GetByIdsAsync(dto.TagIds);
-
+        string? coverImageUrl = null;
+        if (dto.CoverImage != null)
+        {
+            var (url, _) = await _cloudinaryService.UploadImageAsync(dto.CoverImage, "petcaremini/blogs");
+            coverImageUrl = url;
+        }
         var post = new BlogPost
         {
             TitleAz = dto.TitleAz,
@@ -91,7 +100,7 @@ public class BlogPostService : IBlogPostService
             ContentEn = dto.ContentEn,
             SummaryAz = dto.SummaryAz,
             SummaryEn = dto.SummaryEn,
-            CoverImageUrl = dto.CoverImageUrl,
+            CoverImageUrl = coverImageUrl,
             CategoryId = dto.CategoryId,
             AuthorId = userId,
             Status = BlogPostStatus.Pending,
@@ -144,7 +153,11 @@ public class BlogPostService : IBlogPostService
         post.ContentEn = dto.ContentEn;
         post.SummaryAz = dto.SummaryAz;
         post.SummaryEn = dto.SummaryEn;
-        post.CoverImageUrl = dto.CoverImageUrl;
+        if (dto.CoverImage != null)
+        {
+            var (url, _) = await _cloudinaryService.UploadImageAsync(dto.CoverImage, "petcaremini/blogs");
+            post.CoverImageUrl = url;
+        }
         post.CategoryId = dto.CategoryId;
         post.Status = BlogPostStatus.Pending;   
         post.ReadTimeMinutes = CalculateReadTime(dto.ContentAz);
@@ -258,6 +271,10 @@ public class BlogPostService : IBlogPostService
         Title = lang == "az"
         ? p.TitleAz
         : p.TitleEn,
+
+        Content = lang == "az"
+        ? p.ContentAz
+        :p.ContentEn,
 
         Slug = lang == "az"
         ? p.SlugAz
