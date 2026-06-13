@@ -1,4 +1,6 @@
-﻿using PetCareMini.Domain.Common;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using PetCareMini.Domain.Common;
 
 namespace PetCareMini.Domain.Entities;
 
@@ -12,10 +14,13 @@ public class Product : BaseEntity
 
     public decimal Price { get; set; }
     public decimal? DiscountPrice { get; set; }
-    
+
     public bool HasDiscount => DiscountPrice.HasValue && DiscountPrice < Price;
     public int StockQuantity { get; set; }
+
+    [Column(TypeName = "text")]
     public string? ImageUrl { get; set; }
+
     public bool IsActive { get; set; } = true;
     public double AverageRating { get; set; } = 0;
     public int ReviewCount { get; set; } = 0;

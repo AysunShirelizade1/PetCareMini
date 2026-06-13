@@ -42,7 +42,8 @@ public class ProductsController : ControllerBase
 
     [HttpPost]
     [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> Create([FromBody] ProductCreateDto dto)
+    [Consumes("multipart/form-data")]
+    public async Task<IActionResult> Create([FromForm] ProductCreateDto dto)
     {
         await _service.CreateAsync(dto);
         return StatusCode(201, new { message = "Product created." });
@@ -50,7 +51,8 @@ public class ProductsController : ControllerBase
 
     [HttpPut("{id}")]
     [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> Update(int id, [FromBody] ProductUpdateDto dto)
+    [Consumes("multipart/form-data")]
+    public async Task<IActionResult> Update(int id, [FromForm] ProductUpdateDto dto)
     {
         var result = await _service.UpdateAsync(id, dto);
         if (!result) return NotFound(new { message = "Product not found." });
