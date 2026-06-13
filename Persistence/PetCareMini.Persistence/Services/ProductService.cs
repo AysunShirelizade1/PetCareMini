@@ -12,11 +12,13 @@ public class ProductService : IProductService
 {
     private readonly AppDbContext _context;
     private readonly IProductRepository _productRepo;
+    private readonly ICloudinaryService _cloudinaryService;
 
-    public ProductService(AppDbContext context, IProductRepository productRepo)
+    public ProductService(AppDbContext context, IProductRepository productRepo, ICloudinaryService cloudinaryService)
     {
         _context = context;
         _productRepo = productRepo;
+        _cloudinaryService = cloudinaryService;
     }
 
     public async Task<PagedResult<ProductGetDto>> GetAllAsync(ProductQueryDto query)
@@ -137,6 +139,13 @@ public class ProductService : IProductService
 
     public async Task CreateAsync(ProductCreateDto dto)
     {
+        string? imageUrl = null;
+        if (dto.Image != null)
+        {
+            var (url, _) = await _cloudinaryService.UploadImageAsync(dto.Image, "petcaremini/products");
+            imageUrl = url;
+        }
+
         await _context.Products.AddAsync(new Product
         {
             NameAz = dto.NameAz,
@@ -146,7 +155,7 @@ public class ProductService : IProductService
             Price = dto.Price,
             DiscountPrice = dto.DiscountPrice,
             StockQuantity = dto.StockQuantity,
-            ImageUrl = dto.ImageUrl,
+            ImageUrl = imageUrl,
             CategoryId = dto.CategoryId,
             IsActive = true
         });
@@ -158,20 +167,26 @@ public class ProductService : IProductService
         var product = await _context.Products.FindAsync(id);
         if (product is null) return false;
 
+        if (dto.Image != null)
+        {
+            var (url, _) = await _cloudinaryService.UploadImageAsync(dto.Image, "petcaremini/products");
+            product.ImageUrl = url;
+        }
+
         product.NameAz = dto.NameAz;
         product.NameEn = dto.NameEn;
         product.DescriptionAz = dto.DescriptionAz;
         product.DescriptionEn = dto.DescriptionEn;
         product.Price = dto.Price;
-        product.DiscountPrice = dto.DiscountPrice; 
+        product.DiscountPrice = dto.DiscountPrice;
         product.StockQuantity = dto.StockQuantity;
-        product.ImageUrl = dto.ImageUrl;
         product.IsActive = dto.IsActive;
         product.CategoryId = dto.CategoryId;
 
         await _context.SaveChangesAsync();
         return true;
     }
+
 
     public async Task<bool> DeleteAsync(int id)
     {

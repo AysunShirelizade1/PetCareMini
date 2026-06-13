@@ -28,7 +28,7 @@ public class ProductConfiguration : IEntityTypeConfiguration<Product>
             .HasColumnType("decimal(18,2)");
 
         builder.Property(x => x.ImageUrl)
-            .HasMaxLength(255);
+            .HasColumnType("text");
 
         builder.Property(x => x.IsActive)
             .HasDefaultValue(true);

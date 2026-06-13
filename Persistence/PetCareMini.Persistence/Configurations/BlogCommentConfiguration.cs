@@ -30,11 +30,10 @@ public class BlogCommentConfiguration : IEntityTypeConfiguration<BlogComment>
             .HasForeignKey(x => x.UserId)
             .OnDelete(DeleteBehavior.Cascade);
 
-        // Self-referencing — reply üçün
         builder.HasOne(x => x.ParentComment)
             .WithMany(x => x.Replies)
             .HasForeignKey(x => x.ParentCommentId)
-            .OnDelete(DeleteBehavior.Restrict)
+            .OnDelete(DeleteBehavior.Cascade)
             .IsRequired(false);
     }
 }
