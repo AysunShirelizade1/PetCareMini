@@ -14,11 +14,18 @@ public class VeterinarianConfiguration : IEntityTypeConfiguration<Veterinarian>
             .IsRequired()
             .HasMaxLength(100);
 
-        builder.Property(x => x.Specialty)
+        builder.Property(x => x.SpecialtyAz)
             .HasMaxLength(100);
 
-        builder.Property(x => x.Bio)
+        builder.Property(x => x.SpecialtyEn)
+            .HasMaxLength(100);
+
+        builder.Property(x => x.BioAz)
             .HasMaxLength(1000);
+
+        builder.Property(x => x.BioEn)
+            .HasMaxLength(1000);
+
         builder.HasOne(x => x.User)
             .WithOne()
             .HasForeignKey<Veterinarian>(x => x.UserId)

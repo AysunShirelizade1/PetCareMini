@@ -32,7 +32,11 @@ public class CartRepository : ICartRepository
     {
         await _context.CartItems.AddAsync(item);
     }
-
+    public Task DeleteRangeAsync(List<CartItem> items)
+    {
+        _context.CartItems.RemoveRange(items);
+        return Task.CompletedTask;
+    }
     public void Update(CartItem item)
     {
         _context.CartItems.Update(item);

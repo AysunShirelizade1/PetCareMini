@@ -5,9 +5,11 @@ namespace PetCareMini.Domain.Entities;
 public class Veterinarian : BaseEntity
 {
     public string FullName { get; set; } = string.Empty;
-    public string? Specialty { get; set; }
+    public string? SpecialtyAz { get; set; }
+    public string? SpecialtyEn { get; set; }
     public int? ExperienceYears { get; set; }
-    public string? Bio { get; set; }
+    public string? BioAz { get; set; }
+    public string? BioEn { get; set; }
     public string? ProfileImageUrl { get; set; }
     public string? PhoneNumber { get; set; }
     public string? Email { get; set; }

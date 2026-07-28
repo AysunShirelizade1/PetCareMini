@@ -13,7 +13,7 @@ public static class DbSeeder
         await SeedCategoriesAsync(context);
         await SeedProductsAsync(context);
         await SeedServicesAsync(context);
-        await SeedVeterinariansAsync(context);
+        //await SeedVeterinariansAsync(context);
         await SeedFaqsAsync(context);
         await SeedUsersAsync(context);
         await SeedCouponsAsync(context);
@@ -97,20 +97,20 @@ public static class DbSeeder
     }
 
     // ── VETERINARIANS ────────────────────────────────────────────
-    private static async Task SeedVeterinariansAsync(AppDbContext context)
-    {
-        if (await context.Veterinarians.AnyAsync()) return;
+    //private static async Task SeedVeterinariansAsync(AppDbContext context)
+    //{
+    //    if (await context.Veterinarians.AnyAsync()) return;
 
-        await context.Veterinarians.AddRangeAsync(new List<Veterinarian>
-        {
-            new() { FullName = "Dr. Əli Həsənov",     Specialty = "Cərrahiyyə",     PhoneNumber = "+994501234567", Email = "ali@petcare.az",   ProfileImageUrl = "https://placehold.co/300x300?text=Dr+Ali",   ExperienceYears = 8,  IsAvailable = true },
-            new() { FullName = "Dr. Leyla Məmmədova", Specialty = "Dərmatologiya",  PhoneNumber = "+994552345678", Email = "leyla@petcare.az", ProfileImageUrl = "https://placehold.co/300x300?text=Dr+Leyla", ExperienceYears = 5,  IsAvailable = true },
-            new() { FullName = "Dr. Rauf Quliyev",    Specialty = "Diş həkimi",     PhoneNumber = "+994703456789", Email = "rauf@petcare.az",  ProfileImageUrl = "https://placehold.co/300x300?text=Dr+Rauf",  ExperienceYears = 12, IsAvailable = true },
-            new() { FullName = "Dr. Nigar Əliyeva",   Specialty = "Ümumi praktika", PhoneNumber = "+994604567890", Email = "nigar@petcare.az", ProfileImageUrl = "https://placehold.co/300x300?text=Dr+Nigar", ExperienceYears = 3,  IsAvailable = true },
-        });
+    //    await context.Veterinarians.AddRangeAsync(new List<Veterinarian>
+    //    {
+    //        new() { FullName = "Dr. Əli Həsənov",     Specialty = "Cərrahiyyə",     PhoneNumber = "+994501234567", Email = "ali@petcare.az",   ProfileImageUrl = "https://placehold.co/300x300?text=Dr+Ali",   ExperienceYears = 8,  IsAvailable = true },
+    //        new() { FullName = "Dr. Leyla Məmmədova", Specialty = "Dərmatologiya",  PhoneNumber = "+994552345678", Email = "leyla@petcare.az", ProfileImageUrl = "https://placehold.co/300x300?text=Dr+Leyla", ExperienceYears = 5,  IsAvailable = true },
+    //        new() { FullName = "Dr. Rauf Quliyev",    Specialty = "Diş həkimi",     PhoneNumber = "+994703456789", Email = "rauf@petcare.az",  ProfileImageUrl = "https://placehold.co/300x300?text=Dr+Rauf",  ExperienceYears = 12, IsAvailable = true },
+    //        new() { FullName = "Dr. Nigar Əliyeva",   Specialty = "Ümumi praktika", PhoneNumber = "+994604567890", Email = "nigar@petcare.az", ProfileImageUrl = "https://placehold.co/300x300?text=Dr+Nigar", ExperienceYears = 3,  IsAvailable = true },
+    //    });
 
-        await context.SaveChangesAsync();
-    }
+    //    await context.SaveChangesAsync();
+    //}
 
     // ── FAQS ─────────────────────────────────────────────────────
     private static async Task SeedFaqsAsync(AppDbContext context)

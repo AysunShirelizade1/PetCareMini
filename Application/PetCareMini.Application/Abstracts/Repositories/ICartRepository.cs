@@ -10,6 +10,7 @@ public interface ICartRepository
     Task<CartItem?> GetAsync(int userId, int productId);
 
     Task AddAsync(CartItem item);
+    Task DeleteRangeAsync(List<CartItem> items);
 
     void Update(CartItem item);
 

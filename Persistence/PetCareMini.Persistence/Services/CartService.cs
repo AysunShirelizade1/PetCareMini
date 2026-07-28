@@ -85,4 +85,16 @@ public class CartService : ICartService
         _cartRepo.Update(item);
         await _cartRepo.SaveChangesAsync();
     }
+    public async Task<bool> ClearCartAsync(int userId)
+    {
+        var items = await _cartRepo.GetUserCartAsync(userId);
+
+        if (!items.Any())
+            return false;
+
+        await _cartRepo.DeleteRangeAsync(items);
+        await _cartRepo.SaveChangesAsync();
+
+        return true;
+    }
 }

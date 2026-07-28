@@ -5,8 +5,8 @@ public class VeterinarianGetDto
 {
     public int Id { get; set; }
     public string FullName { get; set; } = null!;
-    public string? Specialty { get; set; }
-    public string? Bio { get; set; }
+    public string? Specialty { get; set; }   
+    public string? Bio { get; set; }         
     public int? ExperienceYears { get; set; }
     public string? ProfileImageUrl { get; set; }
     public string? PhoneNumber { get; set; }

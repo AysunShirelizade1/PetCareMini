@@ -20,16 +20,16 @@ public class VeterinariansController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll([FromQuery] string lang = "az")
     {
-        var data = await _vetService.GetAllAsync();
+        var data = await _vetService.GetAllAsync(lang);
         return Ok(data);
     }
 
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetById(int id)
+    public async Task<IActionResult> GetById(int id, [FromQuery] string lang = "az")
     {
-        var data = await _vetService.GetByIdAsync(id);
+        var data = await _vetService.GetByIdAsync(id, lang);
         if (data is null) return NotFound();
         return Ok(data);
     }

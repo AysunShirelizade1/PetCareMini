@@ -3,6 +3,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PetCareMini.Application.Abstracts.Services;
+using PetCareMini.Persistence.Services;
+using PetCareMini.WebApi.Extensions;
 using System.Security.Claims;
 
 [ApiController]
@@ -52,5 +54,16 @@ public class CartController : ControllerBase
         var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
         await _service.RemoveFromCartAsync(userId, productId);
         return Ok(new { message = "Product removed from cart." });
+    }
+    [HttpDelete("clear")]
+    public async Task<IActionResult> ClearCart()
+    {
+        var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+        var cleared = await _service.ClearCartAsync(userId);
+
+        if (!cleared)
+            return Ok(new { message = "Səbət artıq boşdur." });
+
+        return Ok(new { message = "Səbət uğurla təmizləndi." });
     }
 }

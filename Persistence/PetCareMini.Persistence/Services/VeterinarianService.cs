@@ -14,7 +14,7 @@ public class VeterinarianService : IVeterinarianService
         _vetRepository = vetRepository;
     }
 
-    public async Task<List<VeterinarianGetDto>> GetAllAsync()
+    public async Task<List<VeterinarianGetDto>> GetAllAsync(string lang = "az")
     {
         var veterinarians = await _vetRepository.GetAllAsync();
 
@@ -22,8 +22,8 @@ public class VeterinarianService : IVeterinarianService
         {
             Id = x.Id,
             FullName = x.FullName,
-            Specialty = x.Specialty,
-            Bio = x.Bio,
+            Specialty = lang == "en" ? x.SpecialtyEn : x.SpecialtyAz,
+            Bio = lang == "en" ? x.BioEn : x.BioAz,
             ProfileImageUrl = x.ProfileImageUrl,
             PhoneNumber = x.PhoneNumber,
             Email = x.Email,
@@ -35,7 +35,7 @@ public class VeterinarianService : IVeterinarianService
         }).ToList();
     }
 
-    public async Task<VeterinarianGetDto?> GetByIdAsync(int id)
+    public async Task<VeterinarianGetDto?> GetByIdAsync(int id, string lang = "az")
     {
         var veterinarian = await _vetRepository.GetByIdAsync(id);
 
@@ -46,8 +46,8 @@ public class VeterinarianService : IVeterinarianService
         {
             Id = veterinarian.Id,
             FullName = veterinarian.FullName,
-            Specialty = veterinarian.Specialty,
-            Bio = veterinarian.Bio,
+            Specialty = lang == "en" ? veterinarian.SpecialtyEn : veterinarian.SpecialtyAz,
+            Bio = lang == "en" ? veterinarian.BioEn : veterinarian.BioAz,
             ProfileImageUrl = veterinarian.ProfileImageUrl,
             PhoneNumber = veterinarian.PhoneNumber,
             ExperienceYears = veterinarian.ExperienceYears,
@@ -64,8 +64,10 @@ public class VeterinarianService : IVeterinarianService
         var veterinarian = new Veterinarian
         {
             FullName = dto.FullName,
-            Specialty = dto.Specialty,
-            Bio = dto.Bio,
+            SpecialtyAz = dto.SpecialtyAz,
+            SpecialtyEn = dto.SpecialtyEn,
+            BioAz = dto.BioAz,
+            BioEn = dto.BioEn,
             ProfileImageUrl = dto.ProfileImageUrl,
             PhoneNumber = dto.PhoneNumber,
             ExperienceYears = dto.ExperienceYears,
@@ -88,8 +90,10 @@ public class VeterinarianService : IVeterinarianService
             return false;
 
         veterinarian.FullName = dto.FullName;
-        veterinarian.Specialty = dto.Specialty;
-        veterinarian.Bio = dto.Bio;
+        veterinarian.SpecialtyAz = dto.SpecialtyAz;
+        veterinarian.SpecialtyEn = dto.SpecialtyEn;
+        veterinarian.BioAz = dto.BioAz;
+        veterinarian.BioEn = dto.BioEn;
         veterinarian.ProfileImageUrl = dto.ProfileImageUrl;
         veterinarian.PhoneNumber = dto.PhoneNumber;
         veterinarian.ExperienceYears = dto.ExperienceYears;
